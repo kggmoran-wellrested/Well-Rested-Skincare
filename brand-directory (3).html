@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Directory — Well Rested Skincare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #FAFAF8; --off-white: #F2F0EB; --ink: #1A1A18;
+      --ink-light: #4A4A46; --ink-faint: #9A9A94;
+      --sage-pale: #D6E3D4; --teal: #3D7A7A; --teal-light: #5A9E9E;
+      --accent: #C8A882; --border: #E0DDD6; --hover-bg: #EEF5EE;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--teal-light); }
+
+    .page-header { padding: 120px 64px 64px; background: var(--off-white); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .page-header-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 80px 80px; opacity: 0.4; }
+    .page-header-inner { position: relative; z-index: 1; max-width: 640px; }
+    .page-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+    .page-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal); }
+    .page-title { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5vw, 60px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 20px; }
+    .page-title em { font-style: italic; color: var(--teal); }
+    .page-sub { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--ink-light); max-width: 480px; }
+    .page-header-count { position: absolute; right: 64px; bottom: 40px; z-index: 1; text-align: right; }
+    .count-num { font-family: 'DM Serif Display', serif; font-size: 80px; color: var(--border); line-height: 1; }
+    .count-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+
+    .controls-bar { position: sticky; top: 60px; z-index: 50; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 64px; display: flex; align-items: center; }
+    .search-wrap { flex: 1; display: flex; align-items: center; gap: 12px; padding: 18px 32px 18px 0; border-right: 1px solid var(--border); }
+    .search-icon { color: var(--ink-faint); font-size: 15px; flex-shrink: 0; }
+    .search-input { flex: 1; border: none; background: none; outline: none; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 300; color: var(--ink); }
+    .search-input::placeholder { color: var(--ink-faint); }
+    .filter-group { display: flex; align-items: center; }
+    .filter-btn { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); background: none; border: none; border-right: 1px solid var(--border); padding: 20px 18px; cursor: pointer; transition: color 0.2s, background 0.2s; white-space: nowrap; }
+    .filter-btn:hover { color: var(--teal); background: var(--off-white); }
+    .filter-btn.active { color: var(--white); background: var(--teal); }
+    .filter-btn:last-child { border-right: none; }
+    .sort-wrap { display: flex; align-items: center; gap: 10px; padding: 0 20px; border-left: 1px solid var(--border); }
+    .sort-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; }
+    .sort-select { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: var(--ink-light); background: none; border: none; outline: none; cursor: pointer; }
+
+    .results-meta { padding: 18px 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); }
+    .results-count { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
+    .results-count span { color: var(--teal); }
+    .view-toggle { display: flex; }
+    .view-btn { background: none; border: 1px solid var(--border); padding: 6px 10px; cursor: pointer; color: var(--ink-faint); transition: all 0.2s; font-size: 13px; }
+    .view-btn:first-child { border-right: none; }
+    .view-btn.active { background: var(--ink); color: var(--white); border-color: var(--ink); }
+
+    .brands-container { padding: 40px 64px 100px; }
+    .brands-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+    .brands-grid.list-view { grid-template-columns: 1fr; }
+
+    .brand-card { background: var(--white); padding: 36px; cursor: pointer; transition: background 0.2s; position: relative; overflow: hidden; opacity: 0; animation: fadeUp 0.5s forwards; }
+    .brand-card:hover { background: var(--hover-bg); }
+    .brand-card:hover .card-arrow { opacity: 1; transform: translate(3px, -3px); }
+    .brand-card:hover .card-bar { width: 100%; }
+    .card-bar { position: absolute; top: 0; left: 0; height: 2px; width: 0; background: var(--teal); transition: width 0.4s ease; }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px; }
+    .card-logo-placeholder { width: 52px; height: 52px; background: var(--off-white); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 15px; color: var(--teal); flex-shrink: 0; letter-spacing: -0.5px; }
+    .card-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+    .badge { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; }
+    .badge-featured { background: var(--teal); color: var(--white); }
+    .badge-new { background: var(--accent); color: var(--white); }
+    .badge-top { background: var(--sage-pale); color: var(--teal); border: 1px solid var(--teal); }
+    .badge-affiliate { background: var(--ink); color: var(--white); }
+    .card-category { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 8px; }
+    .card-name { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); margin-bottom: 10px; line-height: 1.1; }
+    .card-desc { font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--ink-light); margin-bottom: 22px; }
+    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 22px; }
+    .card-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 9px; border: 1px solid var(--border); color: var(--ink-faint); }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; border-top: 1px solid var(--border); }
+    .card-rating { display: flex; align-items: center; gap: 6px; }
+    .stars-sm { color: var(--accent); font-size: 11px; letter-spacing: 1px; }
+    .rating-val { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-light); }
+    .card-arrow { font-size: 16px; color: var(--teal); opacity: 0; transition: all 0.25s; }
+
+    .brands-grid.list-view .brand-card { padding: 24px 36px; display: grid; grid-template-columns: 52px 1fr auto; gap: 20px; align-items: center; }
+    .brands-grid.list-view .card-bar { display: none; }
+    .brands-grid.list-view .card-top { margin-bottom: 0; }
+    .brands-grid.list-view .card-main { display: flex; flex-direction: column; }
+    .brands-grid.list-view .card-category { margin-bottom: 2px; }
+    .brands-grid.list-view .card-name { font-size: 18px; margin-bottom: 4px; }
+    .brands-grid.list-view .card-desc { margin-bottom: 8px; font-size: 12px; }
+    .brands-grid.list-view .card-tags { margin-bottom: 0; }
+    .brands-grid.list-view .card-footer { border-top: none; padding-top: 0; flex-direction: column; align-items: flex-end; gap: 8px; }
+    .brands-grid.list-view .card-arrow { opacity: 1; }
+
+    .empty-state { padding: 80px; text-align: center; background: var(--white); grid-column: 1 / -1; }
+    .empty-title { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--ink); margin-bottom: 12px; }
+    .empty-sub { font-size: 14px; font-weight: 300; color: var(--ink-faint); }
+
+    footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
+    .footer-logo span { color: var(--teal-light); }
+    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 240px; }
+    .footer-col-title { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.22); margin-bottom: 18px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--teal-light); }
+    .footer-bottom { background: var(--ink); padding: 18px 64px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; }
+    .footer-bottom-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.16); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
+  <ul class="nav-links">
+    <li><a href="/brand-directory.html" class="active">Brands</a></li>
+    <li><a href="/editorial.html">Editorial</a></li>
+    <li><a href="/about.html">About</a></li>
+  </ul>
+  <button class="nav-cta">Newsletter</button>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-grid"></div>
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Brand Directory</p>
+    <h1 class="page-title">Every brand,<br><em>vetted</em> for you.</h1>
+    <p class="page-sub">Our curated directory of clinically validated skincare and wellness brands — filtered, reviewed, and rated so you don't have to research alone.</p>
+  </div>
+  <div class="page-header-count">
+    <div class="count-num" id="totalCount">21</div>
+    <div class="count-label">Brands Listed</div>
+  </div>
+</div>
+
+<div class="controls-bar">
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input class="search-input" type="text" id="searchInput" placeholder="Search brands, ingredients, concerns…" />
+  </div>
+  <div class="filter-group">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="anti-aging">Anti-Aging</button>
+    <button class="filter-btn" data-filter="acne">Acne</button>
+    <button class="filter-btn" data-filter="hydration">Hydration</button>
+    <button class="filter-btn" data-filter="spf">SPF</button>
+    <button class="filter-btn" data-filter="natural">Natural</button>
+    <button class="filter-btn" data-filter="night">Night</button>
+    <button class="filter-btn" data-filter="affiliate">Affiliate</button>
+  </div>
+  <div class="sort-wrap">
+    <span class="sort-label">Sort</span>
+    <select class="sort-select" id="sortSelect">
+      <option value="featured">Featured</option>
+      <option value="rating">Top Rated</option>
+      <option value="az">A → Z</option>
+      <option value="newest">Newest</option>
+    </select>
+  </div>
+</div>
+
+<div class="results-meta">
+  <div class="results-count">Showing <span id="showingCount">21</span> brands</div>
+  <div class="view-toggle">
+    <button class="view-btn active" id="gridViewBtn" title="Grid view">⊞</button>
+    <button class="view-btn" id="listViewBtn" title="List view">☰</button>
+  </div>
+</div>
+
+<div class="brands-container">
+  <div class="brands-grid" id="brandsGrid"></div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">Well Rested <span>Skincare</span></div>
+    <p class="footer-tagline">Your trusted guide to clinically validated skincare and wellness brands.</p>
+  </div>
+  <div>
+    <div class="footer-col-title">Explore</div>
+    <ul class="footer-links"><li><a href="/brand-directory.html">All Brands</a></li><li><a href="/editorial.html">Editorial</a></li></ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Company</div>
+    <ul class="footer-links"><li><a href="/about.html">About Us</a></li><li><a href="/about.html">Contact</a></li></ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Legal</div>
+    <ul class="footer-links"><li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li></ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span class="footer-bottom-text">© 2026 Well Rested Skincare. All rights reserved.</span>
+  <span class="footer-bottom-text">Affiliate links disclosed on all product pages.</span>
+</div>
+
+<script>
+const brands = [
+  // ── AFFILIATE PARTNERS ──
+  { id:1, name:"Skin II", initials:"SII", category:"Brightening / Repair", filters:["anti-aging","hydration","affiliate"], desc:"Advanced brightening and skin repair formulas grounded in peptide science and clinically proven actives for visibly healthier skin.", tags:["Peptides","Brightening","Repair"], rating:4.8, badge:"affiliate", featured:true },
+  { id:2, name:"Alastin", initials:"AL", category:"Post-Procedure / Repair", filters:["anti-aging","affiliate"], desc:"Physician-developed formulas clinically proven to accelerate skin recovery and rebuild the extracellular matrix for lasting results.", tags:["TriHex Technology","Post-Procedure","Collagen"], rating:4.9, badge:"affiliate", featured:true },
+  { id:3, name:"SkinCeuticals", initials:"SC", category:"Anti-Aging / Antioxidants", filters:["anti-aging","affiliate"], desc:"Three decades of antioxidant research powering clinical-grade formulas that neutralize free radicals and visibly reduce aging.", tags:["Vitamin C","Retinol","Antioxidants"], rating:4.9, badge:"affiliate", featured:true },
+  { id:4, name:"Paula's Choice", initials:"PC", category:"Acne / Pore Refinement", filters:["acne","anti-aging","affiliate"], desc:"Fragrance-free, research-backed formulas targeting blackheads, pores, and uneven texture without unnecessary irritants.", tags:["BHA","Niacinamide","AHA"], rating:4.7, badge:"affiliate", featured:true },
+  { id:5, name:"Plated Skin Science", initials:"PS", category:"Regenerative / Exosome", filters:["anti-aging","night","affiliate"], desc:"Pioneering exosome-powered skincare that harnesses platelet-derived biology to accelerate cellular renewal and reduce visible aging.", tags:["Exosomes","Regenerative","Peptides"], rating:4.8, badge:"affiliate", featured:true },
+  { id:6, name:"Tata Harper", initials:"TH", category:"Luxury Natural / Farm-to-Face", filters:["natural","anti-aging","affiliate"], desc:"100% natural, non-toxic luxury skincare formulated on a Vermont farm with bioactive ingredients free from synthetic fillers.", tags:["Natural","Non-Toxic","Bioactive"], rating:4.7, badge:"affiliate", featured:true },
+
+  // ── NEW ADDITIONS ──
+  { id:13, name:"Drunk Elephant", initials:"DE", category:"Clean Actives / Barrier", filters:["anti-aging","hydration"], desc:"Biocompatible formulas free from the 'Suspicious 6,' combining potent actives with skin-barrier-supporting ingredients at every price point.", tags:["Vitamin C","Retinol","Clean"], rating:4.6, badge:"new", featured:true },
+  { id:14, name:"Tatcha", initials:"TA", category:"Japanese Ritual / Hydration", filters:["hydration","natural","anti-aging"], desc:"Japanese beauty rituals meet modern skincare science — rice ferment, hadasei-3, and silk-derived ingredients for luminous, hydrated skin.", tags:["Rice Ferment","Hadasei-3","Silk Extract"], rating:4.7, badge:"new", featured:true },
+  { id:15, name:"Tower 28", initials:"T28", category:"Sensitive / Eczema-Safe", filters:["acne","hydration"], desc:"EWG-verified, dermatologist-tested formulas developed for sensitive and reactive skin, meeting the standards of the National Eczema Association.", tags:["Eczema-Safe","SOS Spray","Clean"], rating:4.5, badge:"new", featured:true },
+  { id:16, name:"Summer Fridays", initials:"SF", category:"Barrier / Hydration", filters:["hydration","natural"], desc:"Minimalist, skin-first formulas built around barrier-supporting ingredients — beloved for their Jet Lag Mask and effortlessly effective approach.", tags:["Barrier Cream","Hyaluronic Acid","Vegan"], rating:4.6, badge:"new", featured:true },
+  { id:17, name:"ZO Skin Health", initials:"ZO", category:"Medical-Grade / Anti-Aging", filters:["anti-aging","acne","night"], desc:"Developed by Dr. Zein Obagi, ZO bridges the gap between therapeutic skincare and aesthetics with physician-dispensed, high-performance formulas.", tags:["Retinol","Medical-Grade","Brightening"], rating:4.8, badge:"new", featured:true },
+  { id:18, name:"Elemis", initials:"EL", category:"Luxury Botanical / Pro-Aging", filters:["anti-aging","natural","night"], desc:"British luxury skincare powered by bioactive marine and botanical ingredients — a pioneer in pro-aging science with decades of spa-proven results.", tags:["Pro-Collagen","Marine","Botanical"], rating:4.7, badge:"new", featured:true },
+  { id:20, name:"Supergoop!", initials:"SG", category:"SPF / Sun Protection", filters:["spf"], desc:"Innovative, skin-loving sunscreens that make SPF something you actually want to wear — lightweight textures, clean formulas, and broad-spectrum protection for every skin type.", tags:["SPF","Broad-Spectrum","Clean"], rating:4.7, badge:"new", featured:true },
+  { id:21, name:"Prequel", initials:"PQ", category:"Toner / Actives", filters:["acne","hydration","anti-aging"], desc:"Barrier-intelligent actives designed to prep, brighten, and refine — Prequel's niacinamide and tranexamic acid formulas are some of the most thoughtfully constructed toners available.", tags:["Niacinamide","Tranexamic Acid","Brightening"], rating:4.6, badge:"new", featured:true },
+
+  // ── DIRECTORY ──
+  { id:7, name:"CeraVe", initials:"CV", category:"Hydration / Barrier Repair", filters:["hydration"], desc:"Dermatologist-developed formulas restoring the skin barrier with essential ceramides and gentle, clinically tested ingredients.", tags:["Ceramides","Hyaluronic Acid","Sensitive"], rating:4.6, badge:null, featured:false },
+  { id:8, name:"EltaMD", initials:"EM", category:"Sun Protection / SPF", filters:["spf"], desc:"Broad-spectrum mineral sunscreens trusted by dermatologists, with reef-safe photostable filters for every skin type.", tags:["SPF 50+","Mineral","Zinc Oxide"], rating:4.8, badge:"top", featured:false },
+  { id:9, name:"La Roche-Posay", initials:"LR", category:"Sensitive / Rosacea", filters:["hydration","acne"], desc:"Prebiotic thermal spring water formulas for sensitive, reactive, and compromised skin, endorsed by dermatologists worldwide.", tags:["Thermal Water","Rosacea","Prebiotic"], rating:4.7, badge:null, featured:false },
+  { id:10, name:"The INKEY List", initials:"TI", category:"Actives / Peptides", filters:["anti-aging","acne"], desc:"Transparent single-ingredient formulas delivering clinical-grade actives at accessible price points without compromise.", tags:["Peptides","Retinol","AHA/BHA"], rating:4.5, badge:null, featured:false },
+  { id:11, name:"Dermatica", initials:"DM", category:"Prescription Actives", filters:["anti-aging","acne"], desc:"Personalised prescription-strength skincare formulated by dermatologists, targeting hyperpigmentation, acne, and aging.", tags:["Retinoids","Azelaic Acid","Personalised"], rating:4.9, badge:null, featured:false },
+  { id:12, name:"Biossance", initials:"BI", category:"Sustainable / Clean", filters:["natural","hydration"], desc:"Squalane-powered clean beauty backed by biotechnology — deeply hydrating, sustainably sourced, and clinically validated.", tags:["Squalane","Clean Beauty","Sustainable"], rating:4.6, badge:null, featured:false },
+  { id:19, name:"Obagi", initials:"OB", category:"Medical-Grade / Rx", filters:["anti-aging","acne"], desc:"Physician-strength formulas targeting hyperpigmentation, acne, and advanced aging with decades of clinical evidence behind each product.", tags:["Hydroquinone","Retinoids","Rx-Grade"], rating:4.7, badge:null, featured:false }
+];
+
+let activeFilter = 'all', activeView = 'grid', searchTerm = '', sortMode = 'featured';
+
+function renderBrands() {
+  let filtered = brands.filter(b => {
+    const mf = activeFilter === 'all' || b.filters.includes(activeFilter);
+    const ms = !searchTerm || b.name.toLowerCase().includes(searchTerm) || b.desc.toLowerCase().includes(searchTerm) || b.tags.some(t => t.toLowerCase().includes(searchTerm)) || b.category.toLowerCase().includes(searchTerm);
+    return mf && ms;
+  });
+  if (sortMode === 'rating') filtered.sort((a,b) => b.rating - a.rating);
+  else if (sortMode === 'az') filtered.sort((a,b) => a.name.localeCompare(b.name));
+  else if (sortMode === 'newest') filtered.sort((a,b) => (b.badge==='new')-(a.badge==='new'));
+  else filtered.sort((a,b) => b.featured - a.featured);
+
+  document.getElementById('showingCount').textContent = filtered.length;
+  document.getElementById('totalCount').textContent = brands.length;
+  const grid = document.getElementById('brandsGrid');
+
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="empty-state"><div class="empty-title">No brands found</div><div class="empty-sub">Try a different search or filter</div></div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map((b, i) => {
+    const badgeLabel = b.badge === 'affiliate' ? 'Affiliate' : b.badge === 'featured' ? 'Featured' : b.badge === 'new' ? 'New' : b.badge === 'top' ? 'Top Rated' : '';
+    const badgeHTML = b.badge ? `<span class="badge badge-${b.badge}">${badgeLabel}</span>` : '';
+    return `
+      <div class="brand-card" style="animation-delay:${i*45}ms">
+        <div class="card-bar"></div>
+        <div class="card-top">
+          <div class="card-logo-placeholder">${b.initials}</div>
+          <div class="card-badges">${badgeHTML}</div>
+        </div>
+        <div class="card-main">
+          <div class="card-category">${b.category}</div>
+          <div class="card-name">${b.name}</div>
+          <p class="card-desc">${b.desc}</p>
+          <div class="card-tags">${b.tags.map(t=>`<span class="card-tag">${t}</span>`).join('')}</div>
+        </div>
+        <div class="card-footer">
+          <div class="card-rating"><span class="stars-sm">★★★★★</span><span class="rating-val">${b.rating}</span></div>
+          <span class="card-arrow">↗</span>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    renderBrands();
+  });
+});
+
+document.getElementById('searchInput').addEventListener('input', e => { searchTerm = e.target.value.toLowerCase().trim(); renderBrands(); });
+document.getElementById('sortSelect').addEventListener('change', e => { sortMode = e.target.value; renderBrands(); });
+
+document.getElementById('gridViewBtn').addEventListener('click', () => {
+  activeView = 'grid';
+  document.getElementById('brandsGrid').classList.remove('list-view');
+  document.getElementById('gridViewBtn').classList.add('active');
+  document.getElementById('listViewBtn').classList.remove('active');
+});
+document.getElementById('listViewBtn').addEventListener('click', () => {
+  activeView = 'list';
+  document.getElementById('brandsGrid').classList.add('list-view');
+  document.getElementById('listViewBtn').classList.add('active');
+  document.getElementById('gridViewBtn').classList.remove('active');
+});
+
+renderBrands();
+</script>
+</body>
+</html>
