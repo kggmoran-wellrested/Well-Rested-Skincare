@@ -18,16 +18,14 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
 
-    <nav>
-  <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
-  <ul class="nav-links">
-    <li><a href="/brand-directory.html">Brands</a></li>
-    <li><a href="/brand-directory.html">Categories</a></li>
-    <li><a href="/editorial.html">Editorial</a></li>
-    <li><a href="/about.html">About</a></li>
-  </ul>
-  <button class="nav-cta">Explore Brands</button>
-</nav>
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--teal-light); }
 
     .page-header { padding: 120px 64px 64px; background: var(--off-white); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
     .page-header-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 80px 80px; opacity: 0.4; }
@@ -123,12 +121,11 @@
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">Well Rested <span>Skincare</span></a>
+  <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
   <ul class="nav-links">
-    <li><a href="#" class="active">Brands</a></li>
-    <li><a href="#">Categories</a></li>
-    <li><a href="#">Editorial</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="/brand-directory.html" class="active">Brands</a></li>
+    <li><a href="/editorial.html">Editorial</a></li>
+    <li><a href="/about.html">About</a></li>
   </ul>
   <button class="nav-cta">Newsletter</button>
 </nav>
@@ -141,7 +138,7 @@
     <p class="page-sub">Our curated directory of clinically validated skincare and wellness brands — filtered, reviewed, and rated so you don't have to research alone.</p>
   </div>
   <div class="page-header-count">
-    <div class="count-num" id="totalCount">19</div>
+    <div class="count-num" id="totalCount">21</div>
     <div class="count-label">Brands Listed</div>
   </div>
 </div>
@@ -173,7 +170,7 @@
 </div>
 
 <div class="results-meta">
-  <div class="results-count">Showing <span id="showingCount">19</span> brands</div>
+  <div class="results-count">Showing <span id="showingCount">21</span> brands</div>
   <div class="view-toggle">
     <button class="view-btn active" id="gridViewBtn" title="Grid view">⊞</button>
     <button class="view-btn" id="listViewBtn" title="List view">☰</button>
@@ -191,15 +188,15 @@
   </div>
   <div>
     <div class="footer-col-title">Explore</div>
-    <ul class="footer-links"><li><a href="#">All Brands</a></li><li><a href="#">Categories</a></li><li><a href="#">Top Rated</a></li><li><a href="#">New Arrivals</a></li></ul>
+    <ul class="footer-links"><li><a href="/brand-directory.html">All Brands</a></li><li><a href="/editorial.html">Editorial</a></li></ul>
   </div>
   <div>
     <div class="footer-col-title">Company</div>
-    <ul class="footer-links"><li><a href="#">About Us</a></li><li><a href="#">Editorial</a></li><li><a href="#">Methodology</a></li><li><a href="#">Contact</a></li></ul>
+    <ul class="footer-links"><li><a href="/about.html">About Us</a></li><li><a href="/about.html">Contact</a></li></ul>
   </div>
   <div>
     <div class="footer-col-title">Legal</div>
-    <ul class="footer-links"><li><a href="#">Affiliate Disclosure</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li></ul>
+    <ul class="footer-links"><li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li></ul>
   </div>
 </footer>
 <div class="footer-bottom">
@@ -224,6 +221,8 @@ const brands = [
   { id:16, name:"Summer Fridays", initials:"SF", category:"Barrier / Hydration", filters:["hydration","natural"], desc:"Minimalist, skin-first formulas built around barrier-supporting ingredients — beloved for their Jet Lag Mask and effortlessly effective approach.", tags:["Barrier Cream","Hyaluronic Acid","Vegan"], rating:4.6, badge:"new", featured:true },
   { id:17, name:"ZO Skin Health", initials:"ZO", category:"Medical-Grade / Anti-Aging", filters:["anti-aging","acne","night"], desc:"Developed by Dr. Zein Obagi, ZO bridges the gap between therapeutic skincare and aesthetics with physician-dispensed, high-performance formulas.", tags:["Retinol","Medical-Grade","Brightening"], rating:4.8, badge:"new", featured:true },
   { id:18, name:"Elemis", initials:"EL", category:"Luxury Botanical / Pro-Aging", filters:["anti-aging","natural","night"], desc:"British luxury skincare powered by bioactive marine and botanical ingredients — a pioneer in pro-aging science with decades of spa-proven results.", tags:["Pro-Collagen","Marine","Botanical"], rating:4.7, badge:"new", featured:true },
+  { id:20, name:"Supergoop!", initials:"SG", category:"SPF / Sun Protection", filters:["spf"], desc:"Innovative, skin-loving sunscreens that make SPF something you actually want to wear — lightweight textures, clean formulas, and broad-spectrum protection for every skin type.", tags:["SPF","Broad-Spectrum","Clean"], rating:4.7, badge:"new", featured:true },
+  { id:21, name:"Prequel", initials:"PQ", category:"Toner / Actives", filters:["acne","hydration","anti-aging"], desc:"Barrier-intelligent actives designed to prep, brighten, and refine — Prequel's niacinamide and tranexamic acid formulas are some of the most thoughtfully constructed toners available.", tags:["Niacinamide","Tranexamic Acid","Brightening"], rating:4.6, badge:"new", featured:true },
 
   // ── DIRECTORY ──
   { id:7, name:"CeraVe", initials:"CV", category:"Hydration / Barrier Repair", filters:["hydration"], desc:"Dermatologist-developed formulas restoring the skin barrier with essential ceramides and gentle, clinically tested ingredients.", tags:["Ceramides","Hyaluronic Acid","Sensitive"], rating:4.6, badge:null, featured:false },
@@ -310,14 +309,3 @@ renderBrands();
 </script>
 </body>
 </html>
-</artifact>
-
-All 7 new brands are in! Here's a summary of what was added and how they're organized:
-
-**New affiliate-pending brands** (marked "New"): Drunk Elephant, Tatcha, Tower 28, Summer Fridays, ZO Skin Health, and Elemis — plus your existing Skin II listing was already there.
-
-**One bonus addition** — I snuck in Obagi since it pairs naturally with ZO (same founder, Dr. Zein Obagi) and rounds out the medical-grade category nicely. Easy to remove if you'd prefer.
-
-**New "Affiliate" filter** — your 6 confirmed affiliate partners (Skin II, Alastin, SkinCeuticals, Paula's Choice, Plated Skin Science, Tata Harper) now have a dedicated dark badge and their own filter tab so visitors — and you — can find them instantly.
-
-The directory now has **19 brands** total. Ready to build the Single Brand page?
