@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Well Rested Skincare</title>
+  <title>Well Rested Skincare — Science-Backed Skincare That Delivers Real Results</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -12,13 +12,15 @@
     :root {
       --white: #FAFAF8; --off-white: #F2F0EB; --ink: #1A1A18;
       --ink-light: #4A4A46; --ink-faint: #9A9A94;
-      --sage-pale: #D6E3D4; --teal: #3D7A7A; --teal-light: #5A9E9E;
-      --accent: #C8A882; --border: #E0DDD6;
+      --sage-pale: #D6E3D4; --sage: #B8D4B4; --teal: #3D7A7A; --teal-light: #5A9E9E;
+      --accent: #C8A882; --warm: #E8D5C0; --border: #E0DDD6;
+      --blush: #F0E6DC; --cream: #F7F2EC;
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
 
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
     .nav-logo { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
     .nav-logo span { color: var(--teal); }
     .nav-links { display: flex; gap: 30px; list-style: none; }
@@ -27,95 +29,167 @@
     .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; transition: background 0.2s; }
     .nav-cta:hover { background: var(--teal-light); }
 
-    .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 60px; }
-    .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 64px 48px 64px 64px; }
-    .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; opacity: 0; animation: fadeUp 0.7s 0.2s forwards; }
-    .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--teal); }
-    .hero-headline { font-family: 'DM Serif Display', serif; font-size: clamp(38px, 4.5vw, 62px); line-height: 1.06; letter-spacing: -1.5px; margin-bottom: 24px; opacity: 0; animation: fadeUp 0.7s 0.35s forwards; }
+    /* TICKER */
+    .ticker { background: var(--teal); padding: 10px 0; overflow: hidden; margin-top: 60px; }
+    .ticker-track { display: flex; gap: 0; animation: ticker 30s linear infinite; white-space: nowrap; }
+    .ticker-item { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.7); padding: 0 32px; border-right: 1px solid rgba(255,255,255,0.2); flex-shrink: 0; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* HERO */
+    .hero { min-height: 92vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+    .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 80px 64px; position: relative; z-index: 2; background: var(--cream); }
+
+    /* warm organic blob shapes in background */
+    .hero-left::before { content: ''; position: absolute; width: 500px; height: 500px; border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; background: radial-gradient(ellipse, rgba(200,168,130,0.15), transparent 70%); top: -100px; right: -100px; z-index: 0; animation: morphBlob 12s ease-in-out infinite; }
+    .hero-left::after { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%; background: radial-gradient(ellipse, rgba(61,122,122,0.08), transparent 70%); bottom: 40px; left: 40px; z-index: 0; animation: morphBlob 16s ease-in-out infinite reverse; }
+    @keyframes morphBlob { 0%, 100% { border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; } 50% { border-radius: 30% 70% 40% 60% / 60% 30% 70% 40%; } }
+
+    .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; opacity: 0; animation: fadeUp 0.7s 0.1s forwards; position: relative; z-index: 1; }
+    .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal); }
+    .hero-headline { font-family: 'DM Serif Display', serif; font-size: clamp(38px, 4.5vw, 62px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 12px; opacity: 0; animation: fadeUp 0.7s 0.25s forwards; position: relative; z-index: 1; }
     .hero-headline em { font-style: italic; color: var(--teal); }
-    .hero-sub { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--ink-light); max-width: 380px; margin-bottom: 40px; opacity: 0; animation: fadeUp 0.7s 0.5s forwards; }
-    .hero-actions { display: flex; align-items: center; gap: 22px; opacity: 0; animation: fadeUp 0.7s 0.65s forwards; }
-    .btn-primary { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--ink); border: none; padding: 14px 32px; cursor: pointer; transition: background 0.2s, transform 0.2s; }
-    .btn-primary:hover { background: var(--teal); transform: translateY(-1px); }
-    .btn-ghost { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); background: none; border: none; cursor: pointer; transition: color 0.2s; }
-    .btn-ghost:hover { color: var(--teal); }
-    .hero-stats { display: flex; gap: 36px; margin-top: 52px; padding-top: 36px; border-top: 1px solid var(--border); opacity: 0; animation: fadeUp 0.7s 0.8s forwards; }
-    .stat-num { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--ink); line-height: 1; margin-bottom: 4px; }
-    .stat-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
+    .hero-tagline { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 20px; color: var(--ink-light); margin-bottom: 28px; opacity: 0; animation: fadeUp 0.7s 0.35s forwards; position: relative; z-index: 1; }
+    .hero-body { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--ink-light); max-width: 420px; margin-bottom: 36px; opacity: 0; animation: fadeUp 0.7s 0.45s forwards; position: relative; z-index: 1; }
+    .hero-actions { display: flex; gap: 14px; opacity: 0; animation: fadeUp 0.7s 0.55s forwards; position: relative; z-index: 1; }
+    .btn-primary { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--teal); color: var(--white); border: none; padding: 14px 28px; cursor: pointer; transition: background 0.2s; text-decoration: none; display: inline-block; }
+    .btn-primary:hover { background: var(--ink); }
+    .btn-secondary { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: none; color: var(--teal); border: 1px solid var(--teal); padding: 14px 28px; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
+    .btn-secondary:hover { background: var(--teal); color: var(--white); }
 
-    .hero-right { background: var(--off-white); position: relative; overflow: hidden; opacity: 0; animation: fadeIn 1s 0.4s forwards; }
-    .grid-lines { position: absolute; inset: 0; background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 72px 72px; opacity: 0.5; }
-    .deco-circle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 380px; height: 380px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
-    .deco-circle::before { content: ''; width: 240px; height: 240px; border-radius: 50%; border: 1px solid var(--sage-pale); display: block; }
-    .hero-right-inner { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 40px; }
-    .hero-featured-badge { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 10px; background: var(--white); border: 1px solid var(--border); padding: 9px 16px; margin-bottom: 16px; width: fit-content; }
-    .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--teal); }
-    .badge-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); }
-    .hero-brand-card { position: relative; z-index: 2; background: var(--white); border: 1px solid var(--border); padding: 28px; }
-    .brand-card-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
-    .brand-card-name { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--ink); margin-bottom: 8px; }
-    .brand-card-desc { font-size: 13px; font-weight: 300; color: var(--ink-light); line-height: 1.65; margin-bottom: 20px; }
-    .brand-card-tags { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 20px; }
-    .tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; padding: 4px 11px; background: var(--sage-pale); color: var(--teal); }
-    .brand-card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; border-top: 1px solid var(--border); }
-    .stars { color: var(--accent); font-size: 12px; letter-spacing: 1px; }
-    .rating-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-light); margin-left: 6px; }
-    .brand-link { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); text-decoration: none; }
+    /* HERO RIGHT — warm lifestyle panel */
+    .hero-right { position: relative; overflow: hidden; background: var(--blush); opacity: 0; animation: fadeIn 1s 0.3s forwards; }
+    .hero-right-organic { position: absolute; inset: 0; }
+    .hero-right-organic::before { content: ''; position: absolute; width: 600px; height: 600px; border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%; background: radial-gradient(ellipse at 60% 40%, rgba(200,168,130,0.25), transparent 60%); top: -100px; left: -100px; animation: morphBlob 14s ease-in-out infinite; }
+    .hero-right-organic::after { content: ''; position: absolute; width: 400px; height: 400px; border-radius: 40% 60% 45% 55% / 55% 45% 60% 40%; background: radial-gradient(ellipse at 40% 60%, rgba(61,122,122,0.12), transparent 60%); bottom: -50px; right: -50px; animation: morphBlob 18s ease-in-out infinite reverse; }
+    .hero-right-content { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 64px; z-index: 1; }
+    .hero-right-wordmark { font-family: 'DM Serif Display', serif; font-size: 52px; color: var(--ink); letter-spacing: -2px; line-height: 1.05; text-align: center; margin-bottom: 8px; }
+    .hero-right-wordmark span { color: var(--teal); display: block; font-style: italic; }
+    .hero-right-sub { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 56px; }
+    .hero-circle { width: 180px; height: 180px; border-radius: 50%; border: 1px solid rgba(61,122,122,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 56px; position: relative; }
+    .hero-circle::before { content: ''; position: absolute; inset: 12px; border-radius: 50%; background: radial-gradient(ellipse, rgba(200,168,130,0.2), transparent); }
+    .hero-circle-text { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 22px; color: var(--teal); text-align: center; line-height: 1.3; z-index: 1; }
+    .hero-trust-pills { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+    .trust-pill { display: flex; align-items: center; gap: 12px; padding: 12px 18px; background: rgba(255,255,255,0.6); border: 1px solid rgba(61,122,122,0.12); backdrop-filter: blur(8px); }
+    .trust-pill-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
+    .trust-pill-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); }
 
-    .ticker { background: var(--ink); padding: 12px 0; overflow: hidden; white-space: nowrap; }
-    .ticker-track { display: inline-flex; animation: ticker 30s linear infinite; }
-    .ticker-item { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); padding: 0 28px; }
-    .ticker-dot { color: var(--teal-light) !important; }
+    /* MANIFESTO */
+    .manifesto { padding: 120px 64px; background: var(--white); position: relative; overflow: hidden; }
+    .manifesto::before { content: ''; position: absolute; width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(ellipse, rgba(214,227,212,0.3), transparent 70%); top: -200px; right: -200px; pointer-events: none; }
+    .manifesto-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+    .manifesto-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+    .manifesto-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal); }
+    .manifesto-headline { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 52px); letter-spacing: -1px; line-height: 1.1; margin-bottom: 48px; }
+    .manifesto-headline em { font-style: italic; color: var(--teal); }
+    .manifesto-body { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .manifesto-text p { font-size: 16px; font-weight: 300; line-height: 1.9; color: var(--ink-light); margin-bottom: 20px; }
+    .manifesto-text p strong { font-weight: 500; color: var(--ink); }
+    .manifesto-text p:last-child { margin-bottom: 0; }
+    .manifesto-quote { background: var(--teal); padding: 48px; position: relative; }
+    .manifesto-quote::before { content: '\201C'; font-family: 'DM Serif Display', serif; font-size: 120px; color: rgba(255,255,255,0.1); position: absolute; top: -20px; left: 24px; line-height: 1; }
+    .manifesto-quote-text { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--white); line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 20px; position: relative; z-index: 1; }
+    .manifesto-quote-text em { font-style: italic; color: rgba(255,255,255,0.7); }
+    .manifesto-quote-sig { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
 
-    .section-brands { padding: 100px 64px; }
+    /* STATS BAR */
+    .stats-bar { background: var(--off-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat-item { padding: 40px 32px; border-right: 1px solid var(--border); text-align: center; }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'DM Serif Display', serif; font-size: 48px; color: var(--teal); letter-spacing: -2px; line-height: 1; margin-bottom: 8px; }
+    .stat-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+
+    /* FEATURED BRANDS */
+    .featured-section { padding: 100px 64px; background: var(--white); }
     .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 56px; }
-    .section-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
-    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -1px; line-height: 1.1; }
+    .section-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+    .section-eyebrow::before { content: ''; display: block; width: 20px; height: 1px; background: var(--teal); }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.8px; line-height: 1.1; }
     .section-title em { font-style: italic; color: var(--teal); }
-    .section-link { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 4px; transition: color 0.2s; }
-    .section-link:hover { color: var(--teal); }
-
+    .section-link { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+    .section-link:hover { color: var(--ink); }
     .brands-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
-    .brand-tile { background: var(--white); padding: 36px; cursor: pointer; transition: background 0.25s; position: relative; overflow: hidden; }
-    .brand-tile:hover { background: var(--off-white); }
-    .brand-tile:hover .tile-arrow { opacity: 1; transform: translate(3px, -3px); }
-    .brand-tile:hover .tile-bar { width: 100%; }
-    .tile-bar { position: absolute; top: 0; left: 0; height: 2px; width: 0; background: var(--teal); transition: width 0.4s ease; }
-    .tile-category { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 16px; }
-    .tile-brand-name { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); margin-bottom: 10px; }
-    .tile-desc { font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--ink-light); margin-bottom: 24px; }
-    .tile-footer { display: flex; align-items: center; justify-content: space-between; }
-    .tile-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-    .tile-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 9px; border: 1px solid var(--border); color: var(--ink-faint); }
-    .tile-arrow { font-size: 16px; color: var(--teal); opacity: 0; transition: all 0.25s; }
+    .brand-card { background: var(--white); padding: 32px; cursor: pointer; transition: background 0.2s; position: relative; overflow: hidden; text-decoration: none; display: block; }
+    .brand-card:hover { background: var(--cream); }
+    .brand-card:hover .brand-card-bar { width: 100%; }
+    .brand-card:hover .brand-card-arrow { opacity: 1; transform: translate(3px,-3px); }
+    .brand-card-bar { position: absolute; top: 0; left: 0; height: 2px; width: 0; background: var(--teal); transition: width 0.4s; }
+    .brand-card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 18px; }
+    .brand-initials { width: 48px; height: 48px; background: var(--off-white); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--teal); }
+    .brand-badge { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; background: var(--teal); color: var(--white); }
+    .brand-cat { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; }
+    .brand-name { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--ink); margin-bottom: 10px; }
+    .brand-desc { font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--ink-light); margin-bottom: 18px; }
+    .brand-card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid var(--border); }
+    .brand-rating { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-light); }
+    .brand-card-arrow { color: var(--teal); font-size: 16px; opacity: 0; transition: all 0.25s; }
 
-    .section-categories { background: var(--off-white); padding: 88px 64px; }
-    .categories-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 48px; }
-    .cat-item { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 28px 16px; background: var(--white); border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s, transform 0.2s; text-align: center; }
-    .cat-item:hover { border-color: var(--teal); transform: translateY(-3px); }
-    .cat-icon { width: 44px; height: 44px; border-radius: 50%; background: var(--sage-pale); display: flex; align-items: center; justify-content: center; font-size: 18px; }
-    .cat-name { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); }
-    .cat-count { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--teal); }
+    /* HOW IT WORKS */
+    .how-section { padding: 100px 64px; background: var(--off-white); border-top: 1px solid var(--border); position: relative; overflow: hidden; }
+    .how-section::after { content: ''; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(ellipse, rgba(200,168,130,0.15), transparent 70%); bottom: -200px; left: -100px; pointer-events: none; }
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); margin-top: 56px; position: relative; z-index: 1; }
+    .how-card { background: var(--white); padding: 40px; transition: background 0.2s; }
+    .how-card:hover { background: var(--cream); }
+    .how-num { font-family: 'DM Serif Display', serif; font-size: 64px; color: var(--border); line-height: 1; margin-bottom: 16px; }
+    .how-title { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); margin-bottom: 12px; }
+    .how-title em { font-style: italic; color: var(--teal); }
+    .how-body { font-size: 13px; font-weight: 300; line-height: 1.75; color: var(--ink-light); }
 
-    .section-editorial { padding: 0 64px 100px; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
-    .editorial-panel { padding: 56px; background: var(--white); }
-    .editorial-panel.dark { background: var(--ink); }
-    .editorial-panel.dark .editorial-eyebrow { color: var(--teal-light); }
-    .editorial-panel.dark .editorial-title { color: var(--white); }
-    .editorial-panel.dark .editorial-body { color: rgba(255,255,255,0.45); }
-    .editorial-panel.dark .btn-editorial { color: rgba(255,255,255,0.5); border-color: rgba(255,255,255,0.12); }
-    .editorial-panel.dark .btn-editorial:hover { color: var(--teal-light); border-color: var(--teal-light); }
-    .editorial-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin-bottom: 18px; }
-    .editorial-title { font-family: 'DM Serif Display', serif; font-size: 30px; letter-spacing: -0.5px; line-height: 1.15; color: var(--ink); margin-bottom: 18px; }
-    .editorial-title em { font-style: italic; }
-    .editorial-body { font-size: 14px; font-weight: 300; line-height: 1.8; color: var(--ink-light); margin-bottom: 32px; }
-    .btn-editorial { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: none; border: 1px solid var(--border); padding: 11px 26px; cursor: pointer; color: var(--ink-light); transition: border-color 0.2s, color 0.2s; }
-    .btn-editorial:hover { border-color: var(--teal); color: var(--teal); }
+    /* EDITORIAL */
+    .editorial-section { padding: 100px 64px; background: var(--white); border-top: 1px solid var(--border); }
+    .editorial-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1px; background: var(--border); margin-top: 56px; }
+    .editorial-card { background: var(--white); padding: 36px; cursor: pointer; transition: background 0.2s; text-decoration: none; display: block; }
+    .editorial-card:hover { background: var(--cream); }
+    .editorial-card.featured { padding: 48px; }
+    .ed-cat { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
+    .ed-title { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.3px; }
+    .editorial-card.featured .ed-title { font-size: 32px; letter-spacing: -0.8px; }
+    .ed-excerpt { font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--ink-light); margin-bottom: 20px; }
+    .ed-meta { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
 
+    /* SKIN TYPE SECTION */
+    .skin-section { padding: 100px 64px; background: var(--ink); position: relative; overflow: hidden; }
+    .skin-section::before { content: ''; position: absolute; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(ellipse, rgba(61,122,122,0.15), transparent 70%); top: -200px; right: -200px; }
+    .skin-section::after { content: ''; position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(ellipse, rgba(200,168,130,0.08), transparent 70%); bottom: -100px; left: -100px; }
+    .skin-inner { position: relative; z-index: 1; }
+    .skin-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .skin-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal-light); }
+    .skin-headline { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 52px); color: var(--white); letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; }
+    .skin-headline em { font-style: italic; color: var(--teal-light); }
+    .skin-sub { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.5); margin-bottom: 56px; max-width: 480px; line-height: 1.7; }
+    .skin-types { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.06); }
+    .skin-type { padding: 32px 28px; background: rgba(255,255,255,0.03); cursor: pointer; transition: background 0.2s; border: 1px solid transparent; }
+    .skin-type:hover { background: rgba(255,255,255,0.07); border-color: rgba(61,122,122,0.4); }
+    .skin-type-icon { font-size: 28px; margin-bottom: 14px; }
+    .skin-type-name { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 8px; }
+    .skin-type-desc { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.4); line-height: 1.6; margin-bottom: 16px; }
+    .skin-type-link { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-light); text-decoration: none; }
+
+    /* NEWSLETTER */
+    .newsletter { padding: 100px 64px; background: var(--blush); border-top: 1px solid var(--border); position: relative; overflow: hidden; }
+    .newsletter::before { content: ''; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(ellipse, rgba(200,168,130,0.2), transparent 70%); top: -200px; right: -100px; }
+    .newsletter-inner { position: relative; z-index: 1; max-width: 600px; }
+    .newsletter-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .newsletter-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal); }
+    .newsletter-title { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3.5vw, 44px); letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; }
+    .newsletter-title em { font-style: italic; color: var(--teal); }
+    .newsletter-sub { font-size: 15px; font-weight: 300; color: var(--ink-light); margin-bottom: 36px; line-height: 1.7; }
+    .newsletter-form { display: flex; gap: 0; max-width: 460px; }
+    .newsletter-input { flex: 1; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 300; padding: 14px 20px; border: 1px solid var(--border); border-right: none; background: var(--white); color: var(--ink); outline: none; transition: border-color 0.2s; }
+    .newsletter-input:focus { border-color: var(--teal); }
+    .newsletter-btn { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--teal); color: var(--white); border: none; padding: 14px 24px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+    .newsletter-btn:hover { background: var(--ink); }
+    .newsletter-perks { display: flex; gap: 24px; margin-top: 20px; flex-wrap: wrap; }
+    .newsletter-perk { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); display: flex; align-items: center; gap: 6px; }
+    .newsletter-perk::before { content: '✓'; color: var(--teal); }
+
+    /* FOOTER */
     footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
     .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
     .footer-logo span { color: var(--teal-light); }
-    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 240px; }
+    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 240px; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social-link { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); text-decoration: none; font-size: 12px; transition: all 0.2s; }
+    .footer-social-link:hover { border-color: var(--teal-light); color: var(--teal-light); }
     .footer-col-title { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.22); margin-bottom: 18px; }
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
     .footer-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
@@ -123,12 +197,10 @@
     .footer-bottom { background: var(--ink); padding: 18px 64px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; }
     .footer-bottom-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.16); }
 
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   </style>
 </head>
 <body>
@@ -137,138 +209,280 @@
   <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
   <ul class="nav-links">
     <li><a href="/brand-directory.html">Brands</a></li>
-    <li><a href="/brand-directory.html">Categories</a></li>
     <li><a href="/editorial.html">Editorial</a></li>
     <li><a href="/about.html">About</a></li>
   </ul>
-  <button class="nav-cta">Explore Brands</button>
+  <button class="nav-cta">Newsletter</button>
 </nav>
 
-<section class="hero">
-  <div class="hero-left">
-    <p class="hero-eyebrow">Curated Healthcare Brands</p>
-    <h1 class="hero-headline">Science-backed<br>skincare, <em>finally</em><br>simplified.</h1>
-    <p class="hero-sub">We aggregate the most clinically validated skincare and wellness brands in one place — so you can make informed, confident decisions for your skin.</p>
-    <div class="hero-actions">
-      <button class="btn-primary">Browse All Brands</button>
-      <button class="btn-ghost">How it works →</button>
-    </div>
-    <div class="hero-stats">
-      <div><div class="stat-num">120+</div><div class="stat-label">Vetted Brands</div></div>
-      <div><div class="stat-num">18</div><div class="stat-label">Categories</div></div>
-      <div><div class="stat-num">4.8★</div><div class="stat-label">Avg. Rating</div></div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="grid-lines"></div>
-    <div class="deco-circle"></div>
-    <div class="hero-right-inner">
-      <div class="hero-featured-badge">
-        <div class="badge-dot"></div>
-        <span class="badge-text">Brand Spotlight — March 2026</span>
-      </div>
-      <div class="hero-brand-card">
-        <div class="brand-card-label">Featured Brand</div>
-        <div class="brand-card-name">Dermatica</div>
-        <p class="brand-card-desc">Prescription-strength skincare powered by dermatologist-formulated actives, personalised to your unique skin profile and goals.</p>
-        <div class="brand-card-tags">
-          <span class="tag">Retinoids</span>
-          <span class="tag">Hyperpigmentation</span>
-          <span class="tag">Anti-Aging</span>
-        </div>
-        <div class="brand-card-footer">
-          <div><span class="stars">★★★★★</span><span class="rating-num">4.9 / 5.0</span></div>
-          <a href="#" class="brand-link">View Brand →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- TICKER -->
 <div class="ticker">
   <div class="ticker-track">
-    <span class="ticker-item">Clinically Validated</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">Dermatologist Approved</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">120+ Curated Brands</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">Evidence-Based Routines</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">Cruelty Free</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">Transparent Ingredients</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">Sleep-Science Backed</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">Clinically Validated</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">Dermatologist Approved</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">120+ Curated Brands</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">Evidence-Based Routines</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">Cruelty Free</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">Transparent Ingredients</span><span class="ticker-item ticker-dot">◆</span>
-    <span class="ticker-item">Sleep-Science Backed</span><span class="ticker-item ticker-dot">◆</span>
+    <span class="ticker-item">Clinically Validated Brands</span>
+    <span class="ticker-item">Science-Backed Skincare</span>
+    <span class="ticker-item">21 Vetted Brands</span>
+    <span class="ticker-item">Honest Reviews Always</span>
+    <span class="ticker-item">Look Like Yourself — Well Rested</span>
+    <span class="ticker-item">Flawless Aging</span>
+    <span class="ticker-item">Real Ingredients. Real Results.</span>
+    <span class="ticker-item">Clinically Validated Brands</span>
+    <span class="ticker-item">Science-Backed Skincare</span>
+    <span class="ticker-item">21 Vetted Brands</span>
+    <span class="ticker-item">Honest Reviews Always</span>
+    <span class="ticker-item">Look Like Yourself — Well Rested</span>
+    <span class="ticker-item">Flawless Aging</span>
+    <span class="ticker-item">Real Ingredients. Real Results.</span>
   </div>
 </div>
 
-<section class="section-brands">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-eyebrow">Featured This Month</div>
-      <h2 class="section-title">Brands <em>worth</em><br>knowing about</h2>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Science-Backed Skincare</p>
+    <h1 class="hero-headline">Look like yourself,<br><em>well rested.</em></h1>
+    <p class="hero-tagline">Flawless aging with a little help from science.</p>
+    <p class="hero-body">We cut through the noise and do the research so you don't have to. Every brand in our directory is vetted for clinical evidence, ingredient quality, and real results. No trends. No filler. Just skincare that works.</p>
+    <div class="hero-actions">
+      <a href="/brand-directory.html" class="btn-primary">Explore Brands →</a>
+      <a href="/editorial.html" class="btn-secondary">Read the Science</a>
     </div>
-    <a href="#" class="section-link">View all brands →</a>
   </div>
-  <div class="brands-grid reveal">
-    <div class="brand-tile"><div class="tile-bar"></div><div class="tile-category">Hydration / Barrier Repair</div><div class="tile-brand-name">CeraVe</div><p class="tile-desc">Developed with dermatologists to restore and maintain the skin's natural barrier using essential ceramides and hyaluronic acid.</p><div class="tile-footer"><div class="tile-tags"><span class="tile-tag">Ceramides</span><span class="tile-tag">Sensitive Skin</span></div><span class="tile-arrow">↗</span></div></div>
-    <div class="brand-tile"><div class="tile-bar"></div><div class="tile-category">Anti-Aging / Antioxidants</div><div class="tile-brand-name">SkinCeuticals</div><p class="tile-desc">Advanced skincare backed by decades of antioxidant research, targeting oxidative stress, collagen loss, and visible aging.</p><div class="tile-footer"><div class="tile-tags"><span class="tile-tag">Vitamin C</span><span class="tile-tag">Retinol</span></div><span class="tile-arrow">↗</span></div></div>
-    <div class="brand-tile"><div class="tile-bar"></div><div class="tile-category">Acne / Pore Refinement</div><div class="tile-brand-name">Paula's Choice</div><p class="tile-desc">Fragrance-free, clinically proven formulas that dissolve blackheads, refine pores, and calm chronic breakouts effectively.</p><div class="tile-footer"><div class="tile-tags"><span class="tile-tag">BHA</span><span class="tile-tag">Niacinamide</span></div><span class="tile-arrow">↗</span></div></div>
-    <div class="brand-tile"><div class="tile-bar"></div><div class="tile-category">Sun Protection / SPF</div><div class="tile-brand-name">EltaMD</div><p class="tile-desc">Dermatologist-trusted broad-spectrum UV protection with reef-safe, photostable mineral filters for all skin types.</p><div class="tile-footer"><div class="tile-tags"><span class="tile-tag">SPF 50+</span><span class="tile-tag">Mineral</span></div><span class="tile-arrow">↗</span></div></div>
-    <div class="brand-tile"><div class="tile-bar"></div><div class="tile-category">Night Recovery / Peptides</div><div class="tile-brand-name">The INKEY List</div><p class="tile-desc">Single-ingredient transparency meets clinical-grade actives — accessible price points, no compromises on performance.</p><div class="tile-footer"><div class="tile-tags"><span class="tile-tag">Peptides</span><span class="tile-tag">AHA/BHA</span></div><span class="tile-arrow">↗</span></div></div>
-    <div class="brand-tile"><div class="tile-bar"></div><div class="tile-category">Redness / Rosacea</div><div class="tile-brand-name">La Roche-Posay</div><p class="tile-desc">Prebiotic thermal spring water formulas engineered for sensitive and compromised skin, endorsed by dermatologists globally.</p><div class="tile-footer"><div class="tile-tags"><span class="tile-tag">Thermal Water</span><span class="tile-tag">Rosacea</span></div><span class="tile-arrow">↗</span></div></div>
+  <div class="hero-right">
+    <div class="hero-right-organic"></div>
+    <div class="hero-right-content">
+      <div class="hero-right-wordmark">Well Rested<span>Skincare</span></div>
+      <div class="hero-right-sub">Est. 2026</div>
+      <div class="hero-circle">
+        <div class="hero-circle-text">Science<br>meets<br>sleep</div>
+      </div>
+      <div class="hero-trust-pills">
+        <div class="trust-pill"><div class="trust-pill-dot"></div><span class="trust-pill-text">Clinically Validated Brands Only</span></div>
+        <div class="trust-pill"><div class="trust-pill-dot"></div><span class="trust-pill-text">Editorial Independence Always</span></div>
+        <div class="trust-pill"><div class="trust-pill-dot"></div><span class="trust-pill-text">Transparent Affiliate Disclosure</span></div>
+        <div class="trust-pill"><div class="trust-pill-dot"></div><span class="trust-pill-text">Science First. Marketing Never.</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section-categories">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-eyebrow">Browse by need</div>
-      <h2 class="section-title">Shop by <em>category</em></h2>
+<!-- STATS BAR -->
+<div class="stats-bar reveal">
+  <div class="stat-item"><div class="stat-num">21</div><div class="stat-label">Vetted Brands</div></div>
+  <div class="stat-item"><div class="stat-num">4.7</div><div class="stat-label">Avg Brand Rating</div></div>
+  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Clinically Validated</div></div>
+  <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Paid Placements</div></div>
+</div>
+
+<!-- MANIFESTO -->
+<section class="manifesto reveal">
+  <div class="manifesto-inner">
+    <div class="manifesto-eyebrow">Why We Exist</div>
+    <h2 class="manifesto-headline">We started Well Rested Skincare<br>because we've been <em>exactly where you are.</em></h2>
+    <div class="manifesto-body">
+      <div class="manifesto-text">
+        <p>Overwhelmed by products. Underwhelmed by results. Tired of gorgeous packaging that couldn't back up its claims. Our own skincare journey taught us one thing: <strong>most of what's being sold doesn't hold up to scrutiny.</strong></p>
+        <p>The ingredients are underdosed. The science is cherry-picked. The marketing is louder than the evidence. So we built something different — a platform dedicated to one idea. That great skin isn't about transformation. It's about looking like the best, most rested version of yourself.</p>
+        <p>Every brand we feature is vetted for clinical evidence, ingredient transparency, and real-world results. Every article we write is grounded in research, not trends. No noise. No filler. Just skincare that works.</p>
+      </div>
+      <div class="manifesto-quote">
+        <div class="manifesto-quote-text">We all want to look like ourselves — just <em>well rested.</em></div>
+        <div class="manifesto-quote-sig">— Well Rested Skincare · Northbrook, IL</div>
+      </div>
     </div>
-  </div>
-  <div class="categories-grid reveal">
-    <div class="cat-item"><div class="cat-icon">🧴</div><div class="cat-name">Moisturizers</div><div class="cat-count">34</div></div>
-    <div class="cat-item"><div class="cat-icon">☀️</div><div class="cat-name">SPF & Sun Care</div><div class="cat-count">21</div></div>
-    <div class="cat-item"><div class="cat-icon">🔬</div><div class="cat-name">Actives & Serums</div><div class="cat-count">48</div></div>
-    <div class="cat-item"><div class="cat-icon">🌙</div><div class="cat-name">Night Recovery</div><div class="cat-count">29</div></div>
-    <div class="cat-item"><div class="cat-icon">💊</div><div class="cat-name">Supplements</div><div class="cat-count">17</div></div>
   </div>
 </section>
 
-<section class="section-editorial">
-  <div class="editorial-panel dark">
-    <div class="editorial-eyebrow">Our Methodology</div>
-    <h3 class="editorial-title">We only list brands that <em>earn</em> it.</h3>
-    <p class="editorial-body">Every brand passes a rigorous clinical review — ingredient transparency, third-party testing, dermatologist endorsement, and real-world efficacy data. No exceptions.</p>
-    <button class="btn-editorial">Our Vetting Process</button>
+<!-- FEATURED BRANDS -->
+<section class="featured-section reveal">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">Featured Brands</div>
+      <h2 class="section-title">Brands we <em>stand behind</em></h2>
+    </div>
+    <a href="/brand-directory.html" class="section-link">View All 21 Brands →</a>
   </div>
-  <div class="editorial-panel">
-    <div class="editorial-eyebrow">Latest Editorial</div>
-    <h3 class="editorial-title">The <em>nighttime</em> routine that actually works.</h3>
-    <p class="editorial-body">Sleep is the original skin treatment. We break down the science of circadian-aligned skincare — and which brands have the formulas to match.</p>
-    <button class="btn-editorial">Read the Guide</button>
+  <div class="brands-grid">
+    <a href="/brand-page.html" class="brand-card">
+      <div class="brand-card-bar"></div>
+      <div class="brand-card-top"><div class="brand-initials">SC</div><span class="brand-badge">Affiliate</span></div>
+      <div class="brand-cat">Anti-Aging / Antioxidants</div>
+      <div class="brand-name">SkinCeuticals</div>
+      <p class="brand-desc">Three decades of antioxidant research powering clinical-grade formulas trusted by dermatologists worldwide.</p>
+      <div class="brand-card-footer"><span class="brand-rating">★★★★★ 4.9</span><span class="brand-card-arrow">↗</span></div>
+    </a>
+    <a href="/brand-directory.html" class="brand-card">
+      <div class="brand-card-bar"></div>
+      <div class="brand-card-top"><div class="brand-initials">AL</div><span class="brand-badge">Affiliate</span></div>
+      <div class="brand-cat">Post-Procedure / Repair</div>
+      <div class="brand-name">Alastin</div>
+      <p class="brand-desc">Physician-developed TriHex technology clinically proven to rebuild the extracellular matrix and accelerate skin recovery.</p>
+      <div class="brand-card-footer"><span class="brand-rating">★★★★★ 4.9</span><span class="brand-card-arrow">↗</span></div>
+    </a>
+    <a href="/brand-directory.html" class="brand-card">
+      <div class="brand-card-bar"></div>
+      <div class="brand-card-top"><div class="brand-initials">PS</div><span class="brand-badge">Affiliate</span></div>
+      <div class="brand-cat">Regenerative / Exosome</div>
+      <div class="brand-name">Plated Skin Science</div>
+      <p class="brand-desc">Pioneering exosome-powered skincare harnessing platelet-derived biology to accelerate cellular renewal.</p>
+      <div class="brand-card-footer"><span class="brand-rating">★★★★★ 4.8</span><span class="brand-card-arrow">↗</span></div>
+    </a>
+    <a href="/brand-directory.html" class="brand-card">
+      <div class="brand-card-bar"></div>
+      <div class="brand-card-top"><div class="brand-initials">DE</div><span class="brand-badge" style="background:var(--accent)">New</span></div>
+      <div class="brand-cat">Clean Actives / Barrier</div>
+      <div class="brand-name">Drunk Elephant</div>
+      <p class="brand-desc">Biocompatible formulas free from the Suspicious 6 — potent actives with barrier-supporting ingredients.</p>
+      <div class="brand-card-footer"><span class="brand-rating">★★★★★ 4.6</span><span class="brand-card-arrow">↗</span></div>
+    </a>
+    <a href="/brand-directory.html" class="brand-card">
+      <div class="brand-card-bar"></div>
+      <div class="brand-card-top"><div class="brand-initials">TH</div><span class="brand-badge">Affiliate</span></div>
+      <div class="brand-cat">Luxury Natural / Farm-to-Face</div>
+      <div class="brand-name">Tata Harper</div>
+      <p class="brand-desc">100% natural, non-toxic luxury skincare formulated on a Vermont farm with bioactive ingredients free from synthetic fillers.</p>
+      <div class="brand-card-footer"><span class="brand-rating">★★★★★ 4.7</span><span class="brand-card-arrow">↗</span></div>
+    </a>
+    <a href="/brand-directory.html" class="brand-card">
+      <div class="brand-card-bar"></div>
+      <div class="brand-card-top"><div class="brand-initials">SG</div><span class="brand-badge" style="background:var(--accent)">New</span></div>
+      <div class="brand-cat">SPF / Sun Protection</div>
+      <div class="brand-name">Supergoop!</div>
+      <p class="brand-desc">Innovative, skin-loving sunscreens that make SPF something you actually want to wear every single day.</p>
+      <div class="brand-card-footer"><span class="brand-rating">★★★★★ 4.7</span><span class="brand-card-arrow">↗</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section reveal">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">Our Approach</div>
+      <h2 class="section-title">How we <em>vet</em> every brand</h2>
+    </div>
+  </div>
+  <div class="how-grid">
+    <div class="how-card">
+      <div class="how-num">01</div>
+      <div class="how-title">Ingredient <em>Review</em></div>
+      <p class="how-body">We evaluate every key active ingredient against published clinical literature. Concentration, formulation pH, and bioavailability all matter — and we check all three.</p>
+    </div>
+    <div class="how-card">
+      <div class="how-num">02</div>
+      <div class="how-title">Clinical <em>Evidence</em></div>
+      <p class="how-body">We look for third-party studies and peer-reviewed research — not brand-funded marketing claims. If the science isn't there, the brand isn't in our directory.</p>
+    </div>
+    <div class="how-card">
+      <div class="how-num">03</div>
+      <div class="how-title">Real-World <em>Results</em></div>
+      <p class="how-body">We validate that clinical promise translates in real life — through consumer data, long-term reviews, and wherever possible, direct testing of products.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EDITORIAL -->
+<section class="editorial-section reveal">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">From the Editorial</div>
+      <h2 class="section-title">The science, <em>explained</em></h2>
+    </div>
+    <a href="/editorial.html" class="section-link">All Articles →</a>
+  </div>
+  <div class="editorial-grid">
+    <a href="/article-am-routine.html" class="editorial-card featured">
+      <div class="ed-cat">Routine Guide</div>
+      <div class="ed-title">The 5-step AM routine that actually holds up to scrutiny</div>
+      <p class="ed-excerpt">We cut through the noise and built a morning routine around the five steps with the strongest clinical evidence behind them. No filler. No trend-chasing. Just science.</p>
+      <div class="ed-meta">6 min read · March 4, 2026</div>
+    </a>
+    <a href="/article-actives.html" class="editorial-card">
+      <div class="ed-cat">Ingredient Spotlight</div>
+      <div class="ed-title">Why active ingredients are the most important part of your routine</div>
+      <p class="ed-excerpt">Actives are the only ingredients that actually change your skin. Here's what they are and which ones work.</p>
+      <div class="ed-meta">7 min read · March 5, 2026</div>
+    </a>
+    <a href="/editorial.html" class="editorial-card">
+      <div class="ed-cat">Sleep & Skin</div>
+      <div class="ed-title">Why your skin does its best work while you sleep</div>
+      <p class="ed-excerpt">The circadian biology behind your skin's overnight repair cycle — and how to make the most of it.</p>
+      <div class="ed-meta">5 min read · Coming Soon</div>
+    </a>
+  </div>
+</section>
+
+<!-- SKIN TYPE SECTION -->
+<section class="skin-section reveal">
+  <div class="skin-inner">
+    <div class="skin-eyebrow">Shop by Skin Type</div>
+    <h2 class="skin-headline">Find brands built<br><em>for your skin.</em></h2>
+    <p class="skin-sub">Every skin type has different needs. Browse our directory filtered by what your skin actually responds to.</p>
+    <div class="skin-types">
+      <a href="/brand-directory.html" class="skin-type" style="text-decoration:none;">
+        <div class="skin-type-icon">💧</div>
+        <div class="skin-type-name">Dry</div>
+        <p class="skin-type-desc">Barrier-focused, ceramide-rich formulas that restore hydration and lock it in.</p>
+        <span class="skin-type-link">Browse Brands →</span>
+      </a>
+      <a href="/brand-directory.html" class="skin-type" style="text-decoration:none;">
+        <div class="skin-type-icon">✨</div>
+        <div class="skin-type-name">Oily</div>
+        <p class="skin-type-desc">Lightweight, non-comedogenic formulas that balance sebum without stripping.</p>
+        <span class="skin-type-link">Browse Brands →</span>
+      </a>
+      <a href="/brand-directory.html" class="skin-type" style="text-decoration:none;">
+        <div class="skin-type-icon">🌿</div>
+        <div class="skin-type-name">Sensitive</div>
+        <p class="skin-type-desc">Fragrance-free, minimal-ingredient formulas clinically tested for reactive skin.</p>
+        <span class="skin-type-link">Browse Brands →</span>
+      </a>
+      <a href="/brand-directory.html" class="skin-type" style="text-decoration:none;">
+        <div class="skin-type-icon">🔬</div>
+        <div class="skin-type-name">Anti-Aging</div>
+        <p class="skin-type-desc">Retinol, peptides, and antioxidants with the clinical evidence to back them up.</p>
+        <span class="skin-type-link">Browse Brands →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter reveal">
+  <div class="newsletter-inner">
+    <div class="newsletter-eyebrow">Stay in the Know</div>
+    <h2 class="newsletter-title">Skincare science,<br><em>in your inbox.</em></h2>
+    <p class="newsletter-sub">Weekly ingredient breakdowns, new brand reviews, and honest skincare guidance — delivered every Sunday morning.</p>
+    <div class="newsletter-form">
+      <input class="newsletter-input" type="email" placeholder="your@email.com" />
+      <button class="newsletter-btn">Subscribe →</button>
+    </div>
+    <div class="newsletter-perks">
+      <span class="newsletter-perk">Weekly editorial</span>
+      <span class="newsletter-perk">Ingredient of the month</span>
+      <span class="newsletter-perk">No spam, ever</span>
+    </div>
   </div>
 </section>
 
 <footer>
   <div>
     <div class="footer-logo">Well Rested <span>Skincare</span></div>
-    <p class="footer-tagline">Your trusted guide to clinically validated skincare and wellness brands — all in one place.</p>
+    <p class="footer-tagline">Your trusted guide to clinically validated skincare and wellness brands.</p>
+    <div class="footer-social">
+      <a href="https://instagram.com/wellrestedskincare" class="footer-social-link" target="_blank">ig</a>
+    </div>
   </div>
   <div>
     <div class="footer-col-title">Explore</div>
-    <ul class="footer-links"><li><a href="#">All Brands</a></li><li><a href="#">Categories</a></li><li><a href="#">Top Rated</a></li><li><a href="#">New Arrivals</a></li></ul>
+    <ul class="footer-links"><li><a href="/brand-directory.html">All Brands</a></li><li><a href="/editorial.html">Editorial</a></li><li><a href="/brand-directory.html">Top Rated</a></li></ul>
   </div>
   <div>
     <div class="footer-col-title">Company</div>
-    <ul class="footer-links"><li><a href="#">About Us</a></li><li><a href="#">Editorial</a></li><li><a href="#">Methodology</a></li><li><a href="#">Contact</a></li></ul>
+    <ul class="footer-links"><li><a href="/about.html">About Us</a></li><li><a href="/about.html">Contact</a></li><li><a href="/editorial.html">Methodology</a></li></ul>
   </div>
   <div>
     <div class="footer-col-title">Legal</div>
-    <ul class="footer-links"><li><a href="#">Affiliate Disclosure</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li></ul>
+    <ul class="footer-links"><li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li></ul>
   </div>
 </footer>
 <div class="footer-bottom">
@@ -280,13 +494,10 @@
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
-      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 100);
+      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 60);
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.06 });
   reveals.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
-</artifact>
-
-
