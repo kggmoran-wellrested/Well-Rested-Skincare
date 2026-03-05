@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 5-Step AM Routine That Actually Holds Up to Scrutiny — Well Rested Skincare</title>
+  <meta name="description" content="We cut through the noise and built a morning skincare routine around the five steps with the strongest clinical evidence behind them." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #FAFAF8; --off-white: #F2F0EB; --ink: #1A1A18;
+      --ink-light: #4A4A46; --ink-faint: #9A9A94;
+      --sage-pale: #D6E3D4; --teal: #3D7A7A; --teal-light: #5A9E9E;
+      --accent: #C8A882; --border: #E0DDD6;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--teal-light); }
+
+    .article-header { padding: 120px 64px 80px; background: var(--off-white); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .header-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 80px 80px; opacity: 0.4; }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; }
+    .breadcrumb { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
+    .breadcrumb a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--teal); }
+    .breadcrumb-sep { font-size: 10px; color: var(--border); }
+    .breadcrumb-current { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); }
+    .article-cat { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white); background: var(--teal); padding: 4px 12px; display: inline-block; margin-bottom: 20px; }
+    .article-title { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 5vw, 58px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 20px; }
+    .article-title em { font-style: italic; color: var(--teal); }
+    .article-subtitle { font-size: 18px; font-weight: 300; line-height: 1.7; color: var(--ink-light); max-width: 620px; margin-bottom: 32px; }
+    .article-meta { display: flex; align-items: center; gap: 16px; }
+    .meta-item { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
+    .meta-divider { width: 1px; height: 14px; background: var(--border); }
+
+    .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 0; }
+    .article-body { padding: 64px; border-right: 1px solid var(--border); max-width: 100%; }
+    .article-sidebar { padding: 40px 32px; background: var(--off-white); position: sticky; top: 60px; height: fit-content; }
+
+    .article-intro { font-size: 17px; font-weight: 300; line-height: 1.9; color: var(--ink-light); margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--border); }
+    .article-intro strong { font-weight: 500; color: var(--ink); }
+
+    .step-block { margin-bottom: 56px; padding-bottom: 56px; border-bottom: 1px solid var(--border); }
+    .step-block:last-of-type { border-bottom: none; }
+    .step-number { font-family: 'DM Serif Display', serif; font-size: 80px; color: var(--border); line-height: 1; margin-bottom: 4px; }
+    .step-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .step-label::before { content: ''; display: block; width: 16px; height: 1px; background: var(--teal); }
+    .step-title { font-family: 'DM Serif Display', serif; font-size: 32px; letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 16px; }
+    .step-title em { font-style: italic; color: var(--teal); }
+    .body-text { font-size: 15px; font-weight: 300; line-height: 1.9; color: var(--ink-light); margin-bottom: 16px; }
+    .body-text strong { font-weight: 500; color: var(--ink); }
+    .body-text:last-child { margin-bottom: 0; }
+
+    .science-box { background: var(--sage-pale); border-left: 3px solid var(--teal); padding: 20px 24px; margin: 24px 0; }
+    .science-box-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+    .science-box p { font-size: 14px; font-weight: 300; line-height: 1.8; color: var(--ink-light); }
+    .science-box strong { font-weight: 500; color: var(--ink); }
+
+    .brand-ref { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border: 1px solid var(--border); background: var(--white); margin: 20px 0; cursor: pointer; transition: border-color 0.2s; text-decoration: none; }
+    .brand-ref:hover { border-color: var(--teal); }
+    .brand-ref-initials { width: 40px; height: 40px; background: var(--off-white); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--teal); flex-shrink: 0; }
+    .brand-ref-info { flex: 1; }
+    .brand-ref-name { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
+    .brand-ref-desc { font-size: 12px; font-weight: 300; color: var(--ink-faint); }
+    .brand-ref-arrow { color: var(--teal); font-size: 14px; }
+
+    .routine-summary { background: var(--ink); padding: 40px; margin: 48px 0; }
+    .summary-title { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--white); margin-bottom: 24px; }
+    .summary-steps { display: flex; flex-direction: column; gap: 12px; }
+    .summary-step { display: flex; align-items: center; gap: 16px; padding: 14px 18px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); }
+    .summary-num { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--teal-light); width: 20px; flex-shrink: 0; }
+    .summary-step-name { font-size: 14px; font-weight: 500; color: var(--white); flex: 1; }
+    .summary-step-tip { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+
+    .conclusion { margin-top: 56px; padding-top: 56px; border-top: 1px solid var(--border); }
+    .conclusion-title { font-family: 'DM Serif Display', serif; font-size: 28px; letter-spacing: -0.5px; margin-bottom: 16px; }
+    .conclusion-title em { font-style: italic; color: var(--teal); }
+
+    .sidebar-section { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--border); }
+    .sidebar-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .sidebar-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 16px; }
+    .toc-item { font-size: 13px; font-weight: 300; color: var(--ink-light); padding: 9px 0; border-bottom: 1px solid var(--border); text-decoration: none; display: block; transition: color 0.2s; }
+    .toc-item:hover { color: var(--teal); }
+    .toc-item:last-child { border-bottom: none; }
+    .toc-num { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--teal); margin-right: 8px; }
+
+    .key-takeaways { display: flex; flex-direction: column; gap: 10px; }
+    .takeaway { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; font-weight: 300; line-height: 1.6; color: var(--ink-light); }
+    .takeaway-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; margin-top: 6px; }
+
+    .related-articles { display: flex; flex-direction: column; gap: 12px; }
+    .related-item { padding: 14px; border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s; text-decoration: none; display: block; }
+    .related-item:hover { border-color: var(--teal); }
+    .related-cat { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+    .related-title { font-size: 13px; font-weight: 400; color: var(--ink); line-height: 1.4; }
+
+    footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
+    .footer-logo span { color: var(--teal-light); }
+    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 240px; }
+    .footer-col-title { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.22); margin-bottom: 18px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--teal-light); }
+    .footer-bottom { background: var(--ink); padding: 18px 64px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; }
+    .footer-bottom-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.16); }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
+  <ul class="nav-links">
+    <li><a href="/brand-directory.html">Brands</a></li>
+    <li><a href="/editorial.html" class="active">Editorial</a></li>
+    <li><a href="/about.html">About</a></li>
+  </ul>
+  <button class="nav-cta">Explore Brands</button>
+</nav>
+
+<div class="article-header">
+  <div class="header-grid"></div>
+  <div class="header-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/editorial.html">Editorial</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">Routine Guides</span>
+    </div>
+    <span class="article-cat">Routine Guide</span>
+    <h1 class="article-title">The 5-step AM routine that <em>actually</em> holds up to scrutiny</h1>
+    <p class="article-subtitle">We cut through the noise and built a morning routine around the five steps with the strongest clinical evidence behind them. No filler. No trend-chasing. Just science.</p>
+    <div class="article-meta">
+      <span class="meta-item">Well Rested Editorial</span>
+      <div class="meta-divider"></div>
+      <span class="meta-item">March 4, 2026</span>
+      <div class="meta-divider"></div>
+      <span class="meta-item">6 min read</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-layout">
+  <div class="article-body">
+
+    <p class="article-intro reveal">The average skincare aisle contains hundreds of products all competing for your morning routine. Serums, essences, mists, eye creams, primers — the list is endless and the marketing is relentless. But if you strip away everything that isn't supported by robust clinical evidence, what are you left with? <strong>Five steps.</strong> Not ten. Not two. Five — each with a specific, documented job to do and a clear place in the order of application. Here's what they are and why they made the cut.</p>
+
+    <div class="routine-summary reveal">
+      <div class="summary-title">The 5-Step AM Routine</div>
+      <div class="summary-steps">
+        <div class="summary-step"><span class="summary-num">01</span><span class="summary-step-name">Cleanser</span><span class="summary-step-tip">Start clean</span></div>
+        <div class="summary-step"><span class="summary-num">02</span><span class="summary-step-name">Toner / Exfoliant</span><span class="summary-step-tip">Prep & refine</span></div>
+        <div class="summary-step"><span class="summary-num">03</span><span class="summary-step-name">Vitamin C Serum</span><span class="summary-step-tip">Antioxidant defence</span></div>
+        <div class="summary-step"><span class="summary-num">04</span><span class="summary-step-name">Moisturiser</span><span class="summary-step-tip">Seal & support</span></div>
+        <div class="summary-step"><span class="summary-num">05</span><span class="summary-step-name">SPF</span><span class="summary-step-tip">Always last, never optional</span></div>
+      </div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="step-block reveal" id="step-1">
+      <div class="step-number">01</div>
+      <div class="step-label">Step One</div>
+      <h2 class="step-title">Cleanser — <em>start with a clean canvas</em></h2>
+      <p class="body-text">Your skin accumulates sebum, sweat, and environmental residue overnight. A morning cleanse removes this buildup and prepares your skin to actually absorb the actives that follow. Skip it and you're layering expensive serums onto a surface that can't receive them properly.</p>
+      <p class="body-text">The key word for a morning cleanser is <strong>gentle</strong>. You're not removing makeup or sunscreen — you're just refreshing the skin. A harsh cleanser in the morning disrupts the acid mantle and compromises your barrier before the day has even started. Look for a low-pH, non-stripping formula.</p>
+      <div class="science-box">
+        <div class="science-box-label">The Science</div>
+        <p>The skin's acid mantle — a thin protective film with a pH of around 4.5–5.5 — is your first line of defence against bacteria and environmental damage. Over-cleansing raises skin pH, disrupts barrier function, and ironically triggers more oil production. <strong>Gentle is always better in the morning.</strong></p>
+      </div>
+      <a href="/brand-directory.html" class="brand-ref">
+        <div class="brand-ref-initials">CV</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">CeraVe Hydrating Facial Cleanser</div>
+          <div class="brand-ref-desc">Ceramide-rich, non-stripping, dermatologist-developed — a benchmark morning cleanser</div>
+        </div>
+        <span class="brand-ref-arrow">→</span>
+      </a>
+      <a href="/brand-directory.html" class="brand-ref">
+        <div class="brand-ref-initials">LR</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">La Roche-Posay Toleriane Hydrating Gentle Cleanser</div>
+          <div class="brand-ref-desc">Prebiotic thermal water formula ideal for sensitive and reactive skin types</div>
+        </div>
+        <span class="brand-ref-arrow">→</span>
+      </a>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step-block reveal" id="step-2">
+      <div class="step-number">02</div>
+      <div class="step-label">Step Two</div>
+      <h2 class="step-title">Toner / Exfoliant — <em>prep and refine</em></h2>
+      <p class="body-text">This step is optional in the morning — but when done correctly, it meaningfully improves the penetration and efficacy of everything that follows. A well-formulated toner balances pH, removes any residual cleanser, and primes the skin for active absorption.</p>
+      <p class="body-text">If you use a chemical exfoliant — AHA or BHA — the morning is actually not the ideal time due to increased photosensitivity. Save your actives exfoliant for the evening and use a hydrating, pH-balancing toner in the AM instead. The exception is niacinamide toners, which work beautifully in the morning and complement Vitamin C application.</p>
+      <div class="science-box">
+        <div class="science-box-label">The Science</div>
+        <p>AHAs (glycolic, lactic acid) and BHAs (salicylic acid) increase photosensitivity by removing the uppermost layer of dead skin cells, making UV protection more critical. If you use chemical exfoliants in the morning, <strong>a broad-spectrum SPF 30+ is non-negotiable — not just recommended.</strong></p>
+      </div>
+      <a href="/brand-directory.html" class="brand-ref">
+        <div class="brand-ref-initials">PC</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">Paula's Choice Skin Balancing Pore-Reducing Toner</div>
+          <div class="brand-ref-desc">Niacinamide-based, pore-minimising, ideal morning prep for combination and oily skin</div>
+        </div>
+        <span class="brand-ref-arrow">→</span>
+      </a>
+      <a href="/brand-directory.html" class="brand-ref">
+        <div class="brand-ref-initials">PQ</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">Prequel Bright Skin Toner</div>
+          <div class="brand-ref-desc">Brightening, barrier-safe toner with niacinamide and tranexamic acid — ideal AM prep for all skin types</div>
+        </div>
+        <span class="brand-ref-arrow">→</span>
+      </a>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step-block reveal" id="step-3">
+      <div class="step-number">03</div>
+      <div class="step-label">Step Three</div>
+      <h2 class="step-title">Vitamin C Serum — <em>your antioxidant defence</em></h2>
+      <p class="body-text">If there is one step that belongs exclusively in the morning routine, it's Vitamin C. As an antioxidant, its job is to neutralise free radicals generated by UV exposure and environmental pollution before they can damage collagen and trigger hyperpigmentation. It only makes sense to apply it before you face the day.</p>
+      <p class="body-text">Not all Vitamin C is equal. L-ascorbic acid is the most clinically validated form — but it's also the most unstable and requires a pH below 3.5 to be effective. Ascorbyl glucoside and sodium ascorbyl phosphate are more stable alternatives with a gentler profile, though the research behind them is less extensive. If efficacy is the priority, L-ascorbic acid at 10–20% concentration is the gold standard.</p>
+      <div class="science-box">
+        <div class="science-box-label">The Science</div>
+        <p>A landmark study found that L-ascorbic acid combined with Vitamin E and ferulic acid provides <strong>8x the photoprotection</strong> of Vitamin C alone. This combination — pioneered by SkinCeuticals — has become the most clinically referenced antioxidant serum formulation in dermatology.</p>
+      </div>
+      <a href="/brand-page.html" class="brand-ref">
+        <div class="brand-ref-initials">SC</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">SkinCeuticals C E Ferulic</div>
+          <div class="brand-ref-desc">The gold-standard Vitamin C serum — 15% L-ascorbic acid with Vitamin E and ferulic acid</div>
+        </div>
+        <span class="brand-ref-arrow">→</span>
+      </a>
+      <a href="/brand-directory.html" class="brand-ref">
+        <div class="brand-ref-initials">DE</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">Drunk Elephant C-Firma Fresh Day Serum</div>
+          <div class="brand-ref-desc">Biocompatible Vitamin C serum free from the Suspicious 6 — potent, stable, and clean</div>
+        </div>
+        <span class="brand-ref-arrow">→</span>
+      </a>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step-block reveal" id="step-4">
+      <div class="step-number">04</div>
+      <div class="step-label">Step Four</div>
+      <h2 class="step-title">Moisturiser — <em>seal and support</em></h2>
+      <p class="body-text">Moisturiser in the morning serves two functions: it seals in the actives you've just applied and it maintains the skin barrier throughout the day. A compromised barrier loses water faster, reacts more to environmental stressors, and absorbs irritants more readily. A daily moisturiser is your maintenance tool.</p>
+      <p class="body-text">The best morning moisturisers are lightweight, non-comedogenic, and formulated with barrier-supporting ingredients — ceramides, hyaluronic acid, and fatty acids. You don't need a heavy cream in the morning. What you need is something that locks in hydration without creating a film that interferes with your SPF application.</p>
+      <div class="science-box">
+        <div class="science-box-label">The Science</div>
+        <p>Ceramides make up approximately <strong>50% of the skin's barrier lipids</strong>. As we age, ceramide production declines — contributing to increased transepidermal water loss (TEWL), sensitivity, and visible dryness. Topical ceramide application has been clinically shown to restore barrier function and reduce TEWL.</p>
+      </div>
+      <a href="/brand-directory.html" class="brand-ref">
+        <div class="brand-ref-initials">CV</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">CeraVe AM Facial Moisturising Lotion</div>
+          <div class="brand-ref-desc">Ceramide and hyaluronic acid formula with SPF 30 — two steps in one for minimal routines</div>
+        </div>
+        <span class="brand-ref-arrow">→</span>
+      </a>
+      <a href="/brand-directory.html" class="brand-ref">
+        <div class="brand-ref-initials">SF</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">Summer Fridays Dreamy Dew Moisturiser</div>
+          <div class="brand-ref-desc">Lightweight, barrier-loving morning moisturiser with a beautiful skin-first formula</div>
+        </div>
+        <span class="brand-ref-arrow">→</span>
+      </a>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="step-block reveal" id="step-5">
+      <div class="step-number">05</div>
+      <div class="step-label">Step Five</div>
+      <h2 class="step-title">SPF — <em>always last, never optional</em></h2>
+      <p class="body-text">SPF is the single most evidence-backed step in any skincare routine. Full stop. UV radiation is the primary driver of photoaging — responsible for an estimated 80–90% of visible skin aging including fine lines, hyperpigmentation, loss of elasticity, and uneven texture. Every other step in this routine is largely undone if you skip sunscreen.</p>
+      <p class="body-text">SPF goes on last in your morning routine, after moisturiser. This is non-negotiable — applying anything on top of sunscreen dilutes and disrupts the filter system, reducing its effectiveness. Use at least SPF 30, broad-spectrum (UVA and UVB), and apply generously. Most people apply less than half the amount needed for the stated protection level.</p>
+      <div class="science-box">
+        <div class="science-box-label">The Science</div>
+        <p>A 2013 study published in the Annals of Internal Medicine found that daily sunscreen use over 4.5 years resulted in <strong>24% less skin aging</strong> compared to discretionary use. No serum, no retinol, no treatment delivers results comparable to consistent daily SPF. It is the most cost-effective anti-aging intervention available.</p>
+      </div>
+      <a href="/brand-directory.html" class="brand-ref">
+        <div class="brand-ref-initials">SG</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">Supergoop! Unseen Sunscreen SPF 40</div>
+          <div class="brand-ref-desc">Weightless, invisible finish — our favourite daily SPF for wearing under makeup or alone</div>
+        </div>
+        <span class="brand-ref-arrow">→</span>
+      </a>
+      <a href="/brand-directory.html" class="brand-ref">
+        <div class="brand-ref-initials">LR</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">La Roche-Posay Anthelios Mineral SPF 50</div>
+          <div class="brand-ref-desc">Excellent mineral option for sensitive skin — lightweight finish, very high protection</div>
+        </div>
+        <span class="brand-ref-arrow">→</span>
+      </a>
+    </div>
+
+    <div class="conclusion reveal">
+      <h2 class="conclusion-title">The <em>bottom line</em></h2>
+      <p class="body-text">Five steps. That's all you need in the morning to meaningfully protect, maintain, and improve your skin over time. Cleanser to start clean. Toner to prep. Vitamin C for antioxidant defence. Moisturiser to seal and support. SPF because nothing else matters without it.</p>
+      <p class="body-text">Everything else — the essences, the mists, the eye creams, the primers — can come later, once these five are locked in as daily non-negotiables. Build the foundation first. The rest is refinement.</p>
+      <p class="body-text">That's the Well Rested approach: science first, simplicity always, results that show.</p>
+    </div>
+
+  </div>
+
+  <div class="article-sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">In This Article</div>
+      <a href="#step-1" class="toc-item"><span class="toc-num">01</span>Cleanser</a>
+      <a href="#step-2" class="toc-item"><span class="toc-num">02</span>Toner / Exfoliant</a>
+      <a href="#step-3" class="toc-item"><span class="toc-num">03</span>Vitamin C Serum</a>
+      <a href="#step-4" class="toc-item"><span class="toc-num">04</span>Moisturiser</a>
+      <a href="#step-5" class="toc-item"><span class="toc-num">05</span>SPF</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Key Takeaways</div>
+      <div class="key-takeaways">
+        <div class="takeaway"><div class="takeaway-dot"></div>Use a gentle, low-pH cleanser in the morning — never strip your skin</div>
+        <div class="takeaway"><div class="takeaway-dot"></div>Vitamin C is the one active that belongs exclusively in the AM</div>
+        <div class="takeaway"><div class="takeaway-dot"></div>SPF always goes on last and is never optional</div>
+        <div class="takeaway"><div class="takeaway-dot"></div>Most people apply less than half the SPF needed for stated protection</div>
+        <div class="takeaway"><div class="takeaway-dot"></div>Chemical exfoliants are better suited to a PM routine</div>
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Shop the Routine</div>
+      <a href="/brand-directory.html" style="display:block; background:var(--teal); color:var(--white); font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; padding:14px; text-align:center; text-decoration:none;">Browse All Brands →</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Related Articles</div>
+      <div class="related-articles">
+        <a href="/editorial.html" class="related-item">
+          <div class="related-cat">Sleep & Skin</div>
+          <div class="related-title">Why your skin does its best work while you sleep</div>
+        </a>
+        <a href="/editorial.html" class="related-item">
+          <div class="related-cat">Ingredient Spotlight</div>
+          <div class="related-title">Vitamin C: everything you need to know before you buy</div>
+        </a>
+        <a href="/editorial.html" class="related-item">
+          <div class="related-cat">Routine Guide</div>
+          <div class="related-title">Build the perfect PM routine around your skin's repair cycle</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">Well Rested <span>Skincare</span></div>
+    <p class="footer-tagline">Your trusted guide to clinically validated skincare and wellness brands.</p>
+  </div>
+  <div>
+    <div class="footer-col-title">Explore</div>
+    <ul class="footer-links"><li><a href="/brand-directory.html">All Brands</a></li><li><a href="/editorial.html">Editorial</a></li></ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Company</div>
+    <ul class="footer-links"><li><a href="/about.html">About Us</a></li><li><a href="/about.html">Contact</a></li></ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Legal</div>
+    <ul class="footer-links"><li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li></ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span class="footer-bottom-text">© 2026 Well Rested Skincare. All rights reserved.</span>
+  <span class="footer-bottom-text">Affiliate links disclosed on all product pages.</span>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
