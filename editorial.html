@@ -17,16 +17,13 @@
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
-
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
     .nav-logo { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
     .nav-logo span { color: var(--teal); }
     .nav-links { display: flex; gap: 30px; list-style: none; }
     .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--teal); }
-    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; transition: background 0.2s; }
-    .nav-cta:hover { background: var(--teal-light); }
-
+    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; }
     .page-header { padding: 120px 64px 64px; background: var(--ink); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
     .header-grid-lines { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 80px 80px; }
     .header-inner { position: relative; z-index: 1; display: flex; align-items: flex-end; justify-content: space-between; }
@@ -39,18 +36,15 @@
     .header-right { text-align: right; }
     .header-issue { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 8px; }
     .header-date { font-family: 'DM Serif Display', serif; font-size: 18px; color: rgba(255,255,255,0.4); }
-
     .cat-nav { display: flex; align-items: center; border-bottom: 1px solid var(--border); overflow-x: auto; padding: 0 64px; background: var(--white); }
     .cat-nav::-webkit-scrollbar { display: none; }
     .cat-nav-item { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); padding: 18px 20px; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; transition: color 0.2s, border-color 0.2s; background: none; border-top: none; border-left: none; border-right: none; }
     .cat-nav-item:hover { color: var(--teal); }
     .cat-nav-item.active { color: var(--teal); border-bottom-color: var(--teal); }
-
-    /* FEATURED */
     .featured-article { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); cursor: pointer; text-decoration: none; color: inherit; }
     .featured-article:hover .featured-img-inner { transform: scale(1.02); }
     .featured-img { overflow: hidden; background: var(--off-white); min-height: 480px; position: relative; }
-    .featured-img-inner { position: absolute; inset: 0; transition: transform 0.5s ease; display: flex; align-items: center; justify-content: center; }
+    .featured-img-inner { position: absolute; inset: 0; transition: transform 0.5s ease; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #d4e8d0, #8fb08a); }
     .featured-img-text { font-family: 'DM Serif Display', serif; font-size: 80px; color: rgba(255,255,255,0.15); letter-spacing: -3px; }
     .featured-cat-pill { position: absolute; top: 28px; left: 28px; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--white); color: var(--teal); padding: 6px 14px; z-index: 2; }
     .featured-content { padding: 56px; display: flex; flex-direction: column; justify-content: center; }
@@ -59,33 +53,25 @@
     .featured-title { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3vw, 44px); letter-spacing: -0.8px; line-height: 1.1; margin-bottom: 20px; }
     .featured-title em { font-style: italic; color: var(--teal); }
     .featured-excerpt { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--ink-light); margin-bottom: 32px; }
-    .featured-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+    .featured-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
     .meta-author { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
     .meta-sep { width: 1px; height: 14px; background: var(--border); }
-    .meta-date { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--ink-faint); }
-    .meta-read { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--ink-faint); }
-    .read-btn { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: none; border: none; color: var(--teal); cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 0; transition: gap 0.2s; }
-    .read-btn:hover { gap: 14px; }
-
-    /* LIVE BADGE */
-    .live-badge { display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--sage-pale); color: var(--teal); border: 1px solid var(--teal); padding: 3px 10px; margin-bottom: 16px; }
-    .live-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--teal); }
-
+    .meta-date { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ink-faint); }
+    .meta-read { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ink-faint); }
+    .read-btn { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); display: inline-flex; align-items: center; gap: 8px; }
+    .live-badge { display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--sage-pale); color: var(--teal); border: 1px solid var(--teal); padding: 3px 10px; margin-bottom: 16px; width: fit-content; }
+    .live-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
     .articles-section { padding: 64px; }
     .articles-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
     .articles-section-title { font-family: 'DM Serif Display', serif; font-size: 28px; letter-spacing: -0.5px; color: var(--ink); }
     .articles-section-title em { font-style: italic; color: var(--teal); }
-    .see-all { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
-    .see-all:hover { color: var(--teal); }
-
+    .see-all { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); background: none; border: none; cursor: pointer; }
     .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
     .article-card { background: var(--white); cursor: pointer; transition: background 0.2s; position: relative; overflow: hidden; text-decoration: none; color: inherit; display: block; }
     .article-card:hover { background: #f0f6f0; }
-    .article-card:hover .article-img-inner { transform: scale(1.04); }
-    .article-card:hover .article-read-link { gap: 10px; }
     .article-card.published { border-top: 2px solid var(--teal); }
     .article-img { height: 200px; overflow: hidden; position: relative; }
-    .article-img-inner { position: absolute; inset: 0; transition: transform 0.4s ease; display: flex; align-items: center; justify-content: center; }
+    .article-img-inner { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
     .article-img-emoji { font-size: 48px; }
     .article-cat-pill { position: absolute; bottom: 14px; left: 14px; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; z-index: 2; color: var(--white); }
     .article-body { padding: 28px; }
@@ -93,49 +79,43 @@
     .article-excerpt { font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--ink-light); margin-bottom: 20px; }
     .article-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid var(--border); }
     .article-meta-sm { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
-    .article-read-link { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); display: flex; align-items: center; gap: 6px; transition: gap 0.2s; background: none; border: none; cursor: pointer; text-decoration: none; }
-
+    .article-read-link { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); text-decoration: none; }
     .img-routine { background: linear-gradient(135deg, #d4e8d0, #8fb08a); }
     .img-ingredient { background: linear-gradient(135deg, #dce8f0, #5a9e9e); }
     .img-brand { background: linear-gradient(135deg, #f0e8d8, #c8a882); }
     .img-sleep { background: linear-gradient(135deg, #1a1a18, #3d7a7a); }
     .img-routine2 { background: linear-gradient(135deg, #e8ddf0, #9a7ab0); }
     .img-ingredient2 { background: linear-gradient(135deg, #f0ead8, #b0956a); }
-
     .pill-routine { background: var(--teal); }
     .pill-ingredient { background: var(--ink); }
     .pill-brand { background: var(--accent); }
     .pill-sleep { background: #2d4a5a; }
-
+    .topics-section { padding: 64px; background: var(--off-white); border-bottom: 1px solid var(--border); }
+    .topics-title { font-family: 'DM Serif Display', serif; font-size: 28px; letter-spacing: -0.5px; margin-bottom: 32px; }
+    .topics-title em { font-style: italic; color: var(--teal); }
+    .topics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .topic-item { padding: 24px; background: var(--white); border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s; }
+    .topic-item:hover { border-color: var(--teal); }
+    .topic-icon { font-size: 24px; margin-bottom: 12px; }
+    .topic-name { font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--ink); margin-bottom: 6px; }
+    .topic-count { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
     .newsletter-strip { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .newsletter-left { padding: 64px; background: var(--teal); }
     .newsletter-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
     .newsletter-title { font-family: 'DM Serif Display', serif; font-size: 34px; letter-spacing: -0.5px; line-height: 1.15; color: var(--white); margin-bottom: 12px; }
     .newsletter-title em { font-style: italic; }
     .newsletter-sub { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 32px; }
-    .newsletter-form { display: flex; gap: 0; }
+    .newsletter-form { display: flex; }
     .newsletter-input { flex: 1; font-family: 'DM Sans', sans-serif; font-size: 13px; padding: 14px 18px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: var(--white); outline: none; }
     .newsletter-input::placeholder { color: rgba(255,255,255,0.4); }
-    .newsletter-submit { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--white); color: var(--teal); border: none; padding: 14px 24px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
-    .newsletter-submit:hover { background: var(--off-white); }
-    .newsletter-privacy { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.08em; color: rgba(255,255,255,0.3); margin-top: 12px; }
+    .newsletter-submit { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--white); color: var(--teal); border: none; padding: 14px 24px; cursor: pointer; white-space: nowrap; }
+    .newsletter-privacy { font-family: 'DM Mono', monospace; font-size: 8px; color: rgba(255,255,255,0.3); margin-top: 12px; }
     .newsletter-right { padding: 64px; background: var(--off-white); display: flex; flex-direction: column; justify-content: center; }
     .newsletter-perks { display: flex; flex-direction: column; gap: 20px; }
     .perk-item { display: flex; align-items: flex-start; gap: 14px; }
     .perk-icon { width: 36px; height: 36px; background: var(--white); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
     .perk-title { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
     .perk-desc { font-size: 12px; font-weight: 300; color: var(--ink-faint); line-height: 1.5; }
-
-    .topics-section { padding: 64px; background: var(--off-white); border-bottom: 1px solid var(--border); }
-    .topics-title { font-family: 'DM Serif Display', serif; font-size: 28px; letter-spacing: -0.5px; margin-bottom: 32px; }
-    .topics-title em { font-style: italic; color: var(--teal); }
-    .topics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-    .topic-item { padding: 24px; background: var(--white); border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
-    .topic-item:hover { border-color: var(--teal); transform: translateY(-2px); }
-    .topic-icon { font-size: 24px; margin-bottom: 12px; }
-    .topic-name { font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--ink); margin-bottom: 6px; }
-    .topic-count { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
-
     footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
     .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
     .footer-logo span { color: var(--teal-light); }
@@ -146,7 +126,6 @@
     .footer-links a:hover { color: var(--teal-light); }
     .footer-bottom { background: var(--ink); padding: 18px 64px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; }
     .footer-bottom-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.16); }
-
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
   </style>
@@ -186,13 +165,12 @@
   <button class="cat-nav-item" data-cat="sleep">Sleep & Skin Science</button>
 </div>
 
-<!-- FEATURED — AM ROUTINE (PUBLISHED) -->
-<a href="/article-am-routine.html" class="featured-article reveal" style="text-decoration:none; color:inherit;">
+<a href="/article-am-routine.html" class="featured-article reveal">
   <div class="featured-img">
-    <div class="featured-img-inner img-routine">
+    <div class="featured-img-inner">
       <div class="featured-img-text">AM</div>
     </div>
-    <div class="featured-cat-pill pill-routine">Routine Guide</div>
+    <div class="featured-cat-pill">Routine Guide</div>
   </div>
   <div class="featured-content">
     <div class="live-badge"><span class="live-dot"></span>Now Live</div>
@@ -217,8 +195,7 @@
   </div>
   <div class="articles-grid reveal" id="articlesGrid">
 
-    <!-- PUBLISHED 1 — ACTIVES -->
-    <a href="/article-actives.html" class="article-card published" data-cat="ingredient" style="text-decoration:none;">
+    <a href="/article-actives.html" class="article-card published" data-cat="ingredient">
       <div class="article-img">
         <div class="article-img-inner img-ingredient"><span class="article-img-emoji">⚗️</span></div>
         <span class="article-cat-pill pill-ingredient">Ingredient Spotlight</span>
@@ -234,8 +211,7 @@
       </div>
     </a>
 
-    <!-- PUBLISHED 2 — AM ROUTINE (second placement) -->
-    <a href="/article-am-routine.html" class="article-card published" data-cat="routine" style="text-decoration:none;">
+    <a href="/article-am-routine.html" class="article-card published" data-cat="routine">
       <div class="article-img">
         <div class="article-img-inner img-routine"><span class="article-img-emoji">🌅</span></div>
         <span class="article-cat-pill pill-routine">Routine Guide</span>
@@ -251,7 +227,6 @@
       </div>
     </a>
 
-    <!-- COMING SOON articles -->
     <div class="article-card" data-cat="ingredient">
       <div class="article-img">
         <div class="article-img-inner img-ingredient2"><span class="article-img-emoji">🍊</span></div>
@@ -262,7 +237,7 @@
         <p class="article-excerpt">Not all Vitamin C is created equal. L-ascorbic acid, ascorbyl glucoside, MAP — we break down which form is actually worth your money.</p>
         <div class="article-footer">
           <span class="article-meta-sm">Coming Soon</span>
-          <button class="article-read-link">Read →</button>
+          <span class="article-read-link">Read →</span>
         </div>
       </div>
     </div>
@@ -277,7 +252,7 @@
         <p class="article-excerpt">We put Tata Harper's bioactive claims under the microscope — and came away with a more nuanced answer than we expected.</p>
         <div class="article-footer">
           <span class="article-meta-sm">Coming Soon</span>
-          <button class="article-read-link">Read →</button>
+          <span class="article-read-link">Read →</span>
         </div>
       </div>
     </div>
@@ -289,10 +264,10 @@
       </div>
       <div class="article-body">
         <div class="article-title">Retinol vs retinoids: a plain-English guide for real people</div>
-        <p class="article-excerpt">Retinol, tretinoin, retinaldehyde, adapalene — the retinoid family is confusing. Here's what each one actually does and who it's for.</p>
+        <p class="article-excerpt">Retinol, tretinoin, retinaldehyde, adapalene — the retinoid family is confusing. Here's what each one actually does.</p>
         <div class="article-footer">
           <span class="article-meta-sm">Coming Soon</span>
-          <button class="article-read-link">Read →</button>
+          <span class="article-read-link">Read →</span>
         </div>
       </div>
     </div>
@@ -304,10 +279,10 @@
       </div>
       <div class="article-body">
         <div class="article-title">Cortisol, sleep debt, and why your skin looks tired</div>
-        <p class="article-excerpt">Chronic poor sleep elevates cortisol, degrades collagen, and disrupts the skin barrier. The science behind looking — and feeling — exhausted.</p>
+        <p class="article-excerpt">Chronic poor sleep elevates cortisol, degrades collagen, and disrupts the skin barrier.</p>
         <div class="article-footer">
           <span class="article-meta-sm">Coming Soon</span>
-          <button class="article-read-link">Read →</button>
+          <span class="article-read-link">Read →</span>
         </div>
       </div>
     </div>
@@ -322,7 +297,7 @@
         <p class="article-excerpt">Your nighttime routine isn't just skincare — it's biology. Here's how to layer actives in sync with your skin's overnight regeneration window.</p>
         <div class="article-footer">
           <span class="article-meta-sm">Coming Soon</span>
-          <button class="article-read-link">Read →</button>
+          <span class="article-read-link">Read →</span>
         </div>
       </div>
     </div>
@@ -334,10 +309,10 @@
       </div>
       <div class="article-body">
         <div class="article-title">Plated Skin Science: is the exosome revolution real?</div>
-        <p class="article-excerpt">Exosomes are being called the next frontier in skin regeneration. We look at the evidence behind Plated's platelet-derived technology.</p>
+        <p class="article-excerpt">Exosomes are being called the next frontier in skin regeneration. We look at the evidence behind Plated's technology.</p>
         <div class="article-footer">
           <span class="article-meta-sm">Coming Soon</span>
-          <button class="article-read-link">Read →</button>
+          <span class="article-read-link">Read →</span>
         </div>
       </div>
     </div>
@@ -352,7 +327,7 @@
         <p class="article-excerpt">Compression wrinkles are real — and they compound over years. The simple changes that protect your skin while you sleep.</p>
         <div class="article-footer">
           <span class="article-meta-sm">Coming Soon</span>
-          <button class="article-read-link">Read →</button>
+          <span class="article-read-link">Read →</span>
         </div>
       </div>
     </div>
@@ -428,8 +403,7 @@
       btn.classList.add('active');
       const cat = btn.dataset.cat;
       document.querySelectorAll('.article-card').forEach(card => {
-        const match = cat === 'all' || card.dataset.cat === cat;
-        card.style.display = match ? 'block' : 'none';
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
       });
     });
   });
