@@ -65,7 +65,7 @@
     .brands-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
     .brands-grid.list-view { grid-template-columns: 1fr; }
 
-    .brand-card { background: var(--white); padding: 36px; cursor: pointer; transition: background 0.2s; position: relative; overflow: hidden; opacity: 0; animation: fadeUp 0.5s forwards; }
+    .brand-card { background: var(--white); padding: 36px; cursor: pointer; transition: background 0.2s; position: relative; overflow: hidden; opacity: 0; animation: fadeUp 0.5s forwards; text-decoration: none; display: block; color: inherit; }
     .brand-card:hover { background: var(--hover-bg); }
     .brand-card:hover .card-arrow { opacity: 1; transform: translate(3px, -3px); }
     .brand-card:hover .card-bar { width: 100%; }
@@ -88,6 +88,8 @@
     .stars-sm { color: var(--accent); font-size: 11px; letter-spacing: 1px; }
     .rating-val { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-light); }
     .card-arrow { font-size: 16px; color: var(--teal); opacity: 0; transition: all 0.25s; }
+    .card-shop-link { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); opacity: 0; transition: opacity 0.25s; }
+    .brand-card:hover .card-shop-link { opacity: 1; }
 
     .brands-grid.list-view .brand-card { padding: 24px 36px; display: grid; grid-template-columns: 52px 1fr auto; gap: 20px; align-items: center; }
     .brands-grid.list-view .card-bar { display: none; }
@@ -128,7 +130,6 @@
     <li><a href="/about.html">About</a></li>
   </ul>
   <button class="nav-cta">Newsletter</button>
-  <button class="filter-btn" data-filter="devices">At-Home Devices</button>
 </nav>
 
 <div class="page-header">
@@ -139,7 +140,7 @@
     <p class="page-sub">Our curated directory of clinically validated skincare and wellness brands — filtered, reviewed, and rated so you don't have to research alone.</p>
   </div>
   <div class="page-header-count">
-    <div class="count-num" id="totalCount">21</div>
+    <div class="count-num" id="totalCount">28</div>
     <div class="count-label">Brands Listed</div>
   </div>
 </div>
@@ -157,6 +158,7 @@
     <button class="filter-btn" data-filter="spf">SPF</button>
     <button class="filter-btn" data-filter="natural">Natural</button>
     <button class="filter-btn" data-filter="night">Night</button>
+    <button class="filter-btn" data-filter="devices">At-Home Devices</button>
     <button class="filter-btn" data-filter="affiliate">Affiliate</button>
   </div>
   <div class="sort-wrap">
@@ -171,7 +173,7 @@
 </div>
 
 <div class="results-meta">
-  <div class="results-count">Showing <span id="showingCount">21</span> brands</div>
+  <div class="results-count">Showing <span id="showingCount">28</span> brands</div>
   <div class="view-toggle">
     <button class="view-btn active" id="gridViewBtn" title="Grid view">⊞</button>
     <button class="view-btn" id="listViewBtn" title="List view">☰</button>
@@ -208,38 +210,40 @@
 <script>
 const brands = [
   // ── AFFILIATE PARTNERS ──
-  { id:1, name:"Skin II", initials:"SII", category:"Brightening / Repair", filters:["anti-aging","hydration","affiliate"], desc:"Advanced brightening and skin repair formulas grounded in peptide science and clinically proven actives for visibly healthier skin.", tags:["Peptides","Brightening","Repair"], rating:4.8, badge:"affiliate", featured:true },
-  { id:2, name:"Alastin", initials:"AL", category:"Post-Procedure / Repair", filters:["anti-aging","affiliate"], desc:"Physician-developed formulas clinically proven to accelerate skin recovery and rebuild the extracellular matrix for lasting results.", tags:["TriHex Technology","Post-Procedure","Collagen"], rating:4.9, badge:"affiliate", featured:true },
-  { id:3, name:"SkinCeuticals", initials:"SC", category:"Anti-Aging / Antioxidants", filters:["anti-aging","affiliate"], desc:"Three decades of antioxidant research powering clinical-grade formulas that neutralize free radicals and visibly reduce aging.", tags:["Vitamin C","Retinol","Antioxidants"], rating:4.9, badge:"affiliate", featured:true },
-  { id:4, name:"Paula's Choice", initials:"PC", category:"Acne / Pore Refinement", filters:["acne","anti-aging","affiliate"], desc:"Fragrance-free, research-backed formulas targeting blackheads, pores, and uneven texture without unnecessary irritants.", tags:["BHA","Niacinamide","AHA"], rating:4.7, badge:"affiliate", featured:true },
-  { id:5, name:"Plated Skin Science", initials:"PS", category:"Regenerative / Exosome", filters:["anti-aging","night","affiliate"], desc:"Pioneering exosome-powered skincare that harnesses platelet-derived biology to accelerate cellular renewal and reduce visible aging.", tags:["Exosomes","Regenerative","Peptides"], rating:4.8, badge:"affiliate", featured:true },
-  { id:6, name:"Tata Harper", initials:"TH", category:"Luxury Natural / Farm-to-Face", filters:["natural","anti-aging","affiliate"], desc:"100% natural, non-toxic luxury skincare formulated on a Vermont farm with bioactive ingredients free from synthetic fillers.", tags:["Natural","Non-Toxic","Bioactive"], rating:4.7, badge:"affiliate", featured:true },
+  { id:1, name:"Skin II", initials:"SII", category:"Brightening / Repair", filters:["anti-aging","hydration","affiliate"], desc:"Advanced brightening and skin repair formulas grounded in peptide science and clinically proven actives for visibly healthier skin.", tags:["Peptides","Brightening","Repair"], rating:4.8, badge:"affiliate", featured:true, link:null },
+  { id:2, name:"Alastin", initials:"AL", category:"Post-Procedure / Repair", filters:["anti-aging","affiliate"], desc:"Physician-developed formulas clinically proven to accelerate skin recovery and rebuild the extracellular matrix for lasting results.", tags:["TriHex Technology","Post-Procedure","Collagen"], rating:4.9, badge:"affiliate", featured:true, link:null },
+  { id:3, name:"SkinCeuticals", initials:"SC", category:"Anti-Aging / Antioxidants", filters:["anti-aging","affiliate"], desc:"Three decades of antioxidant research powering clinical-grade formulas that neutralize free radicals and visibly reduce aging.", tags:["Vitamin C","Retinol","Antioxidants"], rating:4.9, badge:"affiliate", featured:true, link:null },
+  { id:4, name:"Paula's Choice", initials:"PC", category:"Acne / Pore Refinement", filters:["acne","anti-aging","affiliate"], desc:"Fragrance-free, research-backed formulas targeting blackheads, pores, and uneven texture without unnecessary irritants.", tags:["BHA","Niacinamide","AHA"], rating:4.7, badge:"affiliate", featured:true, link:"https://amzn.to/3OQdbWw" },
+  { id:5, name:"Plated Skin Science", initials:"PS", category:"Regenerative / Exosome", filters:["anti-aging","night","affiliate"], desc:"Pioneering exosome-powered skincare that harnesses platelet-derived biology to accelerate cellular renewal and reduce visible aging.", tags:["Exosomes","Regenerative","Peptides"], rating:4.8, badge:"affiliate", featured:true, link:null },
+  { id:6, name:"Tata Harper", initials:"TH", category:"Luxury Natural / Farm-to-Face", filters:["natural","anti-aging","affiliate"], desc:"100% natural, non-toxic luxury skincare formulated on a Vermont farm with bioactive ingredients free from synthetic fillers.", tags:["Natural","Non-Toxic","Bioactive"], rating:4.7, badge:"affiliate", featured:true, link:null },
 
   // ── NEW ADDITIONS ──
-  { id:13, name:"Drunk Elephant", initials:"DE", category:"Clean Actives / Barrier", filters:["anti-aging","hydration"], desc:"Biocompatible formulas free from the 'Suspicious 6,' combining potent actives with skin-barrier-supporting ingredients at every price point.", tags:["Vitamin C","Retinol","Clean"], rating:4.6, badge:"new", featured:true },
-  { id:14, name:"Tatcha", initials:"TA", category:"Japanese Ritual / Hydration", filters:["hydration","natural","anti-aging"], desc:"Japanese beauty rituals meet modern skincare science — rice ferment, hadasei-3, and silk-derived ingredients for luminous, hydrated skin.", tags:["Rice Ferment","Hadasei-3","Silk Extract"], rating:4.7, badge:"new", featured:true },
-  { id:15, name:"Tower 28", initials:"T28", category:"Sensitive / Eczema-Safe", filters:["acne","hydration"], desc:"EWG-verified, dermatologist-tested formulas developed for sensitive and reactive skin, meeting the standards of the National Eczema Association.", tags:["Eczema-Safe","SOS Spray","Clean"], rating:4.5, badge:"new", featured:true },
-  { id:16, name:"Summer Fridays", initials:"SF", category:"Barrier / Hydration", filters:["hydration","natural"], desc:"Minimalist, skin-first formulas built around barrier-supporting ingredients — beloved for their Jet Lag Mask and effortlessly effective approach.", tags:["Barrier Cream","Hyaluronic Acid","Vegan"], rating:4.6, badge:"new", featured:true },
-  { id:17, name:"ZO Skin Health", initials:"ZO", category:"Medical-Grade / Anti-Aging", filters:["anti-aging","acne","night"], desc:"Developed by Dr. Zein Obagi, ZO bridges the gap between therapeutic skincare and aesthetics with physician-dispensed, high-performance formulas.", tags:["Retinol","Medical-Grade","Brightening"], rating:4.8, badge:"new", featured:true },
-  { id:18, name:"Elemis", initials:"EL", category:"Luxury Botanical / Pro-Aging", filters:["anti-aging","natural","night"], desc:"British luxury skincare powered by bioactive marine and botanical ingredients — a pioneer in pro-aging science with decades of spa-proven results.", tags:["Pro-Collagen","Marine","Botanical"], rating:4.7, badge:"new", featured:true },
-  { id:20, name:"Supergoop!", initials:"SG", category:"SPF / Sun Protection", filters:["spf"], desc:"Innovative, skin-loving sunscreens that make SPF something you actually want to wear — lightweight textures, clean formulas, and broad-spectrum protection for every skin type.", tags:["SPF","Broad-Spectrum","Clean"], rating:4.7, badge:"new", featured:true },
-  { id:21, name:"Prequel", initials:"PQ", category:"Toner / Actives", filters:["acne","hydration","anti-aging"], desc:"Barrier-intelligent actives designed to prep, brighten, and refine — Prequel's niacinamide and tranexamic acid formulas are some of the most thoughtfully constructed toners available.", tags:["Niacinamide","Tranexamic Acid","Brightening"], rating:4.6, badge:"new", featured:true },
-  { id: 22, name: "NIRA", category: "At-Home Devices", filter: "devices", rating: 4.8, badge: "new", description: "FDA-cleared non-fractional laser that stimulates collagen production to reduce fine lines — no pain, no downtime.", tags: ["Laser", "Collagen", "Anti-Aging"] },
-{ id: 23, name: "ZIIP", category: "At-Home Devices", filter: "devices", rating: 4.7, badge: "new", description: "Dual nanocurrent and microcurrent device delivering instant lift and long-term skin rejuvenation in a 4-minute treatment.", tags: ["Microcurrent", "Nanocurrent", "Lifting"] },
-{ id: 24, name: "Dr. Pen", category: "At-Home Devices", filter: "devices", rating: 4.6, badge: "new", description: "Professional-grade automated microneedling pen for collagen induction therapy — targets scarring, texture, and fine lines.", tags: ["Microneedling", "Collagen", "Resurfacing"] },
-{ id: 25, name: "JOVS", category: "At-Home Devices", filter: "devices", rating: 4.6, badge: "new", description: "Advanced DPL and IPL devices for photofacial skin rejuvenation, targeting pigmentation, redness, and signs of aging.", tags: ["DPL", "IPL", "Brightening"] },
-{ id: 26, name: "MyoLift", category: "At-Home Devices", filter: "devices", rating: 4.8, badge: "new", description: "FDA-cleared dual-wavelength microcurrent device by 7E Wellness — lifts, tones, and firms facial muscles with precision.", tags: ["Microcurrent", "Lifting", "FDA-Cleared"] },
-{ id: 27, name: "Maysama", category: "At-Home Devices", filter: "devices", rating: 4.7, badge: "new", description: "Pulsed LED light therapy masks and panels with clinically-backed wavelengths for collagen stimulation and skin rejuvenation.", tags: ["LED Therapy", "Red Light", "Collagen"] },
-{ id: 28, name: "NuDerma", category: "At-Home Devices", filter: "devices", rating: 4.5, badge: "new", description: "High-frequency neon and argon skin wands that oxygenate skin, fight acne-causing bacteria, and boost serum absorption.", tags: ["High Frequency", "Acne", "Anti-Aging"] },
+  { id:13, name:"Drunk Elephant", initials:"DE", category:"Clean Actives / Barrier", filters:["anti-aging","hydration"], desc:"Biocompatible formulas free from the 'Suspicious 6,' combining potent actives with skin-barrier-supporting ingredients at every price point.", tags:["Vitamin C","Retinol","Clean"], rating:4.6, badge:"new", featured:true, link:"https://amzn.to/475s65x" },
+  { id:14, name:"Tatcha", initials:"TA", category:"Japanese Ritual / Hydration", filters:["hydration","natural","anti-aging"], desc:"Japanese beauty rituals meet modern skincare science — rice ferment, hadasei-3, and silk-derived ingredients for luminous, hydrated skin.", tags:["Rice Ferment","Hadasei-3","Silk Extract"], rating:4.7, badge:"new", featured:true, link:null },
+  { id:15, name:"Tower 28", initials:"T28", category:"Sensitive / Eczema-Safe", filters:["acne","hydration"], desc:"EWG-verified, dermatologist-tested formulas developed for sensitive and reactive skin, meeting the standards of the National Eczema Association.", tags:["Eczema-Safe","SOS Spray","Clean"], rating:4.5, badge:"new", featured:true, link:"https://amzn.to/4d1GY8A" },
+  { id:16, name:"Summer Fridays", initials:"SF", category:"Barrier / Hydration", filters:["hydration","natural"], desc:"Minimalist, skin-first formulas built around barrier-supporting ingredients — beloved for their Jet Lag Mask and effortlessly effective approach.", tags:["Barrier Cream","Hyaluronic Acid","Vegan"], rating:4.6, badge:"new", featured:true, link:"https://amzn.to/4b7QFjd" },
+  { id:17, name:"ZO Skin Health", initials:"ZO", category:"Medical-Grade / Anti-Aging", filters:["anti-aging","acne","night"], desc:"Developed by Dr. Zein Obagi, ZO bridges the gap between therapeutic skincare and aesthetics with physician-dispensed, high-performance formulas.", tags:["Retinol","Medical-Grade","Brightening"], rating:4.8, badge:"new", featured:true, link:null },
+  { id:18, name:"Elemis", initials:"EL", category:"Luxury Botanical / Pro-Aging", filters:["anti-aging","natural","night"], desc:"British luxury skincare powered by bioactive marine and botanical ingredients — a pioneer in pro-aging science with decades of spa-proven results.", tags:["Pro-Collagen","Marine","Botanical"], rating:4.7, badge:"new", featured:true, link:null },
+  { id:20, name:"Supergoop!", initials:"SG", category:"SPF / Sun Protection", filters:["spf"], desc:"Innovative, skin-loving sunscreens that make SPF something you actually want to wear — lightweight textures, clean formulas, and broad-spectrum protection for every skin type.", tags:["SPF","Broad-Spectrum","Clean"], rating:4.7, badge:"new", featured:true, link:"https://amzn.to/3MYYccd" },
+  { id:21, name:"Prequel", initials:"PQ", category:"Toner / Actives", filters:["acne","hydration","anti-aging"], desc:"Barrier-intelligent actives designed to prep, brighten, and refine — Prequel's niacinamide and tranexamic acid formulas are some of the most thoughtfully constructed toners available.", tags:["Niacinamide","Tranexamic Acid","Brightening"], rating:4.6, badge:"new", featured:true, link:null },
+
+  // ── AT-HOME DEVICES ──
+  { id:22, name:"NIRA", initials:"NR", category:"At-Home Devices", filters:["devices","anti-aging"], desc:"FDA-cleared non-fractional laser that stimulates collagen production to reduce fine lines — no pain, no downtime.", tags:["Laser","Collagen","Anti-Aging"], rating:4.8, badge:"new", featured:true, link:null },
+  { id:23, name:"ZIIP", initials:"ZP", category:"At-Home Devices", filters:["devices","anti-aging"], desc:"Dual nanocurrent and microcurrent device delivering instant lift and long-term skin rejuvenation in a 4-minute treatment.", tags:["Microcurrent","Nanocurrent","Lifting"], rating:4.7, badge:"new", featured:true, link:null },
+  { id:24, name:"Dr. Pen", initials:"DP", category:"At-Home Devices", filters:["devices","acne","anti-aging"], desc:"Professional-grade automated microneedling pen for collagen induction therapy — targets scarring, texture, and fine lines.", tags:["Microneedling","Collagen","Resurfacing"], rating:4.6, badge:"new", featured:true, link:null },
+  { id:25, name:"JOVS", initials:"JV", category:"At-Home Devices", filters:["devices","anti-aging"], desc:"Advanced DPL and IPL devices for photofacial skin rejuvenation, targeting pigmentation, redness, and signs of aging.", tags:["DPL","IPL","Brightening"], rating:4.6, badge:"new", featured:true, link:null },
+  { id:26, name:"MyoLift", initials:"ML", category:"At-Home Devices", filters:["devices","anti-aging"], desc:"FDA-cleared dual-wavelength microcurrent device by 7E Wellness — lifts, tones, and firms facial muscles with precision.", tags:["Microcurrent","Lifting","FDA-Cleared"], rating:4.8, badge:"new", featured:true, link:null },
+  { id:27, name:"Maysama", initials:"MS", category:"At-Home Devices", filters:["devices","anti-aging"], desc:"Pulsed LED light therapy masks and panels with clinically-backed wavelengths for collagen stimulation and skin rejuvenation.", tags:["LED Therapy","Red Light","Collagen"], rating:4.7, badge:"new", featured:true, link:null },
+  { id:28, name:"NuDerma", initials:"ND", category:"At-Home Devices", filters:["devices","acne","anti-aging"], desc:"High-frequency neon and argon skin wands that oxygenate skin, fight acne-causing bacteria, and boost serum absorption.", tags:["High Frequency","Acne","Anti-Aging"], rating:4.5, badge:"new", featured:true, link:null },
 
   // ── DIRECTORY ──
-  { id:7, name:"CeraVe", initials:"CV", category:"Hydration / Barrier Repair", filters:["hydration"], desc:"Dermatologist-developed formulas restoring the skin barrier with essential ceramides and gentle, clinically tested ingredients.", tags:["Ceramides","Hyaluronic Acid","Sensitive"], rating:4.6, badge:null, featured:false },
-  { id:8, name:"EltaMD", initials:"EM", category:"Sun Protection / SPF", filters:["spf"], desc:"Broad-spectrum mineral sunscreens trusted by dermatologists, with reef-safe photostable filters for every skin type.", tags:["SPF 50+","Mineral","Zinc Oxide"], rating:4.8, badge:"top", featured:false },
-  { id:9, name:"La Roche-Posay", initials:"LR", category:"Sensitive / Rosacea", filters:["hydration","acne"], desc:"Prebiotic thermal spring water formulas for sensitive, reactive, and compromised skin, endorsed by dermatologists worldwide.", tags:["Thermal Water","Rosacea","Prebiotic"], rating:4.7, badge:null, featured:false },
-  { id:10, name:"The INKEY List", initials:"TI", category:"Actives / Peptides", filters:["anti-aging","acne"], desc:"Transparent single-ingredient formulas delivering clinical-grade actives at accessible price points without compromise.", tags:["Peptides","Retinol","AHA/BHA"], rating:4.5, badge:null, featured:false },
-  { id:11, name:"Dermatica", initials:"DM", category:"Prescription Actives", filters:["anti-aging","acne"], desc:"Personalised prescription-strength skincare formulated by dermatologists, targeting hyperpigmentation, acne, and aging.", tags:["Retinoids","Azelaic Acid","Personalised"], rating:4.9, badge:null, featured:false },
-  { id:12, name:"Biossance", initials:"BI", category:"Sustainable / Clean", filters:["natural","hydration"], desc:"Squalane-powered clean beauty backed by biotechnology — deeply hydrating, sustainably sourced, and clinically validated.", tags:["Squalane","Clean Beauty","Sustainable"], rating:4.6, badge:null, featured:false },
-  { id:19, name:"Obagi", initials:"OB", category:"Medical-Grade / Rx", filters:["anti-aging","acne"], desc:"Physician-strength formulas targeting hyperpigmentation, acne, and advanced aging with decades of clinical evidence behind each product.", tags:["Hydroquinone","Retinoids","Rx-Grade"], rating:4.7, badge:null, featured:false }
+  { id:7, name:"CeraVe", initials:"CV", category:"Hydration / Barrier Repair", filters:["hydration"], desc:"Dermatologist-developed formulas restoring the skin barrier with essential ceramides and gentle, clinically tested ingredients.", tags:["Ceramides","Hyaluronic Acid","Sensitive"], rating:4.6, badge:null, featured:false, link:"https://amzn.to/3OWojB6" },
+  { id:8, name:"EltaMD", initials:"EM", category:"Sun Protection / SPF", filters:["spf"], desc:"Broad-spectrum mineral sunscreens trusted by dermatologists, with reef-safe photostable filters for every skin type.", tags:["SPF 50+","Mineral","Zinc Oxide"], rating:4.8, badge:"top", featured:false, link:null },
+  { id:9, name:"La Roche-Posay", initials:"LR", category:"Sensitive / Rosacea", filters:["hydration","acne"], desc:"Prebiotic thermal spring water formulas for sensitive, reactive, and compromised skin, endorsed by dermatologists worldwide.", tags:["Thermal Water","Rosacea","Prebiotic"], rating:4.7, badge:null, featured:false, link:"https://amzn.to/3MQSvNv" },
+  { id:10, name:"The INKEY List", initials:"TI", category:"Actives / Peptides", filters:["anti-aging","acne"], desc:"Transparent single-ingredient formulas delivering clinical-grade actives at accessible price points without compromise.", tags:["Peptides","Retinol","AHA/BHA"], rating:4.5, badge:null, featured:false, link:null },
+  { id:11, name:"Dermatica", initials:"DM", category:"Prescription Actives", filters:["anti-aging","acne"], desc:"Personalised prescription-strength skincare formulated by dermatologists, targeting hyperpigmentation, acne, and aging.", tags:["Retinoids","Azelaic Acid","Personalised"], rating:4.9, badge:null, featured:false, link:null },
+  { id:12, name:"Biossance", initials:"BI", category:"Sustainable / Clean", filters:["natural","hydration"], desc:"Squalane-powered clean beauty backed by biotechnology — deeply hydrating, sustainably sourced, and clinically validated.", tags:["Squalane","Clean Beauty","Sustainable"], rating:4.6, badge:null, featured:false, link:null },
+  { id:19, name:"Obagi", initials:"OB", category:"Medical-Grade / Rx", filters:["anti-aging","acne"], desc:"Physician-strength formulas targeting hyperpigmentation, acne, and advanced aging with decades of clinical evidence behind each product.", tags:["Hydroquinone","Retinoids","Rx-Grade"], rating:4.7, badge:null, featured:false, link:"https://amzn.to/4b7Q4ht" }
 ];
 
 let activeFilter = 'all', activeView = 'grid', searchTerm = '', sortMode = 'featured';
@@ -267,8 +271,11 @@ function renderBrands() {
   grid.innerHTML = filtered.map((b, i) => {
     const badgeLabel = b.badge === 'affiliate' ? 'Affiliate' : b.badge === 'featured' ? 'Featured' : b.badge === 'new' ? 'New' : b.badge === 'top' ? 'Top Rated' : '';
     const badgeHTML = b.badge ? `<span class="badge badge-${b.badge}">${badgeLabel}</span>` : '';
+    const shopLabel = b.link ? `<span class="card-shop-link">Shop on Amazon →</span>` : `<span class="card-arrow">↗</span>`;
+    const tag = b.link ? 'a' : 'div';
+    const attrs = b.link ? `href="${b.link}" target="_blank" rel="nofollow sponsored"` : '';
     return `
-      <div class="brand-card" style="animation-delay:${i*45}ms">
+      <${tag} class="brand-card" ${attrs} style="animation-delay:${i*45}ms">
         <div class="card-bar"></div>
         <div class="card-top">
           <div class="card-logo-placeholder">${b.initials}</div>
@@ -282,9 +289,9 @@ function renderBrands() {
         </div>
         <div class="card-footer">
           <div class="card-rating"><span class="stars-sm">★★★★★</span><span class="rating-val">${b.rating}</span></div>
-          <span class="card-arrow">↗</span>
+          ${shopLabel}
         </div>
-      </div>`;
+      </${tag}>`;
   }).join('');
 }
 
