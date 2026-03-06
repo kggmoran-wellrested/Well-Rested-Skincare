@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Editorial — Well Rested Skincare</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,18 +18,15 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
 
-   <nav>
-  <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
-  <ul class="nav-links">
-    <li><a href="/brand-directory.html">Brands</a></li>
-    <li><a href="/brand-directory.html">Categories</a></li>
-    <li><a href="/editorial.html">Editorial</a></li>
-    <li><a href="/about.html">About</a></li>
-  </ul>
-  <button class="nav-cta">Explore Brands</button>
-</nav>
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--teal-light); }
 
-    /* PAGE HEADER */
     .page-header { padding: 120px 64px 64px; background: var(--ink); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
     .header-grid-lines { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 80px 80px; }
     .header-inner { position: relative; z-index: 1; display: flex; align-items: flex-end; justify-content: space-between; }
@@ -43,18 +40,17 @@
     .header-issue { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 8px; }
     .header-date { font-family: 'DM Serif Display', serif; font-size: 18px; color: rgba(255,255,255,0.4); }
 
-    /* CATEGORY NAV */
     .cat-nav { display: flex; align-items: center; border-bottom: 1px solid var(--border); overflow-x: auto; padding: 0 64px; background: var(--white); }
     .cat-nav::-webkit-scrollbar { display: none; }
     .cat-nav-item { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); padding: 18px 20px; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; transition: color 0.2s, border-color 0.2s; background: none; border-top: none; border-left: none; border-right: none; }
     .cat-nav-item:hover { color: var(--teal); }
     .cat-nav-item.active { color: var(--teal); border-bottom-color: var(--teal); }
 
-    /* FEATURED ARTICLE */
-    .featured-article { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); cursor: pointer; }
+    /* FEATURED */
+    .featured-article { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); cursor: pointer; text-decoration: none; color: inherit; }
     .featured-article:hover .featured-img-inner { transform: scale(1.02); }
     .featured-img { overflow: hidden; background: var(--off-white); min-height: 480px; position: relative; }
-    .featured-img-inner { position: absolute; inset: 0; background: linear-gradient(135deg, #c8d8c4 0%, #8fb08a 40%, #3d7a7a 100%); transition: transform 0.5s ease; display: flex; align-items: center; justify-content: center; }
+    .featured-img-inner { position: absolute; inset: 0; transition: transform 0.5s ease; display: flex; align-items: center; justify-content: center; }
     .featured-img-text { font-family: 'DM Serif Display', serif; font-size: 80px; color: rgba(255,255,255,0.15); letter-spacing: -3px; }
     .featured-cat-pill { position: absolute; top: 28px; left: 28px; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--white); color: var(--teal); padding: 6px 14px; z-index: 2; }
     .featured-content { padding: 56px; display: flex; flex-direction: column; justify-content: center; }
@@ -71,7 +67,10 @@
     .read-btn { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: none; border: none; color: var(--teal); cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 0; transition: gap 0.2s; }
     .read-btn:hover { gap: 14px; }
 
-    /* ARTICLES GRID */
+    /* LIVE BADGE */
+    .live-badge { display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--sage-pale); color: var(--teal); border: 1px solid var(--teal); padding: 3px 10px; margin-bottom: 16px; }
+    .live-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--teal); }
+
     .articles-section { padding: 64px; }
     .articles-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
     .articles-section-title { font-family: 'DM Serif Display', serif; font-size: 28px; letter-spacing: -0.5px; color: var(--ink); }
@@ -80,11 +79,11 @@
     .see-all:hover { color: var(--teal); }
 
     .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
-
-    .article-card { background: var(--white); cursor: pointer; transition: background 0.2s; position: relative; overflow: hidden; }
+    .article-card { background: var(--white); cursor: pointer; transition: background 0.2s; position: relative; overflow: hidden; text-decoration: none; color: inherit; display: block; }
     .article-card:hover { background: #f0f6f0; }
     .article-card:hover .article-img-inner { transform: scale(1.04); }
     .article-card:hover .article-read-link { gap: 10px; }
+    .article-card.published { border-top: 2px solid var(--teal); }
     .article-img { height: 200px; overflow: hidden; position: relative; }
     .article-img-inner { position: absolute; inset: 0; transition: transform 0.4s ease; display: flex; align-items: center; justify-content: center; }
     .article-img-emoji { font-size: 48px; }
@@ -94,9 +93,8 @@
     .article-excerpt { font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--ink-light); margin-bottom: 20px; }
     .article-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid var(--border); }
     .article-meta-sm { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
-    .article-read-link { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); display: flex; align-items: center; gap: 6px; transition: gap 0.2s; background: none; border: none; cursor: pointer; }
+    .article-read-link { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); display: flex; align-items: center; gap: 6px; transition: gap 0.2s; background: none; border: none; cursor: pointer; text-decoration: none; }
 
-    /* COLOR VARIANTS FOR ARTICLE IMGS */
     .img-routine { background: linear-gradient(135deg, #d4e8d0, #8fb08a); }
     .img-ingredient { background: linear-gradient(135deg, #dce8f0, #5a9e9e); }
     .img-brand { background: linear-gradient(135deg, #f0e8d8, #c8a882); }
@@ -104,13 +102,11 @@
     .img-routine2 { background: linear-gradient(135deg, #e8ddf0, #9a7ab0); }
     .img-ingredient2 { background: linear-gradient(135deg, #f0ead8, #b0956a); }
 
-    /* PILL COLORS */
     .pill-routine { background: var(--teal); }
     .pill-ingredient { background: var(--ink); }
     .pill-brand { background: var(--accent); }
     .pill-sleep { background: #2d4a5a; }
 
-    /* NEWSLETTER STRIP */
     .newsletter-strip { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .newsletter-left { padding: 64px; background: var(--teal); }
     .newsletter-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
@@ -123,7 +119,6 @@
     .newsletter-submit { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--white); color: var(--teal); border: none; padding: 14px 24px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
     .newsletter-submit:hover { background: var(--off-white); }
     .newsletter-privacy { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.08em; color: rgba(255,255,255,0.3); margin-top: 12px; }
-
     .newsletter-right { padding: 64px; background: var(--off-white); display: flex; flex-direction: column; justify-content: center; }
     .newsletter-perks { display: flex; flex-direction: column; gap: 20px; }
     .perk-item { display: flex; align-items: flex-start; gap: 14px; }
@@ -131,7 +126,6 @@
     .perk-title { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
     .perk-desc { font-size: 12px; font-weight: 300; color: var(--ink-faint); line-height: 1.5; }
 
-    /* TOPICS ROW */
     .topics-section { padding: 64px; background: var(--off-white); border-bottom: 1px solid var(--border); }
     .topics-title { font-family: 'DM Serif Display', serif; font-size: 28px; letter-spacing: -0.5px; margin-bottom: 32px; }
     .topics-title em { font-style: italic; color: var(--teal); }
@@ -142,7 +136,6 @@
     .topic-name { font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--ink); margin-bottom: 6px; }
     .topic-count { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
 
-    /* FOOTER */
     footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
     .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
     .footer-logo span { color: var(--teal-light); }
@@ -156,24 +149,20 @@
 
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Well Rested <span>Skincare</span></a>
+  <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
   <ul class="nav-links">
-    <li><a href="#">Brands</a></li>
-    <li><a href="#">Categories</a></li>
-    <li><a href="#" class="active">Editorial</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="/brand-directory.html">Brands</a></li>
+    <li><a href="/editorial.html" class="active">Editorial</a></li>
+    <li><a href="/about.html">About</a></li>
   </ul>
   <button class="nav-cta">Newsletter</button>
 </nav>
 
-<!-- PAGE HEADER -->
 <div class="page-header">
   <div class="header-grid-lines"></div>
   <div class="header-inner">
@@ -189,7 +178,6 @@
   </div>
 </div>
 
-<!-- CATEGORY NAV -->
 <div class="cat-nav">
   <button class="cat-nav-item active" data-cat="all">All Articles</button>
   <button class="cat-nav-item" data-cat="routine">Routine Guides</button>
@@ -198,30 +186,30 @@
   <button class="cat-nav-item" data-cat="sleep">Sleep & Skin Science</button>
 </div>
 
-<!-- FEATURED ARTICLE -->
-<div class="featured-article reveal">
+<!-- FEATURED — AM ROUTINE (PUBLISHED) -->
+<a href="/article-am-routine.html" class="featured-article reveal" style="text-decoration:none; color:inherit;">
   <div class="featured-img">
-    <div class="featured-img-inner img-sleep">
-      <div class="featured-img-text">ZZZ</div>
+    <div class="featured-img-inner img-routine">
+      <div class="featured-img-text">AM</div>
     </div>
-    <div class="featured-cat-pill pill-sleep">Sleep & Skin Science</div>
+    <div class="featured-cat-pill pill-routine">Routine Guide</div>
   </div>
   <div class="featured-content">
-    <div class="featured-label">Editor's Pick</div>
-    <h2 class="featured-title">Why your skin does its best work <em>while you sleep</em></h2>
-    <p class="featured-excerpt">The circadian rhythm isn't just for your sleep cycle — your skin has one too. Between 11pm and 4am, cell turnover accelerates, repair enzymes activate, and collagen synthesis peaks. Here's how to work with your biology, not against it.</p>
+    <div class="live-badge"><span class="live-dot"></span>Now Live</div>
+    <div class="featured-label">Latest Article</div>
+    <h2 class="featured-title">The 5-step AM routine that <em>actually holds up to scrutiny</em></h2>
+    <p class="featured-excerpt">We cut through the noise and built a morning routine around the five steps with the strongest clinical evidence behind them. No filler. No trend-chasing. Just science — and the brands that deliver it.</p>
     <div class="featured-meta">
       <span class="meta-author">Well Rested Editorial</span>
       <div class="meta-sep"></div>
-      <span class="meta-date">March 10, 2026</span>
+      <span class="meta-date">March 4, 2026</span>
       <div class="meta-sep"></div>
-      <span class="meta-read">8 min read</span>
+      <span class="meta-read">6 min read</span>
     </div>
-    <button class="read-btn">Read Article →</button>
+    <span class="read-btn">Read Article →</span>
   </div>
-</div>
+</a>
 
-<!-- ARTICLES GRID -->
 <section class="articles-section">
   <div class="articles-header reveal">
     <h2 class="articles-section-title">Latest from the <em>journal</em></h2>
@@ -229,31 +217,51 @@
   </div>
   <div class="articles-grid reveal" id="articlesGrid">
 
-    <div class="article-card" data-cat="routine">
+    <!-- PUBLISHED 1 — ACTIVES -->
+    <a href="/article-actives.html" class="article-card published" data-cat="ingredient" style="text-decoration:none;">
+      <div class="article-img">
+        <div class="article-img-inner img-ingredient"><span class="article-img-emoji">⚗️</span></div>
+        <span class="article-cat-pill pill-ingredient">Ingredient Spotlight</span>
+      </div>
+      <div class="article-body">
+        <div class="live-badge"><span class="live-dot"></span>Now Live</div>
+        <div class="article-title">Why active ingredients are the most important part of your routine</div>
+        <p class="article-excerpt">Retinol, Vitamin C, AHAs, niacinamide, peptides — what they are, how they work, and which ones are worth your money.</p>
+        <div class="article-footer">
+          <span class="article-meta-sm">Mar 5 · 7 min</span>
+          <span class="article-read-link">Read →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- PUBLISHED 2 — AM ROUTINE (second placement) -->
+    <a href="/article-am-routine.html" class="article-card published" data-cat="routine" style="text-decoration:none;">
       <div class="article-img">
         <div class="article-img-inner img-routine"><span class="article-img-emoji">🌅</span></div>
         <span class="article-cat-pill pill-routine">Routine Guide</span>
       </div>
       <div class="article-body">
+        <div class="live-badge"><span class="live-dot"></span>Now Live</div>
         <div class="article-title">The 5-step AM routine that actually holds up to scrutiny</div>
         <p class="article-excerpt">We cut through the noise and built a morning routine around the five steps with the strongest clinical evidence behind them.</p>
         <div class="article-footer">
-          <span class="article-meta-sm">Mar 6 · 6 min</span>
-          <a href="/article-am-routine.html" class="article-read-link">Read →</a>
+          <span class="article-meta-sm">Mar 4 · 6 min</span>
+          <span class="article-read-link">Read →</span>
         </div>
       </div>
-    </div>
+    </a>
 
+    <!-- COMING SOON articles -->
     <div class="article-card" data-cat="ingredient">
       <div class="article-img">
-        <div class="article-img-inner img-ingredient"><span class="article-img-emoji">🍊</span></div>
+        <div class="article-img-inner img-ingredient2"><span class="article-img-emoji">🍊</span></div>
         <span class="article-cat-pill pill-ingredient">Ingredient Spotlight</span>
       </div>
       <div class="article-body">
         <div class="article-title">Vitamin C: everything you need to know before you buy</div>
         <p class="article-excerpt">Not all Vitamin C is created equal. L-ascorbic acid, ascorbyl glucoside, MAP — we break down which form is actually worth your money.</p>
         <div class="article-footer">
-          <span class="article-meta-sm">Mar 3 · 9 min</span>
+          <span class="article-meta-sm">Coming Soon</span>
           <button class="article-read-link">Read →</button>
         </div>
       </div>
@@ -268,7 +276,7 @@
         <div class="article-title">Tata Harper: luxury natural skincare or beautiful placebo?</div>
         <p class="article-excerpt">We put Tata Harper's bioactive claims under the microscope — and came away with a more nuanced answer than we expected.</p>
         <div class="article-footer">
-          <span class="article-meta-sm">Feb 28 · 7 min</span>
+          <span class="article-meta-sm">Coming Soon</span>
           <button class="article-read-link">Read →</button>
         </div>
       </div>
@@ -276,14 +284,14 @@
 
     <div class="article-card" data-cat="ingredient">
       <div class="article-img">
-        <div class="article-img-inner img-ingredient2"><span class="article-img-emoji">⚗️</span></div>
+        <div class="article-img-inner img-ingredient"><span class="article-img-emoji">⚗️</span></div>
         <span class="article-cat-pill pill-ingredient">Ingredient Spotlight</span>
       </div>
       <div class="article-body">
         <div class="article-title">Retinol vs retinoids: a plain-English guide for real people</div>
         <p class="article-excerpt">Retinol, tretinoin, retinaldehyde, adapalene — the retinoid family is confusing. Here's what each one actually does and who it's for.</p>
         <div class="article-footer">
-          <span class="article-meta-sm">Feb 22 · 10 min</span>
+          <span class="article-meta-sm">Coming Soon</span>
           <button class="article-read-link">Read →</button>
         </div>
       </div>
@@ -298,7 +306,7 @@
         <div class="article-title">Cortisol, sleep debt, and why your skin looks tired</div>
         <p class="article-excerpt">Chronic poor sleep elevates cortisol, degrades collagen, and disrupts the skin barrier. The science behind looking — and feeling — exhausted.</p>
         <div class="article-footer">
-          <span class="article-meta-sm">Feb 18 · 7 min</span>
+          <span class="article-meta-sm">Coming Soon</span>
           <button class="article-read-link">Read →</button>
         </div>
       </div>
@@ -313,7 +321,7 @@
         <div class="article-title">Build the perfect PM routine around your skin's repair cycle</div>
         <p class="article-excerpt">Your nighttime routine isn't just skincare — it's biology. Here's how to layer actives in sync with your skin's overnight regeneration window.</p>
         <div class="article-footer">
-          <span class="article-meta-sm">Feb 14 · 8 min</span>
+          <span class="article-meta-sm">Coming Soon</span>
           <button class="article-read-link">Read →</button>
         </div>
       </div>
@@ -328,22 +336,7 @@
         <div class="article-title">Plated Skin Science: is the exosome revolution real?</div>
         <p class="article-excerpt">Exosomes are being called the next frontier in skin regeneration. We look at the evidence behind Plated's platelet-derived technology.</p>
         <div class="article-footer">
-          <span class="article-meta-sm">Feb 10 · 8 min</span>
-          <button class="article-read-link">Read →</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="article-card" data-cat="ingredient">
-      <div class="article-img">
-        <div class="article-img-inner img-ingredient"><span class="article-img-emoji">💧</span></div>
-        <span class="article-cat-pill pill-ingredient">Ingredient Spotlight</span>
-      </div>
-      <div class="article-body">
-        <div class="article-title">The hyaluronic acid mistake most people are making</div>
-        <p class="article-excerpt">Applying HA to dry skin can actually pull moisture out of the dermis. We explain how to use it correctly — and which molecular weights matter.</p>
-        <div class="article-footer">
-          <span class="article-meta-sm">Feb 5 · 5 min</span>
+          <span class="article-meta-sm">Coming Soon</span>
           <button class="article-read-link">Read →</button>
         </div>
       </div>
@@ -358,7 +351,7 @@
         <div class="article-title">Sleep position, pillow fabric, and the lines you wake up with</div>
         <p class="article-excerpt">Compression wrinkles are real — and they compound over years. The simple changes that protect your skin while you sleep.</p>
         <div class="article-footer">
-          <span class="article-meta-sm">Jan 30 · 4 min</span>
+          <span class="article-meta-sm">Coming Soon</span>
           <button class="article-read-link">Read →</button>
         </div>
       </div>
@@ -367,34 +360,16 @@
   </div>
 </section>
 
-<!-- TOPICS -->
 <section class="topics-section reveal">
   <h2 class="topics-title">Browse by <em>topic</em></h2>
   <div class="topics-grid">
-    <div class="topic-item">
-      <div class="topic-icon">🌅</div>
-      <div class="topic-name">Routine Guides</div>
-      <div class="topic-count">12 articles</div>
-    </div>
-    <div class="topic-item">
-      <div class="topic-icon">⚗️</div>
-      <div class="topic-name">Ingredient Spotlights</div>
-      <div class="topic-count">18 articles</div>
-    </div>
-    <div class="topic-item">
-      <div class="topic-icon">🏷️</div>
-      <div class="topic-name">Brand Reviews</div>
-      <div class="topic-count">9 articles</div>
-    </div>
-    <div class="topic-item">
-      <div class="topic-icon">🌙</div>
-      <div class="topic-name">Sleep & Skin Science</div>
-      <div class="topic-count">7 articles</div>
-    </div>
+    <div class="topic-item"><div class="topic-icon">🌅</div><div class="topic-name">Routine Guides</div><div class="topic-count">2 articles live</div></div>
+    <div class="topic-item"><div class="topic-icon">⚗️</div><div class="topic-name">Ingredient Spotlights</div><div class="topic-count">1 article live</div></div>
+    <div class="topic-item"><div class="topic-icon">🏷️</div><div class="topic-name">Brand Reviews</div><div class="topic-count">Coming soon</div></div>
+    <div class="topic-item"><div class="topic-icon">🌙</div><div class="topic-name">Sleep & Skin Science</div><div class="topic-count">Coming soon</div></div>
   </div>
 </section>
 
-<!-- NEWSLETTER -->
 <div class="newsletter-strip reveal">
   <div class="newsletter-left">
     <div class="newsletter-eyebrow">The Well Rested Edit</div>
@@ -408,23 +383,13 @@
   </div>
   <div class="newsletter-right">
     <div class="newsletter-perks">
-      <div class="perk-item">
-        <div class="perk-icon">📬</div>
-        <div><div class="perk-title">Weekly editorial</div><div class="perk-desc">New articles every Tuesday, curated by our editorial team.</div></div>
-      </div>
-      <div class="perk-item">
-        <div class="perk-icon">🔬</div>
-        <div><div class="perk-title">Ingredient of the month</div><div class="perk-desc">Deep-dive breakdowns on the actives worth knowing.</div></div>
-      </div>
-      <div class="perk-item">
-        <div class="perk-icon">🏷️</div>
-        <div><div class="perk-title">Exclusive brand deals</div><div class="perk-desc">Subscriber-only discounts from our affiliate partners.</div></div>
-      </div>
+      <div class="perk-item"><div class="perk-icon">📬</div><div><div class="perk-title">Weekly editorial</div><div class="perk-desc">New articles every Tuesday, curated by our editorial team.</div></div></div>
+      <div class="perk-item"><div class="perk-icon">🔬</div><div><div class="perk-title">Ingredient of the month</div><div class="perk-desc">Deep-dive breakdowns on the actives worth knowing.</div></div></div>
+      <div class="perk-item"><div class="perk-icon">🏷️</div><div><div class="perk-title">Exclusive brand deals</div><div class="perk-desc">Subscriber-only discounts from our affiliate partners.</div></div></div>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div>
     <div class="footer-logo">Well Rested <span>Skincare</span></div>
@@ -432,15 +397,15 @@
   </div>
   <div>
     <div class="footer-col-title">Explore</div>
-    <ul class="footer-links"><li><a href="#">All Brands</a></li><li><a href="#">Categories</a></li><li><a href="#">Top Rated</a></li><li><a href="#">New Arrivals</a></li></ul>
+    <ul class="footer-links"><li><a href="/brand-directory.html">All Brands</a></li><li><a href="/editorial.html">Editorial</a></li></ul>
   </div>
   <div>
     <div class="footer-col-title">Editorial</div>
-    <ul class="footer-links"><li><a href="#">Routine Guides</a></li><li><a href="#">Ingredients</a></li><li><a href="#">Brand Reviews</a></li><li><a href="#">Sleep & Skin</a></li></ul>
+    <ul class="footer-links"><li><a href="/article-am-routine.html">Routine Guides</a></li><li><a href="/article-actives.html">Ingredients</a></li></ul>
   </div>
   <div>
     <div class="footer-col-title">Legal</div>
-    <ul class="footer-links"><li><a href="#">Affiliate Disclosure</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li></ul>
+    <ul class="footer-links"><li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li></ul>
   </div>
 </footer>
 <div class="footer-bottom">
@@ -449,7 +414,6 @@
 </div>
 
 <script>
-  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -458,7 +422,6 @@
   }, { threshold: 0.08 });
   reveals.forEach(el => observer.observe(el));
 
-  // Category filter
   document.querySelectorAll('.cat-nav-item').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.cat-nav-item').forEach(b => b.classList.remove('active'));
@@ -473,25 +436,3 @@
 </script>
 </body>
 </html>
-</artifact>
-
-Your **Editorial / Blog** page is done! Here's what's built in:
-
-**Structure:**
-- Dark editorial header — gives it a magazine masthead feel distinct from the other pages
-- Featured hero article with full image treatment
-- 9 seeded articles across all 4 content pillars
-- Browse by topic section
-- Newsletter signup with subscriber perks
-
-**Content seeded across all 4 pillars:**
-- Routine Guides — AM routine, PM routine around the repair cycle
-- Ingredient Spotlights — Vitamin C forms, Retinol vs retinoids, Hyaluronic acid mistakes
-- Brand Reviews — Tata Harper, Plated Skin Science
-- Sleep & Skin — Circadian biology, cortisol & sleep debt, sleep position & compression wrinkles
-
-**Functional:**
-- Category filter tabs work — click any pillar to filter the grid
-- Newsletter form is ready to wire up to Mailchimp or any email provider
-
-That's all four pages complete. Ready to write those **affiliate application pitches** now?
