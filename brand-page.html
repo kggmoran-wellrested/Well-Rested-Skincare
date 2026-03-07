@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SkinCeuticals — Well Rested Skincare</title>
+  <title>Brand — Well Rested Skincare</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -13,558 +13,559 @@
       --white: #FAFAF8; --off-white: #F2F0EB; --ink: #1A1A18;
       --ink-light: #4A4A46; --ink-faint: #9A9A94;
       --sage-pale: #D6E3D4; --teal: #3D7A7A; --teal-light: #5A9E9E;
-      --accent: #C8A882; --border: #E0DDD6;
+      --accent: #C8A882; --border: #E0DDD6; --hover-bg: #EEF5EE;
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
 
-    <nav>
-  <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
-  <ul class="nav-links">
-    <li><a href="/brand-directory.html">Brands</a></li>
-    <li><a href="/brand-directory.html">Categories</a></li>
-    <li><a href="/editorial.html">Editorial</a></li>
-    <li><a href="/about.html">About</a></li>
-  </ul>
-  <button class="nav-cta">Explore Brands</button>
-</nav>
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+    .nav-cta:hover { background: var(--teal-light); }
 
     /* BREADCRUMB */
-    .breadcrumb { padding: 80px 64px 0; display: flex; align-items: center; gap: 10px; }
-    .breadcrumb a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb { padding: 80px 64px 0; display: flex; align-items: center; gap: 8px; }
+    .breadcrumb a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); text-decoration: none; transition: color 0.2s; }
     .breadcrumb a:hover { color: var(--teal); }
-    .breadcrumb-sep { font-size: 10px; color: var(--border); }
-    .breadcrumb-current { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); }
+    .breadcrumb-sep { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--border); }
+    .breadcrumb-current { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); }
 
-    /* HERO SPLIT */
-    .brand-hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 560px; border-bottom: 1px solid var(--border); }
+    /* BRAND HERO */
+    .brand-hero { padding: 40px 64px 64px; background: var(--off-white); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .brand-hero-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 80px 80px; opacity: 0.4; }
+    .brand-hero-inner { position: relative; z-index: 1; display: flex; align-items: flex-start; gap: 48px; }
+    .brand-monogram { width: 100px; height: 100px; background: var(--white); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--teal); flex-shrink: 0; letter-spacing: -1px; }
+    .brand-hero-text { flex: 1; }
+    .brand-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .brand-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal); }
+    .brand-name { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5vw, 64px); letter-spacing: -1.5px; line-height: 1.0; margin-bottom: 16px; }
+    .brand-name em { font-style: italic; color: var(--teal); }
+    .brand-desc { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--ink-light); max-width: 560px; margin-bottom: 24px; }
+    .brand-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .brand-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); color: var(--ink-light); background: var(--white); }
+    .brand-tag.primary { background: var(--teal); color: var(--white); border-color: var(--teal); }
+    .brand-hero-stat { position: absolute; right: 64px; bottom: 40px; z-index: 1; text-align: right; }
+    .stat-num { font-family: 'DM Serif Display', serif; font-size: 72px; color: var(--border); line-height: 1; }
+    .stat-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
 
-    .brand-hero-left { padding: 48px 64px 64px; display: flex; flex-direction: column; justify-content: center; }
-
-    .brand-meta-row { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
-    .brand-badge { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; background: var(--teal); color: var(--white); }
-    .brand-affiliate-badge { background: var(--ink); color: var(--white); font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; }
-    .brand-category-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
-
-    .brand-name { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 5vw, 68px); letter-spacing: -1.5px; line-height: 1.0; margin-bottom: 8px; opacity: 0; animation: fadeUp 0.6s 0.1s forwards; }
-    .brand-tagline { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 20px; color: var(--teal); margin-bottom: 24px; opacity: 0; animation: fadeUp 0.6s 0.2s forwards; }
-    .brand-summary { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--ink-light); max-width: 440px; margin-bottom: 36px; opacity: 0; animation: fadeUp 0.6s 0.3s forwards; }
-
-    .brand-rating-row { display: flex; align-items: center; gap: 16px; margin-bottom: 36px; opacity: 0; animation: fadeUp 0.6s 0.4s forwards; }
-    .stars-lg { color: var(--accent); font-size: 18px; letter-spacing: 2px; }
-    .rating-score { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); }
-    .rating-count { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--ink-faint); text-transform: uppercase; }
-    .rating-divider { width: 1px; height: 24px; background: var(--border); }
-    .verified-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); display: flex; align-items: center; gap: 5px; }
-    .verified-tag::before { content: '✓'; font-size: 11px; }
-
-    .brand-cta-row { display: flex; align-items: center; gap: 16px; opacity: 0; animation: fadeUp 0.6s 0.5s forwards; }
-    .btn-shop { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 15px 36px; cursor: pointer; transition: background 0.2s, transform 0.2s; display: flex; align-items: center; gap: 10px; }
-    .btn-shop:hover { background: var(--ink); transform: translateY(-1px); }
-    .btn-shop-arrow { transition: transform 0.2s; }
-    .btn-shop:hover .btn-shop-arrow { transform: translateX(4px); }
-    .btn-save { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); background: none; border: 1px solid var(--border); padding: 15px 24px; cursor: pointer; transition: border-color 0.2s, color 0.2s; }
-    .btn-save:hover { border-color: var(--teal); color: var(--teal); }
-
-    .affiliate-note { margin-top: 20px; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: var(--ink-faint); opacity: 0; animation: fadeUp 0.6s 0.6s forwards; }
-    .affiliate-note a { color: var(--teal); text-decoration: none; }
-
-    /* BRAND HERO RIGHT */
-    .brand-hero-right { background: var(--off-white); position: relative; overflow: hidden; opacity: 0; animation: fadeIn 0.8s 0.3s forwards; }
-    .hero-right-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 64px 64px; opacity: 0.4; }
-    .brand-logo-display { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%); text-align: center; }
-    .brand-logo-box { width: 140px; height: 140px; background: var(--white); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
-    .brand-logo-initials { font-family: 'DM Serif Display', serif; font-size: 42px; color: var(--teal); letter-spacing: -2px; }
-    .brand-logo-name { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
-
-    .brand-stats-strip { position: absolute; bottom: 0; left: 0; right: 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border); }
-    .brand-stat { padding: 24px; text-align: center; border-right: 1px solid var(--border); background: var(--white); }
-    .brand-stat:last-child { border-right: none; }
-    .brand-stat-num { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--ink); margin-bottom: 4px; }
-    .brand-stat-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
-
-    /* QUICK INFO BAR */
-    .quick-info { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--border); }
-    .qi-item { padding: 24px 32px; border-right: 1px solid var(--border); display: flex; align-items: center; gap: 14px; }
-    .qi-item:last-child { border-right: none; }
-    .qi-icon { font-size: 20px; flex-shrink: 0; }
-    .qi-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 3px; }
-    .qi-value { font-size: 13px; font-weight: 500; color: var(--ink); }
-
-    /* CONTENT LAYOUT */
-    .content-grid { display: grid; grid-template-columns: 1fr 320px; gap: 0; border-bottom: 1px solid var(--border); }
-    .content-main { padding: 64px; border-right: 1px solid var(--border); }
-    .content-sidebar { padding: 40px 32px; background: var(--off-white); }
-
-    /* SECTION STYLES */
-    .section-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-    .section-label::before { content: ''; display: block; width: 20px; height: 1px; background: var(--teal); }
-    .section-title { font-family: 'DM Serif Display', serif; font-size: 32px; letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 20px; }
+    /* PRODUCTS SECTION */
+    .products-section { padding: 64px 64px 100px; }
+    .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 28px; letter-spacing: -0.5px; }
     .section-title em { font-style: italic; color: var(--teal); }
-    .body-text { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--ink-light); margin-bottom: 20px; }
+    .section-note { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
 
-    .section-divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+    .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
 
-    /* PRODUCTS */
-    .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin-top: 32px; }
-    .product-card { background: var(--white); padding: 28px; position: relative; cursor: pointer; transition: background 0.2s; }
-    .product-card:hover { background: #f0f6f0; }
-    .product-card:hover .product-cta { border-color: var(--teal); color: var(--teal); }
-    .product-num { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
-    .product-name { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--ink); margin-bottom: 6px; line-height: 1.2; }
-    .product-sub { font-size: 12px; font-weight: 300; color: var(--ink-faint); margin-bottom: 14px; font-style: italic; }
-    .product-desc { font-size: 13px; font-weight: 300; line-height: 1.65; color: var(--ink-light); margin-bottom: 20px; }
-    .product-footer { display: flex; align-items: center; justify-content: space-between; }
-    .product-price { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--ink); }
-    .product-cta { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; background: none; border: 1px solid var(--border); padding: 8px 16px; cursor: pointer; color: var(--ink-light); transition: border-color 0.2s, color 0.2s; }
-    .product-bestseller { position: absolute; top: 16px; right: 16px; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--accent); color: var(--white); padding: 3px 8px; }
+    .product-card { background: var(--white); display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: background 0.2s; position: relative; overflow: hidden; opacity: 0; animation: fadeUp 0.5s forwards; }
+    .product-card:hover { background: var(--hover-bg); }
+    .product-card:hover .product-card-bar { width: 100%; }
+    .product-card:hover .product-img { transform: scale(1.03); }
+    .product-card-bar { position: absolute; top: 0; left: 0; height: 2px; width: 0; background: var(--teal); transition: width 0.4s ease; }
 
-    /* INGREDIENTS */
-    .ingredients-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
-    .ingredient-item { padding: 16px 20px; border: 1px solid var(--border); background: var(--white); }
-    .ingredient-name { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); margin-bottom: 4px; }
-    .ingredient-role { font-size: 12px; font-weight: 300; color: var(--ink-faint); }
+    .product-img-wrap { aspect-ratio: 1/1; overflow: hidden; background: var(--off-white); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
+    .product-img { width: 75%; height: 75%; object-fit: contain; transition: transform 0.4s ease; }
+    .product-img-placeholder { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; }
+    .product-img-placeholder svg { width: 40px; height: 40px; stroke: var(--border); fill: none; }
 
-    /* REVIEW */
-    .review-block { background: var(--ink); padding: 40px; margin-top: 32px; position: relative; }
-    .review-quote { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 22px; line-height: 1.5; color: var(--white); margin-bottom: 24px; }
-    .review-meta { display: flex; align-items: center; gap: 14px; }
-    .review-author { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
-    .review-stars { color: var(--accent); font-size: 12px; letter-spacing: 1px; }
-    .quote-mark { position: absolute; top: 24px; right: 32px; font-family: 'DM Serif Display', serif; font-size: 80px; color: rgba(255,255,255,0.05); line-height: 1; }
+    .product-info { padding: 24px 28px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+    .product-name { font-family: 'DM Serif Display', serif; font-size: 16px; letter-spacing: -0.3px; line-height: 1.3; }
+    .product-brand-sub { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
 
-    /* SIDEBAR */
-    .sidebar-section { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--border); }
-    .sidebar-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-    .sidebar-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 16px; }
-    .sidebar-cta-box { background: var(--teal); padding: 28px; text-align: center; }
-    .sidebar-cta-title { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 8px; line-height: 1.2; }
-    .sidebar-cta-sub { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.7); margin-bottom: 20px; line-height: 1.6; }
-    .sidebar-btn { display: block; width: 100%; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--white); color: var(--teal); border: none; padding: 13px; cursor: pointer; transition: background 0.2s; margin-bottom: 8px; }
-    .sidebar-btn:hover { background: var(--off-white); }
-    .sidebar-btn-ghost { display: block; width: 100%; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: none; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.2); padding: 12px; cursor: pointer; transition: border-color 0.2s; }
-    .sidebar-btn-ghost:hover { border-color: rgba(255,255,255,0.6); }
-    .sidebar-note { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.06em; color: rgba(255,255,255,0.35); margin-top: 12px; line-height: 1.5; }
+    .product-cta { margin: 0 28px 24px; display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--teal); color: var(--white); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; transition: background 0.2s; }
+    .product-card:hover .product-cta { background: var(--teal-light); }
+    .product-cta-arrow { font-size: 14px; transition: transform 0.2s; }
+    .product-card:hover .product-cta-arrow { transform: translate(3px, -3px); }
 
-    .skin-types { display: flex; flex-wrap: wrap; gap: 8px; }
-    .skin-type-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); color: var(--ink-light); background: var(--white); }
-    .skin-type-tag.match { background: var(--sage-pale); border-color: var(--teal); color: var(--teal); }
+    /* NO LINK STATE */
+    .product-card.no-link { cursor: default; }
+    .product-card.no-link .product-cta { background: var(--border); color: var(--ink-faint); }
 
-    .concern-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .concern-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 300; color: var(--ink-light); }
-    .concern-check { width: 18px; height: 18px; border-radius: 50%; background: var(--sage-pale); border: 1px solid var(--teal); display: flex; align-items: center; justify-content: center; font-size: 9px; color: var(--teal); flex-shrink: 0; }
+    /* BACK LINK */
+    .back-bar { padding: 24px 64px; border-top: 1px solid var(--border); background: var(--off-white); }
+    .back-link { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .back-link:hover { color: var(--teal); }
 
-    .related-brands { display: flex; flex-direction: column; gap: 10px; }
-    .related-brand-item { display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--white); border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s; }
-    .related-brand-item:hover { border-color: var(--teal); }
-    .related-initials { width: 36px; height: 36px; background: var(--off-white); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 12px; color: var(--teal); flex-shrink: 0; }
-    .related-info { flex: 1; }
-    .related-name { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
-    .related-cat { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
-    .related-arrow { color: var(--ink-faint); font-size: 12px; }
+    /* DISCLOSURE */
+    .disclosure { padding: 20px 64px 40px; }
+    .disclosure p { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.06em; line-height: 1.8; color: var(--ink-faint); max-width: 700px; }
+    .disclosure a { color: var(--teal); text-decoration: none; }
 
-    /* SCORE CARD */
-    .score-card { border: 1px solid var(--border); background: var(--white); overflow: hidden; }
-    .score-header { padding: 16px 20px; background: var(--ink); }
-    .score-header-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
-    .score-overall { font-family: 'DM Serif Display', serif; font-size: 36px; color: var(--white); line-height: 1; }
-    .score-out-of { font-family: 'DM Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.3); }
-    .score-rows { padding: 16px 20px; display: flex; flex-direction: column; gap: 12px; }
-    .score-row { display: flex; flex-direction: column; gap: 4px; }
-    .score-row-top { display: flex; justify-content: space-between; align-items: center; }
-    .score-row-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
-    .score-row-val { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--teal); }
-    .score-bar-bg { height: 3px; background: var(--border); border-radius: 2px; }
-    .score-bar-fill { height: 3px; background: var(--teal); border-radius: 2px; transition: width 1s ease; }
-
-    /* FOOTER */
-    footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
-    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
-    .footer-logo span { color: var(--teal-light); }
-    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 240px; }
-    .footer-col-title { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.22); margin-bottom: 18px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
-    .footer-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--teal-light); }
-    .footer-bottom { background: var(--ink); padding: 18px 64px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; }
-    .footer-bottom-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.16); }
-
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
+    /* ANIMATION */
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .product-card:nth-child(1) { animation-delay: 0.05s; }
+    .product-card:nth-child(2) { animation-delay: 0.10s; }
+    .product-card:nth-child(3) { animation-delay: 0.15s; }
+    .product-card:nth-child(4) { animation-delay: 0.20s; }
+    .product-card:nth-child(5) { animation-delay: 0.25s; }
+    .product-card:nth-child(6) { animation-delay: 0.30s; }
+
+    /* NOT FOUND */
+    .not-found { padding: 120px 64px; text-align: center; }
+    .not-found h2 { font-family: 'DM Serif Display', serif; font-size: 36px; margin-bottom: 16px; }
+    .not-found p { font-size: 15px; color: var(--ink-light); margin-bottom: 32px; }
+    .not-found a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); padding: 12px 24px; text-decoration: none; display: inline-block; }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .brand-hero, .products-section, .breadcrumb, .back-bar, .disclosure { padding-left: 24px; padding-right: 24px; }
+      .brand-hero-inner { flex-direction: column; gap: 24px; }
+      .brand-hero-stat { display: none; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .products-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">Well Rested <span>Skincare</span></a>
-  <ul class="nav-links">
-    <li><a href="#">Brands</a></li>
-    <li><a href="#">Categories</a></li>
-    <li><a href="#">Editorial</a></li>
-    <li><a href="#">About</a></li>
-  </ul>
-  <button class="nav-cta">Newsletter</button>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Well Rested <span>Skincare</span></a>
+    <ul class="nav-links">
+      <li><a href="brand-directory.html" class="active">Brands</a></li>
+      <li><a href="editorial.html">Editorial</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="brand-directory.html" class="nav-cta">All Brands</a>
+  </nav>
 
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
-  <a href="#">Home</a>
-  <span class="breadcrumb-sep">›</span>
-  <a href="#">Brands</a>
-  <span class="breadcrumb-sep">›</span>
-  <span class="breadcrumb-current">SkinCeuticals</span>
-</div>
+  <!-- DYNAMIC CONTENT -->
+  <div id="page-content"></div>
 
-<!-- BRAND HERO -->
-<section class="brand-hero">
-  <div class="brand-hero-left">
-    <div class="brand-meta-row">
-      <span class="brand-badge">Featured</span>
-      <span class="brand-affiliate-badge">Affiliate Partner</span>
-      <span class="brand-category-label">Anti-Aging / Antioxidants</span>
-    </div>
-    <h1 class="brand-name">SkinCeuticals</h1>
-    <p class="brand-tagline">Science. Skincare. Solutions.</p>
-    <p class="brand-summary">Three decades of rigorous antioxidant research have made SkinCeuticals the gold standard in clinical skincare. Trusted by dermatologists, validated by science, and formulated for results that are measurable — not just felt.</p>
-    <div class="brand-rating-row">
-      <span class="stars-lg">★★★★★</span>
-      <span class="rating-score">4.9</span>
-      <div class="rating-divider"></div>
-      <span class="rating-count">2,400+ reviews</span>
-      <div class="rating-divider"></div>
-      <span class="verified-tag">Dermatologist Verified</span>
-    </div>
-    <div class="brand-cta-row">
-      <button class="btn-shop">Shop SkinCeuticals <span class="btn-shop-arrow">→</span></button>
-      <button class="btn-save">♡ Save Brand</button>
-    </div>
-    <p class="affiliate-note">✦ This is an affiliate link. We may earn a commission at no extra cost to you. <a href="#">Learn more.</a></p>
-  </div>
+  <script>
+    // ─────────────────────────────────────────────
+    // BRAND DATA
+    // Products sorted alphabetically per brand
+    // ─────────────────────────────────────────────
+    const BRANDS = {
+      alastin: {
+        name: "Alastin Skincare",
+        shortName: "Alastin",
+        monogram: "Al",
+        eyebrow: "Physician-Developed Skincare",
+        descFull: "Alastin Skincare is a physician-developed brand focused on supporting the skin's natural ability to clear out old, damaged proteins and produce new collagen and elastin. A favorite in dermatology offices and MedSpas, their TriHex Technology® is a hallmark of science-backed regenerative skincare.",
+        tags: ["Physician-Developed", "Anti-Aging", "Post-Procedure", "Collagen Support"],
+        type: "skincare",
+        products: [
+          { name: "Restorative Skin Complex Face Serum", img: "alastin-restorative-skin-complex.png", link: "https://amzn.to/4aUZm1B" },
+          { name: "Skin Renewal Retinol Face Serum", img: "alastin-skin-renewal-retinol.png", link: "https://amzn.to/46OGjDI" },
+          { name: "Ultra Nourishing Face Moisturizer", img: "alastin-ultra-nourishing-moisturizer.png", link: "https://amzn.to/3NkxyKY" },
+        ]
+      },
+      biossance: {
+        name: "Biossance",
+        shortName: "Biossance",
+        monogram: "Bi",
+        eyebrow: "Sustainable Clean Beauty",
+        descFull: "Biossance leads the clean beauty movement with plant-derived squalane at the heart of every formula. Their commitment to sustainability is matched by genuine efficacy — each product is thoughtfully formulated to nourish, resurface, and protect without compromise.",
+        tags: ["Clean Beauty", "Squalane", "Vegan", "Sustainable"],
+        type: "skincare",
+        products: [
+          { name: "Squalane + Antioxidant Cleansing Oil", img: "biossance-squalane-cleansing-oil.png", link: "https://amzn.to/4bby3Pp" },
+          { name: "Squalane + Copper Peptide Rapid Plumping Serum", img: "biossance-squalane-copper-peptide-serum.png", link: "https://amzn.to/4ugG1zl" },
+          { name: "Squalane + Lactic Acid Resurfacing Night Serum", img: "biossance-squalane-lactic-acid-serum.png", link: "https://amzn.to/3PmYbPV" },
+        ]
+      },
+      cerave: {
+        name: "CeraVe",
+        shortName: "CeraVe",
+        monogram: "CV",
+        eyebrow: "Dermatologist-Developed Essentials",
+        descFull: "Developed with dermatologists and trusted by millions, CeraVe delivers barrier-restoring formulas powered by three essential ceramides and hyaluronic acid. A staple in dermatology offices and beloved for its accessibility without compromising clinical results.",
+        tags: ["Dermatologist-Developed", "Ceramides", "Barrier Support", "Fragrance-Free"],
+        type: "skincare",
+        products: [
+          { name: "Hydrating Facial Cleanser", img: "cerave-hydrating-facial-cleanser.png", link: "https://amzn.to/3OWojB6" },
+          { name: "Skin Renewing Retinol Serum", img: "cerave-retinol-serum.png", link: "https://amzn.to/4stTims" },
+          { name: "Skin Renewing Vitamin C Serum", img: "cerave-vitamin-c-serum.png", link: "https://amzn.to/4rW4usp" },
+        ]
+      },
+      "drunk-elephant": {
+        name: "Drunk Elephant",
+        shortName: "Drunk Elephant",
+        monogram: "DE",
+        eyebrow: "Biocompatible Skincare",
+        descFull: "Drunk Elephant is built on the philosophy of biocompatibility — formulating with ingredients that directly benefit skin's health and eliminating what doesn't. Their colorful, distinctive packaging belies the serious science inside every bottle.",
+        tags: ["Biocompatible", "Vitamin C", "Peptides", "Hydration"],
+        type: "skincare",
+        products: [
+          { name: "B-Hydra Intensive Hydration Serum", img: "drunk-elephant-b-hydra-serum.png", link: "https://amzn.to/4rVbB46" },
+          { name: "C-Firma Fresh Day Serum", img: "drunk-elephant-c-firma-serum.png", link: "https://amzn.to/475s65x" },
+          { name: "Protini Polypeptide Cream", img: "drunk-elephant-protini-cream.png", link: "https://amzn.to/4bs66E9" },
+        ]
+      },
+      elemis: {
+        name: "Elemis",
+        shortName: "Elemis",
+        monogram: "El",
+        eyebrow: "British Luxury Skincare",
+        descFull: "A British luxury brand with over 30 years of spa expertise, Elemis blends cutting-edge biotechnology with the finest natural ingredients. Their Pro-Collagen line is an iconic staple, trusted by estheticians and skincare enthusiasts around the world.",
+        tags: ["Luxury", "Pro-Collagen", "British Beauty", "Anti-Aging"],
+        type: "skincare",
+        products: [
+          { name: "Dynamic Resurfacing Facial Pads", img: "elemis-dynamic-resurfacing-pads.png", link: "https://amzn.to/3PmUfi7" },
+          { name: "Pro-Collagen Cleansing Balm", img: "elemis-pro-collagen-cleansing-balm.png", link: "https://amzn.to/4d85WDf" },
+          { name: "Pro-Collagen Night Cream", img: "elemis-pro-collagen-night-cream.png", link: "https://amzn.to/3N9BzSq" },
+        ]
+      },
+      "la-roche-posay": {
+        name: "La Roche-Posay",
+        shortName: "La Roche-Posay",
+        monogram: "LR",
+        eyebrow: "Dermatological French Pharmacy",
+        descFull: "Recommended by over 90,000 dermatologists worldwide, La Roche-Posay is the gold standard for sensitive skin care. Formulated with their exclusive Prebiotic Thermal Spring Water and rigorously tested under dermatological supervision.",
+        tags: ["Sensitive Skin", "French Pharmacy", "Dermatologist-Recommended", "SPF"],
+        type: "skincare",
+        products: [
+          { name: "Anthelios Tinted Mineral SPF 50 Light Fluid Sunscreen", img: "la-roche-posay-anthelios-spf50.png", link: "https://amzn.to/4uaAN8x" },
+          { name: "Mela B3 Dark Spot Corrector Serum", img: "la-roche-posay-mela-b3-serum.png", link: "https://amzn.to/4rjJXgi" },
+          { name: "Toleriane Hydrating Gentle Cleanser", img: "la-roche-posay-toleriane-cleanser.png", link: "https://amzn.to/3MQSvNv" },
+        ]
+      },
+      obagi: {
+        name: "Obagi Medical",
+        shortName: "Obagi",
+        monogram: "Ob",
+        eyebrow: "Clinical-Strength Skincare",
+        descFull: "Obagi Medical brings physician-grade formulas to at-home skincare, with a legacy rooted in transformative clinical results. Their Nu-Derm system and Professional-C serums are benchmarks for targeted skin transformation.",
+        tags: ["Clinical-Strength", "Vitamin C", "Retinol", "Brightening"],
+        type: "skincare",
+        products: [
+          { name: "Nu-Derm Clear Fx Skin Brightening Cream", img: "obagi-nu-derm-clear-fx.png", link: "https://amzn.to/40dnmH9" },
+          { name: "Professional-C Vitamin C Serum 20%", img: "obagi-professional-c-serum.png", link: "https://amzn.to/4b7Q4ht" },
+          { name: "Retinol 1.0 Smoothing Cream", img: "obagi-retinol-1.png", link: "https://amzn.to/4ugh1Z7" },
+        ]
+      },
+      "paulas-choice": {
+        name: "Paula's Choice",
+        shortName: "Paula's Choice",
+        monogram: "PC",
+        eyebrow: "Evidence-Based Skincare",
+        descFull: "Paula's Choice was founded on radical transparency — no fragrance, no filler, no false claims. Every formula is backed by peer-reviewed research, and their 2% BHA Liquid Exfoliant has achieved near-cult status among skincare enthusiasts worldwide.",
+        tags: ["Evidence-Based", "BHA", "Retinol", "Fragrance-Free"],
+        type: "skincare",
+        products: [
+          { name: "Retinol Skin-Smoothing Body Lotion Treatment", img: "paulas-choice-retinol-body-treatment.png", link: "https://amzn.to/47lkagn" },
+          { name: "Skin Balancing Pore-Reducing Toner", img: "paulas-choice-pore-reducing-toner.png", link: "https://amzn.to/3OQdbWw" },
+          { name: "Skin Perfecting 2% BHA Liquid Exfoliant", img: "paulas-choice-2-bha-exfoliant.png", link: "https://amzn.to/3N4fhS4" },
+        ]
+      },
+      plated: {
+        name: "Plated Skin Science",
+        shortName: "Plated",
+        monogram: "Pl",
+        eyebrow: "DNA Repair Technology",
+        descFull: "Plated Skin Science harnesses the power of DNA Repair Enzymes (DNAzyme technology) to reverse visible signs of aging at the cellular level. Developed by scientists from Johns Hopkins, their formulas address the root cause of skin aging — DNA damage.",
+        tags: ["DNA Repair", "Anti-Aging", "Science-Forward", "Brightening"],
+        type: "skincare",
+        products: [
+          { name: "EYE Serum", img: "plated-eye-serum.png", link: "https://sovrn.co/1g7cfzz" },
+          { name: "INTENSE Serum", img: "plated-intense-serum.png", link: "https://sovrn.co/bh5ouvd" },
+        ]
+      },
+      prequel: {
+        name: "Prequel Skin",
+        shortName: "Prequel",
+        monogram: "Pq",
+        eyebrow: "Barrier-Focused Skincare",
+        descFull: "Prequel is redefining the basics — each product is formulated at precise pH levels with clinically active concentrations, designed to work with your skin barrier rather than against it. A modern, no-nonsense approach to results-driven skincare.",
+        tags: ["Barrier Support", "AHA/BHA", "pH-Optimized", "Clean"],
+        type: "skincare",
+        products: [
+          { name: "Half & Half Fluid Moisturizer", img: "prequel-half-and-half-moisturizer.png", link: "https://amzn.to/4le6DNx" },
+          { name: "Multi-Acid Milk Peel Exfoliating Solution", img: "prequel-multi-acid-milk-peel.png", link: "https://amzn.to/4b9NxTQ" },
+          { name: "Redness Reform Calming Serum", img: "prequel-redness-reform-serum.png", link: "https://amzn.to/3OThTCY" },
+        ]
+      },
+      "sk-ii": {
+        name: "SK-II",
+        shortName: "SK-II",
+        monogram: "SK",
+        eyebrow: "Legendary Japanese Skincare",
+        descFull: "SK-II's iconic Facial Treatment Essence is built around Pitera™ — a bio-ingredient discovered through decades of research that contains over 50 micronutrients. A cornerstone of Japanese luxury skincare with a devoted global following.",
+        tags: ["Japanese Luxury", "Pitera™", "Brightening", "Anti-Aging"],
+        type: "skincare",
+        products: [
+          { name: "Facial Masks — Brightening Face Mask Sheets", img: "skii-facial-mask-sheets.png", link: "https://amzn.to/4rPVXXP" },
+          { name: "Facial Treatment Essence", img: "skii-facial-treatment-essence.png", link: "https://amzn.to/46N8l2p" },
+        ]
+      },
+      skinceuticals: {
+        name: "SkinCeuticals",
+        shortName: "SkinCeuticals",
+        monogram: "SC",
+        eyebrow: "Advanced Corrective Skincare",
+        descFull: "SkinCeuticals is the gold standard in antioxidant skincare, developed by Duke University researchers and trusted by dermatologists globally. Their patented Duke Antioxidant patent underpins some of the most studied topical vitamin C formulas ever created.",
+        tags: ["Antioxidant", "Vitamin C", "Clinical", "Anti-Aging"],
+        type: "skincare",
+        products: [
+          { name: "C E Ferulic Vitamin C Serum", img: "skinceuticals-ce-ferulic.png", link: "https://sovrn.co/1kqg1ro" },
+          { name: "P-TIOX Peptide Facial Serum", img: "skinceuticals-p-tiox.png", link: "https://sovrn.co/31db7wq" },
+          { name: "Triple Lipid Restore 2:4:2", img: "skinceuticals-triple-lipid-restore.png", link: "https://sovrn.co/0j4efb0" },
+        ]
+      },
+      "summer-fridays": {
+        name: "Summer Fridays",
+        shortName: "Summer Fridays",
+        monogram: "SF",
+        eyebrow: "Modern Clean Skincare",
+        descFull: "Summer Fridays is the brand that made clean skincare feel genuinely luxurious. Founded by two beauty influencers obsessed with ingredient quality, their Cloud Dew moisturizer has become a modern classic for skin that looks effortlessly healthy.",
+        tags: ["Clean Beauty", "Hydration", "Modern Luxury", "Influencer-Founded"],
+        type: "skincare",
+        products: [
+          { name: "Cloud Dew Gel Cream Moisturizer", img: "summer-fridays-cloud-dew.png", link: "https://amzn.to/4b7QFjd" },
+        ]
+      },
+      supergoop: {
+        name: "Supergoop!",
+        shortName: "Supergoop!",
+        monogram: "Sg",
+        eyebrow: "SPF for Every Day",
+        descFull: "Supergoop! set out to make sunscreen something people actually want to wear — and succeeded. Their invisible, weightless formulas have converted an entire generation of SPF-avoiders, with the Unseen Sunscreen becoming one of the most talked-about beauty products of the decade.",
+        tags: ["SPF", "Invisible Finish", "Daily Sun Protection", "Award-Winning"],
+        type: "skincare",
+        products: [
+          { name: "Daily Dose Hydra-Ceramide Boost + SPF 40 Oil", img: "supergoop-daily-dose-spf.png", link: "https://amzn.to/4svtI0z" },
+          { name: "Unseen Sunscreen SPF 40", img: "supergoop-unseen-sunscreen.png", link: "https://amzn.to/3MYYccd" },
+        ]
+      },
+      "tata-harper": {
+        name: "Tata Harper",
+        shortName: "Tata Harper",
+        monogram: "TH",
+        eyebrow: "Farm-to-Face Luxury",
+        descFull: "Tata Harper pioneered farm-to-face luxury skincare, formulating every product at their Vermont farm with 100% natural, non-toxic ingredients. Their commitment to freshness and purity is unmatched — each batch is traceable to its botanical source.",
+        tags: ["Natural", "Farm-to-Face", "Non-Toxic", "Luxury"],
+        type: "skincare",
+        products: [
+          { name: "Retinoic Nutrient Face Oil", img: "tata-harper-retinoic-face-oil.png", link: "https://amzn.to/4d7gq5R" },
+          { name: "Resurfacing Mask", img: "tata-harper-resurfacing-mask.png", link: "https://amzn.to/3PkVZsa" },
+          { name: "Water-Lock Moisturizer", img: "tata-harper-water-lock-moisturizer.png", link: "https://amzn.to/3PmRuxh" },
+        ]
+      },
+      tower28: {
+        name: "Tower 28 Beauty",
+        shortName: "Tower 28",
+        monogram: "T28",
+        eyebrow: "Clean Beauty for Sensitive Skin",
+        descFull: "Tower 28 was built for sensitive skin — every product is free of common irritants and accepted by the National Eczema Association, National Rosacea Society, and National Psoriasis Foundation. Clean beauty that doesn't compromise on results.",
+        tags: ["Sensitive Skin", "Eczema-Accepted", "Rosacea-Accepted", "Clean"],
+        type: "skincare",
+        products: [
+          { name: "SOS Daily Rescue Facial Spray", img: "tower28-sos-daily-spray.png", link: "https://amzn.to/4d1GY8A" },
+          { name: "SOS Recovery Face Cream", img: "tower28-sos-recovery-cream.png", link: "https://amzn.to/4lgj7Em" },
+        ]
+      },
+      zo: {
+        name: "ZO Skin Health",
+        shortName: "ZO Skin Health",
+        monogram: "ZO",
+        eyebrow: "Medical-Grade Skincare",
+        descFull: "Created by world-renowned dermatologist Dr. Zein Obagi, ZO Skin Health bridges the gap between therapeutic skincare and daily maintenance. Their science-driven formulas target the most challenging skin conditions with pharmaceutical-grade precision.",
+        tags: ["Medical-Grade", "Dr. Zein Obagi", "Growth Factors", "Anti-Aging"],
+        type: "skincare",
+        products: [
+          { name: "Complexion Renewal Pads", img: "zo-complexion-renewal-pads.png", link: "https://amzn.to/4aTSDF8" },
+          { name: "Growth Factor Serum Plus", img: "zo-growth-factor-serum.png", link: "https://amzn.to/4ugbVvX" },
+        ]
+      },
+      // DEVICES
+      "dr-pen": {
+        name: "Dr. Pen",
+        shortName: "Dr. Pen",
+        monogram: "DP",
+        eyebrow: "Professional Microneedling",
+        descFull: "Dr. Pen brings professional-grade microneedling technology into the home, with adjustable needle depths and speeds that allow for customized skin rejuvenation. Their devices are used by estheticians and at-home enthusiasts alike for collagen induction therapy.",
+        tags: ["Microneedling", "Collagen Induction", "Professional-Grade", "At-Home Device"],
+        type: "device",
+        products: [
+          { name: "Dr. Pen M8 Microneedling Device", img: "dr-pen-m8.png", link: "https://sovrn.co/l8jpzaf" },
+        ]
+      },
+      jovs: {
+        name: "JOVS",
+        shortName: "JOVS",
+        monogram: "JV",
+        eyebrow: "Advanced Light Therapy",
+        descFull: "JOVS develops cutting-edge light therapy devices that bring clinical-grade LED and laser treatments to your home routine. Their 4D Focus Mask delivers multi-wavelength therapy targeting fine lines, inflammation, and overall skin rejuvenation.",
+        tags: ["LED Therapy", "Red Light", "Anti-Aging", "At-Home Device"],
+        type: "device",
+        products: [
+          { name: "JOVS 4D Laser Light Therapy Mask", img: "jovs-4d-light-therapy-mask.png", link: "https://amzn.to/4ukHaGq" },
+        ]
+      },
+      maysama: {
+        name: "Maysama",
+        shortName: "Maysama",
+        monogram: "Ms",
+        eyebrow: "Red Light Therapy",
+        descFull: "Maysama specializes in professional-grade red and near-infrared light therapy devices, designed to stimulate cellular energy, boost collagen production, and reduce inflammation. Their PRANA mask delivers 660nm and 850nm wavelengths for comprehensive skin renewal.",
+        tags: ["Red Light Therapy", "Near-Infrared", "Collagen Stimulation", "At-Home Device"],
+        type: "device",
+        products: [
+          { name: "Maysama PRANA LED Light Therapy Mask", img: "maysama-prana-mask.png", link: "https://sovrn.co/1onpy7r" },
+        ]
+      },
+      myolift: {
+        name: "MyoLift",
+        shortName: "MyoLift",
+        monogram: "ML",
+        eyebrow: "Microcurrent Facial Toning",
+        descFull: "7E Wellness MyoLift is the leading at-home microcurrent device, trusted by estheticians and used in professional spas. True microcurrent technology — not TENS — works at the cellular level to re-educate facial muscles and lift, tone, and contour.",
+        tags: ["Microcurrent", "Facial Toning", "Lifting", "At-Home Device"],
+        type: "device",
+        products: [
+          { name: "7E Wellness MyoLift Mini Microcurrent Facial Device", img: "myolift-mini.png", link: "https://amzn.to/3P2zubp" },
+        ]
+      },
+      nira: {
+        name: "NIRA",
+        shortName: "NIRA",
+        monogram: "NR",
+        eyebrow: "At-Home Laser Anti-Aging",
+        descFull: "NIRA delivers the power of professional laser resurfacing in a safe, at-home device. Their non-ablative laser technology stimulates collagen and elastin production to visibly reduce fine lines and wrinkles — with clinical results proven in independent studies.",
+        tags: ["Laser", "Non-Ablative", "Collagen", "At-Home Device"],
+        type: "device",
+        products: [
+          { name: "NIRA Pro Laser 2.0 Anti-Aging Device", img: "nira-pro-laser.png", link: "https://sovrn.co/zozal71" },
+        ]
+      },
+      nuderma: {
+        name: "NuDerma",
+        shortName: "NuDerma",
+        monogram: "ND",
+        eyebrow: "High-Frequency Skin Therapy",
+        descFull: "NuDerma's high-frequency wand uses argon and neon gas-filled electrodes to deliver therapeutic electrical currents that tighten skin, reduce acne, and stimulate circulation. A Cosmopolitan Award winner and accessible entry point into professional skin therapy technology.",
+        tags: ["High-Frequency", "Acne", "Skin Tightening", "At-Home Device"],
+        type: "device",
+        products: [
+          { name: "Pure Daily Care NuDerma Handheld Skin Therapy Wand", img: "nuderma-skin-therapy-wand.png", link: "https://amzn.to/4ba5uSt" },
+        ]
+      },
+      ziip: {
+        name: "ZIIP Beauty",
+        shortName: "ZIIP",
+        monogram: "ZP",
+        eyebrow: "Nano-Current Technology",
+        descFull: "ZIIP harnesses nano-current and microcurrent technology through their app-controlled devices, delivering customizable electrical frequencies that tone, lift, and clarify skin. Their gold-plated conductors and companion gels make each treatment feel like a professional facial.",
+        tags: ["Nano-Current", "App-Controlled", "Lifting", "At-Home Device"],
+        type: "device",
+        products: [
+          { name: "ZIIP Halo 2.0 Nano & Microcurrent Device", img: "ziip-halo.png", link: "https://sovrn.co/ma55y6i" },
+        ]
+      },
+    };
 
-  <div class="brand-hero-right">
-    <div class="hero-right-grid"></div>
-    <div class="brand-logo-display">
-      <div class="brand-logo-box">
-        <span class="brand-logo-initials">SC</span>
-      </div>
-      <div class="brand-logo-name">SkinCeuticals</div>
-    </div>
-    <div class="brand-stats-strip">
-      <div class="brand-stat">
-        <div class="brand-stat-num">30+</div>
-        <div class="brand-stat-label">Years of Research</div>
-      </div>
-      <div class="brand-stat">
-        <div class="brand-stat-num">85+</div>
-        <div class="brand-stat-label">Clinical Studies</div>
-      </div>
-      <div class="brand-stat">
-        <div class="brand-stat-num">#1</div>
-        <div class="brand-stat-label">Derm-Recommended</div>
-      </div>
-    </div>
-  </div>
-</section>
+    // ─────────────────────────────────────────────
+    // RENDER
+    // ─────────────────────────────────────────────
+    function getBrandKey() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('brand') || '';
+    }
 
-<!-- QUICK INFO -->
-<div class="quick-info">
-  <div class="qi-item">
-    <span class="qi-icon">🧪</span>
-    <div><div class="qi-label">Formulation</div><div class="qi-value">Clinical / Medical-Grade</div></div>
-  </div>
-  <div class="qi-item">
-    <span class="qi-icon">🌿</span>
-    <div><div class="qi-label">Cruelty Free</div><div class="qi-value">Yes — PETA Certified</div></div>
-  </div>
-  <div class="qi-item">
-    <span class="qi-icon">💰</span>
-    <div><div class="qi-label">Price Range</div><div class="qi-value">$42 – $185</div></div>
-  </div>
-  <div class="qi-item">
-    <span class="qi-icon">🏥</span>
-    <div><div class="qi-label">Where to Buy</div><div class="qi-value">SkinCeuticals.com + Medi-Spas</div></div>
-  </div>
-</div>
+    function renderBrand(key) {
+      const brand = BRANDS[key];
+      const container = document.getElementById('page-content');
 
-<!-- MAIN CONTENT + SIDEBAR -->
-<div class="content-grid">
-  <div class="content-main">
+      if (!brand) {
+        container.innerHTML = `
+          <div class="not-found">
+            <h2>Brand not found</h2>
+            <p>We couldn't find the brand you're looking for.</p>
+            <a href="brand-directory.html">← Back to Brand Directory</a>
+          </div>`;
+        document.title = 'Brand Not Found — Well Rested Skincare';
+        return;
+      }
 
-    <!-- ABOUT -->
-    <div class="reveal">
-      <div class="section-label">Brand Overview</div>
-      <h2 class="section-title">The antioxidant <em>pioneers</em></h2>
-      <p class="body-text">SkinCeuticals was founded on a single scientific breakthrough: the discovery that antioxidants, when formulated at the correct pH and concentration, could measurably prevent and reverse free radical damage to the skin. That discovery — made by Dr. Sheldon Pinnell at Duke University — became the foundation for every product in the line.</p>
-      <p class="body-text">Today, SkinCeuticals occupies a unique space in skincare: sold through dermatologists and licensed professionals rather than department stores, every formula undergoes rigorous clinical testing before it reaches shelves. The brand doesn't chase trends — it sets them.</p>
-    </div>
+      document.title = `${brand.name} — Well Rested Skincare`;
 
-    <hr class="section-divider" />
+      const isDevice = brand.type === 'device';
+      const productCount = brand.products.length;
 
-    <!-- PRODUCTS -->
-    <div class="reveal">
-      <div class="section-label">Top Products</div>
-      <h2 class="section-title">What to <em>buy</em> first</h2>
-      <p class="body-text">These are the four products we consistently recommend — each backed by independent clinical trials and dermatologist endorsement.</p>
+      const tagsHTML = brand.tags.map((t, i) =>
+        `<span class="brand-tag${i === 0 ? ' primary' : ''}">${t}</span>`
+      ).join('');
 
-      <div class="products-grid">
-        <div class="product-card">
-          <span class="product-bestseller">Best Seller</span>
-          <div class="product-num">01</div>
-          <div class="product-name">C E Ferulic</div>
-          <div class="product-sub">Vitamin C Antioxidant Serum</div>
-          <p class="product-desc">The gold-standard Vitamin C serum combining 15% L-ascorbic acid with Vitamin E and ferulic acid for 8x photoprotection and visible brightening.</p>
-          <div class="product-footer">
-            <span class="product-price">$185</span>
-            <button class="product-cta">Shop Now →</button>
+      const productsHTML = brand.products.map(p => {
+        const imgSrc = `images/products/${p.img}`;
+        const imgTag = `<img class="product-img" src="${imgSrc}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="product-img-placeholder" style="display:none">
+            <svg viewBox="0 0 24 24" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>`;
+
+        return `
+        <a class="product-card${p.link ? '' : ' no-link'}" ${p.link ? `href="${p.link}" target="_blank" rel="nofollow sponsored noopener"` : ''}>
+          <div class="product-card-bar"></div>
+          <div class="product-img-wrap">${imgTag}</div>
+          <div class="product-info">
+            <div class="product-brand-sub">${brand.shortName}</div>
+            <div class="product-name">${p.name}</div>
           </div>
-        </div>
-        <div class="product-card">
-          <div class="product-num">02</div>
-          <div class="product-name">Triple Lipid Restore</div>
-          <div class="product-sub">2:4:2 Barrier Cream</div>
-          <p class="product-desc">First-of-its-kind lipid correction cream replenishing ceramides, natural cholesterol, and fatty acids to restore skin's youthful appearance.</p>
-          <div class="product-footer">
-            <span class="product-price">$128</span>
-            <button class="product-cta">Shop Now →</button>
+          <div class="product-cta">
+            <span>${p.link ? 'Shop on Amazon' : 'Coming Soon'}</span>
+            <span class="product-cta-arrow">${p.link ? '↗' : '—'}</span>
           </div>
+        </a>`;
+      }).join('');
+
+      container.innerHTML = `
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="brand-directory.html">Brands</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">${brand.shortName}</span>
         </div>
-        <div class="product-card">
-          <div class="product-num">03</div>
-          <div class="product-name">Retinol 0.3</div>
-          <div class="product-sub">Refining Night Cream</div>
-          <p class="product-desc">Encapsulated retinol at 0.3% concentration minimizes visible signs of aging — fine lines, rough texture, and uneven tone — with minimal irritation.</p>
-          <div class="product-footer">
-            <span class="product-price">$88</span>
-            <button class="product-cta">Shop Now →</button>
+
+        <section class="brand-hero">
+          <div class="brand-hero-grid"></div>
+          <div class="brand-hero-inner">
+            <div class="brand-monogram">${brand.monogram}</div>
+            <div class="brand-hero-text">
+              <div class="brand-eyebrow">${brand.eyebrow}</div>
+              <h1 class="brand-name">${brand.name.replace(/(\s)(\S+)$/, '$1<em>$2</em>')}</h1>
+              <p class="brand-desc">${brand.descFull}</p>
+              <div class="brand-tags">${tagsHTML}</div>
+            </div>
           </div>
-        </div>
-        <div class="product-card">
-          <div class="product-num">04</div>
-          <div class="product-name">H.A. Intensifier</div>
-          <div class="product-sub">Hyaluronic Acid Serum</div>
-          <p class="product-desc">Multi-molecular HA serum shown to increase skin's hyaluronic acid levels by 30% — visibly plumping fine lines and restoring a youthful bounce.</p>
-          <div class="product-footer">
-            <span class="product-price">$102</span>
-            <button class="product-cta">Shop Now →</button>
+          <div class="brand-hero-stat">
+            <div class="stat-num">${String(productCount).padStart(2, '0')}</div>
+            <div class="stat-label">Featured ${isDevice ? 'Devices' : 'Products'}</div>
           </div>
-        </div>
-      </div>
-    </div>
+        </section>
 
-    <hr class="section-divider" />
-
-    <!-- INGREDIENTS -->
-    <div class="reveal">
-      <div class="section-label">Key Ingredients</div>
-      <h2 class="section-title">What's <em>inside</em> the bottle</h2>
-      <p class="body-text">SkinCeuticals formulas are built around a handful of well-researched actives, each present at clinically validated concentrations.</p>
-      <div class="ingredients-list">
-        <div class="ingredient-item">
-          <div class="ingredient-name">L-Ascorbic Acid (Vit C)</div>
-          <div class="ingredient-role">Antioxidant, brightening, collagen synthesis</div>
-        </div>
-        <div class="ingredient-item">
-          <div class="ingredient-name">Ferulic Acid</div>
-          <div class="ingredient-role">Doubles efficacy of Vitamins C & E, UV protection</div>
-        </div>
-        <div class="ingredient-item">
-          <div class="ingredient-name">Retinol (Encapsulated)</div>
-          <div class="ingredient-role">Cell turnover, fine line reduction, texture</div>
-        </div>
-        <div class="ingredient-item">
-          <div class="ingredient-name">Hyaluronic Acid</div>
-          <div class="ingredient-role">Multi-weight hydration, plumping, barrier support</div>
-        </div>
-        <div class="ingredient-item">
-          <div class="ingredient-name">Ceramides</div>
-          <div class="ingredient-role">Barrier restoration, moisture retention</div>
-        </div>
-        <div class="ingredient-item">
-          <div class="ingredient-name">Niacinamide</div>
-          <div class="ingredient-role">Pore minimizing, brightening, sebum regulation</div>
-        </div>
-      </div>
-    </div>
-
-    <hr class="section-divider" />
-
-    <!-- EDITORIAL REVIEW -->
-    <div class="reveal">
-      <div class="section-label">Our Review</div>
-      <h2 class="section-title">The Well Rested <em>verdict</em></h2>
-      <p class="body-text">We've tested SkinCeuticals extensively — and the results are hard to argue with. The C E Ferulic is one of the most clinically validated serums on the market, and for anyone serious about sun damage prevention and brightening, it genuinely earns its $185 price tag.</p>
-      <p class="body-text">The Triple Lipid Restore is a personal favourite for anyone dealing with barrier damage — particularly after in-office procedures, extended retinol use, or harsh winters. It's one of the few moisturizers we'd recommend without caveats.</p>
-      <p class="body-text">The brand isn't perfect — the pricing is premium and accessibility through professional channels only adds friction. But the science is real, the results are documented, and the dermatologist trust is earned, not bought.</p>
-
-      <div class="review-block">
-        <div class="quote-mark">"</div>
-        <p class="review-quote">SkinCeuticals doesn't ask you to trust them — they show you the data. That's rare in an industry built on beautiful promises.</p>
-        <div class="review-meta">
-          <span class="review-stars">★★★★★</span>
-          <span class="review-author">Well Rested Editorial Team · March 2026</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- SIDEBAR -->
-  <div class="content-sidebar">
-
-    <!-- CTA BOX -->
-    <div class="sidebar-section">
-      <div class="sidebar-cta-box">
-        <div class="sidebar-cta-title">Ready to shop SkinCeuticals?</div>
-        <p class="sidebar-cta-sub">Get clinical-grade skincare delivered directly to your door.</p>
-        <button class="sidebar-btn">Shop SkinCeuticals →</button>
-        <button class="sidebar-btn-ghost">View All Products</button>
-        <p class="sidebar-note">✦ Affiliate link — we earn a small commission at no cost to you. This never influences our reviews.</p>
-      </div>
-    </div>
-
-    <!-- WRS SCORE -->
-    <div class="sidebar-section">
-      <div class="sidebar-label">WRS Score</div>
-      <div class="score-card">
-        <div class="score-header">
-          <div class="score-header-label">Overall Rating</div>
-          <span class="score-overall">9.4</span><span class="score-out-of"> / 10</span>
-        </div>
-        <div class="score-rows">
-          <div class="score-row">
-            <div class="score-row-top"><span class="score-row-label">Ingredient Quality</span><span class="score-row-val">9.8</span></div>
-            <div class="score-bar-bg"><div class="score-bar-fill" style="width:98%"></div></div>
+        <section class="products-section">
+          <div class="section-header">
+            <h2 class="section-title">Featured <em>${isDevice ? 'Devices' : 'Products'}</em></h2>
+            <span class="section-note">Affiliate links · Amazon ${isDevice ? '& Direct' : ''}</span>
           </div>
-          <div class="score-row">
-            <div class="score-row-top"><span class="score-row-label">Clinical Evidence</span><span class="score-row-val">9.7</span></div>
-            <div class="score-bar-bg"><div class="score-bar-fill" style="width:97%"></div></div>
+          <div class="products-grid">
+            ${productsHTML}
           </div>
-          <div class="score-row">
-            <div class="score-row-top"><span class="score-row-label">Efficacy</span><span class="score-row-val">9.5</span></div>
-            <div class="score-bar-bg"><div class="score-bar-fill" style="width:95%"></div></div>
-          </div>
-          <div class="score-row">
-            <div class="score-row-top"><span class="score-row-label">Value for Money</span><span class="score-row-val">8.2</span></div>
-            <div class="score-bar-bg"><div class="score-bar-fill" style="width:82%"></div></div>
-          </div>
-          <div class="score-row">
-            <div class="score-row-top"><span class="score-row-label">Accessibility</span><span class="score-row-val">8.0</span></div>
-            <div class="score-bar-bg"><div class="score-bar-fill" style="width:80%"></div></div>
-          </div>
+        </section>
+
+        <div class="back-bar">
+          <a href="brand-directory.html" class="back-link">← Back to All Brands</a>
         </div>
-      </div>
-    </div>
 
-    <!-- BEST FOR -->
-    <div class="sidebar-section">
-      <div class="sidebar-label">Best For Skin Types</div>
-      <div class="skin-types">
-        <span class="skin-type-tag match">Normal</span>
-        <span class="skin-type-tag match">Dry</span>
-        <span class="skin-type-tag match">Combination</span>
-        <span class="skin-type-tag match">Mature</span>
-        <span class="skin-type-tag">Oily</span>
-        <span class="skin-type-tag">Sensitive</span>
-      </div>
-    </div>
-
-    <!-- SKIN CONCERNS -->
-    <div class="sidebar-section">
-      <div class="sidebar-label">Addresses</div>
-      <ul class="concern-list">
-        <li class="concern-item"><span class="concern-check">✓</span>Fine lines & wrinkles</li>
-        <li class="concern-item"><span class="concern-check">✓</span>Uneven skin tone</li>
-        <li class="concern-item"><span class="concern-check">✓</span>Sun damage & dark spots</li>
-        <li class="concern-item"><span class="concern-check">✓</span>Dullness & lack of radiance</li>
-        <li class="concern-item"><span class="concern-check">✓</span>Loss of firmness</li>
-        <li class="concern-item"><span class="concern-check">✓</span>Barrier damage</li>
-      </ul>
-    </div>
-
-    <!-- RELATED BRANDS -->
-    <div class="sidebar-section">
-      <div class="sidebar-label">You Might Also Like</div>
-      <div class="related-brands">
-        <div class="related-brand-item">
-          <div class="related-initials">AL</div>
-          <div class="related-info"><div class="related-name">Alastin</div><div class="related-cat">Post-Procedure / Repair</div></div>
-          <span class="related-arrow">›</span>
+        <div class="disclosure">
+          <p>This page contains affiliate links. As an Amazon Associate and affiliate partner, Well Rested Skincare earns from qualifying purchases at no extra cost to you. <a href="affiliate-disclosure.html">Read our full disclosure →</a></p>
         </div>
-        <div class="related-brand-item">
-          <div class="related-initials">ZO</div>
-          <div class="related-info"><div class="related-name">ZO Skin Health</div><div class="related-cat">Medical-Grade</div></div>
-          <span class="related-arrow">›</span>
-        </div>
-        <div class="related-brand-item">
-          <div class="related-initials">PS</div>
-          <div class="related-info"><div class="related-name">Plated Skin Science</div><div class="related-cat">Regenerative</div></div>
-          <span class="related-arrow">›</span>
-        </div>
-      </div>
-    </div>
+      `;
+    }
 
-  </div>
-</div>
+    renderBrand(getBrandKey());
+  </script>
 
-<!-- FOOTER -->
-<footer>
-  <div>
-    <div class="footer-logo">Well Rested <span>Skincare</span></div>
-    <p class="footer-tagline">Your trusted guide to clinically validated skincare and wellness brands.</p>
-  </div>
-  <div>
-    <div class="footer-col-title">Explore</div>
-    <ul class="footer-links"><li><a href="#">All Brands</a></li><li><a href="#">Categories</a></li><li><a href="#">Top Rated</a></li><li><a href="#">New Arrivals</a></li></ul>
-  </div>
-  <div>
-    <div class="footer-col-title">Company</div>
-    <ul class="footer-links"><li><a href="#">About Us</a></li><li><a href="#">Editorial</a></li><li><a href="#">Methodology</a></li><li><a href="#">Contact</a></li></ul>
-  </div>
-  <div>
-    <div class="footer-col-title">Legal</div>
-    <ul class="footer-links"><li><a href="#">Affiliate Disclosure</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li></ul>
-  </div>
-</footer>
-<div class="footer-bottom">
-  <span class="footer-bottom-text">© 2026 Well Rested Skincare. All rights reserved.</span>
-  <span class="footer-bottom-text">Affiliate links disclosed on all product pages.</span>
-</div>
-
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 100);
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-</script>
 </body>
 </html>
-</artifact>
-
-Here's your **Single Brand Page**, built using SkinCeuticals as the template! Here's everything included:
-
-**Conversion-focused layout:**
-- Hero with affiliate badge, star rating, and prominent **Shop** CTA
-- Transparent affiliate disclosure note (important for FTC compliance)
-- Sticky sidebar with a bold **Shop Now** box visible while scrolling
-
-**Content sections:**
-- Brand overview & editorial story
-- Top 4 products with prices and individual CTAs
-- Key ingredients breakdown with roles
-- Full editorial review with a pull quote
-- WRS Score card with animated rating bars
-
-**Trust & discovery elements:**
-- Quick info bar (cruelty free, price range, where to buy)
-- Skin type compatibility tags
-- Skin concerns checklist
-- Related brands to keep visitors on your site
-
-This template works for every brand — just swap out the name, copy, products, and scores. Ready to write the **affiliate application pitches** next, or shall we build the blog/editorial section first?
