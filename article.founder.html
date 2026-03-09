@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Founder — Well Rested Skincare</title>
+  <meta name="description" content="Hi, I'm Katherine — a nurse, midwestern mom of two, and the person behind Well Rested Skincare. Here's why I built this." />
+  <link rel="canonical" href="https://wellrestedskincare.com/article-founder.html">
+  <meta property="og:title" content="Meet the Founder — Well Rested Skincare">
+  <meta property="og:description" content="Hi, I'm Katherine — a nurse, midwestern mom of two, and the person behind Well Rested Skincare.">
+  <meta property="og:url" content="https://wellrestedskincare.com/article-founder.html">
+  <meta property="og:type" content="article">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Meet the Founder",
+    "description": "Hi, I'm Katherine — a nurse, midwestern mom of two, and the person behind Well Rested Skincare.",
+    "datePublished": "2026-03-09",
+    "dateModified": "2026-03-09",
+    "author": {"@type": "Person", "name": "Katherine"},
+    "publisher": {"@type": "Organization", "name": "Well Rested Skincare", "url": "https://wellrestedskincare.com"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://wellrestedskincare.com/article-founder.html"},
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wellrestedskincare.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Editorial", "item": "https://wellrestedskincare.com/editorial.html"},
+        {"@type": "ListItem", "position": 3, "name": "Meet the Founder", "item": "https://wellrestedskincare.com/article-founder.html"}
+      ]
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #FAFAF8; --off-white: #F2F0EB; --ink: #1A1A18;
+      --ink-light: #4A4A46; --ink-faint: #9A9A94;
+      --sage-pale: #D6E3D4; --teal: #3D7A7A; --teal-light: #5A9E9E;
+      --accent: #C8A882; --border: #E0DDD6;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--teal-light); }
+
+    .article-header { padding: 120px 64px 80px; background: var(--off-white); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .header-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 80px 80px; opacity: 0.4; }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; }
+    .breadcrumb { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
+    .breadcrumb a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--teal); }
+    .breadcrumb-sep { font-size: 10px; color: var(--border); }
+    .breadcrumb-current { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); }
+    .article-cat { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white); background: var(--teal); padding: 4px 12px; display: inline-block; margin-bottom: 20px; }
+    .article-title { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 5vw, 58px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 20px; }
+    .article-title em { font-style: italic; color: var(--teal); }
+    .article-subtitle { font-size: 18px; font-weight: 300; line-height: 1.7; color: var(--ink-light); max-width: 620px; margin-bottom: 32px; }
+    .article-meta { display: flex; align-items: center; gap: 16px; }
+    .meta-item { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
+    .meta-divider { width: 1px; height: 14px; background: var(--border); }
+
+    .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 0; }
+    .article-body { padding: 64px; border-right: 1px solid var(--border); max-width: 100%; }
+    .article-sidebar { padding: 40px 32px; background: var(--off-white); position: sticky; top: 60px; height: fit-content; }
+
+    .article-intro { font-size: 17px; font-weight: 300; line-height: 1.9; color: var(--ink-light); margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--border); }
+    .article-intro strong { font-weight: 500; color: var(--ink); }
+
+    .body-section { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--border); }
+    .body-section:last-of-type { border-bottom: none; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .section-label::before { content: ''; display: block; width: 16px; height: 1px; background: var(--teal); }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 28px; letter-spacing: -0.5px; line-height: 1.15; margin-bottom: 20px; }
+    .section-title em { font-style: italic; color: var(--teal); }
+    .body-text { font-size: 15px; font-weight: 300; line-height: 1.9; color: var(--ink-light); margin-bottom: 16px; }
+    .body-text strong { font-weight: 500; color: var(--ink); }
+    .body-text:last-child { margin-bottom: 0; }
+
+    .pull-quote { border-left: 3px solid var(--teal); padding: 20px 28px; margin: 32px 0; background: var(--sage-pale); }
+    .pull-quote p { font-family: 'DM Serif Display', serif; font-size: 22px; line-height: 1.5; color: var(--ink); font-style: italic; }
+    .pull-quote cite { display: block; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-top: 12px; font-style: normal; }
+
+    .cta-block { background: var(--ink); padding: 48px; margin: 48px 0 0; text-align: center; }
+    .cta-block-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 16px; }
+    .cta-block-title { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--white); margin-bottom: 12px; }
+    .cta-block-sub { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.4); margin-bottom: 28px; line-height: 1.7; }
+    .cta-btn { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--teal); color: var(--white); border: none; padding: 14px 32px; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s; }
+    .cta-btn:hover { background: var(--teal-light); }
+
+    .sidebar-section { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--border); }
+    .sidebar-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .sidebar-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 16px; }
+    .about-card { padding: 20px; background: var(--white); border: 1px solid var(--border); }
+    .about-name { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--ink); margin-bottom: 4px; }
+    .about-role { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    .about-bio { font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--ink-light); }
+    .related-articles { display: flex; flex-direction: column; gap: 12px; }
+    .related-item { padding: 14px; border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s; text-decoration: none; display: block; }
+    .related-item:hover { border-color: var(--teal); }
+    .related-cat { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+    .related-title { font-size: 13px; font-weight: 400; color: var(--ink); line-height: 1.4; }
+
+    footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
+    .footer-logo span { color: var(--teal-light); }
+    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 240px; }
+    .footer-col-title { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.22); margin-bottom: 18px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--teal-light); }
+    .footer-bottom { background: var(--ink); padding: 18px 64px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; }
+    .footer-bottom-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.16); }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+      .article-header { padding: 100px 24px 56px; }
+      .article-body { padding: 40px 24px; }
+      nav { padding: 0 24px; }
+      footer { grid-template-columns: 1fr 1fr; padding: 40px 24px; }
+      .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 8px; }
+    }
+  </style>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H93DL9R9QJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H93DL9R9QJ');
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
+  <ul class="nav-links">
+    <li><a href="/brand-directory.html">Brands</a></li>
+    <li><a href="/editorial.html" class="active">Editorial</a></li>
+    <li><a href="/about.html">About</a></li>
+  </ul>
+  <button class="nav-cta" onclick="window.location.href='/brand-directory.html'">Explore Brands</button>
+</nav>
+
+<div class="article-header">
+  <div class="header-grid"></div>
+  <div class="header-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/editorial.html">Editorial</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">Meet the Founder</span>
+    </div>
+    <span class="article-cat">Founder's Note</span>
+    <h1 class="article-title">Hi, I'm Katherine. Here's <em>why</em> I built this.</h1>
+    <p class="article-subtitle">A nurse, a midwestern mom of two, and someone who went deep down the skincare rabbit hole — and never really came back up.</p>
+    <div class="article-meta">
+      <span class="meta-item">Katherine</span>
+      <div class="meta-divider"></div>
+      <span class="meta-item">March 9, 2026</span>
+      <div class="meta-divider"></div>
+      <span class="meta-item">4 min read</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-layout">
+  <div class="article-body">
+
+    <p class="article-intro reveal">I'm a nurse. A mom of two boys. I live in the Midwest, I love a good Sunday routine, and I have been <strong>obsessed with skincare</strong> for longer than I care to admit. Well Rested Skincare is the site I always wished existed — so eventually, I just built it myself.</p>
+
+    <div class="body-section reveal">
+      <div class="section-label">Where it started</div>
+      <h2 class="section-title">Clean ingredients, <em>real results</em></h2>
+      <p class="body-text">For years, my approach to skincare was pretty simple: I wanted products with clean ingredients that actually worked. No long lists of unpronounceable chemicals. No unnecessary fillers. I spent a lot of time reading labels, researching formulations, and slowly building a routine I trusted.</p>
+      <p class="body-text">That framework served me well — and honestly, it still shapes how I think. I tend toward brands that are thoughtful about what they put in the bottle. But over time, my perspective got a little more nuanced.</p>
+      <div class="pull-quote">
+        <p>"Sometimes your skin needs medicine."</p>
+        <cite>— My favorite esthetician, and now my personal motto</cite>
+      </div>
+      <p class="body-text">She's right. There are ingredients — retinoids, vitamin C, AHAs, peptides — that don't just feel nice on your skin. They actually change it, at the cellular level, in ways that have been documented in peer-reviewed literature for decades. Clean and effective aren't mutually exclusive, but sometimes the most effective thing is also a little clinical. I've made my peace with that.</p>
+    </div>
+
+    <div class="body-section reveal">
+      <div class="section-label">The turning point</div>
+      <h2 class="section-title">COVID, a lot of free time, and <em>at-home devices</em></h2>
+      <p class="body-text">During COVID, like a lot of people, I suddenly had time on my hands and a strong motivation to stop spending money at the derm's office. I started researching at-home devices — LED masks, microcurrent, laser — and what I found surprised me.</p>
+      <p class="body-text">The technology had quietly matured. Devices that used to be exclusive to clinical settings were now available for home use, calibrated for safety and consistent enough to produce real results over time. I became a little bit evangelical about it. My friends started texting me for recommendations. My family started asking questions at the dinner table that I will not repeat here.</p>
+      <p class="body-text">That's when I realized: there was no single place that brought together the skincare brands I trusted <em>and</em> the devices I'd come to rely on, with honest editorial context and actual clinical grounding behind the recommendations. So I built it.</p>
+    </div>
+
+    <div class="body-section reveal">
+      <div class="section-label">What this site is</div>
+      <h2 class="section-title">Science first. <em>Marketing never.</em></h2>
+      <p class="body-text">Every brand in our directory has been vetted — not sponsored, not paid to be here. I look at ingredient quality, clinical evidence, and real-world results. If a brand makes a claim that isn't backed by the research, it doesn't make the cut, no matter how beautiful the packaging is.</p>
+      <p class="body-text">I'm also an affiliate, which means I earn a small commission when you buy through my links. That's how this site stays running. But it has never and will never influence which brands I recommend — and I've turned down paid placement requests to keep it that way.</p>
+      <p class="body-text">This is the skincare site I would have wanted when I was starting out. I hope it saves you some time, some money, and a few very expensive mistakes.</p>
+    </div>
+
+    <div class="cta-block reveal">
+      <div class="cta-block-label">Ready to explore?</div>
+      <div class="cta-block-title">Browse the brand directory</div>
+      <p class="cta-block-sub">24 vetted brands — skincare and devices — ranked by clinical evidence, ingredient quality, and real results.</p>
+      <a href="/brand-directory.html" class="cta-btn">See All Brands →</a>
+    </div>
+
+  </div>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">About the Author</div>
+      <div class="about-card">
+        <div class="about-name">Katherine</div>
+        <div class="about-role">Founder, Well Rested Skincare</div>
+        <p class="about-bio">Nurse. Midwestern mom of two. Skincare obsessive. Built this site because no one else had.</p>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Read Next</div>
+      <div class="related-articles">
+        <a href="/article-am-routine.html" class="related-item">
+          <div class="related-cat">Routine Guide</div>
+          <div class="related-title">The 5-step AM routine that actually holds up to scrutiny</div>
+        </a>
+        <a href="/article-actives.html" class="related-item">
+          <div class="related-cat">Ingredient Spotlight</div>
+          <div class="related-title">Why active ingredients are the most important part of your routine</div>
+        </a>
+        <a href="/article-devices.html" class="related-item">
+          <div class="related-cat">Device Guide</div>
+          <div class="related-title">At-home skincare devices: what actually works</div>
+        </a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">Well Rested <span>Skincare</span></div>
+    <p class="footer-tagline">Science-backed skincare, honestly reviewed. 0 paid placements. Ever.</p>
+  </div>
+  <div>
+    <div class="footer-col-title">Explore</div>
+    <ul class="footer-links">
+      <li><a href="/brand-directory.html">Brand Directory</a></li>
+      <li><a href="/editorial.html">Editorial</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Editorial</div>
+    <ul class="footer-links">
+      <li><a href="/article-am-routine.html">AM Routine Guide</a></li>
+      <li><a href="/article-actives.html">Active Ingredients</a></li>
+      <li><a href="/article-devices.html">At-Home Devices</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Legal</div>
+    <ul class="footer-links">
+      <li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span class="footer-bottom-text">© 2026 Well Rested Skincare — All rights reserved</span>
+  <span class="footer-bottom-text">0 Paid Placements</span>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+
+</body>
+</html>
