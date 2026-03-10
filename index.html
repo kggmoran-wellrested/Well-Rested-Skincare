@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="fo-verify" content="32f2a19c-9e80-4d9b-87ea-863a950bb80c" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Well Rested Skincare — Science-Backed Skincare That Delivers Real Results</title>
@@ -98,6 +97,19 @@
     .stat-item:last-child { border-right: none; }
     .stat-num { font-family: 'DM Serif Display', serif; font-size: 48px; color: var(--teal); letter-spacing: -2px; line-height: 1; margin-bottom: 8px; }
     .stat-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+
+    /* FOUNDER NOTE */
+    .founder-section { padding: 100px 64px; background: var(--cream); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .founder-inner { display: grid; grid-template-columns: 160px 1fr; gap: 64px; align-items: center; max-width: 900px; margin: 0 auto; }
+    .founder-left { display: flex; justify-content: center; }
+    .founder-monogram { width: 120px; height: 120px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 52px; color: var(--white); font-style: italic; }
+    .founder-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .founder-eyebrow::before { content: ''; display: block; width: 20px; height: 1px; background: var(--teal); }
+    .founder-headline { font-family: 'DM Serif Display', serif; font-size: clamp(22px, 2.5vw, 32px); letter-spacing: -0.5px; line-height: 1.15; margin-bottom: 20px; }
+    .founder-headline em { font-style: italic; color: var(--teal); }
+    .founder-body { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--ink-light); margin-bottom: 14px; }
+    .founder-link { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; transition: color 0.2s; }
+    .founder-link:hover { color: var(--ink); }
 
     /* FEATURED BRANDS */
     .featured-section { padding: 100px 64px; background: var(--white); }
@@ -203,14 +215,6 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   </style>
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H93DL9R9QJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-H93DL9R9QJ');
-  </script>
 </head>
 <body>
 
@@ -229,14 +233,14 @@
   <div class="ticker-track">
     <span class="ticker-item">Clinically Validated Brands</span>
     <span class="ticker-item">Science-Backed Skincare</span>
-    <span class="ticker-item">21 Vetted Brands</span>
+    <span class="ticker-item">24 Vetted Brands</span>
     <span class="ticker-item">Honest Reviews Always</span>
     <span class="ticker-item">Look Like Yourself — Well Rested</span>
     <span class="ticker-item">Flawless Aging</span>
     <span class="ticker-item">Real Ingredients. Real Results.</span>
     <span class="ticker-item">Clinically Validated Brands</span>
     <span class="ticker-item">Science-Backed Skincare</span>
-    <span class="ticker-item">21 Vetted Brands</span>
+    <span class="ticker-item">24 Vetted Brands</span>
     <span class="ticker-item">Honest Reviews Always</span>
     <span class="ticker-item">Look Like Yourself — Well Rested</span>
     <span class="ticker-item">Flawless Aging</span>
@@ -276,7 +280,7 @@
 
 <!-- STATS BAR -->
 <div class="stats-bar reveal">
-  <div class="stat-item"><div class="stat-num">21</div><div class="stat-label">Vetted Brands</div></div>
+  <div class="stat-item"><div class="stat-num">24</div><div class="stat-label">Vetted Brands</div></div>
   <div class="stat-item"><div class="stat-num">4.7</div><div class="stat-label">Avg Brand Rating</div></div>
   <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Clinically Validated</div></div>
   <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Paid Placements</div></div>
@@ -301,6 +305,22 @@
   </div>
 </section>
 
+<!-- FOUNDER NOTE -->
+<section class="founder-section reveal">
+  <div class="founder-inner">
+    <div class="founder-left">
+      <div class="founder-monogram">K</div>
+    </div>
+    <div class="founder-right">
+      <div class="founder-eyebrow">A Note from the Founder</div>
+      <h2 class="founder-headline">Hi, I'm Katherine — a nurse, a midwestern mom of two, and a lifelong <em>skincare obsessive.</em></h2>
+      <p class="founder-body">I built Well Rested Skincare because I kept getting asked the same questions by friends and family: what actually works? What's worth the money? I'd been doing this research for years anyway — so eventually I just made it a website.</p>
+      <p class="founder-body">My approach: clean ingredients when possible, clinical evidence always. And as my favorite esthetician once told me — sometimes your skin needs medicine. I've made peace with that.</p>
+      <a href="/article-founder.html" class="founder-link">Read my full story →</a>
+    </div>
+  </div>
+</section>
+
 <!-- FEATURED BRANDS -->
 <section class="featured-section reveal">
   <div class="section-header">
@@ -308,7 +328,7 @@
       <div class="section-eyebrow">Featured Brands</div>
       <h2 class="section-title">Brands we <em>stand behind</em></h2>
     </div>
-    <a href="/brand-directory.html" class="section-link">View All 21 Brands →</a>
+    <a href="/brand-directory.html" class="section-link">View All 24 Brands →</a>
   </div>
   <div class="brands-grid">
     <a href="/brand-page.html" class="brand-card">
