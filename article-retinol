@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Truth About Retinol — What It Does and How to Start — Well Rested Skincare</title>
+  <meta name="description" content="Retinol is the most clinically proven anti-aging ingredient in skincare. Here's what it actually does, how to start without irritation, and which products to buy." />
+  <link rel="canonical" href="https://wellrestedskincare.com/article-retinol.html">
+  <meta property="og:title" content="The Truth About Retinol — What It Does and How to Start">
+  <meta property="og:description" content="Retinol is the most clinically proven anti-aging ingredient in skincare. Here's what it actually does, how to start without irritation, and which products to buy.">
+  <meta property="og:url" content="https://wellrestedskincare.com/article-retinol.html">
+  <meta property="og:type" content="article">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Truth About Retinol — What It Does and How to Start",
+    "description": "Retinol is the most clinically proven anti-aging ingredient in skincare. Here's what it actually does, how to start without irritation, and which products to buy.",
+    "datePublished": "2026-03-13",
+    "dateModified": "2026-03-13",
+    "author": {"@type": "Organization", "name": "Well Rested Skincare", "url": "https://wellrestedskincare.com"},
+    "publisher": {"@type": "Organization", "name": "Well Rested Skincare", "url": "https://wellrestedskincare.com"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://wellrestedskincare.com/article-retinol.html"},
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wellrestedskincare.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Editorial", "item": "https://wellrestedskincare.com/editorial.html"},
+        {"@type": "ListItem", "position": 3, "name": "The Truth About Retinol", "item": "https://wellrestedskincare.com/article-retinol.html"}
+      ]
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #FAFAF8; --off-white: #F2F0EB; --ink: #1A1A18;
+      --ink-light: #4A4A46; --ink-faint: #9A9A94;
+      --sage-pale: #D6E3D4; --teal: #3D7A7A; --teal-light: #5A9E9E;
+      --accent: #C8A882; --border: #E0DDD6;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--teal); }
+    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--teal-light); }
+
+    .article-header { padding: 120px 64px 80px; background: var(--off-white); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .header-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 80px 80px; opacity: 0.4; }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; }
+    .breadcrumb { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
+    .breadcrumb a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--teal); }
+    .breadcrumb-sep { font-size: 10px; color: var(--border); }
+    .breadcrumb-current { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); }
+    .article-cat { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white); background: var(--teal); padding: 4px 12px; display: inline-block; margin-bottom: 20px; }
+    .article-title { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 5vw, 58px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 20px; }
+    .article-title em { font-style: italic; color: var(--teal); }
+    .article-subtitle { font-size: 18px; font-weight: 300; line-height: 1.7; color: var(--ink-light); max-width: 620px; margin-bottom: 32px; }
+    .article-meta { display: flex; align-items: center; gap: 16px; }
+    .meta-item { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
+    .meta-divider { width: 1px; height: 14px; background: var(--border); }
+
+    .article-layout { display: grid; grid-template-columns: 1fr 300px; gap: 0; }
+    .article-body { padding: 64px; border-right: 1px solid var(--border); max-width: 100%; }
+    .article-sidebar { padding: 40px 32px; background: var(--off-white); position: sticky; top: 60px; height: fit-content; }
+
+    .article-intro { font-size: 17px; font-weight: 300; line-height: 1.9; color: var(--ink-light); margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--border); }
+    .article-intro strong { font-weight: 500; color: var(--ink); }
+
+    .body-section { margin-bottom: 56px; padding-bottom: 56px; border-bottom: 1px solid var(--border); }
+    .body-section:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+    .section-label::before { content: ''; display: block; width: 16px; height: 1px; background: var(--teal); }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 32px; letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 20px; }
+    .section-title em { font-style: italic; color: var(--teal); }
+    .body-text { font-size: 15px; font-weight: 300; line-height: 1.9; color: var(--ink-light); margin-bottom: 16px; }
+    .body-text strong { font-weight: 500; color: var(--ink); }
+    .body-text:last-child { margin-bottom: 0; }
+
+    .science-box { background: var(--sage-pale); border-left: 3px solid var(--teal); padding: 20px 24px; margin: 24px 0; }
+    .science-box-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+    .science-box p { font-size: 14px; font-weight: 300; line-height: 1.8; color: var(--ink-light); }
+    .science-box strong { font-weight: 500; color: var(--ink); }
+
+    .retinoid-table { width: 100%; border-collapse: collapse; margin: 28px 0; }
+    .retinoid-table th { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); padding: 10px 16px; border-bottom: 2px solid var(--border); text-align: left; }
+    .retinoid-table td { font-size: 13px; font-weight: 300; color: var(--ink-light); padding: 14px 16px; border-bottom: 1px solid var(--border); line-height: 1.5; }
+    .retinoid-table td strong { font-weight: 500; color: var(--ink); }
+    .retinoid-table tr:last-child td { border-bottom: none; }
+    .retinoid-table tr:hover td { background: var(--off-white); }
+
+    .mistake-list { display: flex; flex-direction: column; gap: 16px; margin: 24px 0; }
+    .mistake-item { display: flex; gap: 16px; padding: 18px 20px; border: 1px solid var(--border); background: var(--white); }
+    .mistake-num { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--border); line-height: 1; flex-shrink: 0; width: 32px; }
+    .mistake-content { flex: 1; }
+    .mistake-title { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+    .mistake-body { font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--ink-light); }
+
+    .schedule-block { background: var(--ink); padding: 36px; margin: 28px 0; }
+    .schedule-title { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--white); margin-bottom: 20px; }
+    .schedule-steps { display: flex; flex-direction: column; gap: 10px; }
+    .schedule-step { display: flex; align-items: flex-start; gap: 14px; padding: 12px 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); }
+    .schedule-week { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-light); width: 64px; flex-shrink: 0; padding-top: 2px; }
+    .schedule-text { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.6; }
+    .schedule-text strong { font-weight: 500; color: var(--white); }
+
+    .brand-ref { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border: 1px solid var(--border); background: var(--white); margin: 16px 0; cursor: pointer; transition: border-color 0.2s; text-decoration: none; }
+    .brand-ref:hover { border-color: var(--teal); }
+    .brand-ref-initials { width: 40px; height: 40px; background: var(--off-white); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--teal); flex-shrink: 0; }
+    .brand-ref-info { flex: 1; }
+    .brand-ref-name { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
+    .brand-ref-desc { font-size: 12px; font-weight: 300; color: var(--ink-faint); }
+    .brand-ref-arrow { color: var(--teal); font-size: 14px; }
+
+    .sidebar-section { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--border); }
+    .sidebar-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .sidebar-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 16px; }
+    .toc-item { font-size: 13px; font-weight: 300; color: var(--ink-light); padding: 9px 0; border-bottom: 1px solid var(--border); text-decoration: none; display: block; transition: color 0.2s; }
+    .toc-item:hover { color: var(--teal); }
+    .toc-item:last-child { border-bottom: none; }
+    .toc-num { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--teal); margin-right: 8px; }
+    .key-takeaways { display: flex; flex-direction: column; gap: 10px; }
+    .takeaway { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; font-weight: 300; line-height: 1.6; color: var(--ink-light); }
+    .takeaway-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; margin-top: 6px; }
+    .related-articles { display: flex; flex-direction: column; gap: 12px; }
+    .related-item { padding: 14px; border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s; text-decoration: none; display: block; }
+    .related-item:hover { border-color: var(--teal); }
+    .related-cat { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+    .related-title { font-size: 13px; font-weight: 400; color: var(--ink); line-height: 1.4; }
+
+    footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
+    .footer-logo span { color: var(--teal-light); }
+    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 240px; }
+    .footer-col-title { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.22); margin-bottom: 18px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--teal-light); }
+    .footer-bottom { background: var(--ink); padding: 18px 64px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; }
+    .footer-bottom-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.16); }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-sidebar { position: static; }
+      .article-header { padding: 100px 24px 56px; }
+      .article-body { padding: 40px 24px; border-right: none; }
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      footer { grid-template-columns: 1fr 1fr; padding: 40px 24px; }
+      .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 8px; }
+    }
+  </style>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H93DL9R9QJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H93DL9R9QJ');
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
+  <ul class="nav-links">
+    <li><a href="/brand-directory.html">Brands</a></li>
+    <li><a href="/editorial.html" class="active">Editorial</a></li>
+    <li><a href="/about.html">About</a></li>
+  </ul>
+  <button class="nav-cta" onclick="window.location.href='/brand-directory.html'">Explore Brands</button>
+</nav>
+
+<div class="article-header">
+  <div class="header-grid"></div>
+  <div class="header-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/editorial.html">Editorial</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">Ingredient Spotlight</span>
+    </div>
+    <span class="article-cat">Ingredient Spotlight</span>
+    <h1 class="article-title">The truth about retinol — what it <em>actually</em> does and how to start</h1>
+    <p class="article-subtitle">Retinol is the most clinically proven anti-aging ingredient in skincare history. Here's the science behind it, how to introduce it without wrecking your skin, and which products are actually worth buying.</p>
+    <div class="article-meta">
+      <span class="meta-item">Well Rested Editorial</span>
+      <div class="meta-divider"></div>
+      <span class="meta-item">March 13, 2026</span>
+      <div class="meta-divider"></div>
+      <span class="meta-item">8 min read</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-layout">
+  <div class="article-body">
+
+    <p class="article-intro reveal">If you had to pick one ingredient that has earned its place in skincare through decades of clinical research, it would be retinol. No other over-the-counter ingredient has been studied as extensively, proven as consistently, or recommended as universally by dermatologists for anti-aging. And yet — it's also the ingredient most people either avoid entirely out of fear, or use incorrectly and give up on. <strong>This article fixes that.</strong></p>
+
+    <div class="body-section reveal">
+      <div class="section-label">The Science</div>
+      <h2 class="section-title">What retinol <em>actually</em> does to your skin</h2>
+      <p class="body-text">Retinol is a form of vitamin A. When applied to skin, it gets converted by enzymes in the skin into retinoic acid — the active form that actually does the work. Retinoic acid binds to receptors in skin cells and literally changes how they behave.</p>
+      <p class="body-text">Specifically, it <strong>speeds up cell turnover</strong> — the process by which old, damaged skin cells are shed and replaced with new ones. In young skin, this happens naturally every 28 days or so. As we age, that cycle slows significantly. Retinol pushes it back toward the pace of younger skin.</p>
+      <p class="body-text">Beyond cell turnover, retinoic acid also <strong>stimulates collagen production</strong> in the dermis — the deeper layer of skin where structural support lives. This is the mechanism behind its clinically proven ability to reduce the appearance of fine lines and wrinkles over time.</p>
+      <div class="science-box">
+        <div class="science-box-label">Clinical Evidence</div>
+        <p>Retinoids have been studied in controlled clinical trials since the 1980s. Peer-reviewed research has consistently demonstrated measurable reductions in fine lines, improved skin texture, reduced hyperpigmentation, and increased dermal collagen density with regular use. No other OTC anti-aging ingredient has a comparable evidence base.</p>
+      </div>
+      <p class="body-text">The important distinction: retinol (the OTC form) is not the same as tretinoin (the prescription form, also called retinoic acid). Tretinoin is more potent because it doesn't require that conversion step. But retinol, used consistently, produces real, clinically documented results — just on a longer timeline.</p>
+    </div>
+
+    <div class="body-section reveal">
+      <div class="section-label">The Retinoid Family</div>
+      <h2 class="section-title">OTC vs prescription — <em>what's the difference?</em></h2>
+      <p class="body-text">Retinoids are a family of vitamin A derivatives, and they're not all created equal. Here's how they stack up:</p>
+      <table class="retinoid-table">
+        <thead>
+          <tr>
+            <th>Retinoid</th>
+            <th>Availability</th>
+            <th>Potency</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Retinyl palmitate</strong></td>
+            <td>OTC</td>
+            <td>Lowest</td>
+            <td>Complete beginners, very sensitive skin</td>
+          </tr>
+          <tr>
+            <td><strong>Retinol</strong></td>
+            <td>OTC</td>
+            <td>Moderate</td>
+            <td>Most people — the standard starting point</td>
+          </tr>
+          <tr>
+            <td><strong>Retinaldehyde</strong></td>
+            <td>OTC</td>
+            <td>High</td>
+            <td>Experienced retinol users wanting more without Rx</td>
+          </tr>
+          <tr>
+            <td><strong>Tretinoin</strong></td>
+            <td>Prescription only</td>
+            <td>Highest</td>
+            <td>Significant aging concerns, acne, under derm supervision</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="body-text">For most people starting out, <strong>retinol at 0.025%–0.1%</strong> is the right entry point. It's potent enough to produce real results, gentle enough to build tolerance without significant irritation, and widely available in well-formulated products.</p>
+      <p class="body-text">If you've been using retinol consistently for 6+ months with no irritation and want more, retinaldehyde is worth exploring — or a conversation with your dermatologist about tretinoin.</p>
+    </div>
+
+    <div class="body-section reveal">
+      <div class="section-label">Getting Started</div>
+      <h2 class="section-title">How to introduce retinol <em>without the irritation</em></h2>
+      <p class="body-text">The reason most people fail with retinol is simple: they use too much, too soon. The skin needs time to build tolerance, and the purging and peeling that comes from starting too aggressively is uncomfortable enough that most people quit before they see results.</p>
+      <p class="body-text">The protocol that works — and that dermatologists consistently recommend — is called <strong>slow and low.</strong></p>
+
+      <div class="schedule-block">
+        <div class="schedule-title">The Slow & Low Introduction Schedule</div>
+        <div class="schedule-steps">
+          <div class="schedule-step">
+            <span class="schedule-week">Weeks 1–2</span>
+            <span class="schedule-text"><strong>1x per week.</strong> Apply a pea-sized amount to clean, dry skin. Wait 20–30 minutes after washing your face before applying.</span>
+          </div>
+          <div class="schedule-step">
+            <span class="schedule-week">Weeks 3–4</span>
+            <span class="schedule-text"><strong>2x per week.</strong> If no significant irritation, increase to twice weekly. Continue monitoring.</span>
+          </div>
+          <div class="schedule-step">
+            <span class="schedule-week">Month 2</span>
+            <span class="schedule-text"><strong>Every other night.</strong> Skin should be building tolerance. Peeling and redness should be minimal.</span>
+          </div>
+          <div class="schedule-step">
+            <span class="schedule-week">Month 3+</span>
+            <span class="schedule-text"><strong>Nightly if tolerated.</strong> This is where consistent results begin to compound. Give it 6 months before judging.</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="body-text">A few additional rules that make a real difference: <strong>always use retinol at night</strong> — it degrades in sunlight and increases photosensitivity. <strong>Always follow with SPF the next morning.</strong> And always apply moisturizer after — a well-hydrated skin barrier tolerates retinol significantly better than a dry one.</p>
+      <p class="body-text">The "sandwich method" — applying moisturizer before and after retinol — can help very sensitive skin build tolerance even more gradually. It dilutes the retinol slightly but reduces irritation meaningfully.</p>
+    </div>
+
+    <div class="body-section reveal">
+      <div class="section-label">Product Picks</div>
+      <h2 class="section-title">Which retinol products are <em>actually worth buying</em></h2>
+      <p class="body-text">Not all retinol products are formulated equally. The concentration matters, but so does the delivery system — retinol is unstable and degrades quickly when exposed to light or air. Look for opaque, airless packaging and formulas that include skin-supporting ingredients alongside the retinol.</p>
+      <p class="body-text">These are the brands in our directory with retinol products we recommend:</p>
+
+      <a href="/brand-page.html?brand=cerave" class="brand-ref">
+        <div class="brand-ref-initials">CV</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">CeraVe Skin Renewing Retinol Serum</div>
+          <div class="brand-ref-desc">Encapsulated retinol with ceramides and niacinamide — excellent for beginners. Fragrance-free, gentle, affordable.</div>
+        </div>
+        <span class="brand-ref-arrow">↗</span>
+      </a>
+
+      <a href="/brand-page.html?brand=paulas-choice" class="brand-ref">
+        <div class="brand-ref-initials">PC</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">Paula's Choice 1% Retinol Treatment</div>
+          <div class="brand-ref-desc">A higher-concentration option for experienced users. Well-formulated with peptides and vitamin C. Evidence-based as expected from Paula's Choice.</div>
+        </div>
+        <span class="brand-ref-arrow">↗</span>
+      </a>
+
+      <a href="/brand-page.html?brand=obagi" class="brand-ref">
+        <div class="brand-ref-initials">Ob</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">Obagi Retinol 1.0</div>
+          <div class="brand-ref-desc">Clinical-strength retinol for users ready to step up. Physician-developed formula with shea butter to buffer irritation.</div>
+        </div>
+        <span class="brand-ref-arrow">↗</span>
+      </a>
+
+      <a href="/brand-page.html?brand=alastin" class="brand-ref">
+        <div class="brand-ref-initials">Al</div>
+        <div class="brand-ref-info">
+          <div class="brand-ref-name">Alastin Skin Renewal Retinol Serum</div>
+          <div class="brand-ref-desc">Pairs retinol with Alastin's proprietary TriHex Technology® for amplified collagen support. A premium option for serious anti-aging.</div>
+        </div>
+        <span class="brand-ref-arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="body-section reveal">
+      <div class="section-label">What to Avoid</div>
+      <h2 class="section-title">The most common retinol <em>mistakes</em></h2>
+      <div class="mistake-list">
+        <div class="mistake-item">
+          <div class="mistake-num">01</div>
+          <div class="mistake-content">
+            <div class="mistake-title">Starting too strong, too fast</div>
+            <div class="mistake-body">Jumping straight to nightly use or a high concentration is the fastest way to damage your skin barrier and give up. The slow and low schedule exists for a reason — follow it.</div>
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-num">02</div>
+          <div class="mistake-content">
+            <div class="mistake-title">Skipping SPF the morning after</div>
+            <div class="mistake-body">Retinol increases photosensitivity. Using it without daily SPF the following morning actively undermines the results you're working toward and increases UV damage risk.</div>
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-num">03</div>
+          <div class="mistake-content">
+            <div class="mistake-title">Layering with AHAs or BHAs on the same night</div>
+            <div class="mistake-body">Combining retinol with acids (glycolic, lactic, salicylic) in the same application significantly increases irritation risk. Alternate nights instead — acids one night, retinol the next.</div>
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-num">04</div>
+          <div class="mistake-content">
+            <div class="mistake-title">Quitting during the purge</div>
+            <div class="mistake-body">In the first 4–6 weeks, accelerated cell turnover can temporarily make skin look worse — more breakouts, more texture. This is normal. It passes. Most people who quit do so just before it gets better.</div>
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-num">05</div>
+          <div class="mistake-content">
+            <div class="mistake-title">Expecting results in weeks</div>
+            <div class="mistake-body">Retinol works on a timeline of months, not weeks. Meaningful improvement in fine lines and texture typically takes 3–6 months of consistent use. Give it time before judging.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">In This Article</div>
+      <a href="#" class="toc-item"><span class="toc-num">01</span>What retinol does</a>
+      <a href="#" class="toc-item"><span class="toc-num">02</span>OTC vs prescription</a>
+      <a href="#" class="toc-item"><span class="toc-num">03</span>How to start</a>
+      <a href="#" class="toc-item"><span class="toc-num">04</span>Product picks</a>
+      <a href="#" class="toc-item"><span class="toc-num">05</span>Common mistakes</a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Key Takeaways</div>
+      <div class="key-takeaways">
+        <div class="takeaway"><div class="takeaway-dot"></div>Start at 0.025%–0.1% and build slowly over months</div>
+        <div class="takeaway"><div class="takeaway-dot"></div>Always use at night — never during the day</div>
+        <div class="takeaway"><div class="takeaway-dot"></div>SPF every morning is non-negotiable</div>
+        <div class="takeaway"><div class="takeaway-dot"></div>Don't layer with AHAs/BHAs on the same night</div>
+        <div class="takeaway"><div class="takeaway-dot"></div>Give it 3–6 months before judging results</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Read Next</div>
+      <div class="related-articles">
+        <a href="/article-actives.html" class="related-item">
+          <div class="related-cat">Ingredient Spotlight</div>
+          <div class="related-title">Why active ingredients are the most important part of your routine</div>
+        </a>
+        <a href="/article-am-routine.html" class="related-item">
+          <div class="related-cat">Routine Guide</div>
+          <div class="related-title">The 5-step AM routine that actually holds up to scrutiny</div>
+        </a>
+        <a href="/article-devices.html" class="related-item">
+          <div class="related-cat">Device Guide</div>
+          <div class="related-title">At-home skincare devices: what actually works</div>
+        </a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">Well Rested <span>Skincare</span></div>
+    <p class="footer-tagline">Science-backed skincare, honestly reviewed. 0 paid placements. Ever.</p>
+  </div>
+  <div>
+    <div class="footer-col-title">Explore</div>
+    <ul class="footer-links">
+      <li><a href="/brand-directory.html">Brand Directory</a></li>
+      <li><a href="/editorial.html">Editorial</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Editorial</div>
+    <ul class="footer-links">
+      <li><a href="/article-am-routine.html">AM Routine Guide</a></li>
+      <li><a href="/article-actives.html">Active Ingredients</a></li>
+      <li><a href="/article-devices.html">At-Home Devices</a></li>
+      <li><a href="/article-retinol.html">Retinol Guide</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Legal</div>
+    <ul class="footer-links">
+      <li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span class="footer-bottom-text">© 2026 Well Rested Skincare — All rights reserved</span>
+  <span class="footer-bottom-text">0 Paid Placements</span>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+
+</body>
+</html>
