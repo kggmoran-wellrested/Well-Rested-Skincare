@@ -18,19 +18,6 @@
       --blush: #F0E6DC; --cream: #F7F2EC;
     }
     html { scroll-behavior: smooth; }
-    
-    <script type="text/javascript">     
-  var vglnk = {key: 2a4jylb.d6e39569-cfd5-4ae2-ab8f-07315c1f39c5};     
-  (function(d, t) {         
-  var s = d.createElement(t);             
-  s.type = 'text/javascript';             
-  s.async = true;             
-  s.src = '//cdn.viglink.com/api/vglnk.js';         
-  var r = d.getElementsByTagName(t)[0];             
-  r.parentNode.insertBefore(s, r);     
-  }(document, 'script')); 
-</script>
-
     body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
 
     /* NAV */
@@ -163,10 +150,16 @@
 
     /* EDITORIAL */
     .editorial-section { padding: 100px 64px; background: var(--white); border-top: 1px solid var(--border); }
-    .editorial-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1px; background: var(--border); margin-top: 56px; }
+    .editorial-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 1px; background: var(--border); margin-top: 56px; }
     .editorial-card { background: var(--white); padding: 36px; cursor: pointer; transition: background 0.2s; text-decoration: none; display: block; }
     .editorial-card:hover { background: var(--cream); }
     .editorial-card.featured { padding: 48px; }
+    .editorial-card.has-image { padding: 0; overflow: hidden; }
+    .editorial-card.has-image:hover { background: var(--white); }
+    .ed-card-image { width: 100%; aspect-ratio: 1/1; overflow: hidden; }
+    .ed-card-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .editorial-card.has-image:hover .ed-card-image img { transform: scale(1.04); }
+    .ed-card-body { padding: 24px; }
     .ed-cat { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
     .ed-title { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.3px; }
     .editorial-card.featured .ed-title { font-size: 32px; letter-spacing: -0.8px; }
@@ -228,6 +221,26 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* FLATLAY GALLERY */
+    .flatlay-section { padding: 100px 64px; background: var(--off-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .flatlay-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; }
+    .flatlay-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .flatlay-grid .flatlay-item:first-child { grid-column: span 2; }
+    .flatlay-item { position: relative; overflow: hidden; background: var(--warm); cursor: pointer; }
+    .flatlay-item:first-child { aspect-ratio: 16/9; }
+    .flatlay-item:not(:first-child) { aspect-ratio: 4/5; }
+    .flatlay-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.55s ease; }
+    .flatlay-item:hover img { transform: scale(1.04); }
+    .flatlay-placeholder { width: 100%; height: 100%; background: var(--cream); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 260px; }
+    .flatlay-placeholder-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+    .flatlay-placeholder-icon { width: 40px; height: 40px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--ink-faint); font-size: 18px; }
+    .flatlay-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,26,24,0.55) 0%, transparent 55%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 24px; }
+    .flatlay-item:hover .flatlay-overlay { opacity: 1; }
+    .flatlay-overlay-label { font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--white); letter-spacing: -0.2px; }
+    .flatlay-caption { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-top: 10px; text-align: center; }
+    .flatlay-upload-note { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+    .flatlay-upload-note::before { content: ''; display: block; width: 16px; height: 1px; background: var(--border); }
   </style>
 </head>
 <body>
@@ -275,20 +288,66 @@
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-right-organic"></div>
-    <div class="hero-right-content">
-      <div class="hero-right-wordmark">Well Rested<span>Skincare</span></div>
-      <div class="hero-right-sub">Est. 2026</div>
-      <div class="hero-circle">
-        <div class="hero-circle-text">Science<br>meets<br>sleep</div>
-      </div>
-      <div class="hero-trust-pills">
-        <div class="trust-pill"><div class="trust-pill-dot"></div><span class="trust-pill-text">Clinically Validated Brands Only</span></div>
-        <div class="trust-pill"><div class="trust-pill-dot"></div><span class="trust-pill-text">Editorial Independence Always</span></div>
-        <div class="trust-pill"><div class="trust-pill-dot"></div><span class="trust-pill-text">Transparent Affiliate Disclosure</span></div>
-        <div class="trust-pill"><div class="trust-pill-dot"></div><span class="trust-pill-text">Science First. Marketing Never.</span></div>
-      </div>
+    <img src="images/hero.png" alt="Well Rested Skincare" style="width:100%;height:100%;object-fit:cover;display:block;" />
+  </div>
+</section>
+
+<!-- FOUNDER NOTE -->
+<section class="founder-section reveal">
+  <div class="founder-inner">
+    <div class="founder-left">
+      <div class="founder-monogram">K</div>
     </div>
+    <div class="founder-right">
+      <div class="founder-eyebrow">A Note from the Founder</div>
+      <h2 class="founder-headline">Hi, I'm Katherine — a nurse, a midwestern mom of two, wife of a healthcare executive, and a lifelong <em>skincare obsessive.</em></h2>
+      <p class="founder-body">I built Well Rested Skincare because I kept getting asked the same questions by friends and family: what actually works? What's worth the money? I'd been doing this research for years anyway — so eventually I just made it a website.</p>
+      <p class="founder-body">My approach: clean ingredients when possible, clinical evidence always. And as my favorite esthetician once told me — sometimes your skin needs medicine. I've made peace with that.</p>
+      <a href="/article-founder.html" class="founder-link">Read my full story →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FLATLAY GALLERY -->
+<section class="flatlay-section reveal">
+  <div class="flatlay-header">
+    <div>
+      <div class="section-eyebrow">The Shelf</div>
+      <h2 class="section-title">Products worth <em>the shelf space</em></h2>
+    </div>
+    <a href="/brand-directory.html" class="section-link">Browse All Brands →</a>
+  </div>
+  <div class="flatlay-grid">
+
+    <div class="flatlay-item">
+      <img src="images/flatlay-hero.png" alt="Morning routine" />
+      <div class="flatlay-overlay"><span class="flatlay-overlay-label">Morning Routine Edit</span></div>
+    </div>
+
+    <!-- Replace with your second Canva flatlay -->
+    <div class="flatlay-item">
+      <img src="images/flatlay-2.png" alt="Serums and actives" />
+      <div class="flatlay-overlay"><span class="flatlay-overlay-label">Serums &amp; Actives</span></div>
+    </div>
+
+    <!-- Replace with your third Canva flatlay -->
+    <a href="/article-actives.html" class="flatlay-item" style="text-decoration:none;">
+      <img src="images/article-actives.png" alt="Skincare Ingredients That Work" />
+      <div class="flatlay-overlay"><span class="flatlay-overlay-label">Ingredients That Work</span></div>
+    </a>
+
+    <!-- Replace with your fourth Canva flatlay -->
+    <a href="/article-devices.html" class="flatlay-item" style="text-decoration:none;">
+      <img src="images/article-devices.png" alt="At-Home Devices That Actually Work" />
+      <div class="flatlay-overlay"><span class="flatlay-overlay-label">At-Home Devices</span></div>
+    </a>
+
+    <!-- Replace with your fifth Canva flatlay -->
+    <a href="/article-retinol.html" class="flatlay-item" style="text-decoration:none;">
+      <img src="images/article-retinol.png" alt="Benefits of Retinol" />
+      <div class="flatlay-overlay"><span class="flatlay-overlay-label">Benefits of Retinol</span></div>
+    </a>
+
   </div>
 </section>
 
@@ -315,22 +374,6 @@
         <div class="manifesto-quote-text">We all want to look like ourselves — just <em>well rested.</em></div>
         <div class="manifesto-quote-sig">— Well Rested Skincare · Northbrook, IL</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOUNDER NOTE -->
-<section class="founder-section reveal">
-  <div class="founder-inner">
-    <div class="founder-left">
-      <div class="founder-monogram">K</div>
-    </div>
-    <div class="founder-right">
-      <div class="founder-eyebrow">A Note from the Founder</div>
-      <h2 class="founder-headline">Hi, I'm Katherine — a nurse, a midwestern mom of two, wife of a healthcare executive, and a lifelong <em>skincare obsessive.</em></h2>
-      <p class="founder-body">I built Well Rested Skincare because I kept getting asked the same questions by friends and family: what actually works? What's worth the money? I'd been doing this research for years anyway — so eventually I just made it a website.</p>
-      <p class="founder-body">My approach: clean ingredients when possible, clinical evidence always. And as my favorite esthetician once told me — sometimes your skin needs medicine. I've made peace with that.</p>
-      <a href="/article-founder.html" class="founder-link">Read my full story →</a>
     </div>
   </div>
 </section>
@@ -439,17 +482,41 @@
       <p class="ed-excerpt">We cut through the noise and built a morning routine around the five steps with the strongest clinical evidence behind them. No filler. No trend-chasing. Just science.</p>
       <div class="ed-meta">6 min read · March 4, 2026</div>
     </a>
-    <a href="/article-actives.html" class="editorial-card">
-      <div class="ed-cat">Ingredient Spotlight</div>
-      <div class="ed-title">Why active ingredients are the most important part of your routine</div>
-      <p class="ed-excerpt">Actives are the only ingredients that actually change your skin. Here's what they are and which ones work.</p>
-      <div class="ed-meta">7 min read · March 5, 2026</div>
+    <a href="/article-actives.html" class="editorial-card has-image">
+      <div class="ed-card-image">
+        <img src="images/article-actives.png" alt="Skincare Ingredients That Work" />
+      </div>
+      <div class="ed-card-body">
+        <div class="ed-cat">Ingredient Spotlight</div>
+        <div class="ed-title">Why active ingredients are the most important part of your routine</div>
+        <div class="ed-meta">7 min read · March 5, 2026</div>
+      </div>
     </a>
     <a href="/editorial.html" class="editorial-card">
       <div class="ed-cat">Sleep & Skin</div>
       <div class="ed-title">Why your skin does its best work while you sleep</div>
       <p class="ed-excerpt">The circadian biology behind your skin's overnight repair cycle — and how to make the most of it.</p>
       <div class="ed-meta">5 min read · Coming Soon</div>
+    </a>
+    <a href="/article-devices.html" class="editorial-card has-image">
+      <div class="ed-card-image">
+        <img src="images/article-devices.png" alt="At-Home Devices That Actually Work" />
+      </div>
+      <div class="ed-card-body">
+        <div class="ed-cat">At-Home Devices</div>
+        <div class="ed-title">At-home devices that actually work</div>
+        <div class="ed-meta">Microneedling · Lasers · LED · Microcurrent</div>
+      </div>
+    </a>
+    <a href="/article-retinol.html" class="editorial-card has-image">
+      <div class="ed-card-image">
+        <img src="images/article-retinol.png" alt="Benefits of Retinol" />
+      </div>
+      <div class="ed-card-body">
+        <div class="ed-cat">Ingredient Deep-Dive</div>
+        <div class="ed-title">Benefits of retinol — and how to use it right</div>
+        <div class="ed-meta">Retinol · Anti-Aging · Cell Turnover</div>
+      </div>
     </a>
   </div>
 </section>
