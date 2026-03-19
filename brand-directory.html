@@ -141,6 +141,49 @@
     .footer-bottom-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.16); }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ─── MOBILE ─────────────────────────────────── */
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; height: 56px; }
+      .nav-links { display: none; }
+      .nav-cta { padding: 8px 14px; font-size: 9px; }
+
+      .page-header { padding: 80px 24px 48px; }
+      .page-header-count { display: none; }
+      .page-title { font-size: clamp(28px, 8vw, 40px); }
+      .page-sub { font-size: 14px; }
+
+      .controls-bar { padding: 0 20px; flex-wrap: wrap; top: 56px; }
+      .search-wrap { width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 14px 0; }
+      .filter-group { width: 100%; overflow-x: auto; border-bottom: 1px solid var(--border); }
+      .filter-btn { padding: 14px 12px; font-size: 9px; flex-shrink: 0; }
+      .sort-wrap { border-left: none; padding: 12px 0; width: 100%; }
+
+      .results-meta { padding: 14px 20px; }
+      .brands-container { padding: 20px 20px 80px; }
+      .brands-grid { grid-template-columns: 1fr; }
+      .brand-card { padding: 24px 20px; }
+      .card-logo-img { width: 64px; height: 40px; }
+      .card-name { font-size: 18px; }
+      .card-desc { font-size: 13px; }
+      .card-tags { display: none; }
+
+      .brands-grid.list-view .brand-card { grid-template-columns: 48px 1fr; padding: 16px 20px; }
+
+      footer { grid-template-columns: 1fr; padding: 40px 24px; gap: 28px; }
+      .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 8px; text-align: center; }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      nav { padding: 0 32px; }
+      .page-header { padding: 100px 40px 56px; }
+      .controls-bar { padding: 0 40px; }
+      .results-meta { padding: 14px 40px; }
+      .brands-container { padding: 32px 40px 80px; }
+      .brands-grid { grid-template-columns: repeat(2, 1fr); }
+      footer { padding: 48px 40px; grid-template-columns: 1fr 1fr; }
+      .footer-bottom { padding: 16px 40px; }
+    }
   </style>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H93DL9R9QJ"></script>
