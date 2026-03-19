@@ -263,6 +263,109 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+    /* ─── MOBILE RESPONSIVE ─────────────────────── */
+    @media (max-width: 768px) {
+
+      /* NAV */
+      nav { padding: 0 20px; height: 56px; }
+      .nav-links { display: none; }
+      .nav-cta { padding: 8px 14px; font-size: 9px; }
+
+      /* TICKER */
+      .ticker { margin-top: 56px; }
+      .ticker-item { font-size: 9px; padding: 0 20px; }
+
+      /* HERO */
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 48px 24px 40px; }
+      .hero-headline { font-size: clamp(32px, 8vw, 44px); letter-spacing: -1px; }
+      .hero-tagline { font-size: 17px; }
+      .hero-body { font-size: 14px; margin-bottom: 28px; }
+      .hero-actions { flex-direction: column; gap: 10px; }
+      .btn-primary, .btn-secondary { text-align: center; padding: 14px 20px; font-size: 10px; }
+      .hero-right { min-height: 260px; }
+
+      /* FOUNDER */
+      .founder-section { padding: 48px 24px; }
+      .founder-inner { grid-template-columns: 80px 1fr; gap: 24px; }
+      .founder-monogram { width: 72px; height: 72px; font-size: 32px; }
+      .founder-headline { font-size: clamp(18px, 5vw, 24px); }
+      .founder-body { font-size: 14px; }
+
+      /* FLATLAY GALLERY */
+      .flatlay-section { padding: 48px 20px; }
+      .flatlay-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .flatlay-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .flatlay-grid .flatlay-item:first-child { grid-column: span 2; aspect-ratio: 4/3; }
+      .flatlay-item:not(:first-child) { aspect-ratio: 1/1; }
+      .flatlay-overlay { opacity: 1; background: linear-gradient(to top, rgba(26,26,24,0.5) 0%, transparent 60%); }
+
+      /* STATS BAR */
+      .stats-bar { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { padding: 24px 16px; }
+      .stat-num { font-size: 36px; }
+
+      /* MANIFESTO */
+      .manifesto { padding: 56px 24px; }
+      .manifesto-headline { font-size: clamp(26px, 6vw, 38px); }
+      .manifesto-body { grid-template-columns: 1fr; gap: 32px; }
+      .manifesto-text p { font-size: 15px; }
+      .manifesto-quote { padding: 36px 28px; }
+      .manifesto-quote-text { font-size: 20px; }
+
+      /* FEATURED BRANDS */
+      .featured-section { padding: 56px 20px; }
+      .section-header { flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 32px; }
+      .brands-grid { grid-template-columns: 1fr; }
+      .brand-card { padding: 24px; }
+
+      /* HOW IT WORKS */
+      .how-section { padding: 56px 20px; }
+      .how-grid { grid-template-columns: 1fr; }
+      .how-card { padding: 28px 24px; }
+
+      /* EDITORIAL */
+      .editorial-section { padding: 56px 20px; }
+      .editorial-grid { grid-template-columns: 1fr; }
+      .editorial-card.featured { padding: 28px 24px; }
+      .editorial-card.featured .ed-title { font-size: 22px; }
+      .ed-card-body { padding: 16px; }
+      .ed-title { font-size: 16px; }
+
+      /* SKIN TYPE */
+      .skin-section { padding: 56px 20px; }
+      .skin-types { grid-template-columns: 1fr 1fr; }
+      .skin-type { padding: 24px 18px; }
+      .skin-headline { font-size: clamp(26px, 7vw, 38px); }
+
+      /* NEWSLETTER */
+      .newsletter { padding: 56px 20px; }
+      .newsletter-form { flex-direction: column; max-width: 100%; }
+      .newsletter-input { border-right: 1px solid var(--border); border-bottom: none; }
+      .newsletter-btn { padding: 14px; text-align: center; }
+      .newsletter-perks { flex-direction: column; gap: 10px; }
+
+      /* FOOTER */
+      footer { grid-template-columns: 1fr; padding: 48px 24px; gap: 32px; }
+      .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 8px; text-align: center; }
+    }
+
+    /* ─── TABLET ─────────────────────────────────── */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      nav { padding: 0 32px; }
+      .hero-left { padding: 60px 40px; }
+      .hero-headline { font-size: clamp(32px, 4vw, 48px); }
+      .manifesto { padding: 80px 40px; }
+      .featured-section, .how-section, .editorial-section, .flatlay-section,
+      .skin-section, .newsletter, footer { padding-left: 40px; padding-right: 40px; }
+      .brands-grid { grid-template-columns: repeat(2, 1fr); }
+      .editorial-grid { grid-template-columns: 1fr 1fr 1fr; }
+      .skin-types { grid-template-columns: repeat(2, 1fr); }
+      footer { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { padding: 16px 40px; }
+    }
+  </style>
+
     /* FLATLAY GALLERY */
     .flatlay-section { padding: 100px 64px; background: var(--off-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .flatlay-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; }
@@ -372,9 +475,9 @@
     </div>
 
     <!-- Replace with your third Canva flatlay -->
-    <a href="/article-actives.html" class="flatlay-item" style="text-decoration:none;">
-      <img src="images/products/article-actives.png" alt="Skincare Ingredients That Work" />
-      <div class="flatlay-overlay"><span class="flatlay-overlay-label">Ingredients That Work</span></div>
+    <a href="/article-peptides.html" class="flatlay-item" style="text-decoration:none;">
+      <img src="images/products/article-peptides.png" alt="Peptides Explained" />
+      <div class="flatlay-overlay"><span class="flatlay-overlay-label">Peptides, Explained</span></div>
     </a>
 
     <!-- Replace with your fourth Canva flatlay -->
