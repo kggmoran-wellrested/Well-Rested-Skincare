@@ -364,7 +364,6 @@
       footer { grid-template-columns: 1fr 1fr; }
       .footer-bottom { padding: 16px 40px; }
     }
-  </style>
 
     /* FLATLAY GALLERY */
     .flatlay-section { padding: 100px 64px; background: var(--off-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -374,7 +373,7 @@
     .flatlay-item { position: relative; overflow: hidden; background: var(--warm); cursor: pointer; }
     .flatlay-item:first-child { aspect-ratio: 16/9; }
     .flatlay-item:not(:first-child) { aspect-ratio: 4/5; }
-    .flatlay-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.55s ease; }
+    .flatlay-item img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.55s ease; }
     .flatlay-item:hover img { transform: scale(1.04); }
     .flatlay-placeholder { width: 100%; height: 100%; background: var(--cream); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 260px; }
     .flatlay-placeholder-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
