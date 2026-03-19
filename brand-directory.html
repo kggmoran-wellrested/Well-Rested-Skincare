@@ -3,7 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Editorial — Well Rested Skincare</title>
+  <title>Clinically Validated Skincare Brands — Well Rested Skincare Directory</title>
+  <meta name="description" content="Browse 24 vetted skincare brands ranked by clinical evidence, ingredient quality, and real results. Dermatologist-trusted picks for anti-aging, barrier repair, SPF, and at-home devices.">
+  <link rel="canonical" href="https://wellrestedskincare.com/brand-directory.html">
+  <meta property="og:title" content="Clinically Validated Skincare Brands — Well Rested Skincare">
+  <meta property="og:description" content="24 vetted skincare brands ranked by clinical evidence, ingredient quality, and real results.">
+  <meta property="og:url" content="https://wellrestedskincare.com/brand-directory.html">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Well Rested Skincare Brand Directory",
+    "description": "24 clinically vetted skincare brands ranked by ingredient quality, clinical evidence, and real results.",
+    "url": "https://wellrestedskincare.com/brand-directory.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wellrestedskincare.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Brand Directory", "item": "https://wellrestedskincare.com/brand-directory.html"}
+      ]
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -13,109 +35,100 @@
       --white: #FAFAF8; --off-white: #F2F0EB; --ink: #1A1A18;
       --ink-light: #4A4A46; --ink-faint: #9A9A94;
       --sage-pale: #D6E3D4; --teal: #3D7A7A; --teal-light: #5A9E9E;
-      --accent: #C8A882; --border: #E0DDD6;
+      --accent: #C8A882; --border: #E0DDD6; --hover-bg: #EEF5EE;
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
     .nav-logo { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
     .nav-logo span { color: var(--teal); }
     .nav-links { display: flex; gap: 30px; list-style: none; }
     .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--teal); }
-    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; }
-    .page-header { padding: 120px 64px 64px; background: var(--ink); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
-    .header-grid-lines { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 80px 80px; }
-    .header-inner { position: relative; z-index: 1; display: flex; align-items: flex-end; justify-content: space-between; }
-    .header-left { max-width: 600px; }
-    .page-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal-light); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
-    .page-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal-light); }
-    .page-title { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 5vw, 68px); letter-spacing: -1.5px; line-height: 1.05; color: var(--white); margin-bottom: 20px; }
-    .page-title em { font-style: italic; color: var(--teal-light); }
-    .page-sub { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.45); max-width: 460px; }
-    .header-right { text-align: right; }
-    .header-issue { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 8px; }
-    .header-date { font-family: 'DM Serif Display', serif; font-size: 18px; color: rgba(255,255,255,0.4); }
-    .cat-nav { display: flex; align-items: center; border-bottom: 1px solid var(--border); overflow-x: auto; padding: 0 64px; background: var(--white); }
-    .cat-nav::-webkit-scrollbar { display: none; }
-    .cat-nav-item { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); padding: 18px 20px; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; transition: color 0.2s, border-color 0.2s; background: none; border-top: none; border-left: none; border-right: none; }
-    .cat-nav-item:hover { color: var(--teal); }
-    .cat-nav-item.active { color: var(--teal); border-bottom-color: var(--teal); }
-    .featured-article { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); cursor: pointer; text-decoration: none; color: inherit; }
-    .featured-article:hover .featured-img-inner { transform: scale(1.02); }
-    .featured-img { overflow: hidden; background: var(--off-white); min-height: 480px; position: relative; }
-    .featured-img-inner { position: absolute; inset: 0; transition: transform 0.5s ease; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #d4e8d0, #8fb08a); }
-    .featured-img-text { font-family: 'DM Serif Display', serif; font-size: 80px; color: rgba(255,255,255,0.15); letter-spacing: -3px; }
-    .featured-cat-pill { position: absolute; top: 28px; left: 28px; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--white); color: var(--teal); padding: 6px 14px; z-index: 2; }
-    .featured-content { padding: 56px; display: flex; flex-direction: column; justify-content: center; }
-    .featured-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-    .featured-label::before { content: ''; display: block; width: 20px; height: 1px; background: var(--teal); }
-    .featured-title { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3vw, 44px); letter-spacing: -0.8px; line-height: 1.1; margin-bottom: 20px; }
-    .featured-title em { font-style: italic; color: var(--teal); }
-    .featured-excerpt { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--ink-light); margin-bottom: 32px; }
-    .featured-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; flex-wrap: wrap; }
-    .meta-author { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
-    .meta-sep { width: 1px; height: 14px; background: var(--border); }
-    .meta-date { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ink-faint); }
-    .meta-read { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ink-faint); }
-    .read-btn { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); display: inline-flex; align-items: center; gap: 8px; }
-    .live-badge { display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--sage-pale); color: var(--teal); border: 1px solid var(--teal); padding: 3px 10px; margin-bottom: 16px; width: fit-content; }
-    .live-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
-    .articles-section { padding: 64px; }
-    .articles-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
-    .articles-section-title { font-family: 'DM Serif Display', serif; font-size: 28px; letter-spacing: -0.5px; color: var(--ink); }
-    .articles-section-title em { font-style: italic; color: var(--teal); }
-    .see-all { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); background: none; border: none; cursor: pointer; }
-    .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
-    .article-card { background: var(--white); cursor: pointer; transition: background 0.2s; position: relative; overflow: hidden; text-decoration: none; color: inherit; display: block; }
-    .article-card:hover { background: #f0f6f0; }
-    .article-card.published { border-top: 2px solid var(--teal); }
-    .article-img { height: 200px; overflow: hidden; position: relative; }
-    .article-img-inner { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
-    .article-img-emoji { font-size: 48px; }
-    .article-cat-pill { position: absolute; bottom: 14px; left: 14px; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; z-index: 2; color: var(--white); }
-    .article-body { padding: 28px; }
-    .article-title { font-family: 'DM Serif Display', serif; font-size: 20px; letter-spacing: -0.3px; line-height: 1.2; color: var(--ink); margin-bottom: 10px; }
-    .article-excerpt { font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--ink-light); margin-bottom: 20px; }
-    .article-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid var(--border); }
-    .article-meta-sm { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
-    .article-read-link { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); text-decoration: none; }
-    .img-routine { background: linear-gradient(135deg, #d4e8d0, #8fb08a); }
-    .img-ingredient { background: linear-gradient(135deg, #dce8f0, #5a9e9e); }
-    .img-brand { background: linear-gradient(135deg, #f0e8d8, #c8a882); }
-    .img-sleep { background: linear-gradient(135deg, #1a1a18, #3d7a7a); }
-    .img-routine2 { background: linear-gradient(135deg, #e8ddf0, #9a7ab0); }
-    .img-ingredient2 { background: linear-gradient(135deg, #f0ead8, #b0956a); }
-    .pill-routine { background: var(--teal); }
-    .pill-ingredient { background: var(--ink); }
-    .pill-brand { background: var(--accent); }
-    .pill-sleep { background: #2d4a5a; }
-    .topics-section { padding: 64px; background: var(--off-white); border-bottom: 1px solid var(--border); }
-    .topics-title { font-family: 'DM Serif Display', serif; font-size: 28px; letter-spacing: -0.5px; margin-bottom: 32px; }
-    .topics-title em { font-style: italic; color: var(--teal); }
-    .topics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-    .topic-item { padding: 24px; background: var(--white); border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s; }
-    .topic-item:hover { border-color: var(--teal); }
-    .topic-icon { font-size: 24px; margin-bottom: 12px; }
-    .topic-name { font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--ink); margin-bottom: 6px; }
-    .topic-count { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
-    .newsletter-strip { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .newsletter-left { padding: 64px; background: var(--teal); }
-    .newsletter-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
-    .newsletter-title { font-family: 'DM Serif Display', serif; font-size: 34px; letter-spacing: -0.5px; line-height: 1.15; color: var(--white); margin-bottom: 12px; }
-    .newsletter-title em { font-style: italic; }
-    .newsletter-sub { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 32px; }
-    .newsletter-form { display: flex; }
-    .newsletter-input { flex: 1; font-family: 'DM Sans', sans-serif; font-size: 13px; padding: 14px 18px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: var(--white); outline: none; }
-    .newsletter-input::placeholder { color: rgba(255,255,255,0.4); }
-    .newsletter-submit { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--white); color: var(--teal); border: none; padding: 14px 24px; cursor: pointer; white-space: nowrap; }
-    .newsletter-privacy { font-family: 'DM Mono', monospace; font-size: 8px; color: rgba(255,255,255,0.3); margin-top: 12px; }
-    .newsletter-right { padding: 64px; background: var(--off-white); display: flex; flex-direction: column; justify-content: center; }
-    .newsletter-perks { display: flex; flex-direction: column; gap: 20px; }
-    .perk-item { display: flex; align-items: flex-start; gap: 14px; }
-    .perk-icon { width: 36px; height: 36px; background: var(--white); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
-    .perk-title { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
-    .perk-desc { font-size: 12px; font-weight: 300; color: var(--ink-faint); line-height: 1.5; }
+    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--teal-light); }
+
+    .page-header { padding: 120px 64px 64px; background: var(--off-white); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .page-header-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 80px 80px; opacity: 0.4; }
+    .page-header-inner { position: relative; z-index: 1; max-width: 640px; }
+    .page-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+    .page-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal); }
+    .page-title { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5vw, 60px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 20px; }
+    .page-title em { font-style: italic; color: var(--teal); }
+    .page-sub { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--ink-light); max-width: 480px; }
+    .page-header-count { position: absolute; right: 64px; bottom: 40px; z-index: 1; text-align: right; }
+    .count-num { font-family: 'DM Serif Display', serif; font-size: 80px; color: var(--border); line-height: 1; }
+    .count-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
+
+    .controls-bar { position: sticky; top: 60px; z-index: 50; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 64px; display: flex; align-items: center; }
+    .search-wrap { flex: 1; display: flex; align-items: center; gap: 12px; padding: 18px 32px 18px 0; border-right: 1px solid var(--border); }
+    .search-icon { color: var(--ink-faint); font-size: 15px; flex-shrink: 0; }
+    .search-input { flex: 1; border: none; background: none; outline: none; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 300; color: var(--ink); }
+    .search-input::placeholder { color: var(--ink-faint); }
+    .filter-group { display: flex; align-items: center; }
+    .filter-btn { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); background: none; border: none; border-right: 1px solid var(--border); padding: 20px 18px; cursor: pointer; transition: color 0.2s, background 0.2s; white-space: nowrap; }
+    .filter-btn:hover { color: var(--teal); background: var(--off-white); }
+    .filter-btn.active { color: var(--white); background: var(--teal); }
+    .filter-btn:last-child { border-right: none; }
+    .sort-wrap { display: flex; align-items: center; gap: 10px; padding: 0 20px; border-left: 1px solid var(--border); }
+    .sort-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; }
+    .sort-select { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; color: var(--ink-light); background: none; border: none; outline: none; cursor: pointer; }
+
+    .results-meta { padding: 18px 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); }
+    .results-count { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
+    .results-count span { color: var(--teal); }
+    .view-toggle { display: flex; }
+    .view-btn { background: none; border: 1px solid var(--border); padding: 6px 10px; cursor: pointer; color: var(--ink-faint); transition: all 0.2s; font-size: 13px; }
+    .view-btn:first-child { border-right: none; }
+    .view-btn.active { background: var(--ink); color: var(--white); border-color: var(--ink); }
+
+    .brands-container { padding: 40px 64px 100px; }
+    .brands-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
+    .brands-grid.list-view { grid-template-columns: 1fr; }
+
+    .brand-card { background: var(--white); padding: 36px; cursor: pointer; transition: background 0.2s; position: relative; overflow: hidden; opacity: 0; animation: fadeUp 0.5s forwards; text-decoration: none; display: block; color: inherit; }
+    .brand-card:hover { background: var(--hover-bg); }
+    .brand-card:hover .card-arrow { opacity: 1; transform: translate(3px, -3px); }
+    .brand-card:hover .card-bar { width: 100%; }
+    .card-bar { position: absolute; top: 0; left: 0; height: 2px; width: 0; background: var(--teal); transition: width 0.4s ease; }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px; }
+    .card-logo-placeholder { width: 52px; height: 52px; background: var(--off-white); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 15px; color: var(--teal); flex-shrink: 0; letter-spacing: -0.5px; }
+    .card-logo-img { width: 80px; height: 52px; object-fit: contain; display: block; flex-shrink: 0; }
+    .card-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+    .badge { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; }
+    .badge-featured { background: var(--teal); color: var(--white); }
+    .badge-new { background: var(--accent); color: var(--white); }
+    .badge-top { background: var(--sage-pale); color: var(--teal); border: 1px solid var(--teal); }
+    .badge-affiliate { background: var(--ink); color: var(--white); }
+    .card-category { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 8px; }
+    .card-name { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); margin-bottom: 10px; line-height: 1.1; }
+    .card-desc { font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--ink-light); margin-bottom: 22px; }
+    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 22px; }
+    .card-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 9px; border: 1px solid var(--border); color: var(--ink-faint); }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; border-top: 1px solid var(--border); }
+    .card-rating { display: flex; align-items: center; gap: 6px; }
+    .stars-sm { color: var(--accent); font-size: 11px; letter-spacing: 1px; }
+    .rating-val { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-light); }
+    .card-arrow { font-size: 16px; color: var(--teal); opacity: 0; transition: all 0.25s; }
+    .card-shop-link { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); opacity: 0; transition: opacity 0.25s; }
+    .brand-card:hover .card-shop-link { opacity: 1; }
+
+    .brands-grid.list-view .brand-card { padding: 24px 36px; display: grid; grid-template-columns: 52px 1fr auto; gap: 20px; align-items: center; }
+    .brands-grid.list-view .card-bar { display: none; }
+    .brands-grid.list-view .card-top { margin-bottom: 0; }
+    .brands-grid.list-view .card-main { display: flex; flex-direction: column; }
+    .brands-grid.list-view .card-category { margin-bottom: 2px; }
+    .brands-grid.list-view .card-name { font-size: 18px; margin-bottom: 4px; }
+    .brands-grid.list-view .card-desc { margin-bottom: 8px; font-size: 12px; }
+    .brands-grid.list-view .card-tags { margin-bottom: 0; }
+    .brands-grid.list-view .card-footer { border-top: none; padding-top: 0; flex-direction: column; align-items: flex-end; gap: 8px; }
+    .brands-grid.list-view .card-arrow { opacity: 1; }
+
+    .empty-state { padding: 80px; text-align: center; background: var(--white); grid-column: 1 / -1; }
+    .empty-title { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--ink); margin-bottom: 12px; }
+    .empty-sub { font-size: 14px; font-weight: 300; color: var(--ink-faint); }
+
     footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
     .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
     .footer-logo span { color: var(--teal-light); }
@@ -126,8 +139,8 @@
     .footer-links a:hover { color: var(--teal-light); }
     .footer-bottom { background: var(--ink); padding: 18px 64px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; }
     .footer-bottom-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.16); }
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 
     /* ─── MOBILE ─────────────────────────────────── */
     @media (max-width: 768px) {
@@ -135,42 +148,28 @@
       .nav-links { display: none; }
       .nav-cta { padding: 8px 14px; font-size: 9px; }
 
-      /* Page header */
       .page-header { padding: 80px 24px 48px; }
+      .page-header-count { display: none; }
       .page-title { font-size: clamp(28px, 8vw, 40px); }
       .page-sub { font-size: 14px; }
 
-      /* Featured article */
-      .featured-article { grid-template-columns: 1fr; }
-      .featured-img { min-height: 220px; }
-      .featured-content { padding: 32px 24px; }
-      .featured-title { font-size: clamp(22px, 6vw, 32px); }
-      .featured-excerpt { font-size: 14px; }
+      .controls-bar { padding: 0 20px; flex-wrap: wrap; top: 56px; }
+      .search-wrap { width: 100%; border-right: none; border-bottom: 1px solid var(--border); padding: 14px 0; }
+      .filter-group { width: 100%; overflow-x: auto; border-bottom: 1px solid var(--border); }
+      .filter-btn { padding: 14px 12px; font-size: 9px; flex-shrink: 0; }
+      .sort-wrap { border-left: none; padding: 12px 0; width: 100%; }
 
-      /* Articles grid */
-      .articles-section { padding: 40px 24px; }
-      .articles-header { flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 24px; }
-      .articles-grid { grid-template-columns: 1fr; }
-      .article-card { border-top: 2px solid var(--teal); }
-      .article-img { min-height: 180px; }
-      .article-body { padding: 20px; }
-      .article-title { font-size: 16px; }
-      .article-excerpt { font-size: 13px; }
+      .results-meta { padding: 14px 20px; }
+      .brands-container { padding: 20px 20px 80px; }
+      .brands-grid { grid-template-columns: 1fr; }
+      .brand-card { padding: 24px 20px; }
+      .card-logo-img { width: 64px; height: 40px; }
+      .card-name { font-size: 18px; }
+      .card-desc { font-size: 13px; }
+      .card-tags { display: none; }
 
-      /* Topics */
-      .topics-section { padding: 40px 24px; }
-      .topics-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .topic-item { padding: 16px; }
+      .brands-grid.list-view .brand-card { grid-template-columns: 48px 1fr; padding: 16px 20px; }
 
-      /* Newsletter strip */
-      .newsletter-strip { grid-template-columns: 1fr; }
-      .newsletter-left { padding: 40px 24px; }
-      .newsletter-right { padding: 32px 24px; border-left: none; border-top: 1px solid var(--border); }
-      .nl-form { flex-direction: column; }
-      .nl-input { border-right: 1px solid var(--border); border-bottom: none; }
-      .nl-btn { text-align: center; }
-
-      /* Footer */
       footer { grid-template-columns: 1fr; padding: 40px 24px; gap: 28px; }
       .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 8px; text-align: center; }
     }
@@ -178,11 +177,10 @@
     @media (min-width: 769px) and (max-width: 1024px) {
       nav { padding: 0 32px; }
       .page-header { padding: 100px 40px 56px; }
-      .featured-content { padding: 48px 40px; }
-      .articles-section { padding: 56px 40px; }
-      .articles-grid { grid-template-columns: repeat(2, 1fr); }
-      .topics-section { padding: 48px 40px; }
-      .topics-grid { grid-template-columns: repeat(2, 1fr); }
+      .controls-bar { padding: 0 40px; }
+      .results-meta { padding: 14px 40px; }
+      .brands-container { padding: 32px 40px 80px; }
+      .brands-grid { grid-template-columns: repeat(2, 1fr); }
       footer { padding: 48px 40px; grid-template-columns: 1fr 1fr; }
       .footer-bottom { padding: 16px 40px; }
     }
@@ -201,197 +199,63 @@
 <nav>
   <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
   <ul class="nav-links">
-    <li><a href="/brand-directory.html">Brands</a></li>
-    <li><a href="/editorial.html" class="active">Editorial</a></li>
+    <li><a href="/brand-directory.html" class="active">Brands</a></li>
+    <li><a href="/editorial.html">Editorial</a></li>
     <li><a href="/about.html">About</a></li>
   </ul>
   <button class="nav-cta">Newsletter</button>
 </nav>
 
 <div class="page-header">
-  <div class="header-grid-lines"></div>
-  <div class="header-inner">
-    <div class="header-left">
-      <p class="page-eyebrow">Editorial</p>
-      <h1 class="page-title">The science of<br>skin, <em>beautifully</em><br>explained.</h1>
-      <p class="page-sub">Evidence-based guides, ingredient deep-dives, brand spotlights, and the sleep science your skin has been waiting for.</p>
-    </div>
-    <div class="header-right">
-      <div class="header-issue">Volume 01 · Issue 03</div>
-      <div class="header-date">March 2026</div>
-    </div>
+  <div class="page-header-grid"></div>
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Brand Directory</p>
+    <h1 class="page-title">Every brand,<br><em>vetted</em> for you.</h1>
+    <p class="page-sub">Our curated directory of clinically validated skincare and wellness brands — filtered, reviewed, and rated so you don't have to research alone.</p>
+  </div>
+  <div class="page-header-count">
+    <div class="count-num" id="totalCount">24</div>
+    <div class="count-label">Brands Listed</div>
   </div>
 </div>
 
-<div class="cat-nav">
-  <button class="cat-nav-item active" data-cat="all">All Articles</button>
-  <button class="cat-nav-item" data-cat="routine">Routine Guides</button>
-  <button class="cat-nav-item" data-cat="ingredient">Ingredient Spotlights</button>
-  <button class="cat-nav-item" data-cat="brand">Brand Reviews</button>
-  <button class="cat-nav-item" data-cat="sleep">Sleep & Skin Science</button>
+<div class="controls-bar">
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input class="search-input" type="text" id="searchInput" placeholder="Search brands, ingredients, concerns…" />
+  </div>
+  <div class="filter-group">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="anti-aging">Anti-Aging</button>
+    <button class="filter-btn" data-filter="acne">Acne</button>
+    <button class="filter-btn" data-filter="hydration">Hydration</button>
+    <button class="filter-btn" data-filter="spf">SPF</button>
+    <button class="filter-btn" data-filter="natural">Natural</button>
+    <button class="filter-btn" data-filter="night">Night</button>
+    <button class="filter-btn" data-filter="devices">At-Home Devices</button>
+    <button class="filter-btn" data-filter="affiliate">Affiliate</button>
+  </div>
+  <div class="sort-wrap">
+    <span class="sort-label">Sort</span>
+    <select class="sort-select" id="sortSelect">
+      <option value="featured">Featured</option>
+      <option value="rating">Top Rated</option>
+      <option value="az">A → Z</option>
+      <option value="newest">Newest</option>
+    </select>
+  </div>
 </div>
 
-<a href="/article-am-routine.html" class="featured-article reveal">
-  <div class="featured-img">
-    <div class="featured-img-inner">
-      <div class="featured-img-text">AM</div>
-    </div>
-    <div class="featured-cat-pill">Routine Guide</div>
+<div class="results-meta">
+  <div class="results-count">Showing <span id="showingCount">26</span> brands</div>
+  <div class="view-toggle">
+    <button class="view-btn active" id="gridViewBtn" title="Grid view">⊞</button>
+    <button class="view-btn" id="listViewBtn" title="List view">☰</button>
   </div>
-  <div class="featured-content">
-    <div class="live-badge"><span class="live-dot"></span>Now Live</div>
-    <div class="featured-label">Latest Article</div>
-    <h2 class="featured-title">The 5-step AM routine that <em>actually holds up to scrutiny</em></h2>
-    <p class="featured-excerpt">We cut through the noise and built a morning routine around the five steps with the strongest clinical evidence behind them. No filler. No trend-chasing. Just science — and the brands that deliver it.</p>
-    <div class="featured-meta">
-      <span class="meta-author">Well Rested Editorial</span>
-      <div class="meta-sep"></div>
-      <span class="meta-date">March 4, 2026</span>
-      <div class="meta-sep"></div>
-      <span class="meta-read">6 min read</span>
-    </div>
-    <span class="read-btn">Read Article →</span>
-  </div>
-</a>
+</div>
 
-<section class="articles-section">
-  <div class="articles-header reveal">
-    <h2 class="articles-section-title">Latest from the <em>journal</em></h2>
-    <button class="see-all">View all articles →</button>
-  </div>
-  <div class="articles-grid reveal" id="articlesGrid">
-
-    <a href="/article-actives.html" class="article-card published" data-cat="ingredient">
-      <div class="article-img">
-        <div class="article-img-inner img-ingredient"><span class="article-img-emoji">⚗️</span></div>
-        <span class="article-cat-pill pill-ingredient">Ingredient Spotlight</span>
-      </div>
-      <div class="article-body">
-        <div class="live-badge"><span class="live-dot"></span>Now Live</div>
-        <div class="article-title">Why active ingredients are the most important part of your routine</div>
-        <p class="article-excerpt">Retinol, Vitamin C, AHAs, niacinamide, peptides — what they are, how they work, and which ones are worth your money.</p>
-        <div class="article-footer">
-          <span class="article-meta-sm">Mar 5 · 7 min</span>
-          <span class="article-read-link">Read →</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="/article-am-routine.html" class="article-card published" data-cat="routine">
-      <div class="article-img">
-        <div class="article-img-inner img-routine"><span class="article-img-emoji">🌅</span></div>
-        <span class="article-cat-pill pill-routine">Routine Guide</span>
-      </div>
-      <div class="article-body">
-        <div class="live-badge"><span class="live-dot"></span>Now Live</div>
-        <div class="article-title">The 5-step AM routine that actually holds up to scrutiny</div>
-        <p class="article-excerpt">We cut through the noise and built a morning routine around the five steps with the strongest clinical evidence behind them.</p>
-        <div class="article-footer">
-          <span class="article-meta-sm">Mar 4 · 6 min</span>
-          <span class="article-read-link">Read →</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="/article-devices.html" class="article-card published" data-cat="routine">
-      <div class="article-img">
-        <div class="article-img-inner img-routine" style="background: linear-gradient(135deg, #2d4a5a, #3d7a7a);"><span class="article-img-emoji">🔬</span></div>
-        <span class="article-cat-pill pill-routine">Device Guide</span>
-      </div>
-      <div class="article-body">
-        <div class="article-title">At-home skincare devices: what actually works</div>
-        <p class="article-excerpt">LED, microcurrent, microneedling, laser — the science behind each technology and which devices are worth the investment.</p>
-        <div class="article-footer">
-          <span class="article-meta-sm">Mar 7 · 9 min</span>
-          <span class="article-read-link">Read →</span>
-        </div>
-      </div>
-    </a>
-
-
-
-    <a href="/article-retinol.html" class="article-card published" data-cat="ingredient">
-      <div class="article-img">
-        <div class="article-img-inner img-ingredient"><span class="article-img-emoji">⚗️</span></div>
-        <span class="article-cat-pill pill-ingredient">Ingredient Spotlight</span>
-      </div>
-      <div class="article-body">
-        <div class="article-title">The truth about retinol — what it does and how to start</div>
-        <p class="article-excerpt">Retinol is the most clinically proven anti-aging ingredient in skincare history. Here's the science, how to start without irritation, and which products to buy.</p>
-        <div class="article-footer">
-          <span class="article-meta-sm">March 2026</span>
-          <span class="article-read-link">Read →</span>
-        </div>
-      </div>
-    </a>
-
-
-
-    <a href="/article-post-procedure.html" class="article-card published" data-cat="routine">
-      <div class="article-img">
-        <div class="article-img-inner img-routine2"><span class="article-img-emoji">🌛</span></div>
-        <span class="article-cat-pill pill-routine">Routine Guide</span>
-      </div>
-      <div class="article-body">
-        <div class="article-title">Post-procedure skincare — what to use after microneedling and laser</div>
-        <p class="article-excerpt">What you apply in the 72 hours after a procedure can make or break your results. Here's exactly what to reach for after microneedling and laser.</p>
-        <div class="article-footer">
-          <span class="article-meta-sm">March 2026</span>
-          <span class="article-read-link">Read →</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="/article-peptides.html" class="article-card published" data-cat="ingredient">
-      <div class="article-img">
-        <img src="images/products/article-peptides.png" alt="Peptides Explained" style="width:100%;height:100%;object-fit:cover;display:block;" />
-        <span class="article-cat-pill pill-ingredient">Ingredient Deep-Dive</span>
-      </div>
-      <div class="article-body">
-        <div class="article-title">Peptides, explained — what they are, how they work, and which ones to use</div>
-        <p class="article-excerpt">Signal peptides, copper peptides, Argireline — a clear breakdown of the four peptide types, how to layer them, and the products worth your money.</p>
-        <div class="article-footer">
-          <span class="article-meta-sm">March 2026</span>
-          <span class="article-read-link">Read →</span>
-        </div>
-      </div>
-    </a>
-
-
-
-
-
-  </div>
-</section>
-
-<section class="topics-section reveal">
-  <h2 class="topics-title">Browse by <em>topic</em></h2>
-  <div class="topics-grid">
-    <div class="topic-item"><div class="topic-icon">🌅</div><div class="topic-name">Routine Guides</div><div class="topic-count">2 articles live</div></div>
-    <div class="topic-item"><div class="topic-icon">⚗️</div><div class="topic-name">Ingredient Spotlights</div><div class="topic-count">3 articles live</div></div>
-    <div class="topic-item"><div class="topic-icon">🏷️</div><div class="topic-name">Brand Reviews</div><div class="topic-count">Coming soon</div></div>
-    <div class="topic-item"><div class="topic-icon">🌙</div><div class="topic-name">Sleep & Skin Science</div><div class="topic-count">Coming soon</div></div>
-  </div>
-</section>
-
-<div class="newsletter-strip reveal">
-  <div class="newsletter-left">
-    <div class="newsletter-eyebrow">The Well Rested Edit</div>
-    <h3 class="newsletter-title">Skincare science,<br><em>straight to you.</em></h3>
-    <p class="newsletter-sub">Weekly ingredient breakdowns, new brand reviews, and evidence-based routine guides — no fluff, no filler.</p>
-    <div class="newsletter-form">
-      <input class="newsletter-input" type="email" placeholder="your@email.com" />
-      <button class="newsletter-submit">Subscribe →</button>
-    </div>
-    <p class="newsletter-privacy">No spam. Unsubscribe any time. We never share your data.</p>
-  </div>
-  <div class="newsletter-right">
-    <div class="newsletter-perks">
-      <div class="perk-item"><div class="perk-icon">📬</div><div><div class="perk-title">Weekly editorial</div><div class="perk-desc">New articles every Tuesday, curated by our editorial team.</div></div></div>
-      <div class="perk-item"><div class="perk-icon">🔬</div><div><div class="perk-title">Ingredient of the month</div><div class="perk-desc">Deep-dive breakdowns on the actives worth knowing.</div></div></div>
-      <div class="perk-item"><div class="perk-icon">🏷️</div><div><div class="perk-title">Exclusive brand deals</div><div class="perk-desc">Subscriber-only discounts from our affiliate partners.</div></div></div>
-    </div>
-  </div>
+<div class="brands-container">
+  <div class="brands-grid" id="brandsGrid"></div>
 </div>
 
 <footer>
@@ -404,8 +268,8 @@
     <ul class="footer-links"><li><a href="/brand-directory.html">All Brands</a></li><li><a href="/editorial.html">Editorial</a></li></ul>
   </div>
   <div>
-    <div class="footer-col-title">Editorial</div>
-    <ul class="footer-links"><li><a href="/article-am-routine.html">Routine Guides</a></li><li><a href="/article-actives.html">Ingredients</a></li></ul>
+    <div class="footer-col-title">Company</div>
+    <ul class="footer-links"><li><a href="/about.html">About Us</a></li><li><a href="/about.html">Contact</a></li></ul>
   </div>
   <div>
     <div class="footer-col-title">Legal</div>
@@ -418,24 +282,117 @@
 </div>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 80);
-    });
-  }, { threshold: 0.08 });
-  reveals.forEach(el => observer.observe(el));
+const brands = [
+  // ── AFFILIATE PARTNERS ──
+  { id:1, name:"SK-II", initials:"SK", category:"Brightening / Repair", filters:["anti-aging","hydration","affiliate"], desc:"Legendary Japanese skincare powered by Pitera™ — a ferment-derived bio-ingredient with over 50 micronutrients for luminous, ageless skin.", tags:["Pitera™","Brightening","Japanese Luxury"], rating:4.8, badge:"affiliate", featured:true, logo:"SK-II_Logo_Red.png", pageSlug:"sk-ii" },
+  { id:2, name:"Alastin", initials:"AL", category:"Post-Procedure / Repair", filters:["anti-aging","affiliate"], desc:"Physician-developed formulas clinically proven to accelerate skin recovery and rebuild the extracellular matrix for lasting results.", tags:["TriHex Technology","Post-Procedure","Collagen"], rating:4.9, badge:"affiliate", featured:true, logo:"logo_alastin.png", pageSlug:"alastin" },
+  { id:3, name:"SkinCeuticals", initials:"SC", category:"Anti-Aging / Antioxidants", filters:["anti-aging","affiliate"], desc:"Three decades of antioxidant research powering clinical-grade formulas that neutralize free radicals and visibly reduce aging.", tags:["Vitamin C","Retinol","Antioxidants"], rating:4.9, badge:"affiliate", featured:true, logo:"logo_skinceuticals.png", pageSlug:"skinceuticals" },
+  { id:4, name:"Paula's Choice", initials:"PC", category:"Acne / Pore Refinement", filters:["acne","anti-aging","affiliate"], desc:"Fragrance-free, research-backed formulas targeting blackheads, pores, and uneven texture without unnecessary irritants.", tags:["BHA","Niacinamide","AHA"], rating:4.7, badge:"affiliate", featured:true, logo:"logo_paulaschoice.png", pageSlug:"paulas-choice" },
+  { id:5, name:"Plated Skin Science", initials:"PS", category:"Regenerative / DNA Repair", filters:["anti-aging","night","affiliate"], desc:"Pioneering DNA repair enzyme skincare developed by Johns Hopkins scientists — accelerates cellular renewal and reduces visible aging at the source.", tags:["DNA Repair","Regenerative","Peptides"], rating:4.8, badge:"affiliate", featured:true, logo:"logo_plated.png", pageSlug:"plated" },
+  { id:6, name:"Tata Harper", initials:"TH", category:"Luxury Natural / Farm-to-Face", filters:["natural","anti-aging","affiliate"], desc:"100% natural, non-toxic luxury skincare formulated on a Vermont farm with bioactive ingredients free from synthetic fillers.", tags:["Natural","Non-Toxic","Bioactive"], rating:4.7, badge:"affiliate", featured:true, logo:"logo_tataharper.png", pageSlug:"tata-harper" },
 
-  document.querySelectorAll('.cat-nav-item').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.cat-nav-item').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const cat = btn.dataset.cat;
-      document.querySelectorAll('.article-card').forEach(card => {
-        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
-      });
-    });
+  // ── NEW ADDITIONS ──
+  { id:13, name:"Drunk Elephant", initials:"DE", category:"Clean Actives / Barrier", filters:["anti-aging","hydration"], desc:"Biocompatible formulas free from the 'Suspicious 6,' combining potent actives with skin-barrier-supporting ingredients at every price point.", tags:["Vitamin C","Retinol","Clean"], rating:4.6, badge:"new", featured:true, logo:"logo_DE.png", pageSlug:"drunk-elephant" },
+  { id:15, name:"Tower 28", initials:"T28", category:"Sensitive / Eczema-Safe", filters:["acne","hydration"], desc:"EWG-verified, dermatologist-tested formulas developed for sensitive and reactive skin, meeting the standards of the National Eczema Association.", tags:["Eczema-Safe","SOS Spray","Clean"], rating:4.5, badge:"new", featured:true, logo:"logo_tower28.png", pageSlug:"tower28" },
+  { id:16, name:"Summer Fridays", initials:"SF", category:"Barrier / Hydration", filters:["hydration","natural"], desc:"Minimalist, skin-first formulas built around barrier-supporting ingredients — beloved for their Cloud Dew Moisturizer and effortlessly effective approach.", tags:["Barrier Cream","Hyaluronic Acid","Vegan"], rating:4.6, badge:"new", featured:true, logo:"logo_summerfridays.png", pageSlug:"summer-fridays" },
+  { id:17, name:"ZO Skin Health", initials:"ZO", category:"Medical-Grade / Anti-Aging", filters:["anti-aging","acne","night"], desc:"Developed by Dr. Zein Obagi, ZO bridges the gap between therapeutic skincare and aesthetics with physician-dispensed, high-performance formulas.", tags:["Retinol","Medical-Grade","Brightening"], rating:4.8, badge:"new", featured:true, logo:"logo_zoskin.png", pageSlug:"zo" },
+  { id:18, name:"Elemis", initials:"EL", category:"Luxury Botanical / Pro-Aging", filters:["anti-aging","natural","night"], desc:"British luxury skincare powered by bioactive marine and botanical ingredients — a pioneer in pro-aging science with decades of spa-proven results.", tags:["Pro-Collagen","Marine","Botanical"], rating:4.7, badge:"new", featured:true, logo:"logo_elemis.png", pageSlug:"elemis" },
+  { id:20, name:"Supergoop!", initials:"SG", category:"SPF / Sun Protection", filters:["spf"], desc:"Innovative, skin-loving sunscreens that make SPF something you actually want to wear — lightweight textures, clean formulas, and broad-spectrum protection for every skin type.", tags:["SPF","Broad-Spectrum","Clean"], rating:4.7, badge:"new", featured:true, logo:"logo_supergoop.png", pageSlug:"supergoop" },
+  { id:21, name:"Prequel", initials:"PQ", category:"Barrier / Actives", filters:["acne","hydration","anti-aging"], desc:"pH-optimized barrier-intelligent actives — each formula is precisely calibrated to maximize efficacy while respecting the skin's natural ecosystem.", tags:["pH-Optimized","AHA","Barrier Support"], rating:4.6, badge:"new", featured:true, logo:"logo_prequel.png", pageSlug:"prequel" },
+
+  // ── AT-HOME DEVICES ──
+  { id:22, name:"NIRA", initials:"NR", category:"At-Home Devices", filters:["devices","anti-aging"], desc:"Non-ablative laser that stimulates collagen production to reduce fine lines — clinically proven results with no pain, no downtime.", tags:["Laser","Collagen","Anti-Aging"], rating:4.8, badge:"new", featured:true, logo:"logo_nira.png", pageSlug:"nira" },
+  { id:23, name:"ZIIP", initials:"ZP", category:"At-Home Devices", filters:["devices","anti-aging"], desc:"App-controlled nano and microcurrent device delivering instant lift and long-term skin rejuvenation with gold-plated conductors.", tags:["Microcurrent","Nanocurrent","Lifting"], rating:4.7, badge:"new", featured:true, logo:"logo_ziip.png", pageSlug:"ziip" },
+  { id:24, name:"Dr. Pen", initials:"DP", category:"At-Home Devices", filters:["devices","acne","anti-aging"], desc:"Professional-grade automated microneedling pen for collagen induction therapy — targets scarring, texture, and fine lines.", tags:["Microneedling","Collagen","Resurfacing"], rating:4.6, badge:"new", featured:true, logo:"logo_drpen.png", pageSlug:"dr-pen" },
+  { id:25, name:"JOVS", initials:"JV", category:"At-Home Devices", filters:["devices","anti-aging"], desc:"4D laser light therapy mask delivering multi-wavelength LED treatments for fine lines, inflammation, and total skin rejuvenation.", tags:["LED Therapy","Red Light","Anti-Aging"], rating:4.6, badge:"new", featured:true, logo:"logo_jovs.png", pageSlug:"jovs" },
+  { id:26, name:"MyoLift", initials:"ML", category:"At-Home Devices", filters:["devices","anti-aging"], desc:"True microcurrent — not TENS — re-educates facial muscles at the cellular level to lift, tone, and contour with lasting results.", tags:["Microcurrent","Lifting","FDA-Cleared"], rating:4.8, badge:"new", featured:true, logo:"logo_myolift.png", pageSlug:"myolift" },
+  { id:27, name:"Maysama", initials:"MS", category:"At-Home Devices", filters:["devices","anti-aging"], desc:"Professional-grade red and near-infrared LED mask delivering 660nm and 850nm wavelengths for collagen stimulation and skin renewal.", tags:["LED Therapy","Red Light","Collagen"], rating:4.7, badge:"new", featured:true, logo:"logo_maysama.png", pageSlug:"maysama" },
+  { id:28, name:"NuDerma", initials:"ND", category:"At-Home Devices", filters:["devices","acne","anti-aging"], desc:"Cosmopolitan Award-winning high-frequency wand that tightens skin, reduces acne, and boosts serum absorption with argon and neon electrodes.", tags:["High Frequency","Acne","Anti-Aging"], rating:4.5, badge:"new", featured:true, logo:"logo_nuderma.png", pageSlug:"nuderma" },
+
+  // ── DIRECTORY ──
+  { id:7, name:"CeraVe", initials:"CV", category:"Hydration / Barrier Repair", filters:["hydration"], desc:"Dermatologist-developed formulas restoring the skin barrier with essential ceramides and gentle, clinically tested ingredients.", tags:["Ceramides","Hyaluronic Acid","Sensitive"], rating:4.6, badge:null, featured:false, logo:"logo_cerve.png", pageSlug:"cerave" },
+  { id:9, name:"La Roche-Posay", initials:"LR", category:"Sensitive / Rosacea", filters:["hydration","acne"], desc:"Prebiotic thermal spring water formulas for sensitive, reactive, and compromised skin, endorsed by dermatologists worldwide.", tags:["Thermal Water","Rosacea","Prebiotic"], rating:4.7, badge:null, featured:false, logo:"logo_larocheposay.png", pageSlug:"la-roche-posay" },
+  { id:25, name:"Eau Thermale Avène", initials:"Av", category:"Sensitive / Dermatological", filters:["hydration","sensitive"], desc:"French dermatological skincare built around Avène Thermal Spring Water — one of the most clinically studied soothing ingredients in dermatology.", tags:["Thermal Water","Sensitive Skin","French Pharmacy"], rating:4.8, badge:"New", featured:false, logo:"logo_avene.png", pageSlug:"avene" },
+  { id:26, name:"Young Goose", initials:"YG", category:"NAD+ Cellular Anti-Aging", filters:["antiaging","serums"], desc:"Next-generation anti-aging skincare built around NAD+APEX™ technology — working at the cellular level to support skin repair, energy, and longevity.", tags:["NAD+","Peptides","Longevity Science"], rating:4.8, badge:"New", featured:false, logo:"logo_younggoose.png", pageSlug:"young-goose" },
+  { id:12, name:"Biossance", initials:"BI", category:"Sustainable / Clean", filters:["natural","hydration"], desc:"Squalane-powered clean beauty backed by biotechnology — deeply hydrating, sustainably sourced, and clinically validated.", tags:["Squalane","Clean Beauty","Sustainable"], rating:4.6, badge:null, featured:false, logo:"logo_biossance.png", pageSlug:"biossance" },
+  { id:19, name:"Obagi Medical", initials:"OB", category:"Medical-Grade / Clinical", filters:["anti-aging","acne"], desc:"Physician-strength formulas targeting hyperpigmentation, acne, and advanced aging with decades of clinical evidence behind each product.", tags:["Vitamin C","Retinoids","Clinical"], rating:4.7, badge:null, featured:false, logo:"logo_obagi.png", pageSlug:"obagi" }
+];
+
+let activeFilter = 'all', activeView = 'grid', searchTerm = '', sortMode = 'featured';
+
+function renderBrands() {
+  let filtered = brands.filter(b => {
+    const mf = activeFilter === 'all' || b.filters.includes(activeFilter);
+    const ms = !searchTerm || b.name.toLowerCase().includes(searchTerm) || b.desc.toLowerCase().includes(searchTerm) || b.tags.some(t => t.toLowerCase().includes(searchTerm)) || b.category.toLowerCase().includes(searchTerm);
+    return mf && ms;
   });
+  if (sortMode === 'rating') filtered.sort((a,b) => b.rating - a.rating);
+  else if (sortMode === 'az') filtered.sort((a,b) => a.name.localeCompare(b.name));
+  else if (sortMode === 'newest') filtered.sort((a,b) => (b.badge==='new')-(a.badge==='new'));
+  else filtered.sort((a,b) => b.featured - a.featured);
+
+  document.getElementById('showingCount').textContent = filtered.length;
+  document.getElementById('totalCount').textContent = brands.length;
+  const grid = document.getElementById('brandsGrid');
+
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="empty-state"><div class="empty-title">No brands found</div><div class="empty-sub">Try a different search or filter</div></div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map((b, i) => {
+    const badgeLabel = b.badge === 'affiliate' ? 'Affiliate' : b.badge === 'featured' ? 'Featured' : b.badge === 'new' ? 'New' : b.badge === 'top' ? 'Top Rated' : '';
+    const badgeHTML = b.badge ? `<span class="badge badge-${b.badge}">${badgeLabel}</span>` : '';
+    const shopLabel = `<span class="card-arrow">View Brand →</span>`;
+    const tag = 'a';
+    const attrs = `href="/brands/${b.pageSlug}.html"`;
+    return `
+      <${tag} class="brand-card" ${attrs} style="animation-delay:${i*45}ms">
+        <div class="card-bar"></div>
+        <div class="card-top">
+          ${b.logo ? `<img class="card-logo-img" src="images/logos/${b.logo}" alt="${b.name} logo" onerror="this.style.display='none'">` : `<div class="card-logo-placeholder">${b.initials}</div>`}
+          <div class="card-badges">${badgeHTML}</div>
+        </div>
+        <div class="card-main">
+          <div class="card-category">${b.category}</div>
+          <div class="card-name">${b.name}</div>
+          <p class="card-desc">${b.desc}</p>
+          <div class="card-tags">${b.tags.map(t=>`<span class="card-tag">${t}</span>`).join('')}</div>
+        </div>
+        <div class="card-footer">
+          <div class="card-rating"><span class="stars-sm">★★★★★</span><span class="rating-val">${b.rating}</span></div>
+          ${shopLabel}
+        </div>
+      </${tag}>`;
+  }).join('');
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    renderBrands();
+  });
+});
+
+document.getElementById('searchInput').addEventListener('input', e => { searchTerm = e.target.value.toLowerCase().trim(); renderBrands(); });
+document.getElementById('sortSelect').addEventListener('change', e => { sortMode = e.target.value; renderBrands(); });
+
+document.getElementById('gridViewBtn').addEventListener('click', () => {
+  activeView = 'grid';
+  document.getElementById('brandsGrid').classList.remove('list-view');
+  document.getElementById('gridViewBtn').classList.add('active');
+  document.getElementById('listViewBtn').classList.remove('active');
+});
+document.getElementById('listViewBtn').addEventListener('click', () => {
+  activeView = 'list';
+  document.getElementById('brandsGrid').classList.add('list-view');
+  document.getElementById('listViewBtn').classList.add('active');
+  document.getElementById('gridViewBtn').classList.remove('active');
+});
+
+renderBrands();
 </script>
 </body>
 </html>
