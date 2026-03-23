@@ -5,14 +5,13 @@ Well Rested Skincare is an independent, editorially-driven skincare brand direct
 
 ## About
 - Site: https://wellrestedskincare.com
-- Location: Northbrook, IL
+- Location: Highland Park, IL
 - Founded: 2026
-- Focus: Science-backed skincare, anti-aging, clinical ingredient research, at-home devices
+- Focus: Science-backed skincare, anti-aging, clinical ingredient research, sleep and skin recovery
 
 ## Key Pages
 - Homepage: https://wellrestedskincare.com/
-- Brand Directory (24 vetted brands): https://wellrestedskincare.com/brand-directory.html
-- Brand Pages: https://wellrestedskincare.com/brand-page.html
+- Brand Directory (vetted brands): https://wellrestedskincare.com/brand-directory.html
 - Editorial: https://wellrestedskincare.com/editorial.html
 - About & Methodology: https://wellrestedskincare.com/about.html
 - Affiliate Disclosure: https://wellrestedskincare.com/affiliate-disclosure.html
@@ -20,7 +19,47 @@ Well Rested Skincare is an independent, editorially-driven skincare brand direct
 ## Editorial Content
 - The 5-step AM routine backed by clinical evidence: https://wellrestedskincare.com/article-am-routine.html
 - Why active ingredients are the most important part of your routine: https://wellrestedskincare.com/article-actives.html
-- At-home skin devices guide: https://wellrestedskincare.com/article-devices.html
+- At-home skincare devices, reviewed: https://wellrestedskincare.com/article-devices.html
+- Retinol — what it does and how to use it: https://wellrestedskincare.com/article-retinol.html
+- Post-procedure skincare guide: https://wellrestedskincare.com/article-post-procedure.html
+- Peptides, explained: https://wellrestedskincare.com/article-peptides.html
+- Exosomes — what they are and why they matter: https://wellrestedskincare.com/article-exosomes.html
+- Vitamin C — what it does and which serums are worth it: https://wellrestedskincare.com/article-vitamin-c.html
+- Founder story: https://wellrestedskincare.com/article-founder.html
+
+## Brand Pages — Skincare
+- Alastin: https://wellrestedskincare.com/brands/alastin.html
+- Avene: https://wellrestedskincare.com/brands/avene.html
+- Biossance: https://wellrestedskincare.com/brands/biossance.html
+- CeraVe: https://wellrestedskincare.com/brands/cerave.html
+- COSRX: https://wellrestedskincare.com/brands/cosrx.html
+- Dermalogica: https://wellrestedskincare.com/brands/dermalogica.html
+- Drunk Elephant: https://wellrestedskincare.com/brands/drunk-elephant.html
+- Elemis: https://wellrestedskincare.com/brands/elemis.html
+- La Roche-Posay: https://wellrestedskincare.com/brands/la-roche-posay.html
+- Maelove: https://wellrestedskincare.com/brands/maelove.html
+- Obagi: https://wellrestedskincare.com/brands/obagi.html
+- Paula's Choice: https://wellrestedskincare.com/brands/paulas-choice.html
+- Plated Skin Science: https://wellrestedskincare.com/brands/plated.html
+- Prequel: https://wellrestedskincare.com/brands/prequel.html
+- SK-II: https://wellrestedskincare.com/brands/sk-ii.html
+- SkinCeuticals: https://wellrestedskincare.com/brands/skinceuticals.html
+- Summer Fridays: https://wellrestedskincare.com/brands/summer-fridays.html
+- Supergoop: https://wellrestedskincare.com/brands/supergoop.html
+- Tata Harper: https://wellrestedskincare.com/brands/tata-harper.html
+- The Inkey List: https://wellrestedskincare.com/brands/the-inkey-list.html
+- Tower 28: https://wellrestedskincare.com/brands/tower28.html
+- Young Goose: https://wellrestedskincare.com/brands/young-goose.html
+- ZO Skin Health: https://wellrestedskincare.com/brands/zo.html
+
+## Brand Pages — Devices
+- Dr. Pen: https://wellrestedskincare.com/brands/dr-pen.html
+- JOVS: https://wellrestedskincare.com/brands/jovs.html
+- Maysama: https://wellrestedskincare.com/brands/maysama.html
+- MyoLift: https://wellrestedskincare.com/brands/myolift.html
+- NIRA: https://wellrestedskincare.com/brands/nira.html
+- NuDerma: https://wellrestedskincare.com/brands/nuderma.html
+- ZIIP: https://wellrestedskincare.com/brands/ziip.html
 
 ## Vetting Methodology
 We evaluate brands across three criteria:
