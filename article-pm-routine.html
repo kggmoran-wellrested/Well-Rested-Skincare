@@ -174,10 +174,22 @@
 
     @media (max-width: 768px) {
       nav { padding: 0 24px; }
+      .nav-links { display: none; }
       .article-hero { padding: 64px 24px 48px; }
-      .article-body { padding: 48px 24px; }
+      .article-title { font-size: clamp(28px, 8vw, 42px); }
+      .article-subtitle { font-size: 17px; }
+      .article-meta { flex-wrap: wrap; gap: 12px; }
+      .article-body { padding: 40px 20px; }
+      .routine-summary { padding: 28px 20px; }
+      .summary-step { flex-wrap: wrap; gap: 8px; }
+      .summary-step-tip { width: 100%; padding-left: 36px; }
+      .step-number { font-size: 56px; }
+      .step-title { font-size: 24px; }
       .product-grid { grid-template-columns: 1fr; }
-      .related-section { padding: 48px 24px; }
+      .pull-quote { padding: 20px 24px; }
+      .pull-quote p { font-size: 18px; }
+      .callout { padding: 18px 20px; }
+      .related-section { padding: 48px 20px; }
       .related-grid { grid-template-columns: 1fr; }
       footer { grid-template-columns: 1fr; padding: 40px 24px; gap: 28px; }
       .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 8px; text-align: center; }
