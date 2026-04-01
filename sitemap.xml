@@ -348,4 +348,18 @@
     <priority>0.9</priority>
   </url>
 
+  <url>
+    <loc>https://wellrestedskincare.com/brands/medik8.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://wellrestedskincare.com/article-crystal-retinal.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>
