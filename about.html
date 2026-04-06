@@ -30,21 +30,21 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --white: #FAFAF8; --off-white: #F2F0EB; --ink: #1A1A18;
       --ink-light: #4A4A46; --ink-faint: #9A9A94;
-      --sage-pale: #D6E3D4; --teal: #3D7A7A; --teal-light: #5A9E9E;
+      --sage-pale: #D6E3D4; --teal: #7D9B77; --teal-light: #9BBD95;
       --accent: #C8A882; --border: #E0DDD6;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+    body { font-family: 'Lora', serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
 
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
+    .nav-logo { font-family: 'Cormorant Garant', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
     .nav-logo span { color: var(--teal); }
     .nav-links { display: flex; gap: 30px; list-style: none; }
     .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
@@ -55,20 +55,20 @@
     .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 80px 64px; }
     .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; opacity: 0; animation: fadeUp 0.7s 0.1s forwards; }
     .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal); }
-    .hero-headline { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 5vw, 66px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 28px; opacity: 0; animation: fadeUp 0.7s 0.25s forwards; }
+    .hero-headline { font-family: 'Cormorant Garant', serif; font-size: clamp(40px, 5vw, 66px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 28px; opacity: 0; animation: fadeUp 0.7s 0.25s forwards; }
     .hero-headline em { font-style: italic; color: var(--teal); }
-    .hero-philosophy { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 22px; color: var(--ink-light); line-height: 1.5; margin-bottom: 36px; padding-left: 24px; border-left: 2px solid var(--teal); opacity: 0; animation: fadeUp 0.7s 0.4s forwards; }
+    .hero-philosophy { font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 22px; color: var(--ink-light); line-height: 1.5; margin-bottom: 36px; padding-left: 24px; border-left: 2px solid var(--teal); opacity: 0; animation: fadeUp 0.7s 0.4s forwards; }
     .hero-body { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--ink-light); max-width: 440px; opacity: 0; animation: fadeUp 0.7s 0.55s forwards; }
 
     .hero-right { background: var(--ink); position: relative; overflow: hidden; opacity: 0; animation: fadeIn 1s 0.3s forwards; }
     .hero-right-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 72px 72px; }
     .hero-right-content { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 64px; text-align: center; }
-    .hero-right-wordmark { font-family: 'DM Serif Display', serif; font-size: 48px; color: var(--white); letter-spacing: -2px; line-height: 1.1; margin-bottom: 16px; }
+    .hero-right-wordmark { font-family: 'Cormorant Garant', serif; font-size: 48px; color: var(--white); letter-spacing: -2px; line-height: 1.1; margin-bottom: 16px; }
     .hero-right-wordmark span { color: var(--teal-light); }
     .hero-right-tagline { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 64px; }
     .hero-right-circle { width: 200px; height: 200px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; position: relative; margin: 0 auto 64px; }
     .hero-right-circle::before { content: ''; position: absolute; inset: 16px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.06); }
-    .circle-text { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 28px; color: var(--teal-light); text-align: center; line-height: 1.3; }
+    .circle-text { font-family: 'Cormorant Garant', serif; font-style: italic; font-size: 28px; color: var(--teal-light); text-align: center; line-height: 1.3; }
     .hero-pillars { display: flex; flex-direction: column; gap: 0; width: 100%; border: 1px solid rgba(255,255,255,0.08); }
     .hero-pillar { padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 14px; }
     .hero-pillar:last-child { border-bottom: none; }
@@ -81,7 +81,7 @@
     .mission-right { padding: 80px 64px; }
     .section-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
     .section-eyebrow::before { content: ''; display: block; width: 20px; height: 1px; background: var(--teal); }
-    .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3vw, 44px); letter-spacing: -0.8px; line-height: 1.1; margin-bottom: 24px; }
+    .section-title { font-family: 'Cormorant Garant', serif; font-size: clamp(28px, 3vw, 44px); letter-spacing: -0.8px; line-height: 1.1; margin-bottom: 24px; }
     .section-title em { font-style: italic; color: var(--teal); }
     .body-text { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--ink-light); margin-bottom: 20px; }
     .body-text:last-child { margin-bottom: 0; }
@@ -92,13 +92,13 @@
     .value-card { background: var(--white); padding: 40px; transition: background 0.2s; }
     .value-card:hover { background: var(--off-white); }
     .value-icon { font-size: 28px; margin-bottom: 20px; }
-    .value-title { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--ink); margin-bottom: 12px; }
+    .value-title { font-family: 'Cormorant Garant', serif; font-size: 22px; color: var(--ink); margin-bottom: 12px; }
     .value-title em { font-style: italic; color: var(--teal); }
     .value-body { font-size: 13px; font-weight: 300; line-height: 1.75; color: var(--ink-light); }
 
     /* PHILOSOPHY STRIP */
     .philosophy-strip { background: var(--teal); padding: 80px 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .philosophy-quote { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3.5vw, 48px); letter-spacing: -1px; line-height: 1.15; color: var(--white); }
+    .philosophy-quote { font-family: 'Cormorant Garant', serif; font-size: clamp(28px, 3.5vw, 48px); letter-spacing: -1px; line-height: 1.15; color: var(--white); }
     .philosophy-quote em { font-style: italic; color: rgba(255,255,255,0.6); }
     .philosophy-body { font-size: 15px; font-weight: 300; line-height: 1.85; color: rgba(255,255,255,0.6); margin-bottom: 32px; }
     .philosophy-sig { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
@@ -107,8 +107,8 @@
     .vetting-section { padding: 100px 64px; background: var(--off-white); border-top: 1px solid var(--border); }
     .vetting-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); margin-top: 56px; }
     .vetting-step { background: var(--white); padding: 36px 32px; }
-    .step-num { font-family: 'DM Serif Display', serif; font-size: 48px; color: var(--border); line-height: 1; margin-bottom: 20px; }
-    .step-title { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--ink); margin-bottom: 10px; }
+    .step-num { font-family: 'Cormorant Garant', serif; font-size: 48px; color: var(--border); line-height: 1; margin-bottom: 20px; }
+    .step-title { font-family: 'Cormorant Garant', serif; font-size: 18px; color: var(--ink); margin-bottom: 10px; }
     .step-body { font-size: 13px; font-weight: 300; line-height: 1.7; color: var(--ink-light); }
 
     /* CONTACT */
@@ -117,9 +117,9 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form-field { display: flex; flex-direction: column; gap: 8px; }
     .form-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); }
-    .form-input { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 300; padding: 12px 16px; border: 1px solid var(--border); background: var(--white); color: var(--ink); outline: none; transition: border-color 0.2s; }
+    .form-input { font-family: 'Lora', serif; font-size: 14px; font-weight: 300; padding: 12px 16px; border: 1px solid var(--border); background: var(--white); color: var(--ink); outline: none; transition: border-color 0.2s; }
     .form-input:focus { border-color: var(--teal); }
-    .form-textarea { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 300; padding: 12px 16px; border: 1px solid var(--border); background: var(--white); color: var(--ink); outline: none; resize: vertical; min-height: 120px; transition: border-color 0.2s; }
+    .form-textarea { font-family: 'Lora', serif; font-size: 14px; font-weight: 300; padding: 12px 16px; border: 1px solid var(--border); background: var(--white); color: var(--ink); outline: none; resize: vertical; min-height: 120px; transition: border-color 0.2s; }
     .form-textarea:focus { border-color: var(--teal); }
     .form-submit { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--teal); color: var(--white); border: none; padding: 14px 32px; cursor: pointer; transition: background 0.2s; align-self: flex-start; }
     .form-submit:hover { background: var(--ink); }
@@ -131,7 +131,7 @@
 
     /* FOOTER */
     footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
-    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
+    .footer-logo { font-family: 'Cormorant Garant', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
     .footer-logo span { color: var(--teal-light); }
     .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 240px; }
     .footer-col-title { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.22); margin-bottom: 18px; }
@@ -193,7 +193,7 @@
 <body>
 
 <nav>
-  <a href="/" class="nav-logo">Well Rested <span>Skincare</span></a>
+  <a href="/" class="nav-logo"><img src="images/products/Logo-WRS.png" alt="Well Rested Skincare" style="height:36px;width:36px;object-fit:contain;border-radius:50%;margin-right:10px;vertical-align:middle;">Well Rested <span>Skincare</span></a>
   <ul class="nav-links">
     <li><a href="/brand-directory.html">Brands</a></li>
     <li><a href="/editorial.html">Editorial</a></li>
