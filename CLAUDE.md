@@ -101,7 +101,7 @@ When creating a new page, always use `index.html` as the base template. Copy its
 | Medik8 (via CJ) | ✅ Approved | 10% | 30 days | Contact: affiliates@medik8.us. Crystal Retinal, C-Tetra Luxe, Liquid Peptides links live |
 | Sovrn | ✅ Installed | Varies | Varies | JS on index.html |
 | VigLink | ✅ Installed | Varies | Varies | JS on all articles |
-| Dermstore (via Rakuten) | ✅ Approved | 2% base, $4-9 CPA | TBC | Approved April 2026. $9 CPA for Beauty Fix products |
+| Dermstore (via Rakuten) | ✅ Approved | 2% base, $4-9 CPA | 30 days | Approved April 2026. $9 CPA for Beauty Fix products |
 | Rakuten | ✅ Active | Varies | Varies | Dermstore approved. Apply to more brands |
 | Ogee (Rakuten) | ⏳ Declined | — | — | Follow up in 3 months. Contact: Cate Cartier, cate@altamediapartners.com |
 | ShareASale/Awin | ⏳ Not applied | — | — | |
