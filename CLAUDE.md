@@ -10,8 +10,8 @@ Well Rested Skincare is a static HTML affiliate site that reviews and directorie
 - **Build process:** None — static files deployed directly
 - **Version control:** GitHub — repo: github.com/kggmoran-wellrested/well-rested-skincare
 - **Analytics:** Google Analytics 4 — Measurement ID: G-H93DL9R9QJ
-- **Affiliate networks:** Amazon Associates, Sovrn, Impact Radius
-- **Commission rates:** 3–10% depending on product/network
+- **Affiliate networks:** Amazon Associates, CJ Affiliates, Sovrn, VigLink, Rakuten (Dermstore)
+- **Commission rates:** 3–10% depending on product/network (Dermstore: 2% base, $4-9 CPA)
 
 ## File Structure
 ```
@@ -85,20 +85,39 @@ When creating a new page, always use `index.html` as the base template. Copy its
 - [x] editorial.html updated with devices article card (live)
 
 ## Affiliate & Business Context
-- Affiliate networks: Amazon Associates, Sovrn, Impact Radius
 - Disclosure page: /affiliate-disclosure.html
 - Paid placements policy: None — editorial independence maintained ("0 Paid Placements")
-- Commission structure: 3–10% depending on product and network
-- Amazon Associates status: pending approval (need 3 sales within 180 days)
-- LLC: Well Rested LLC — application submitted, pending approval
 - Instagram: @wellrestedskincare
+- Pinterest: @wellrestedskincare
+- LLC: IL application in progress (2 rejections due to name conflicts)
+
+## Affiliate Programs — Current Status
+
+| Program | Status | Commission | Cookie | Notes |
+|---|---|---|---|---|
+| Amazon Associates | ✅ Active | 3-4% | 24hr | Fallback for all brands |
+| CJ Affiliates | ✅ Active | Varies | Varies | Properties: Website 101699797, Instagram 101714978, Pinterest 101714980 |
+| eCosmetics (via CJ) | ✅ Approved | 8% | 30 days | Plated, Skinbetter Science, MyoLift QT Plus links live |
+| Medik8 (via CJ) | ✅ Approved | 10% | 30 days | Contact: affiliates@medik8.us. Crystal Retinal, C-Tetra Luxe, Liquid Peptides links live |
+| Sovrn | ✅ Installed | Varies | Varies | JS on index.html |
+| VigLink | ✅ Installed | Varies | Varies | JS on all articles |
+| Dermstore (via Rakuten) | ✅ Approved | 2% base, $4-9 CPA | TBC | Approved April 2026. $9 CPA for Beauty Fix products |
+| Rakuten | ✅ Active | Varies | Varies | Dermstore approved. Apply to more brands |
+| Ogee (Rakuten) | ⏳ Declined | — | — | Follow up in 3 months. Contact: Cate Cartier, cate@altamediapartners.com |
+| ShareASale/Awin | ⏳ Not applied | — | — | |
+
+### CJ Link Rules
+- Always select correct property (Website vs Instagram vs Pinterest) before generating links
+- Pinterest blocks dpbolvw.net and anrdoezrs.net — use brand page URL instead for those pins
+- Plated links are blocked on Pinterest — link to brand page instead
 
 ## Do Not Touch
 - Do not edit the affiliate disclosure legal language in affiliate-disclosure.html
-- Do not change the color scheme or typography (DM Serif Display, DM Mono, DM Sans — teal #3D7A7A)
 - Do not remove the "0 Paid Placements" stat from the homepage
 - Do not delete googlec46f137391f8e5a2.html — this is the Google Search Console verification file
-- Do not rename or move product images in images/products/ without updating brand-page.html references
+- Do not rename or move product images in images/products/ without updating references
+- Current fonts: Cormorant Garant (headings), DM Mono (labels/meta), Lora (body)
+- Current accent color: --teal #7D9B77, --teal-light #9BBD95
 
 <!DOCTYPE html>
 <html lang="en">
