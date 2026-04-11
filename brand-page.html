@@ -528,6 +528,44 @@
           { name: "YOUth DAILY Moisturizing Cream", img: "young goose youth daily.png", link: "https://amzn.to/413v9HF" },
         ]
       },
+      glytone: {
+        name: "Glytone",
+        shortName: "Glytone",
+        monogram: "Gl",
+        eyebrow: "Dermatologist-Developed Exfoliation",
+        descFull: "Glytone is a dermatologist-developed brand built around glycolic acid — one of the most extensively studied AHAs in clinical skincare. Their body wash and lotion system delivers genuine chemical exfoliation at efficacious concentrations, accelerating cell turnover and improving texture in a way that physical exfoliants simply cannot match. A trusted workhorse in medical-grade body care.",
+        tags: ["Glycolic Acid", "AHA Exfoliation", "Dermatologist-Developed", "Body Care"],
+        type: "skincare",
+        products: [
+          { name: "Exfoliating Body Wash", img: "glytone-bodywash.jpeg", link: "https://click.linksynergy.com/link?id=FGYy8pDuiPk&offerid=2004499.539457198473984135103745&type=2&murl=https%3a%2f%2fwww.dermstore.com%2fp%2fglytone-exfoliating-body-wash%2f11287678%2f%3fswitchcurrency%3dUSD%26shippingcountry%3dUS" },
+          { name: "Exfoliating Body Lotion", img: "glytone-bodylotion.jpeg", link: "https://click.linksynergy.com/link?id=FGYy8pDuiPk&offerid=2004499.539456947147326375807663&type=2&murl=https%3a%2f%2fwww.dermstore.com%2fp%2fglytone-exfoliating-body-lotion-8.4-fl.-oz.%2f12915589%2f%3fswitchcurrency%3dUSD%26shippingcountry%3dUS" },
+        ]
+      },
+      necessaire: {
+        name: "Nécessaire",
+        shortName: "Nécessaire",
+        monogram: "Nc",
+        eyebrow: "Body Care, Elevated",
+        descFull: "Nécessaire is a clean, minimalist body care brand formulated with the same rigor as premium facial skincare. Their Body Retinol and Body Vitamin C bring clinical active ingredients to a body care format — designed for daily use, with elegant textures that make consistent application realistic. Free of fragrance, parabens, and unnecessary additives.",
+        tags: ["Body Retinol", "Vitamin C", "Clean", "Minimalist"],
+        type: "skincare",
+        products: [
+          { name: "The Body Retinol", img: "necessaire-retinol.jpg", link: "https://www.amazon.com/dp/B0CC9DRY6W?ref=t_ac_view_request_product_image&campaignId=amzn1.campaign.11UHZHYFD52AY&linkCode=tr1&tag=wellresteds0f-20&linkId=amzn1.campaign.11UHZHYFD52AY_1775932922956" },
+          { name: "The Body Vitamin C", img: "necessaire-vitc.jpg", link: "https://www.amazon.com/dp/B0DQYNVPRC?ref=t_ac_view_request_product_image&campaignId=amzn1.campaign.11UHZHYFD52AY&linkCode=tr1&tag=wellresteds0f-20&linkId=amzn1.campaign.11UHZHYFD52AY_1775932949915" },
+        ]
+      },
+      timeless: {
+        name: "Timeless Skin Care",
+        shortName: "Timeless",
+        monogram: "TL",
+        eyebrow: "Clinical Actives, Accessible Price",
+        descFull: "Timeless Skin Care delivers clinical-strength active formulas at a fraction of the price of luxury competitors. Their 20% Vitamin C + E Ferulic Acid Serum is widely regarded as one of the best-value vitamin C formulations available — using the same gold-standard L-ascorbic acid + ferulic acid combination as serums that cost four times as much. A favourite among skincare enthusiasts who prioritize efficacy over branding.",
+        tags: ["Vitamin C", "Ferulic Acid", "Clinical-Strength", "Value"],
+        type: "skincare",
+        products: [
+          { name: "20% Vitamin C + E Ferulic Acid Serum", img: "timeless-vitc.jpg", link: "https://amzn.to/4srsh2A" },
+        ]
+      },
       medik8: {
         name: "Medik8",
         shortName: "Medik8",
@@ -592,7 +630,7 @@
             <div class="product-name">${p.name}</div>
           </div>
           <div class="product-cta">
-            <span>${p.link ? 'Shop on Amazon' : 'Coming Soon'}</span>
+            <span>${p.link ? (p.link.includes('dermstore') ? 'Shop on Dermstore' : p.link.includes('medik8') || p.link.includes('anrdoezrs') || p.link.includes('dpbolvw') || p.link.includes('kqzyfj') ? 'Shop on Medik8' : p.link.includes('ecosmetics') ? 'Shop on eCosmetics' : 'Shop on Amazon') : 'Coming Soon'}</span>
             <span class="product-cta-arrow">${p.link ? '↗' : '—'}</span>
           </div>
         </a>`;
