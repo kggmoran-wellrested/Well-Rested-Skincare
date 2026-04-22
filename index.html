@@ -48,6 +48,8 @@
     "url": "https://wellrestedskincare.com"
   }
   </script>
+  <!-- Mailchimp -->
+  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
   <script type="text/javascript">
     var vglnk = {key: '2a4jylb.d6e39569-cfd5-4ae2-ab8f-07315c1f39c5'};
     (function(d, t) {
@@ -239,22 +241,17 @@
     .skin-type-link { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-light); text-decoration: none; }
 
     /* NEWSLETTER */
-    .newsletter { padding: 100px 64px; background: var(--blush); border-top: 1px solid var(--border); position: relative; overflow: hidden; }
-    .newsletter::before { content: ''; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(ellipse, rgba(200,168,130,0.2), transparent 70%); top: -200px; right: -100px; }
-    .newsletter-inner { position: relative; z-index: 1; max-width: 600px; }
-    .newsletter-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-    .newsletter-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal); }
-    .newsletter-title { font-family: 'Cormorant Garant', serif; font-size: clamp(28px, 3.5vw, 44px); letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; }
-    .newsletter-title em { font-style: italic; color: var(--teal); }
-    .newsletter-sub { font-size: 15px; font-weight: 300; color: var(--ink-light); margin-bottom: 36px; line-height: 1.7; }
-    .newsletter-form { display: flex; gap: 0; max-width: 460px; }
-    .newsletter-input { flex: 1; font-family: 'Lora', serif; font-size: 14px; font-weight: 300; padding: 14px 20px; border: 1px solid var(--border); border-right: none; background: var(--white); color: var(--ink); outline: none; transition: border-color 0.2s; }
-    .newsletter-input:focus { border-color: var(--teal); }
-    .newsletter-btn { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--teal); color: var(--white); border: none; padding: 14px 24px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
-    .newsletter-btn:hover { background: var(--ink); }
-    .newsletter-perks { display: flex; gap: 24px; margin-top: 20px; flex-wrap: wrap; }
-    .newsletter-perk { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); display: flex; align-items: center; gap: 6px; }
-    .newsletter-perk::before { content: '✓'; color: var(--teal); }
+    .mc-signup-section { padding: 100px 64px; background: var(--teal); text-align: center; }
+    .mc-signup-inner { max-width: 580px; margin: 0 auto; }
+    .mc-signup-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+    .mc-signup-heading { font-family: 'Cormorant Garant', serif; font-size: clamp(28px, 3.5vw, 44px); letter-spacing: -1px; line-height: 1.1; color: #fff; margin-bottom: 16px; }
+    .mc-signup-sub { font-family: 'Lora', serif; font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.85); margin-bottom: 36px; line-height: 1.7; }
+    .mc-fields { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .mc-input { font-family: 'Lora', serif; font-size: 14px; padding: 14px 18px; border: none; background: #fff; color: var(--ink); flex: 1; min-width: 180px; max-width: 210px; outline: none; }
+    .mc-input::placeholder { color: #999; }
+    .mc-btn { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--ink); color: #fff; border: none; padding: 14px 28px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+    .mc-btn:hover { background: #333; }
+    .mc-disclaimer { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.5); margin-top: 16px; }
 
     /* FOOTER */
     footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
@@ -352,11 +349,10 @@
       .skin-headline { font-size: clamp(26px, 7vw, 38px); }
 
       /* NEWSLETTER */
-      .newsletter { padding: 56px 20px; }
-      .newsletter-form { flex-direction: column; max-width: 100%; }
-      .newsletter-input { border-right: 1px solid var(--border); border-bottom: none; }
-      .newsletter-btn { padding: 14px; text-align: center; }
-      .newsletter-perks { flex-direction: column; gap: 10px; }
+      .mc-signup-section { padding: 56px 20px; }
+      .mc-fields { flex-direction: column; align-items: center; }
+      .mc-input { max-width: 100%; width: 100%; }
+      .mc-btn { width: 100%; }
 
       /* FOOTER */
       footer { grid-template-columns: 1fr; padding: 48px 24px; gap: 32px; }
@@ -370,7 +366,7 @@
       .hero-headline { font-size: clamp(32px, 4vw, 48px); }
       .manifesto { padding: 80px 40px; }
       .featured-section, .how-section, .editorial-section, .flatlay-section,
-      .skin-section, .newsletter, footer { padding-left: 40px; padding-right: 40px; }
+      .skin-section, .mc-signup-section, footer { padding-left: 40px; padding-right: 40px; }
       .brands-grid { grid-template-columns: repeat(2, 1fr); }
       .editorial-grid { grid-template-columns: 1fr 1fr 1fr; }
       .skin-types { grid-template-columns: repeat(2, 1fr); }
@@ -740,20 +736,22 @@
 </section>
 
 <!-- NEWSLETTER -->
-<section class="newsletter reveal">
-  <div class="newsletter-inner">
-    <div class="newsletter-eyebrow">Stay in the Know</div>
-    <h2 class="newsletter-title">Skincare science,<br><em>in your inbox.</em></h2>
-    <p class="newsletter-sub">Weekly ingredient breakdowns, new brand reviews, and honest skincare guidance — delivered every Sunday morning.</p>
-    <div class="newsletter-form">
-      <input class="newsletter-input" type="email" placeholder="your@email.com" />
-      <button class="newsletter-btn">Subscribe →</button>
-    </div>
-    <div class="newsletter-perks">
-      <span class="newsletter-perk">Weekly editorial</span>
-      <span class="newsletter-perk">Ingredient of the month</span>
-      <span class="newsletter-perk">No spam, ever</span>
-    </div>
+<section class="mc-signup-section reveal">
+  <div class="mc-signup-inner">
+    <p class="mc-signup-label">Free Download</p>
+    <h2 class="mc-signup-heading">The Anti-Aging Starter Guide</h2>
+    <p class="mc-signup-sub">Morning and evening routines, layering rules, and product picks at every budget — free when you subscribe.</p>
+    <form action="https://wellrestedskincare.us7.list-manage.com/subscribe/post?u=e19c8770792d8aef42cc9cc10&amp;id=0b2fa22813&amp;f_id=007fefe4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+      <div class="mc-fields">
+        <input type="text" name="FNAME" placeholder="First name" class="mc-input" id="mce-FNAME">
+        <input type="email" name="EMAIL" placeholder="Email address" class="mc-input required email" id="mce-EMAIL" required>
+        <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="mc-btn">Get the Guide</button>
+      </div>
+      <div aria-hidden="true" style="position:absolute;left:-5000px;">
+        <input type="text" name="b_e19c8770792d8aef42cc9cc10_0b2fa22813" tabindex="-1" value="">
+      </div>
+      <p class="mc-disclaimer">No spam. Unsubscribe anytime.</p>
+    </form>
   </div>
 </section>
 
