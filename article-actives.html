@@ -144,7 +144,26 @@
 
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
+    /* MAILCHIMP SIGNUP */
+    .mc-signup-section { padding: 80px 64px; background: var(--teal); text-align: center; }
+    .mc-signup-inner { max-width: 580px; margin: 0 auto; }
+    .mc-signup-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+    .mc-signup-heading { font-family: 'Cormorant Garant', serif; font-size: clamp(24px, 3vw, 38px); letter-spacing: -1px; line-height: 1.1; color: #fff; margin-bottom: 16px; }
+    .mc-signup-sub { font-family: 'Lora', serif; font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.85); margin-bottom: 32px; line-height: 1.7; }
+    .mc-fields { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .mc-input { font-family: 'Lora', serif; font-size: 14px; padding: 13px 18px; border: none; background: #fff; color: var(--ink); flex: 1; min-width: 180px; max-width: 210px; outline: none; }
+    .mc-input::placeholder { color: #999; }
+    .mc-btn { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--ink); color: #fff; border: none; padding: 13px 28px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+    .mc-btn:hover { background: #333; }
+    .mc-disclaimer { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.5); margin-top: 16px; }
+    @media (max-width: 768px) {
+      .mc-signup-section { padding: 56px 24px; }
+      .mc-fields { flex-direction: column; align-items: center; }
+      .mc-input { max-width: 100%; width: 100%; }
+      .mc-btn { width: 100%; }
+    }
   </style>
+  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H93DL9R9QJ"></script>
   <script>
@@ -432,6 +451,26 @@
     </div>
   </div>
 </div>
+
+<!-- MAILCHIMP SIGNUP -->
+<section class="mc-signup-section">
+  <div class="mc-signup-inner">
+    <p class="mc-signup-label">Free Download</p>
+    <h2 class="mc-signup-heading">The Anti-Aging Starter Guide</h2>
+    <p class="mc-signup-sub">Morning and evening routines, layering rules, and product picks at every budget — free when you subscribe.</p>
+    <form action="https://wellrestedskincare.us7.list-manage.com/subscribe/post?u=e19c8770792d8aef42cc9cc10&amp;id=0b2fa22813&amp;f_id=007fefe4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+      <div class="mc-fields">
+        <input type="text" name="FNAME" placeholder="First name" class="mc-input" id="mce-FNAME">
+        <input type="email" name="EMAIL" placeholder="Email address" class="mc-input required email" id="mce-EMAIL" required>
+        <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="mc-btn">Get the Guide</button>
+      </div>
+      <div aria-hidden="true" style="position:absolute;left:-5000px;">
+        <input type="text" name="b_e19c8770792d8aef42cc9cc10_0b2fa22813" tabindex="-1" value="">
+      </div>
+      <p class="mc-disclaimer">No spam. Unsubscribe anytime.</p>
+    </form>
+  </div>
+</section>
 
 <footer>
   <div>
