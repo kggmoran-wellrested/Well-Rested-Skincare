@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Anti-Aging Starter Guide — Well Rested Skincare</title>
+  <meta name="description" content="A free guide to building your anti-aging skincare routine — morning and evening routines, layering rules, and product picks at every budget." />
+  <meta name="robots" content="noindex" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H93DL9R9QJ"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-H93DL9R9QJ');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--white:#FAFAF8;--off-white:#F2F0EB;--ink:#1A1A18;--ink-light:#4A4A46;--ink-faint:#9A9A94;--teal:#7D9B77;--teal-light:#9BBD95;--border:#E0DDD6;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Lora',serif;background:var(--off-white);color:var(--ink);min-height:100vh;display:flex;flex-direction:column;}
+
+    /* NAV */
+    nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;background:var(--white);border-bottom:1px solid var(--border);}
+    .nav-logo{font-family:'Cormorant Garant',serif;font-size:17px;color:var(--ink);text-decoration:none;}
+    .nav-logo span{color:var(--teal);}
+    .nav-logo img{height:36px;width:36px;object-fit:contain;border-radius:50%;margin-right:10px;vertical-align:middle;}
+
+    /* HERO */
+    .hero{flex:1;display:flex;align-items:center;justify-content:center;padding:80px 24px;}
+    .hero-inner{max-width:560px;width:100%;text-align:center;}
+    .hero-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:20px;}
+    .hero-title{font-family:'Cormorant Garant',serif;font-size:clamp(36px,5vw,60px);letter-spacing:-1.5px;line-height:1.05;margin-bottom:20px;color:var(--ink);}
+    .hero-title em{font-style:italic;color:var(--teal);}
+    .hero-sub{font-size:16px;font-weight:300;line-height:1.8;color:var(--ink-light);margin-bottom:40px;}
+
+    /* WHAT'S INSIDE */
+    .inside-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:48px;text-align:left;border:1px solid var(--border);padding:28px 32px;background:var(--white);}
+    .inside-list li{font-size:14px;font-weight:300;color:var(--ink-light);padding-left:20px;position:relative;line-height:1.6;}
+    .inside-list li::before{content:'✓';position:absolute;left:0;color:var(--teal);font-size:13px;}
+
+    /* FORM */
+    .form-wrap{background:var(--teal);padding:40px 36px;text-align:center;}
+    .form-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:12px;}
+    .form-title{font-family:'Cormorant Garant',serif;font-size:26px;color:#fff;letter-spacing:-0.5px;margin-bottom:24px;line-height:1.2;}
+    .mc-fields{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:14px;}
+    .mc-input{font-family:'Lora',serif;font-size:14px;padding:13px 18px;border:none;background:#fff;color:var(--ink);flex:1;min-width:180px;max-width:210px;outline:none;}
+    .mc-input::placeholder{color:#999;}
+    .mc-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;background:var(--ink);color:#fff;border:none;padding:13px 28px;cursor:pointer;transition:background 0.2s;white-space:nowrap;}
+    .mc-btn:hover{background:#333;}
+    .mc-disclaimer{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.08em;color:rgba(255,255,255,0.5);}
+
+    /* ABOUT */
+    .about{padding:48px 32px;text-align:center;border-top:1px solid var(--border);background:var(--white);}
+    .about-name{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;}
+    .about p{font-size:14px;font-weight:300;line-height:1.8;color:var(--ink-light);max-width:480px;margin:0 auto;}
+
+    /* FOOTER */
+    .footer{padding:20px 48px;background:var(--ink);display:flex;align-items:center;justify-content:space-between;}
+    .footer-text{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.08em;color:rgba(255,255,255,0.2);}
+    .footer-link{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.08em;color:rgba(255,255,255,0.3);text-decoration:none;}
+    .footer-link:hover{color:var(--teal-light);}
+
+    @media(max-width:768px){
+      nav{padding:0 20px;}
+      .hero{padding:48px 20px;}
+      .inside-list{padding:20px 24px;}
+      .form-wrap{padding:32px 24px;}
+      .mc-fields{flex-direction:column;align-items:center;}
+      .mc-input{max-width:100%;width:100%;}
+      .mc-btn{width:100%;}
+      .footer{flex-direction:column;gap:8px;text-align:center;padding:20px 24px;}
+    }
+  </style>
+  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="images/products/Logo-WRS.png" alt="Well Rested Skincare">
+    Well Rested <span>Skincare</span>
+  </a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+
+    <div class="hero-eyebrow">Free Download</div>
+    <h1 class="hero-title">The Anti-Aging<br><em>Starter Guide</em></h1>
+    <p class="hero-sub">Everything you need to build a science-backed anti-aging routine — without the overwhelm. Enter your email and I'll send it straight to your inbox.</p>
+
+    <ul class="inside-list">
+      <li>Morning and evening routine frameworks for women 35+</li>
+      <li>How to layer your actives so they actually work</li>
+      <li>When to introduce retinoids, vitamin C, and peptides</li>
+      <li>Product picks at every budget — under $20 to investment</li>
+      <li>The beginner mistakes that set most people back</li>
+    </ul>
+
+    <div class="form-wrap">
+      <div class="form-label">Get instant access</div>
+      <div class="form-title">Send me the guide</div>
+      <form action="https://wellrestedskincare.us7.list-manage.com/subscribe/post?u=e19c8770792d8aef42cc9cc10&amp;id=0b2fa22813&amp;f_id=007fefe4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div class="mc-fields">
+          <input type="text" name="FNAME" placeholder="First name" class="mc-input" id="mce-FNAME">
+          <input type="email" name="EMAIL" placeholder="Email address" class="mc-input required email" id="mce-EMAIL" required>
+          <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="mc-btn">Get the Guide</button>
+        </div>
+        <div aria-hidden="true" style="position:absolute;left:-5000px;">
+          <input type="text" name="b_e19c8770792d8aef42cc9cc10_0b2fa22813" tabindex="-1" value="">
+        </div>
+        <p class="mc-disclaimer">No spam. Unsubscribe anytime.</p>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<div class="about">
+  <div class="about-name">From Katherine Moran</div>
+  <p>I'm a skincare obsessive in my 40s. I'm genuinely obsessed with skincare — the ingredients, the devices, the in-office treatments. If there's something worth trying, I've probably already tried it. Everything I share is science-backed and honest.</p>
+</div>
+
+<footer class="footer">
+  <span class="footer-text">© 2026 Well Rested Skincare</span>
+  <a href="/affiliate-disclosure.html" class="footer-link">Affiliate Disclosure</a>
+  <a href="/" class="footer-link">wellrestedskincare.com</a>
+</footer>
+
+</body>
+</html>
