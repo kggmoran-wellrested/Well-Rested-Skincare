@@ -1,0 +1,27 @@
+Initial release: SEO Machine - Open source SEO content creation tool
+Transform Castos Writer into SEO Machine - a generalized, open-source tool
+for creating long-form, SEO-optimized blog content for any business.
+
+## What's New
+
+- **Generic Templates**: All context files converted to fill-in-the-blank templates
+- **Real Example**: Original Castos setup moved to examples/castos/ as reference
+- **Complete Documentation**: Updated README, Quick Start, and NEXT-STEPS guides
+- **Environment Setup**: Added .env.example with detailed configuration instructions
+- **Open Source**: MIT License with contribution guidelines
+
+## Key Features
+
+- Custom Claude Code commands: /research, /write, /rewrite, /optimize, /analyze-existing
+- Specialized AI agents: SEO optimizer, meta creator, internal linker, keyword mapper
+- Advanced analysis modules: Search intent, keyword density, readability, SEO quality
+- Data integrations: Google Analytics 4, Search Console, DataForSEO
+- Template-driven: Easy to customize for any brand or industry
+
+## What Changed from Castos Writer
+
+- Removed all Castos-specific branding and content
+- Created template files for brand-voice, features, writing-examples, internal-links
+- Added examples/castos/ directory with complete real-world example
+- Updated all commands and agents to be industry-agnostic
+- Generalized documentation for any business use case
