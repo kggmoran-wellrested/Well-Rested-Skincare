@@ -146,11 +146,11 @@ Morning Routine, Night Routine, The Basics, Start Here, Level Up, Full Routine, 
 
 | Product | Payhip URL | Price | Pages | Status |
 |---|---|---|---|---|
-| The Ozempic Face Protocol | payhip.com/b/RP1dS | $32 | 17 | Live — awaiting Stripe/PayPal connection |
-| The Perimenopause Skin and Diet Guide | payhip.com/b/gTEFG | $32 | 24 | Live |
-| The Well Rested Anti-Aging Collection (bundle) | payhip.com/b/FUJF5X | $52 | 41 | Live |
+| The Ozempic Face Protocol | payhip.com/b/RP1dS | $19 (was $32 — dropped May 21) | 17 | Live, Stripe connected |
+| The Perimenopause Skin and Diet Guide | payhip.com/b/gTEFG | $19 (was $32 — dropped May 21) | 24 | Live, Stripe connected |
+| The Well Rested Anti-Aging Collection (bundle) | payhip.com/b/FUJF5X | $29 (was $52 — dropped May 21) | 41 | Live, Stripe connected |
 
-All three products need Stripe or PayPal connected on Payhip before purchases can process. Bundle = Ozempic Face Protocol + Perimenopause Skin and Diet Guide.
+Bundle = Ozempic Face Protocol + Perimenopause Skin and Diet Guide. Price drop May 21 reflects Katherine's decision that $32/$52 was too high for a brand with limited social proof. Strategy: $19/$19/$29 to seed reviews + early sales. Reassess after 30 days of conversion data. **New no-price cover images generated in Canva May 21 — once swapped in, future price changes won't require new cover designs.**
 
 ---
 
@@ -179,6 +179,7 @@ All three products need Stripe or PayPal connected on Payhip before purchases ca
 | article-summer-skincare.html | Summer Skincare Routine | May 4 | Updated May 2026 |
 | article-ozempic-face.html | Ozempic Face: What Actually Helps | May 15 | Payhip CTA |
 | article-foods-for-skin.html | Best Foods for Glowing Skin | May 18 | New |
+| article-ingredients-after-45.html | 5 Skincare Ingredients Worth Paying For After 45 (And 3 That Don't) | May 26 | **New** — W1 anchor article. ~1,700 words. Includes FAQPage schema, ingredient cards, 6 internal links, ShopMy + Amazon affiliate links. Coordinated launch with Substack post + IG carousel. |
 
 ### Articles with Payhip CTAs
 - article-ozempic-face.html → Ozempic Face Protocol ($32, payhip.com/b/RP1dS)
@@ -253,7 +254,31 @@ All three products need Stripe or PayPal connected on Payhip before purchases ca
 - Jun 11: At-home devices pin (article)
 - Jun 13: Protocol product pin (Payhip)
 
-**Pending:** 8-pin microneedling batch designed and ready to ship pointing at new article-microneedling-aftercare.html URL.
+### 8-Pin Microneedling Batch (built in Canva May 21)
+
+All 8 pins generated via Canva AI, each with 4 candidate variations. Target: 400+ impression microneedling redness cluster. All link to article-microneedling-aftercare.html. Full SEO copy (titles, descriptions, hashtags, board placement) lives in `/Users/katherinemoran/Desktop/campaign-plan/microneedling-pinterest-batch.md`.
+
+**Canva candidate edit URLs (v1 of each — see batch file for all 4 variations per pin):**
+1. Microneedling Redness Day by Day → https://www.canva.com/d/G9T_O6k4pUPbNjb
+2. How Long Does Redness Last → https://www.canva.com/d/65JNgIrgfUKdN7u
+3. Day 1 vs Day 7 Recovery → https://www.canva.com/d/M9FT_hAz0vHP0_c
+4. When to Worry About Redness → https://www.canva.com/d/31UKGqmRZy4eYvO
+5. 5 Products for Faster Recovery → https://www.canva.com/d/h5iCt1Uk6eRtZaq
+6. First 48 Hours Protocol → https://www.canva.com/d/uFNCqgE1xyZqnK5
+7. Recovery for Mature Skin → https://www.canva.com/d/wVenJo9ba5G7wzr
+8. What I Actually Put on My Face → https://www.canva.com/d/2En-XORNfhxXMt3
+
+**Rotation (woven into existing schedule, 2/week ~3 days apart):**
+- Thu May 21, 9pm EST: Pin #1
+- Sun May 24, 9pm EST: Pin #4
+- Wed May 28, 9pm EST: Pin #2
+- Sat May 31, 9pm EST: Pin #6
+- Tue Jun 3, 9pm EST: Pin #5
+- Fri Jun 6, 9pm EST: Pin #3
+- Mon Jun 9, 9pm EST: Pin #7
+- Thu Jun 12, 9pm EST: Pin #8
+
+**Note:** Pinterest scheduler allows scheduling out to at least 30 days (confirmed May 21 — Katherine's window extends to Jun 19). All 8 pins can be scheduled in one sitting.
 
 ---
 
@@ -286,6 +311,7 @@ The `marketing:campaign-plan` skill has been customized for Well Rested Skincare
 - Eats Mediterranean most days
 - Loves a martini and fries on occasion — not a deprivation approach
 - **Voice:** personal experience grounds every recommendation. Science-backed but never condescending. Warm, honest, authoritative. **No dashes in body copy. Never use "obsessed". American spellings.**
+- **Procedure name-drop fatigue (added May 23 2026):** Katherine is tired of CO2 laser / Sculptra / microneedling / microcurrent being listed in every piece of content. Going forward, reference procedures only when contextually doing argumentative work (e.g., "for laxity, you need [procedure]"). Avoid using the procedure list as autobiographical credibility shorthand. Prefer "I've been around the block with products, learned to parse fact from fiction" framing for personal authority.
 
 ---
 
@@ -337,7 +363,8 @@ Medik8, Obagi, Paula's Choice, La Roche-Posay
 - Update ShopMy payment info once bank account and EIN are in place
 
 ### Pinterest
-- Ship 8-pin microneedling batch pointing at new article URL
+- Schedule the 8-pin microneedling batch per rotation above (starting tonight May 21)
+- Schedule the 3 replacement Payhip product pins (Ozempic Face → Sat May 23, Perimenopause → Wed May 28 11pm, Bundle → Fri Jun 6 11pm). Old higher-priced product pins stay live to keep Pinterest equity.
 - Fresh evergreen image for SPF pin (current says "spring break edition")
 - Create 2-3 additional perimenopause pins with different images
 
@@ -374,3 +401,136 @@ Medik8, Obagi, Paula's Choice, La Roche-Posay
 - **Ran top-15 ShopMy swap pass**: 41 link swaps across 13 articles (actives, am-routine, copper-peptides, crystal-retinal, exosomes, glp1-skin, microneedling-aftercare, perimenopause, pm-routine, post-procedure, retinol, sleep-aging, spf-guide). All product-card badges flipped from "Amazon"/"CJ" to "ShopMy". Duplicate Alastin links (4aUZm1B and 3NSQoch) both routed to p-56561231. Zero orphan URLs for the 15 products. Awaiting commit + push.
 - Customized marketing plugin's campaign-plan skill for Well Rested Skincare.
 - Confirmed Supermetrics live data: Pinterest, GSC, GA4, Instagram all flowing (license 1749070).
+- Resolved diverged-branch merge issue (force-pushed clean local commit after origin had stale broken articles).
+- Built 8-pin microneedling Pinterest batch in Canva (32 candidate designs total, 4 variations per pin). Wrote full SEO copy file with titles, descriptions, hashtags, and rotation schedule at `/Users/katherinemoran/Desktop/campaign-plan/microneedling-pinterest-batch.md`. Rotation starts tonight (Thu May 21, 9pm EST), 2 pins/week through Jun 12.
+- **Payhip pricing reset**: dropped all 3 products to $19/$19/$29 (was $32/$32/$52). Confirmed Stripe is now connected. Generated 3 new no-price cover images in Canva (Katherine to pick favorite per product and upload to Payhip). Recommendation: never bake price into product covers again — Payhip UI shows it natively.
+- Generated 3 fresh Payhip product pins in Canva (Perimenopause, Ozempic Face, Bundle) with no prices baked in. Full SEO copy added to Pinterest batch file. Scheduled: Ozempic May 23, Perimenopause May 28, Bundle Jun 6. Old higher-priced live pins stay published to retain Pinterest equity.
+- **End of session May 21**: Katherine published Microneedling Pin #1 live and scheduled the remaining 11 pins (7 microneedling + 3 Payhip product + 1 other?) in Pinterest's native scheduler. Full batch deploys through Jun 12.
+
+---
+
+## Instagram Baseline (pulled May 22 2026)
+
+- **Followers:** 1,823
+- **Posts:** 39 published
+- **Critical insight:** Only 2-3% of followers are her target (US women 35-55). 58% India, 21% Bangladesh, 6% Nigeria, **3.5% US**. Age: 76% under 35; only 12% in her 35-54 target.
+- **Engagement rate ~0.2%** (healthy is 1-3%). Vanity follower count, low real signal.
+- **Format gap:** 17 single-image feed posts + 1 Reel + 0 carousels in last 30 days.
+- **May 14-15 viral spike:** Reach 10,493 + 2,149 (vs normal 14-122/day). Content CAN break out of her broken follower base.
+- **Best-performing post in window:** Arbutin experiment (April 26) — reach 306, 5x normal. Series-based experiment hook works.
+
+## Instagram Strategy (decided May 22)
+
+### Content pillars (4)
+1. **Ingredient Truth** — Splurge vs save, La Mer vs equivalent active, decoding back of bottle. **Strongest differentiator.**
+2. **Skin & Food** — Anti-inflammatory cooking, kitchen-pantry skincare, supplements, gut/skin axis.
+3. **Perimenopause Reality** — What changes after 40, GLP-1 face, skincare regrets, age-slower frameworks.
+4. **The Real Routine** — Current AM/PM, empties, reorders, honest takes.
+
+### Weekly cadence
+- Mon 7-9pm EST: Carousel (8-10 slides) — Ingredient Truth or Splurge vs Save
+- Wed 7-9pm EST: No-face Reel (15-30s) — Real Routine or quick Ingredient Truth
+- Fri 7-9pm EST: Carousel — Skin & Food OR Perimenopause Reality
+- Daily: 1-2 Stories
+
+### Format rules (no on-camera)
+- Reels: text on cream background, hands holding product, ingredient close-ups, product b-roll. Never selfie talking head.
+- Carousels: 8-10 slides, hook on slide 1, payoff on slide 8-10. Editorial design matching her brand kit.
+- Save rate > like rate. Optimize content for "I need to come back to this."
+
+### Hashtag strategy
+**Never use:** #skincare, #wellness, #antiaging, #beauty (broad tags = wrong international audience).
+**Always rotate ultra-niche sets by pillar:**
+- Ingredient Truth: #skincareingredients #skincarescience #ingredientdecoded #activeingredients #beautychemistry #splurgevssave #cleanbeauty40 #midlifebeauty
+- Perimenopause: #perimenopauseskincare #perimenopausejourney #midlifewellness #womenover40 #skincareover45 #glp1face #ozempicface #midliferevolution
+- Skin & Food: #antiinflammatoryfoods #skinfromwithin #beautyfromwithin #midlifenutrition #healthyagingfood #longevityfood #foodforskin #mediterraneandiet
+- Real Routine: #midlifeskincare #realskincare #honestbeauty #everydayskincare #skincareempties #skincareover40 #beautynotes
+
+### 2-week starter calendar (May 25 - Jun 7)
+- Mon 5/25: Carousel — "Splurge vs Save: La Mer Crème de la Mer vs Drugstore Squalane + Ceramides" (Ingredient Truth)
+- Wed 5/27: Reel — "POV: reading a moisturizer like a chemist" (no face, hands + product, text overlay)
+- Fri 5/29: Carousel — "5 Anti-Inflammatory Foods Your Skin Will Show You Loved" (Skin & Food)
+- Mon 6/1: Carousel — "5 Skincare Regrets at 48" (Perimenopause + personal)
+- Wed 6/3: Reel — "What changes about your skin in perimenopause" (no face, text on cream)
+- Fri 6/5: Carousel — "5 Ways to Age Slower Through Perimenopause" (Perimenopause Reality)
+
+### DM automation plan
+- Tool: **Manychat** (manychat.com), free tier up to 1,000 contacts
+- Flow 1: New follow → welcome DM → offer Starter Guide
+- Flow 2: Comment keyword "LIST" or "GUIDE" → auto-DM appropriate PDF link
+- Closes the loop on captions that already prompt comments
+
+### Reference accounts to study (winning in this space)
+- Caroline Hirons — carousel-heavy, no-face Reels with hands+product, education-first
+- The Cosmetic Bystander — long-form ingredient deep-dives, Substack-first
+- Dr. Sam Bunting — Reels with text overlay walking ingredient lists
+- Liah Yoo / KraveBeauty — "myth busting" carousels, splurge vs save format
+
+---
+
+## Substack — LIVE (launched May 22 2026)
+
+**URL:** wellrestedskincare.substack.com
+**Publication name:** Well Rested
+**Tagline:** Aging wellness, science honest.
+**Handle:** @wellrestedskincare
+**Profile name:** Katherine Moran (linked to publication for now — Substack quirk)
+**Bio:** Skincare-honest, midlife-real. I'm Katherine, 48. Writing about aging well: the chemistry, the procedures, the perimenopause, the science. Founder of Well Rested Skincare.
+
+**Status of setup tasks (May 22):**
+- ✓ Account created
+- ✓ Publication renamed from auto-name to "Well Rested"
+- ✓ Bio set
+- ✓ Manifesto post published: "Why I Started Well Rested" (Katherine's edited version, ~700 words)
+- ✓ About page customized with full About content
+- ✓ 5 sections created (Ingredient Truth, Aging Wellness, Food For Skin & Body, What I'm Testing, Field Notes)
+- ✓ Welcome email automation set up
+- ✓ Email header banner uploaded (2400×800, brand teal with logo)
+- Paid subscriptions OFF (intentional — free-only for first 60 days)
+
+**Positioning:** Aging wellness, science-honest. Broader than just skincare.
+
+**5 buckets (every post tagged):**
+1. Ingredient Truth (skincare/supplement chemistry deep-dives)
+2. Aging Wellness (perimenopause, sleep, hormones, GLP-1s)
+3. Food For Skin & Body (anti-inflammatory eating, supplements)
+4. What I'm Testing (real-time experiments — arbutin fits here)
+5. Field Notes (personal essays, behind-scenes)
+
+**Cadence:** 1 long-form post/week (1,500-2,500 words) + 2-3 Substack Notes/week.
+
+**Free vs paid:** Start 100% free for 60 days. After: $5-7/month paid tier (What I'm Testing + monthly Q&A + early access). 70% free, 30% paid.
+
+**Growth lever:** Substack Recommendations. Past 100 subscribers, reach out to The Cosmetic Bystander, Get The Gloss writers, perimenopause Substacks for mutual recommendations.
+
+**Next Substack moves (after May 22 launch):**
+- Day 3-5: First Note (something short — what she's testing this week, or a quick observation)
+- Day 5-7: Second long-form post — recommend the arbutin experiment as "What I'm Testing" (already half-written content)
+- Day 10: Third long-form — "Why your skincare stopped working in perimenopause" (Aging Wellness)
+- Day 14: First reader Q&A or community engagement post
+- Day 30: Subscribe to 30 Substacks in the space + comment on their posts to seed recommendations
+- Day 60: Reach out to 5 Substack writers for mutual recommendations
+
+**Week 1 anchor content (Ingredient Truth):**
+- Substack long-form draft ready: `campaign-plan/Substack/substack-post-02-ingredients-after-45.md` ("5 Ingredients Actually Worth Paying For at 45")
+- IG Carousel #2 ready: `campaign-plan/Instagram/Presentation - 5 Skincare Ingredients Worth Paying For.pdf` (10 slides, warm peachy aesthetic, edited May 23)
+- Launch: **Tuesday May 26, 2026** — shifted off Monday because Mon 5/25 is Memorial Day. Coordinated launch: Substack post 9am EST, IG carousel 8pm EST.
+
+---
+
+## Roadmap: New Payhip Product
+
+**"The Skincare Ingredient Decoder"** — $24, 30-40 pages
+- 20 active ingredients worth paying for (retinoids, peptides, ceramides, niacinamide, vitamin C, AHAs/BHAs)
+- 10 marketing buzzwords that mean nothing
+- Splurge vs save tables ("If you can't afford X, here's the active-equivalent at Y price")
+- How to read an INCI list in 60 seconds
+- Actives never to skip after 40
+
+Build it by repackaging IG ingredient carousel content + existing article research. Target: ready to launch when ~10 ingredient carousels are published (~Aug 2026).
+
+---
+
+## NOT priorities (decided May 21)
+- **TikTok Shop**: skip. Video-first + audience age mismatch.
+- **Shopify**: revisit 2027+ only if private-label physical product launch.
