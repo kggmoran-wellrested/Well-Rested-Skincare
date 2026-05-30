@@ -66,7 +66,7 @@ ShopMy and Pinterest do not have direct connectors. Supermetrics handles Pintere
 | Program | Status | Commission | Notes |
 |---|---|---|---|
 | ShopMy | Active | 10-20% | shopmy.us/shop/wellrestedskincare. **Priority over Amazon** — higher commissions. Active swap project underway. |
-| Amazon Associates | Active | 3-4% | Tag: wellresteds0f-20 |
+| Amazon Associates | Active | 3-4% | Tag: wellresteds0f-20. **Storefront live at amazon.com/shop/wellresteds0f** (created May 30 2026 — open to all Associates now, not just Influencers). Creator Rewards bonus program accepted (tiered flat fees: $670 → $15, $1,110 → $35, $1,770 → $55, $2,710 → $110). |
 | CJ Affiliates | Active | Varies | Properties: Website 101699797, Instagram 101714978, Pinterest 101714980 |
 | eCosmetics (via CJ) | Approved | 8% | Plated, Skinbetter Science, MyoLift QT Plus |
 | Medik8 (via CJ) | Approved | 10% | Contact: Mary Curme, affiliates@medik8.us |
@@ -419,7 +419,25 @@ Medik8, Obagi, Paula's Choice, La Roche-Posay
 - **May 14-15 viral spike:** Reach 10,493 + 2,149 (vs normal 14-122/day). Content CAN break out of her broken follower base.
 - **Best-performing post in window:** Arbutin experiment (April 26) — reach 306, 5x normal. Series-based experiment hook works.
 
-## Instagram Strategy (decided May 22)
+## Strategy Pivot — May 28 2026: IG to maintenance mode
+
+After 6+ weeks of testing carousels with declining engagement on a wrong-demo audience (88% non-US), Katherine decided to pull IG back to maintenance mode and concentrate energy on Pinterest + Substack + Website. Carousel production is exhausting and ROI is near-zero given the audience composition.
+
+**New priority order:**
+1. **Pinterest** — primary discovery + product revenue. 4-6 pins/week (2-3 editorial + 2-3 product spotlight to Amazon affiliate)
+2. **Substack** — primary editorial voice. 1 long-form/week + 2-3 Notes
+3. **Website** — primary SEO + affiliate compounding. 1 article every 1-2 weeks
+4. **Instagram** — maintenance only. 1 repost/week max. No original carousels or Reels.
+
+**Amazon Influencer:** Applied May 27, rejected. Reapply late July 2026 when Pinterest + Substack metrics are stronger. Regular Amazon Associates (tag: wellresteds0f-20) works fine for product pins in the meantime.
+
+**Strategic insight:** every piece of content going forward should be a compounding asset, not engagement bait. Pinterest pins, Substack posts, and website articles compound. IG carousels do not. The 5-7 hours/week previously spent on IG carousel production redirected to Substack long-forms + Pinterest batches.
+
+Full revised content calendar lives at `/Users/katherinemoran/Desktop/campaign-plan/content-calendar.md` (rewritten May 28).
+
+---
+
+## Instagram Strategy (decided May 22 — SUPERSEDED, see pivot above)
 
 ### Content pillars (4)
 1. **Ingredient Truth** — Splurge vs save, La Mer vs equivalent active, decoding back of bottle. **Strongest differentiator.**
