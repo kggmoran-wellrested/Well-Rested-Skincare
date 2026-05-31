@@ -180,7 +180,7 @@ Bundle = Ozempic Face Protocol + Perimenopause Skin and Diet Guide. Price drop M
 | article-ozempic-face.html | Ozempic Face: What Actually Helps | May 15 | Payhip CTA |
 | article-foods-for-skin.html | Best Foods for Glowing Skin | May 18 | New |
 | article-ingredients-after-45.html | 5 Skincare Ingredients Worth Paying For After 45 (And 3 That Don't) | May 26 | **New** — W1 anchor article. ~1,700 words. Includes FAQPage schema, ingredient cards, 6 internal links, ShopMy + Amazon affiliate links. Coordinated launch with Substack post + IG carousel. |
-| article-perimenopause-skin-changes.html | Why Your Skincare Stopped Working in Perimenopause: The 5 Things That Change | Jun 2 | **New** — W2 anchor article. ~2,000 words. Diagnostic angle complement to existing perimenopause guide. FAQPage schema, 5 change cards with science + swap, 6 internal links, ShopMy + Amazon affiliate links. Dual-published with Substack post #3 (Aging Wellness section). |
+| article-perimenopause-skin-changes.html | Why Your Skincare Stopped Working in Perimenopause: The 5 Things That Change | May 31 | **New** — W2 anchor article. ~2,000 words. Diagnostic angle complement to existing perimenopause guide. FAQPage schema, 5 change cards with science + swap, 6 internal links, ShopMy + Amazon affiliate links. Dual-published with Substack post #3 (Aging Wellness section). Published Sunday for weekend Substack reading window. |
 
 ### Articles with Payhip CTAs
 - article-ozempic-face.html → Ozempic Face Protocol ($32, payhip.com/b/RP1dS)
