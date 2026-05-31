@@ -66,7 +66,7 @@ ShopMy and Pinterest do not have direct connectors. Supermetrics handles Pintere
 | Program | Status | Commission | Notes |
 |---|---|---|---|
 | ShopMy | Active | 10-20% | shopmy.us/shop/wellrestedskincare. **Priority over Amazon** — higher commissions. Active swap project underway. |
-| Amazon Associates | Active | 3-4% | Tag: wellresteds0f-20. **Storefront live at amazon.com/shop/wellresteds0f** (created May 30 2026 — open to all Associates now, not just Influencers). Creator Rewards bonus program accepted (tiered flat fees: $670 → $15, $1,110 → $35, $1,770 → $55, $2,710 → $110). |
+| Amazon Associates | Active | 3-4% | Tag: wellresteds0f-20. **Storefront live at amazon.com/shop/wellresteds0f** (created May 30 2026 — open to all Associates now, not just Influencers). Creator Rewards bonus program accepted (tiered flat fees: $670 → $15, $1,110 → $35, $1,770 → $55, $2,710 → $110). 12 Idea Lists populated — full URL list at `/Users/katherinemoran/Desktop/campaign-plan/Amazon/idea-list-urls.md`. |
 | CJ Affiliates | Active | Varies | Properties: Website 101699797, Instagram 101714978, Pinterest 101714980 |
 | eCosmetics (via CJ) | Approved | 8% | Plated, Skinbetter Science, MyoLift QT Plus |
 | Medik8 (via CJ) | Approved | 10% | Contact: Mary Curme, affiliates@medik8.us |
@@ -180,6 +180,7 @@ Bundle = Ozempic Face Protocol + Perimenopause Skin and Diet Guide. Price drop M
 | article-ozempic-face.html | Ozempic Face: What Actually Helps | May 15 | Payhip CTA |
 | article-foods-for-skin.html | Best Foods for Glowing Skin | May 18 | New |
 | article-ingredients-after-45.html | 5 Skincare Ingredients Worth Paying For After 45 (And 3 That Don't) | May 26 | **New** — W1 anchor article. ~1,700 words. Includes FAQPage schema, ingredient cards, 6 internal links, ShopMy + Amazon affiliate links. Coordinated launch with Substack post + IG carousel. |
+| article-perimenopause-skin-changes.html | Why Your Skincare Stopped Working in Perimenopause: The 5 Things That Change | Jun 2 | **New** — W2 anchor article. ~2,000 words. Diagnostic angle complement to existing perimenopause guide. FAQPage schema, 5 change cards with science + swap, 6 internal links, ShopMy + Amazon affiliate links. Dual-published with Substack post #3 (Aging Wellness section). |
 
 ### Articles with Payhip CTAs
 - article-ozempic-face.html → Ozempic Face Protocol ($32, payhip.com/b/RP1dS)
