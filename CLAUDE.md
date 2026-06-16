@@ -154,7 +154,7 @@ Bundle = Ozempic Face Protocol + Perimenopause Skin and Diet Guide. Price drop M
 
 ---
 
-## Articles Published — 21 total
+## Articles Published — 23 total
 
 | File | Title | Date | SEO Status |
 |---|---|---|---|
@@ -168,20 +168,21 @@ Bundle = Ozempic Face Protocol + Perimenopause Skin and Diet Guide. Price drop M
 | article-vitamin-c.html | Vitamin C Serums | March | Updated May 2026 |
 | article-sleep-aging.html | How Sleep Affects Skin Aging | March | Updated May 2026 |
 | article-pm-routine.html | Nighttime Skincare Routine for Anti-Aging | Mar 27 | Updated May 2026 |
-| article-spf-guide.html | Best Sunscreen for Face and Body | Mar 29 | Updated May 2026 |
+| article-spf-guide.html | Best Sunscreen for Face and Body | Mar 29 | **Updated Jun 14 2026** — added "Update June 2026: FDA approved bemotrizinol" section after mineral-vs-chemical with full breakdown (broad-spectrum, photostable, no white cast, low irritation, September launch). Removed all spring break references for evergreen language. dateModified=2026-06-14 in schema. |
 | article-perimenopause.html | Perimenopause Skincare | Mar 30 | Updated May 2026 — Payhip CTA |
-| article-crystal-retinal.html | Medik8 Crystal Retinal Review | Apr 1 | Updated May 2026 |
-| article-glp1-skin.html | GLP-1 Medications and Skin | Apr 4 | Updated May 2026 |
+| article-crystal-retinal.html | Medik8 Crystal Retinal Review | Apr 1 | **Title/meta rewrite Jun 14 2026** — "Medik8 Crystal Retinal vs Tretinoin: 6-Month Review" (was "Is Retinaldehyde a Better Alternative?"). Position 9 on Google with 0.4% CTR — biggest single CTR opportunity on the site. |
+| article-glp1-skin.html | GLP-1 Medications and Skin | Apr 4 | **Title/meta rewrite Jun 14 2026** — "GLP-1 and Skin: The 5 Changes Nobody Warned You About" (was "Ozempic Face, Skin Laxity, and How to Respond"). Listicle format + curiosity hook. |
 | article-body-antiaging.html | Anti-Aging Body Care | Apr 11 | Updated May 2026 |
-| article-copper-peptides.html | Copper Peptides | Apr 15 | Updated May 2026 |
-| article-arbutin.html | Arbutin Comparison | Apr 23 | Updated May 2026 |
+| article-copper-peptides.html | Copper Peptides | Apr 15 | **Meta cleanup Jun 14 2026** — dash removed from description (voice rule). |
+| article-arbutin.html | Arbutin Comparison | Apr 23 | **Title/meta rewrite Jun 14 2026** — "Alpha Arbutin Cream for Dark Spots: My Honest 4-Week Test" (was "Arbutin for Skin Lightening: Does Arbutin Cream Actually Fade Dark Spots? Coleman Compound vs Tosowoong"). Highest impression volume on site (982 imp), title now matches actual search queries. |
 | article-microneedling-aftercare.html | Microneedling Redness Day by Day | Apr 27 | **Full rewrite May 21 2026** — targets 400+ impression redness cluster ranking pos 70-95; FAQPage schema with 6 Qs |
 | article-summer-skincare.html | Summer Skincare Routine | May 4 | Updated May 2026 |
 | article-ozempic-face.html | Ozempic Face: What Actually Helps | May 15 | Payhip CTA |
-| article-foods-for-skin.html | Best Foods for Glowing Skin | May 18 | New |
+| article-foods-for-skin.html | Best Foods for Glowing Skin | May 18 | **Title/meta rewrite Jun 14 2026** — "7 Best Foods for Glowing Skin (And Why They Actually Work)" — specific number boosts CTR, matches "7 antioxidant foods" rising query. |
 | article-ingredients-after-45.html | 5 Skincare Ingredients Worth Paying For After 45 (And 3 That Don't) | May 26 | **New** — W1 anchor article. ~1,700 words. Includes FAQPage schema, ingredient cards, 6 internal links, ShopMy + Amazon affiliate links. Coordinated launch with Substack post + IG carousel. |
 | article-perimenopause-skin-changes.html | Why Your Skincare Stopped Working in Perimenopause: The 5 Things That Change | May 31 | **New** — W2 anchor article. ~2,000 words. Diagnostic angle complement to existing perimenopause guide. FAQPage schema, 5 change cards with science + swap, 6 internal links, ShopMy + Amazon affiliate links. Dual-published with Substack post #3 (Aging Wellness section). Published Sunday for weekend Substack reading window. |
-| article-hydrogen-water-skin.html | Hydrogen Water for Skin: What the Research Actually Shows (And What's Overstated) | Jun 3 | **New** — Ingredient Truth pillar. ~2,200 words. SEO target: "hydrogen water for skin," "molecular hydrogen skin," "H2 skin benefits." Cites Debkowska 2025 pilot study + Alex Tarnava (Drink HRW founder, brand Katherine is personally testing). Honest "promising, not yet replacement for established interventions" framing. FAQPage schema with 5 Q&As, 5 internal links. NO affiliate relationship with Drink HRW disclosed in piece. Dual-published with Substack post #4 (Aging Wellness section). Future "What I'm Testing" follow-up planned 60-90 days out. |
+| article-hydrogen-water-skin.html | Hydrogen Water for Skin: What the Research Actually Shows (And What's Overstated) | Jun 3 | **New** — Ingredient Truth pillar. ~2,200 words. SEO target: "hydrogen water for skin," "molecular hydrogen skin," "H2 skin benefits." Cites Debkowska 2025 pilot study + Alex Tarnava (Drink HRW founder, brand Katherine is personally testing). Honest "promising, not yet replacement for established interventions" framing. FAQPage schema with 5 Q&As, 5 internal links. NO affiliate relationship with Drink HRW disclosed in piece. Dual-published with Substack post #4 (Aging Wellness section). Hero image added Jun 14 (article-hydrogen-water-skin.jpg). Future "What I'm Testing" follow-up planned 60-90 days out. |
+| article-perimenopause-stack.html | The Perimenopause Stack: 6 Layers That Actually Work | **Jun 16** (launch Tue) | **New — first in The Stack series.** ~2,000 words. Six-layer framework (Skincare, Diet, Sleep, Hormones, Supplements, Procedures) with high-leverage move at each layer. FAQPage schema with 5 Q&As, 6 internal links. Hero image: article-perimenopause-stack.jpg. ShopMy + Amazon affiliate links. Payhip CTA box mid-article → Perimenopause Stack PDF ($19). Featured on homepage + editorial.html, added to sitemap. Dual-published with Substack post #6. Template for future Stack articles (GLP-1 Face Stack next, late July). |
 
 ### Articles with Payhip CTAs
 - article-ozempic-face.html → Ozempic Face Protocol ($32, payhip.com/b/RP1dS)
@@ -346,29 +347,45 @@ Medik8, Obagi, Paula's Choice, La Roche-Posay
 ## Pending Items
 
 ### Immediate
-- Commit + push the 13 swapped articles via GitHub Desktop, then request indexing in Search Console for changed URLs
+### Tomorrow (Tuesday Jun 16 — launch day)
+- Publish Substack post #6 (The Perimenopause Stack) — draft ready
+- Confirm Perimenopause Stack article live + request indexing in GSC
+- Build Perimenopause Routine Photo/Collage for Amazon storefront
+- Post Perimenopause Routine flatlay to Instagram with caption + ManyChat PERI flow setup
+- Confirm 9pm Pinterest editorial pin fires
+
+### This week
+- Build the 6 remaining Amazon storefront Photo/Collages (Supplements, Retinoid Tier, Body Care, Sensitive Skin, Wellness Tools, SPF Rotation differentiated). Text spec ready.
+- Set up additional ManyChat keyword flows as new IG posts ship
+- Track Amazon Associates conversions from the viral SPF post
+
+### Next 2 weeks
+- Build the Stack Assessment quiz in ScoreApp (use spec + product map + result templates)
+- Continue testing flatlay IG format (3 posts over 2 weeks for confirmation data)
+- Pinterest batch 2 (in motion — Katherine working on it)
+
+### Business / Legal (still open)
 - Call IRS 1-800-829-4933 to get EIN (Reference 101)
 - Open business bank account under Red Barn Ventures LLC
 - File DBA with IL Secretary of State (~$30 + newspaper)
-- Connect Stripe or PayPal on Payhip (all three listings cannot process payments until done)
-- Request indexing in Search Console for article-microneedling-aftercare, article-post-procedure, article-foods-for-skin, article-perimenopause, and 8 articles updated May 13
 
-### Content
+### Content (longer arc)
 - Arbutin results article (~June 2026) — take before photos first
 - Copper peptides personal verdict (~July 2026)
 - Retinaldehyde deep-dive centering Crystal Retinal
 - Vitamin C comparison article
+- GLP-1 Face Stack (next Stack series piece, late July)
+- The Skincare Stack Decoder (formerly Ingredient Decoder, ~Aug 2026)
 
 ### Affiliate (after top 15)
 - Handle remaining 34 one-off Amazon products
 - Identify 3 device links in article-devices.html (3P2zubp, 4ba5uSt, 4ukHaGq)
 - Update ShopMy payment info once bank account and EIN are in place
 
-### Pinterest
-- Schedule the 8-pin microneedling batch per rotation above (starting tonight May 21)
-- Schedule the 3 replacement Payhip product pins (Ozempic Face → Sat May 23, Perimenopause → Wed May 28 11pm, Bundle → Fri Jun 6 11pm). Old higher-priced product pins stay live to keep Pinterest equity.
-- Fresh evergreen image for SPF pin (current says "spring break edition")
-- Create 2-3 additional perimenopause pins with different images
+### Misc one-offs
+- Sunscreen Day Reel posted to Trial Reels
+- CeraVe brand page editorial section
+- Remaining brand page editorial sections
 
 ---
 
@@ -408,6 +425,46 @@ Medik8, Obagi, Paula's Choice, La Roche-Posay
 - **Payhip pricing reset**: dropped all 3 products to $19/$19/$29 (was $32/$32/$52). Confirmed Stripe is now connected. Generated 3 new no-price cover images in Canva (Katherine to pick favorite per product and upload to Payhip). Recommendation: never bake price into product covers again — Payhip UI shows it natively.
 - Generated 3 fresh Payhip product pins in Canva (Perimenopause, Ozempic Face, Bundle) with no prices baked in. Full SEO copy added to Pinterest batch file. Scheduled: Ozempic May 23, Perimenopause May 28, Bundle Jun 6. Old higher-priced live pins stay published to retain Pinterest equity.
 - **End of session May 21**: Katherine published Microneedling Pin #1 live and scheduled the remaining 11 pins (7 microneedling + 3 Payhip product + 1 other?) in Pinterest's native scheduler. Full batch deploys through Jun 12.
+
+**Jun 14, 2026 (Sunday — major shipping day):**
+- **The Stack pivot — branded positioning shift**: Reframed entire brand around "stacking" concept. Brand now positioned as "Skincare stacking for midlife. Chemistry-honest version of aging well." Stack frame unifies skincare + diet + sleep + hormones + supplements + procedures as 6 layers that compound. The breadth of topics now has a name.
+- **Substack manifesto published**: "The Stack Is the Strategy" — post #5, ~1,800 words, manifesto post explaining the new frame. Saved at `/campaign-plan/Substack/substack-post-05-the-stack-is-the-strategy.md`.
+- **Payhip rebrand executed (Katherine):**
+  - The Ozempic Face Protocol → **The GLP-1 Face Stack** ($19, payhip.com/b/RP1dS)
+  - The Perimenopause Skin and Diet Guide → **The Perimenopause Stack** ($19, payhip.com/b/gTEFG)
+  - The Well Rested Anti-Aging Collection → **The Foundational Stack** ($29 bundle, payhip.com/b/FUJF5X)
+  - New no-price covers + new descriptions live. Full Payhip rebrand spec at `/campaign-plan/Payhip/payhip-stack-rebrand-descriptions.md`.
+- **IG bio updated to V5 (Stack-coded):**
+  - Name field: "Skincare stacking for midlife"
+  - Bio: "Katherine, 48. Why one product was never going to fix it. / Skincare stacking for women in midlife. / Chemistry-honest. No hype. ↓"
+  - Links: wellrestedskincare.com (primary) + wellrestedskincare.substack.com (secondary). Linktree dropped.
+- **Newsletter button fix shipped**: 15 pages had inert `<button class="nav-cta">Newsletter</button>` that did nothing. All converted to `<a href="/starter-guide.html" class="nav-cta">Newsletter</a>` via sed batch. Pages: editorial, about, affiliate-disclosure, brand-directory, article-crystal-retinal, article-devices, article-exosomes, article-glp1-skin, article-peptides, article-perimenopause, article-pm-routine, article-retinol, article-sleep-aging, article-spf-guide, article-vitamin-c. (Note: stray duplicate at /images/products/article-peptides.html still has broken button — not served.)
+- **Hydrogen Water article hero image added**: Katherine's flatlay (clear glass, blue background, H2 element badge) saved as `article-hydrogen-water-skin.jpg`. Wired into og:image, twitter:image, editorial.html featured + grid card, index.html homepage card upgraded from text-only to has-image.
+- **Quiz spec built**: The Stack Assessment — 10-question diagnostic delivering personalized Stack report. Tool: ScoreApp ($49/mo). Full spec at `/campaign-plan/Quiz/stack-assessment-spec.md`. 6 result page templates at `/campaign-plan/Quiz/quiz-result-page-templates.md` (one per archetype: premenopausal under 35, premenopausal 35-44, perimenopausal, on HRT, GLP-1 user, both peri+GLP-1). Product mapping spreadsheet at `/campaign-plan/Quiz/stack-assessment-product-map.xlsx` — 38 products across 2 sheets (Product Map + Recommendation Logic). Eye cream deliberately excluded as editorial differentiator.
+- **Stack motif visual assets generated**: 7 labeled PNGs (manifesto, perimenopause, ingredient, morning, GLP-1 face, foundational, peptide stacks) + 5 blank templates at `/campaign-plan/Pinterest/stack-motifs/`. 1000×1500 PNG, brand palette, ready for Canva overlay.
+- **Pinterest specs built for July**: Stack pivot batch (Jun 15-29) with 7 editorial pins, Product picks batch (Jun 16-30) with 7 product pins (later updated: Body Care After 45, Sensitive Skin Saviors, Anti-Inflammatory Pantry swapped in for SPF/Retinoid/Vitamin C which Katherine had already done). Payhip Stack pins batch for July (3 pins) at `/campaign-plan/Pinterest/payhip-stack-pins-july.md`. Combined cadence: 6 pins/week through end of June.
+- **SEO title/meta rewrites** on 5 underperforming articles: crystal-retinal, arbutin, copper-peptides (meta only), glp1-skin, foods-for-skin. Largest CTR opportunity was Crystal Retinal at position 9 with 0.4% CTR (was leaving real traffic on the table).
+- **ManyChat went live**: Permission refresh resolved silent-failure issue. Comment-keyword flows now firing.
+  - **SENSITIVE** flow live → Sensitive Skin Saviors Amazon Idea List
+  - **SPF** flow live → SPF I Actually Wear Amazon Idea List
+  - Pattern: opening DM with link + hero products mentioned + "P.S. Substack" secondary message
+  - **Meta deprecation note**: new-follower welcome DMs no longer work — Meta restricted the API in 2024. Only comment-keyword and DM-keyword triggers work reliably now.
+- **Viral IG moment**: SPF Essentials flatlay post (repurposed Pinterest pin) hit 50+ comments, new followers, big Amazon traffic spike. 12-15x lift over baseline (~3-4 comments). Confirmed flatlay-plus-Comment-KEYWORD format works for her audience. Strategic insight: product-forward visual content with stack-coded framing outperforms abstract educational content.
+- **Perimenopause Stack article + Substack post #6 built** for Jun 16 launch. Article: `article-perimenopause-stack.html` (~2,000 words, six-layer framework, FAQPage schema, Payhip CTA mid-article). Substack: `/campaign-plan/Substack/substack-post-06-the-perimenopause-stack.md`. Hero image `article-perimenopause-stack.jpg` saved to images/products. Promoted to featured slot on editorial.html and homepage editorial card on index.html. Added to sitemap.xml.
+- **SPF article major update**: Added "Update June 2026: FDA approved bemotrizinol" section after the mineral-vs-chemical block. Full breakdown: broad-spectrum, photostable, no white cast, low irritation profile, September shelf timing. Also removed all spring break references for evergreen language. dateModified added to schema. Bonus: also a Substack Note candidate to ride the news cycle.
+- **Performance snapshot pulled via Supermetrics** (last 30 days vs prior 30):
+  - GSC: 24 clicks (+33%), 3,563 impressions (+147%), CTR 0.67%, position 47.9
+  - Pinterest: 8,235 impressions (+35%), 28 saves (-22%), 12 outbound clicks (+300%), 192 engagements (+27%)
+  - Top page: homepage 12 clicks at position 9.6 (26% CTR)
+  - Top query breakthrough: "medik8 crystal retinal vs tretinoin" position 10.5, first click landed this period
+  - GA4 + Mailchimp data not available on current Supermetrics license tier
+  - IG reach down 99.7% vs prior 30 — but prior window includes May 14-15 viral spike, so comparison is artificially inflated. Maintenance mode working as intended.
+
+**Jun 15, 2026 (Monday):**
+- **Amazon Storefront strategy session**: Audited public storefront. Identified that 3 covers (SPF Essentials, Barrier Repair & Hydration, Microneedling & Skin Devices) use winning flatlay format, but 12 others use default single-product covers (visual inconsistency = breaks editorial brand). Confirmed: Idea Lists do NOT accept custom cover images (auto-generates from first product). Custom flatlays must be uploaded as Photos/Collages (separate content type). Strategy: build matched pair (Photo + Idea List) for each theme. Photo handles visual storefront layer with shoppable hotspots, Idea List handles deep curation backend.
+- **Content text drafted for 7 new Amazon storefront Photo/Collage flatlays**: Perimenopause Routine, Supplements I Take, Retinoid Tier List, Body Care After 45, Sensitive Skin Saviors, SPF Rotation (differentiated from SPF Essentials), Wellness Tools. Each with title text, 4 category labels, and recommended featured products. Built to match SPF Essentials template DNA.
+- **Perimenopause Routine IG caption + ManyChat flow drafted** for Tue Jun 16 launch (paired with Perimenopause Stack article going live). Keyword: PERI, perimenopause, ROUTINE. URL: Amazon Perimenopause Skin Routine list. Hero products in DM swapped from Plated INTENSE (ShopMy only) to Allies Multi Peptides + Avène Cicalfate+ (both on Amazon).
+- **CLAUDE.md updated** (you're reading the result).
 
 ---
 
