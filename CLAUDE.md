@@ -128,6 +128,19 @@ Morning Routine, Night Routine, The Basics, Start Here, Level Up, Full Routine, 
 
 ---
 
+## LED Mask ShopMy URLs (added Jun 24 2026)
+
+For article-red-light-truth.html and any future LED mask coverage. Add all three to the **Device + Treatment** ShopMy collection, and consider spinning up a dedicated **Red Light Masks** sub-collection.
+
+| Mask | ShopMy URL | Notes |
+|---|---|---|
+| Maysama PRANA | https://go.shopmy.us/p-55070454 | Katherine owns. Highest irradiance in comparison (54 mW/cm² avg). |
+| Omnilux Contour Face | https://go.shopmy.us/p-67024776 | Most peer-reviewed evidence in category. 40+ studies. |
+| CurrentBody Skin LED Series 2 | https://go.shopmy.us/p-67025064 | Three wavelengths incl. 1072nm. Independent RCT. |
+| HigherDOSE Red Light Face Mask | (no ShopMy yet — direct link only: higherdose.com/products/higherdose-red-light-face-mask) | Katherine owns and uses most. Cordless. Check ShopMy availability. |
+
+---
+
 ## Mailchimp
 
 - **Audience:** Well Rested Skincare (ID: 0b2fa22813)
