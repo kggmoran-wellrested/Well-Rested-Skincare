@@ -12,7 +12,9 @@ When this file is uploaded, read it fully before responding. This is an ongoing 
 **Stack:** Static HTML on GitHub Pages (kggmoran-wellrested repo)
 **Live repo (synced via GitHub Desktop):** `/Users/katherinemoran/Documents/GitHub/Well-Rested-Skincare`
 **Older snapshot (do not edit):** `/Users/katherinemoran/Desktop/Well-Rested-Skincare-main`
-**Audience:** Women 35–55, anti-aging, clean beauty, perimenopause, GLP-1 face, longevity
+**Audience:** Women 35–55 who are curious about aging well but not perfectly. Interested in skin, ingredients, food, sleep, hormones, perimenopause, GLP-1s, longevity. Not looking to be lectured. Looking to compare notes with someone whose taste they trust.
+
+**Positioning (updated Sep 12, 2026):** Katherine is not an expert, not a dermatologist, not a chemist. She is a midlife woman who is curious about skin, ingredients, food, and the products that earn their place in a routine. She reads the research, tests things on her own skin, and writes honestly about what she finds. The goal is not perfect aging. The goal is understanding her own biology well enough to make choices that hold up. Voice framing that WORKS: "curious," "learning," "testing," "what I found," "what I'm using." Voice framing that DOES NOT WORK anymore: "chemistry-honest" (as a brand tagline — the phrase is retired), "editorial voice on X," "expert on Y," anything that positions her as an authority. She reads the ingredient list before the marketing copy, but she does not sell that as expertise.
 **Instagram:** @wellrestedskincare
 **Pinterest:** @wellrestedskincare (verified, id 549770143536)
 **GA4:** G-H93DL9R9QJ (account id 527550101)
@@ -44,8 +46,20 @@ When this file is uploaded, read it fully before responding. This is an ongoing 
 - **Logo:** Logo-WRS.png in images/products/
   - Root pages: images/products/Logo-WRS.png
   - Brand/article pages: ../images/products/Logo-WRS.png
-- **No dashes in body copy** — use commas, colons, or restructured sentences instead. Dashes are a telltale sign of AI-generated content.
-- **Never use the word "obsessed"**
+- **Voice rules — Words and phrases to avoid (AI tells):**
+  - **No dashes in body copy** (em, en) — use commas, colons, or restructured sentences instead
+  - **Never use:** "obsessed"
+  - **Never use as intensifiers:** "actually" / "actual" / "really" / "real" (e.g. "real difference," "actually works," "the real answer")
+  - **Never use:** "matters" / "matter" (as in "why it matters," "what matters most")
+  - **Never use:** "genuinely," "essentially," "the key is," "landing on"
+  - **American spellings only**
+- **Voice rules — Sentence patterns to avoid (AI cadence):**
+  - No staccato triplets ("Seasonal, chemistry-honest, skin-supportive.")
+  - No fragment CTAs ("Save the list." "The honest read.")
+  - No punchy short-sentence stacking that reads as AI rhythm
+  - No abstract-concept-as-agent constructions ("The routine has to catch up to the biology")
+  - No fake reader-mail authority openings ("Every fall I get the same message from readers")
+  - Prefer flowing prose with complete thoughts and connective tissue
 
 ---
 
@@ -326,7 +340,7 @@ The `marketing:campaign-plan` skill has been customized for Well Rested Skincare
 - Testing: Coleman Compound pads (noticed clearer skin), Tosowoong arbutin on mom's hands
 - Eats Mediterranean most days
 - Loves a martini and fries on occasion — not a deprivation approach
-- **Voice:** personal experience grounds every recommendation. Science-backed but never condescending. Warm, honest, authoritative. **No dashes in body copy. Never use "obsessed". American spellings.**
+- **Voice:** curious midlife woman sharing what she is learning, not an expert lecturing. Personal experience grounds every recommendation. Science-backed but never authoritative. Warm, honest, learning-in-public. Reader is a peer, not a student. **No dashes in body copy. Never use "obsessed". American spellings.** The phrase "chemistry-honest" as a brand tagline is retired (Sep 12, 2026) — it read as too authoritative. She can still be analytically rigorous, but the framing is "I read the ingredient list before the marketing copy" rather than "I'm the chemistry-honest voice on X."
 - **Procedure name-drop fatigue (added May 23 2026):** Katherine is tired of CO2 laser / Sculptra / microneedling / microcurrent being listed in every piece of content. Going forward, reference procedures only when contextually doing argumentative work (e.g., "for laxity, you need [procedure]"). Avoid using the procedure list as autobiographical credibility shorthand. Prefer "I've been around the block with products, learned to parse fact from fiction" framing for personal authority.
 
 ---
