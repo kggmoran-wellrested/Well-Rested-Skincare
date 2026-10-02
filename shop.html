@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Well Rested Skincare</title>
+  <meta name="description" content="Shop my skincare picks on Amazon, prestige brands on ShopMy, and digital guides on Payhip. One page for every way to shop with Well Rested Skincare." />
+  <link rel="canonical" href="https://wellrestedskincare.com/shop.html" />
+  <meta property="og:title" content="Shop — Well Rested Skincare" />
+  <meta property="og:description" content="Shop my skincare picks on Amazon, prestige brands on ShopMy, and digital guides on Payhip." />
+  <meta property="og:url" content="https://wellrestedskincare.com/shop.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H93DL9R9QJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H93DL9R9QJ');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #FAFAF8; --off-white: #F2F0EB; --ink: #1A1A18;
+      --ink-light: #4A4A46; --ink-faint: #9A9A94;
+      --teal: #7D9B77; --teal-light: #9BBD95;
+      --accent: #C8A882; --border: #E0DDD6; --hover-bg: #EEF5EE;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lora', serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Cormorant Garant', serif; font-size: 17px; color: var(--ink); text-decoration: none; }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); background: var(--teal); border: none; padding: 9px 20px; cursor: pointer; transition: background 0.2s; text-decoration: none; display: inline-block; }
+    .nav-cta:hover { background: var(--teal-light); }
+
+    .hero { padding: 120px 64px 48px; background: var(--off-white); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+    .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px); background-size: 80px 80px; opacity: 0.4; }
+    .hero-inner { position: relative; z-index: 1; max-width: 720px; }
+    .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal); }
+    .hero-title { font-family: 'Cormorant Garant', serif; font-size: clamp(32px, 4vw, 56px); letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 20px; }
+    .hero-subtitle { font-size: 16px; font-weight: 300; line-height: 1.8; color: var(--ink-light); max-width: 580px; }
+
+    .shop-grid-section { padding: 72px 64px 56px; max-width: 1200px; margin: 0 auto; }
+    .shop-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .shop-card { background: var(--white); padding: 48px 36px; display: flex; flex-direction: column; min-height: 420px; text-decoration: none; color: inherit; transition: background 0.2s; }
+    .shop-card:hover { background: var(--hover-bg); }
+    .shop-card-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
+    .shop-card-title { font-family: 'Cormorant Garant', serif; font-size: 32px; letter-spacing: -0.5px; margin-bottom: 16px; color: var(--ink); line-height: 1.15; }
+    .shop-card-desc { font-size: 14px; font-weight: 300; line-height: 1.8; color: var(--ink-light); margin-bottom: 24px; flex: 1; }
+    .shop-card-points { list-style: none; margin-bottom: 28px; }
+    .shop-card-points li { font-size: 13px; font-weight: 300; line-height: 1.6; color: var(--ink-light); padding-left: 16px; position: relative; margin-bottom: 6px; }
+    .shop-card-points li::before { content: '—'; position: absolute; left: 0; color: var(--teal); }
+    .shop-card-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); background: var(--teal); padding: 14px 24px; align-self: flex-start; transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+    .shop-card:hover .shop-card-cta { background: var(--teal-light); }
+
+    .disclosure-section { padding: 24px 64px 56px; max-width: 1200px; margin: 0 auto; }
+    .disclosure-section p { font-size: 12px; font-weight: 300; color: var(--ink-faint); line-height: 1.7; max-width: 760px; }
+    .disclosure-section a { color: var(--teal); text-decoration: none; }
+
+    footer { background: var(--ink); padding: 56px 64px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
+    .footer-logo { font-family: 'Cormorant Garant', serif; font-size: 20px; color: var(--white); margin-bottom: 14px; }
+    .footer-logo span { color: var(--teal-light); }
+    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 240px; }
+    .footer-col-title { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.22); margin-bottom: 18px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--teal-light); }
+    .footer-bottom { background: var(--ink); padding: 18px 64px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; }
+    .footer-bottom-text { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.16); }
+
+    @media (max-width: 900px) {
+      .shop-grid { grid-template-columns: 1fr; }
+      .shop-card { min-height: auto; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 24px 40px; }
+      .shop-grid-section { padding: 48px 24px 32px; }
+      .disclosure-section { padding: 16px 24px 40px; }
+      footer { grid-template-columns: 1fr; padding: 40px 24px; gap: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="images/products/Logo-WRS.png" alt="Well Rested Skincare" style="height:36px;width:36px;object-fit:contain;border-radius:50%;margin-right:10px;vertical-align:middle;">Well Rested <span>Skincare</span></a>
+  <ul class="nav-links">
+    <li><a href="/shop.html" class="active">Shop</a></li>
+    <li><a href="/editorial.html">Editorial</a></li>
+    <li><a href="/about.html">About</a></li>
+  </ul>
+  <a href="https://shopmy.us/shop/wellrestedskincare?Section_id=2507460&tab=collections" class="nav-cta" target="_blank" rel="noopener">Shop My Picks</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Shop</div>
+    <h1 class="hero-title">Three ways to shop with Well Rested Skincare.</h1>
+    <p class="hero-subtitle">Everything I recommend lives in one of three places: Amazon for accessible drugstore and midlife picks, ShopMy for prestige and dermatologist-tier brands, and Payhip for my digital guides. Pick the one that matches what you're shopping for.</p>
+  </div>
+</section>
+
+<section class="shop-grid-section">
+  <div class="shop-grid">
+
+    <a href="https://www.amazon.com/shop/wellresteds0f" target="_blank" rel="noopener" class="shop-card">
+      <div class="shop-card-label">Amazon · Accessible tier</div>
+      <h2 class="shop-card-title">Shop on Amazon</h2>
+      <p class="shop-card-desc">The Amazon storefront. Where I keep the under-$50 picks that make up the backbone of a midlife routine, plus the supplements, kitchen staples, and devices worth the Prime delivery.</p>
+      <ul class="shop-card-points">
+        <li>Idea Lists by concern (hyperpigmentation, retinoids, barrier, SPF)</li>
+        <li>Video reviews on Amazon Live</li>
+        <li>Collagen, omega-3, D3, magnesium, matcha, olive oil</li>
+      </ul>
+      <span class="shop-card-cta">Open Amazon storefront →</span>
+    </a>
+
+    <a href="https://shopmy.us/shop/wellrestedskincare?Section_id=2507460&tab=collections" target="_blank" rel="noopener" class="shop-card">
+      <div class="shop-card-label">ShopMy · Prestige + emerging</div>
+      <h2 class="shop-card-title">Shop My Picks</h2>
+      <p class="shop-card-desc">The ShopMy collections. Prestige brands, dermatologist-tier products, and emerging labels I've vetted personally. This is where the Coleman Compound, Neocutis, Plated, Medik8, and Allies of Skin picks live.</p>
+      <ul class="shop-card-points">
+        <li>Collections by concern and routine step</li>
+        <li>Dermatologist-tier formulations</li>
+        <li>Prestige brands with the strongest clinical data</li>
+      </ul>
+      <span class="shop-card-cta">Open ShopMy collections →</span>
+    </a>
+
+    <a href="https://payhip.com/WellRested" target="_blank" rel="noopener" class="shop-card">
+      <div class="shop-card-label">Payhip · Digital guides</div>
+      <h2 class="shop-card-title">Digital Guides</h2>
+      <p class="shop-card-desc">My digital guides, in instant-download PDF format. The complete protocols I use for my own skin, with product picks, layering rules, and realistic timelines.</p>
+      <ul class="shop-card-points">
+        <li>The Perimenopause Skin and Diet Guide ($19)</li>
+        <li>How to Choose the Right Active ($5)</li>
+        <li>The GLP-1 Face Stack ($19)</li>
+      </ul>
+      <span class="shop-card-cta">Open Payhip shop →</span>
+    </a>
+
+  </div>
+</section>
+
+<div class="disclosure-section">
+  <p>Affiliate disclosure: Well Rested Skincare earns a small commission on purchases made through Amazon, ShopMy, and other affiliate links at no extra cost to you. These commissions are how the site stays running. They have never influenced which products or brands I recommend, and I have declined paid placement to keep it that way. <a href="/affiliate-disclosure.html">Read the full disclosure →</a></p>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo">Well Rested <span>Skincare</span></div>
+    <p class="footer-tagline">Your trusted guide to clinically validated skincare and wellness.</p>
+  </div>
+  <div>
+    <div class="footer-col-title">Explore</div>
+    <ul class="footer-links"><li><a href="/shop.html">Shop</a></li><li><a href="/editorial.html">Editorial</a></li><li><a href="https://shopmy.us/shop/wellrestedskincare" target="_blank" rel="noopener">Shop My Picks</a></li><li><a href="https://www.amazon.com/shop/wellresteds0f" target="_blank" rel="noopener">Shop on Amazon</a></li></ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Company</div>
+    <ul class="footer-links"><li><a href="/about.html">About Us</a></li><li><a href="/affiliate-disclosure.html">Disclosure</a></li></ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Legal</div>
+    <ul class="footer-links"><li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li></ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span class="footer-bottom-text">© 2026 Well Rested Skincare. All rights reserved.</span>
+  <span class="footer-bottom-text">Affiliate links disclosed on all product pages.</span>
+</div>
+
+</body>
+</html>
