@@ -64,6 +64,30 @@
     .shop-card-cta { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); background: var(--teal); padding: 14px 24px; align-self: flex-start; transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px; }
     .shop-card:hover .shop-card-cta { background: var(--teal-light); }
 
+    /* Digital Guides section */
+    .guides-section { padding: 56px 64px 72px; max-width: 1200px; margin: 0 auto; background: var(--off-white); }
+    .guides-section-wrap { max-width: 1200px; margin: 0 auto; }
+    .guides-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .guides-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--teal); }
+    .guides-title { font-family: 'Cormorant Garant', serif; font-size: clamp(28px, 3.4vw, 42px); letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; }
+    .guides-intro { font-size: 15px; font-weight: 300; line-height: 1.75; color: var(--ink-light); max-width: 620px; margin-bottom: 40px; }
+    .guides-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .guide-card { background: var(--white); border: 1px solid var(--border); padding: 32px 32px 28px; display: flex; flex-direction: column; min-height: 340px; }
+    .guide-card.featured { border-color: var(--teal); position: relative; }
+    .guide-card.featured::before { content: 'BUNDLE · SAVE $5'; position: absolute; top: -11px; left: 24px; background: var(--teal); color: var(--white); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; padding: 4px 10px; }
+    .guide-tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
+    .guide-name { font-family: 'Cormorant Garant', serif; font-size: 24px; letter-spacing: -0.3px; line-height: 1.2; margin-bottom: 10px; color: var(--ink); }
+    .guide-desc { font-size: 13.5px; font-weight: 300; line-height: 1.7; color: var(--ink-light); margin-bottom: 20px; flex: 1; }
+    .guide-price-row { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border); gap: 16px; flex-wrap: wrap; }
+    .guide-price { font-family: 'Cormorant Garant', serif; font-size: 26px; color: var(--ink); font-weight: 500; }
+    .guide-price small { font-size: 12px; color: var(--ink-faint); font-weight: 300; }
+    .payhip-buy-button { font-family: 'DM Mono', monospace !important; font-size: 10px !important; letter-spacing: 0.12em !important; text-transform: uppercase !important; color: var(--white) !important; background: var(--teal) !important; padding: 12px 22px !important; text-decoration: none !important; border: none !important; display: inline-block !important; cursor: pointer !important; transition: background 0.2s !important; }
+    .payhip-buy-button:hover { background: var(--teal-light) !important; }
+    @media (max-width: 768px) {
+      .guides-section { padding: 40px 24px 56px; }
+      .guides-grid { grid-template-columns: 1fr; }
+    }
+
     .disclosure-section { padding: 24px 64px 56px; max-width: 1200px; margin: 0 auto; }
     .disclosure-section p { font-size: 12px; font-weight: 300; color: var(--ink-faint); line-height: 1.7; max-width: 760px; }
     .disclosure-section a { color: var(--teal); text-decoration: none; }
@@ -147,12 +171,72 @@
       <p class="shop-card-desc">My digital guides, in instant-download PDF format. The complete protocols I use for my own skin, with product picks, layering rules, and realistic timelines.</p>
       <ul class="shop-card-points">
         <li>The Perimenopause Skin and Diet Guide ($19)</li>
+        <li>The Ozempic Face Protocol ($19)</li>
+        <li>The Well Rested Anti-Aging Collection (bundle · save $5)</li>
         <li>How to Choose the Right Active ($5)</li>
-        <li>The GLP-1 Face Stack ($19)</li>
       </ul>
       <span class="shop-card-cta">Open Payhip shop →</span>
     </a>
 
+  </div>
+</section>
+
+<!-- Payhip embed script - required once per page for buy buttons to work -->
+<script type="text/javascript" src="https://payhip.com/payhip.js"></script>
+
+<section class="guides-section">
+  <div class="guides-section-wrap">
+    <div class="guides-eyebrow">Digital Guides</div>
+    <h2 class="guides-title">Buy the plan I built for myself.</h2>
+    <p class="guides-intro">Instant PDF download. Written by a 48-year-old nurse. Add to cart below and checkout opens right here — you stay on this page.</p>
+
+    <div class="guides-grid">
+
+      <!-- BUNDLE (featured) -->
+      <div class="guide-card featured">
+        <div class="guide-tag">Best value</div>
+        <h3 class="guide-name">The Well Rested Anti-Aging Collection</h3>
+        <p class="guide-desc">Both $19 guides together — Perimenopause Skin &amp; Diet + The Ozempic Face Protocol. Built to run side by side: one handles the long game of perimenopausal skin, the other handles the specific changes GLP-1s set in motion.</p>
+        <div class="guide-price-row">
+          <div class="guide-price">$33 <small>(save $5)</small></div>
+          <a class="payhip-buy-button" data-theme="green" data-product="UJF5X" href="https://payhip.com/b/UJF5X">Add to cart</a>
+        </div>
+      </div>
+
+      <!-- OZEMPIC FACE PROTOCOL -->
+      <div class="guide-card">
+        <div class="guide-tag">New · 14 pages</div>
+        <h3 class="guide-name">The Ozempic Face Protocol</h3>
+        <p class="guide-desc">A 12-month plan for the facial changes nobody warned you about on GLP-1s. AM and PM routines, products at three budget tiers, the at-home device protocol, and the full in-office treatment guide covering CO2, Sculptra, and microneedling.</p>
+        <div class="guide-price-row">
+          <div class="guide-price">$19</div>
+          <a class="payhip-buy-button" data-theme="green" data-product="RP1dS" href="https://payhip.com/b/RP1dS">Add to cart</a>
+        </div>
+      </div>
+
+      <!-- PERIMENOPAUSE GUIDE -->
+      <div class="guide-card">
+        <div class="guide-tag">13 pages</div>
+        <h3 class="guide-name">The Perimenopause Skin &amp; Diet Guide</h3>
+        <p class="guide-desc">The daily foundation for skin as estrogen declines. The five skin changes of perimenopause, AM and PM routines, product picks at three budget tiers, and the foods that support collagen, barrier repair, and inflammation.</p>
+        <div class="guide-price-row">
+          <div class="guide-price">$19</div>
+          <a class="payhip-buy-button" data-theme="green" data-product="gTEFG" href="https://payhip.com/b/gTEFG">Add to cart</a>
+        </div>
+      </div>
+
+      <!-- INGREDIENT CHEAT SHEET -->
+      <div class="guide-card">
+        <div class="guide-tag">Starter · 1 page</div>
+        <h3 class="guide-name">How to Choose the Right Active</h3>
+        <p class="guide-desc">The one-page cheat sheet. Which active ingredient for which concern — hyperpigmentation, aging, breakouts, barrier — with the concentrations that are worth looking for. The one I would hand a friend starting from scratch.</p>
+        <div class="guide-price-row">
+          <div class="guide-price">$5</div>
+          <a class="payhip-buy-button" data-theme="green" data-product="USEpb" href="https://payhip.com/b/USEpb">Add to cart</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
