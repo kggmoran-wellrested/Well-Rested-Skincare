@@ -75,14 +75,11 @@
     .guide-card { background: var(--white); border: 1px solid var(--border); padding: 32px 32px 28px; display: flex; flex-direction: column; min-height: 340px; }
     .guide-card.featured { border-color: var(--teal); position: relative; }
     .guide-card.featured::before { content: 'BUNDLE · SAVE $5'; position: absolute; top: -11px; left: 24px; background: var(--teal); color: var(--white); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; padding: 4px 10px; }
-    .guide-card.free { grid-column: 1 / -1; background: linear-gradient(90deg, #EEF5EE 0%, var(--white) 60%); border-color: var(--teal); position: relative; min-height: auto; padding: 28px 36px; flex-direction: row; align-items: center; gap: 32px; }
-    .guide-card.free::before { content: 'FREE · START HERE'; position: absolute; top: -11px; left: 24px; background: var(--accent); color: var(--white); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; padding: 4px 10px; }
-    .guide-card.free .free-body { flex: 1; }
-    .guide-card.free .guide-name { font-size: 22px; margin-bottom: 6px; }
-    .guide-card.free .guide-desc { font-size: 13.5px; margin-bottom: 0; }
-    .guide-card.free .free-cta { flex-shrink: 0; }
+    .guide-card.free { background: linear-gradient(135deg, #EEF5EE 0%, var(--white) 70%); border-color: var(--teal); position: relative; }
+    .guide-card.free::before { content: 'FREE'; position: absolute; top: -11px; left: 24px; background: var(--accent); color: var(--white); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.22em; padding: 4px 10px; }
+    .guide-card.free .guide-name { font-size: 22px; }
     @media (max-width: 768px) {
-      .guide-card.free { flex-direction: column; align-items: flex-start; padding: 32px 24px; gap: 20px; }
+      .guide-card.free { padding: 32px 24px; }
     }
     .guide-tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; }
     .guide-name { font-family: 'Cormorant Garant', serif; font-size: 24px; letter-spacing: -0.3px; line-height: 1.2; margin-bottom: 10px; color: var(--ink); }
@@ -201,15 +198,25 @@
 
     <div class="guides-grid">
 
-      <!-- FREE LEAD MAGNET -->
+      <!-- FREE LEAD MAGNET 1 -->
       <div class="guide-card free">
-        <div class="free-body">
-          <div class="guide-tag">One-page printable</div>
-          <h3 class="guide-name">The Hyperpigmentation Plan — Free</h3>
-          <p class="guide-desc">The four actives that fade dark spots, melasma, and PIH, on one printable page. Tranexamic acid, arbutin, vitamin C, azelaic acid. Specific products at three budget tiers. Enter your email and the PDF is sent right away.</p>
+        <div class="guide-tag">7-page starter · routine</div>
+        <h3 class="guide-name">The Anti-Aging Starter Guide</h3>
+        <p class="guide-desc">The AM and PM routines I use, with product picks at three budget tiers. The five shifts you may be noticing in midlife skin and what each one responds to. If you want to start somewhere, start here.</p>
+        <div class="guide-price-row">
+          <div class="guide-price">Free</div>
+          <a class="payhip-buy-button" data-theme="green" data-product="jm7Cc" href="https://payhip.com/b/jm7Cc">Get the guide</a>
         </div>
-        <div class="free-cta">
-          <a class="payhip-buy-button" data-theme="green" data-product="Mb2QB" href="https://payhip.com/b/Mb2QB">Get the free plan</a>
+      </div>
+
+      <!-- FREE LEAD MAGNET 2 -->
+      <div class="guide-card free">
+        <div class="guide-tag">1-page printable · pigmentation</div>
+        <h3 class="guide-name">The Hyperpigmentation Plan</h3>
+        <p class="guide-desc">The four actives that fade dark spots, melasma, and PIH, on one printable page. Tranexamic acid, arbutin, vitamin C, azelaic acid. Specific products at three budget tiers.</p>
+        <div class="guide-price-row">
+          <div class="guide-price">Free</div>
+          <a class="payhip-buy-button" data-theme="green" data-product="Mb2QB" href="https://payhip.com/b/Mb2QB">Get the plan</a>
         </div>
       </div>
 
