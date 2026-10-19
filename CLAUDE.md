@@ -638,3 +638,8 @@ Build it by repackaging IG ingredient carousel content + existing article resear
 ## NOT priorities (decided May 21)
 - **TikTok Shop**: skip. Video-first + audience age mismatch.
 - **Shopify**: revisit 2027+ only if private-label physical product launch.
+
+**Oct 19, 2026:**
+- **New article: article-pdgf-after-microneedling.html** ("PDGF After Microneedling and Laser: What the Research Shows"). Ingredient Truth. Covers PRP vs growth factor serums vs platelet extract/exosomes, study evidence, PDGF vs PDRN, granuloma/FDA safety section, provider questions, and 3 product picks on ShopMy: Plated Intense (p-61227402), SkinMedica TNS Advanced+ (p-95744529), BIOEFFECT EGF Serum (p-95744748). Hero/og image: images/products/growth-factor-serums-plated-skinmedica-bioeffect.jpg. FAQPage + Article + Breadcrumb schema. Added to sitemap.xml, editorial.html latest grid, and index.html editorial grid. Awaiting commit + push, then request indexing.
+- Editorial stance in this piece: serums belong on healed skin, not freshly needled skin. Do not add Katherine's personal at-home PDGF microneedling experience to this article.
+- Repo lives in iCloud Drive (Documents sync). A stale .git/index.lock blocked a commit today; fixed with rm .git/index.lock. If lock errors recur, consider moving the repo out of iCloud-synced folders.
