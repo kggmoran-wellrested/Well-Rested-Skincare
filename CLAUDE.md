@@ -439,6 +439,16 @@ Medik8, Obagi, Paula's Choice, La Roche-Posay
 
 ## Session Log
 
+**Oct 20, 2026 (Claude via GitHub connector, branch `seo-quick-wins-oct-2026`):**
+- Baseline pulled (Sep 20 to Oct 17 vs prior 28 days): GA4 users 382 (+41%), pageviews 686 (+80%); GSC clicks 88 (+49%), impressions 4,031, avg position 12.4 (was 18.5). Crystal Retinal = 55 of 88 clicks. Only 2 form_submit events in 28 days.
+- Title/meta/og/schema rewrites + dateModified on azelaic-acid, glp1-skin, bemotrizinol, retinol, crystal-retinal.
+- azelaic-acid: added FAQ (HTML + FAQPage schema) for "Is azelaic acid 15% gel good for melasma?" (query ranks pos 4.4, 0 clicks).
+- glp1-skin: new section "Dry, itchy skin on a GLP-1: barrier repair first" (CeraVe Hydrating Cleanser, Avene Cicalfate+, Obagi Hydrate Luxe ShopMy links). Fixed invalid HTML: internal-link <p> tags were nested inside <h2> tags.
+- bemotrizinol: CeraVe H3 renamed for "cerave bemotrizinol/bemt" queries + mid-October status paragraph. Corrected max concentration from 10% to 6% (FDA final order).
+- retinol: body promised retinoid ladder but jumped straight into perimenopause. Added "How retinol works", "The retinoid ladder", "How to start retinol without the peeling" before the estrogen section. H1 dash removed.
+- sitemap.xml: lastmod updated for the 5 pages; removed duplicate <url> entries (retinol, post-procedure, vitamin-c, sleep-aging, pm-routine, perimenopause).
+- After merge: request indexing in Search Console for the 5 URLs.
+
 **May 21, 2026:**
 - Rewrote article-microneedling-aftercare.html targeting microneedling redness cluster (400+ impressions, pos 70-95). Added FAQPage schema, day-by-day timeline, Plated/Tower 28/Avène/Obagi affiliate links, Payhip CTA.
 - Rewrote article-post-procedure.html — pulled microneedling content out (now lives in dedicated article), refocused on laser/IPL/Sculptra with 5-5-5 Sculptra massage protocol. Fixed broken canonical and breadcrumb schema.
