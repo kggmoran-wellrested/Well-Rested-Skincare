@@ -131,6 +131,10 @@
     .have input { accent-color: var(--teal); width: 15px; height: 15px; }
     .item.owned .item-name, .item.owned .item-why { opacity: 0.45; }
     .item.same .item-name { font-weight: 400; color: var(--ink-light); }
+    .item.optional { background: var(--cream); padding-left: 14px; padding-right: 14px; border: 1px dashed var(--border); margin-top: 14px; }
+    .item.optional .item-name { font-weight: 400; }
+    .item.optional .item-name a { font-weight: 500; }
+    .item.optional.off .item-name a { color: var(--ink); }
 
     .cart { position: sticky; bottom: 0; z-index: 20; background: var(--ink); color: var(--white); padding: 18px 22px; margin-top: 40px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .cart p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.75); line-height: 1.5; }
@@ -285,7 +289,7 @@
       <section class="week">
         <div class="eyebrow">Your week</div>
         <h2>Which night gets <em>what</em></h2>
-        <p class="lede">Mornings stay the same every day. At night, the strongest steps take turns so your skin gets results without getting raw. Cleanse first and finish with your night cream every night.</p>
+        <p class="lede">Mornings stay the same every day. At night, the strongest steps take turns so your skin gets results without getting raw. Cleanse first and finish with your moisturizer every night.</p>
         <div class="week-grid" id="week"></div>
         <p class="week-note" id="week-note"></p>
       </section>
@@ -507,6 +511,7 @@
   var answers = {};
   var step = 0;
   var owned = {};
+  var addons = {};
 
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]; }); };
@@ -571,7 +576,11 @@
     pm.push({ step: 'Retinoid', p: pick('retinoid', retV), when: retV === 'beginner' ? 'Retinoid nights only. Start with 2 nights a week and build up over a month or two.' : 'Retinoid nights only, 3 nights a week. A pea-sized amount is plenty.' });
     pm.push({ step: 'Exfoliant', p: pick('exfoliant', exV), when: 'Exfoliant night only, once a week. Never on the same night as your retinoid.' });
     pm.push({ step: 'Peptide serum', p: pick('peptide', 'one'), when: 'On the nights you skip the retinoid and exfoliant.' });
-    pm.push({ step: 'Night cream', p: pick('night', (dry || sens || answers.age === '55') ? 'rich' : 'light'), when: 'Every night, last step.' });
+    var moist = am[3].p;
+    pm.push({ step: 'Moisturize', p: moist, same: true, label: 'Same moisturizer as your morning', when: 'Every night, last step. Use a little more than you do in the morning.' });
+    var wantsRich = dry || sens || answers.age === '55';
+    pm.push({ step: 'Optional add on', p: pick('night', wantsRich ? 'rich' : 'light'), optional: true, ask: wantsRich ? 'Want a richer night cream?' : 'Want a separate night cream?',
+      when: wantsRich ? 'Your skin may like this. Use it in place of your moisturizer at night, especially on recovery nights.' : 'Not a must. Some people like a dedicated night cream in place of their moisturizer at night.' });
     return { am: am, pm: pm, retV: retV };
   }
 
@@ -579,7 +588,17 @@
     var url = 'https://www.amazon.com/dp/' + it.p.a + '?tag=' + TAG;
     var key = it.p.a;
     if (it.same) {
-      return '<div class="item same"><div class="item-num">' + (i + 1) + '</div><div><div class="item-step">' + esc(it.step) + '</div><div class="item-name">Same cleanser as your morning</div><div class="item-why">' + esc(it.p.n) + '</div></div><div></div></div>';
+      return '<div class="item same"><div class="item-num">' + (i + 1) + '</div><div><div class="item-step">' + esc(it.step) + '</div><div class="item-name">' + esc(it.label || 'Same cleanser as your morning') + '</div><div class="item-why">' + esc(it.p.n) + '</div>' +
+        (it.when ? '<div class="item-when">' + esc(it.when) + '</div>' : '') + '</div><div></div></div>';
+    }
+    if (it.optional) {
+      var on = !!addons[key];
+      return '<div class="item optional' + (on ? '' : ' off') + '"><div class="item-num">+</div><div>' +
+        '<div class="item-step">' + esc(it.step) + '</div>' +
+        '<div class="item-name">' + esc(it.ask) + ' <a href="' + url + '" target="_blank" rel="nofollow sponsored noopener">' + esc(it.p.n) + '</a></div>' +
+        '<div class="item-why">' + esc(it.p.w) + '</div>' +
+        '<div class="item-when">' + esc(it.when) + '</div>' +
+        '</div><label class="have"><input type="checkbox" data-addon="' + key + '"' + (on ? ' checked' : '') + '> Add to cart</label></div>';
     }
     var isOwned = !!owned[key];
     return '<div class="item' + (isOwned ? ' owned' : '') + '"><div class="item-num">' + (i + 1) + '</div><div>' +
@@ -594,7 +613,7 @@
     var seen = {}, n = 0, q = 'https://www.amazon.com/gp/aws/cart/add.html?AssociateTag=' + TAG;
     list.forEach(function (it) {
       var a = it.p.a;
-      if (seen[a] || owned[a]) return;
+      if (seen[a] || owned[a] || it.same || (it.optional && !addons[a])) return;
       seen[a] = true; n++;
       q += '&ASIN.' + n + '=' + a + '&Quantity.' + n + '=1';
     });
@@ -625,10 +644,10 @@
   };
 
   function renderWeek(retV) {
-    var R = { c: 'c-ret', t: 'Retinoid', b: 'Retinoid night', s: 'Then night cream' };
-    var Pp = { c: 'c-pep', t: 'Repair', b: 'Peptide night', s: 'Peptide serum, then night cream' };
-    var E = { c: 'c-exf', t: 'Exfoliate', b: 'Exfoliant night', s: 'Then a calming night cream' };
-    var C = { c: 'c-rec', t: 'Recovery', b: 'Recovery night', s: 'Peptide serum and your richest cream' };
+    var R = { c: 'c-ret', t: 'Retinoid', b: 'Retinoid night', s: 'Then moisturizer' };
+    var Pp = { c: 'c-pep', t: 'Repair', b: 'Peptide night', s: 'Peptide serum, then moisturizer' };
+    var E = { c: 'c-exf', t: 'Exfoliate', b: 'Exfoliant night', s: 'Then moisturizer' };
+    var C = { c: 'c-rec', t: 'Recovery', b: 'Recovery night', s: 'Peptide serum, then your moisturizer or a richer cream if you have one' };
     var days = retV === 'beginner' ? [R, Pp, E, R, Pp, Pp, C] : [R, Pp, E, R, Pp, R, C];
     var names = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     $('week').innerHTML = days.map(function (d, i) {
@@ -650,7 +669,7 @@
     Array.prototype.forEach.call(document.querySelectorAll('.tier-toggle button'), function (b) { b.classList.toggle('on', b.getAttribute('data-tier') === answers.tier); });
     renderWeek(r.retV);
 
-    var all = cartURL(r.am.concat(r.pm.filter(function (x) { return !x.same; })));
+    var all = cartURL(r.am.concat(r.pm));
     var amC = cartURL(r.am);
     var pmC = cartURL(r.pm.filter(function (x) { return !x.same; }));
     setCart('cart-all', all, all.n ? 'Add my routine to cart (' + all.n + ')' : 'Nothing left to add');
@@ -662,7 +681,8 @@
 
     Array.prototype.forEach.call(document.querySelectorAll('.have input'), function (cb) {
       cb.addEventListener('change', function () {
-        owned[cb.getAttribute('data-asin')] = cb.checked;
+        if (cb.hasAttribute('data-addon')) addons[cb.getAttribute('data-addon')] = cb.checked;
+        else owned[cb.getAttribute('data-asin')] = cb.checked;
         showResults(false);
       });
     });
@@ -681,7 +701,7 @@
   $('next').addEventListener('click', function () { go(1); });
   $('back').addEventListener('click', function () { go(-1); });
   $('restart').addEventListener('click', function () {
-    answers = {}; owned = {}; step = 0;
+    answers = {}; owned = {}; addons = {}; step = 0;
     try { history.replaceState(null, '', location.pathname); } catch (e) {}
     $('results').classList.remove('show');
     $('quiz').style.display = '';
