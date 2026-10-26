@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build Your Skincare Routine: A 6-Question Quiz for Skin Over 40 | Well Rested Skincare</title>
-  <meta name="description" content="Answer six quick questions about your skin and get a morning and evening routine built from the products I use and recommend, with a weekly schedule and one button to add the whole routine to your Amazon cart." />
+  <title>Skincare Routine Quiz for Women Over 40: Find Yours in 6 Questions | Well Rested Skincare</title>
+  <meta name="description" content="Take this free skincare routine quiz for women over 40. Answer six questions about your skin type, concerns and budget to get a morning and evening anti-aging routine with product picks and a printable weekly schedule." />
   <link rel="canonical" href="https://wellrestedskincare.com/routine-quiz.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Build Your Skincare Routine in 6 Questions" />
-  <meta property="og:description" content="A morning and evening routine for skin over 40, matched to your skin type, your main concern and your budget." />
+  <meta property="og:title" content="Skincare Routine Quiz for Women Over 40" />
+  <meta property="og:description" content="Answer six questions and get a morning and evening routine for skin over 40, matched to your skin type, your main concerns and your budget, with a printable weekly schedule." />
+  <meta property="og:image" content="https://wellrestedskincare.com/images/routine-quiz-pin.jpg" />
+  <meta property="og:image:alt" content="Not sure what your skin needs after 40? Answer six questions, get your routine." />
   <meta property="og:url" content="https://wellrestedskincare.com/routine-quiz.html" />
   <meta property="og:site_name" content="Well Rested Skincare" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://wellrestedskincare.com/images/routine-quiz-pin.jpg" />
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H93DL9R9QJ"></script>
   <script>
@@ -24,9 +27,10 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Build Your Skincare Routine",
+    "name": "Skincare Routine Quiz for Women Over 40",
     "url": "https://wellrestedskincare.com/routine-quiz.html",
-    "description": "A six-question quiz that builds a morning and evening skincare routine for skin over 40.",
+    "description": "A free six-question skincare routine quiz for women over 40 that builds a morning and evening anti-aging routine with product picks and a printable weekly schedule.",
+    "image": "https://wellrestedskincare.com/images/routine-quiz-pin.jpg",
     "author": { "@type": "Person", "name": "Katherine Moran", "url": "https://wellrestedskincare.com/about.html" },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -37,6 +41,54 @@
       ]
     }
   }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does this skincare routine quiz work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You answer six questions about your age, skin type, the one or two things you most want to change, your experience with retinoids, whether you wear makeup most days and your budget. The quiz then builds a morning and evening routine from the products I use and recommend, with a weekly schedule that shows which nights get a retinoid, an exfoliant or a peptide serum."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good skincare routine for women over 40?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The routine I come back to is simple: a gentle cleanser, vitamin C, moisturizer and sunscreen in the morning, and a retinoid a few nights a week in the evening. Once your skin is used to the retinoid, you can add an exfoliant, a peptide serum and one booster serum for your main concern. The quiz starts you with those five essentials and tells you when to add the rest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does the routine cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "My Smart picks are mostly under $40 each, and the five essentials usually come to about $100 to $150. Splurge picks are $40 and up, and there is a middle option that splurges only on vitamin C, retinoid and your booster. Your results show an estimated range for each, and you can check off anything you already own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an LED mask or another device?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Your routine works without one. If you already own an LED mask, your weekly schedule shows which nights to use it, and my comparison of the four masks I researched is linked on the results page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this medical advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is general education from my own research and my own skin. If you are pregnant or breastfeeding, have a skin condition or use prescription skincare, check with your doctor or dermatologist first."
+      }
+    }
+  ]
+}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -191,6 +243,14 @@
     .mc-input { font-family: 'Lora', serif; font-size: 15px; padding: 12px 14px; border: 1px solid var(--border); background: var(--white); color: var(--ink); width: 100%; }
     .mc-input:focus { outline: none; border-color: var(--teal); }
 
+    .faq { background: var(--off-white); border-top: 1px solid var(--border); }
+    .faq-list { max-width: 760px; border-top: 1px solid var(--border); margin-top: 18px; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .faq-item summary { cursor: pointer; font-family: 'Cormorant Garant', serif; font-size: 22px; font-weight: 500; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; color: var(--teal); font-size: 24px; line-height: 1; }
+    .faq-item[open] summary::after { content: '\2212'; }
+    .faq-item p { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--ink-light); margin-top: 10px; max-width: 680px; }
     .fine { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13px; font-weight: 300; line-height: 1.8; color: var(--ink-faint); }
     .fine a { color: var(--teal-deep); }
     .restart { margin-top: 28px; }
@@ -287,8 +347,8 @@
 
 <header class="hero">
   <div class="inner">
-    <div class="eyebrow">Routine quiz</div>
-    <h1>Answer six questions, get <em>your routine</em></h1>
+    <div class="eyebrow">Skincare routine quiz for women over 40</div>
+    <h1>Answer six questions, get your <em>skincare routine</em></h1>
     <p class="lede">Tell me a little about your skin and I'll put together a morning and evening routine from the products I use and recommend, plus a weekly schedule so you know which nights get the stronger steps. When you're done, one button adds the whole routine to your Amazon cart, and you can take out anything you already own.</p>
   </div>
 </header>
@@ -396,6 +456,20 @@
 
   </div>
 </main>
+
+<section class="section faq" id="faq">
+  <div class="inner">
+    <div class="eyebrow">Questions</div>
+    <h2>About the <em>routine quiz</em></h2>
+    <div class="faq-list">
+      <details class="faq-item"><summary>How does this skincare routine quiz work?</summary><p>You answer six questions about your age, skin type, the one or two things you most want to change, your experience with retinoids, whether you wear makeup most days and your budget. The quiz then builds a morning and evening routine from the products I use and recommend, with a weekly schedule that shows which nights get a retinoid, an exfoliant or a peptide serum.</p></details>
+      <details class="faq-item"><summary>What is a good skincare routine for women over 40?</summary><p>The routine I come back to is simple: a gentle cleanser, vitamin C, moisturizer and sunscreen in the morning, and a retinoid a few nights a week in the evening. Once your skin is used to the retinoid, you can add an exfoliant, a peptide serum and one booster serum for your main concern. The quiz starts you with those five essentials and tells you when to add the rest.</p></details>
+      <details class="faq-item"><summary>How much does the routine cost?</summary><p>My Smart picks are mostly under $40 each, and the five essentials usually come to about $100 to $150. Splurge picks are $40 and up, and there is a middle option that splurges only on vitamin C, retinoid and your booster. Your results show an estimated range for each, and you can check off anything you already own.</p></details>
+      <details class="faq-item"><summary>Do I need an LED mask or another device?</summary><p>No. Your routine works without one. If you already own an LED mask, your weekly schedule shows which nights to use it, and my comparison of the four masks I researched is linked on the results page.</p></details>
+      <details class="faq-item"><summary>Is this medical advice?</summary><p>No. It is general education from my own research and my own skin. If you are pregnant or breastfeeding, have a skin condition or use prescription skincare, check with your doctor or dermatologist first.</p></details>
+    </div>
+  </div>
+</section>
 
 <div class="sheet" id="sheet" aria-hidden="true"></div>
 
