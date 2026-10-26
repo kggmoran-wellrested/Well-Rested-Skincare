@@ -393,7 +393,16 @@
     .flatlay-upload-note { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
     .flatlay-upload-note::before { content: ''; display: block; width: 16px; height: 1px; background: var(--border); }
   
-    .hero-start { display: inline-block; align-self: flex-start; margin-top: 22px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); text-decoration: none; border-bottom: 1px solid var(--teal); padding-bottom: 3px; }
+    .hero-quiz { position: relative; z-index: 1; display: block; max-width: 480px; margin: 0 0 28px; padding: 20px 22px 20px 24px; background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--teal); text-decoration: none; color: var(--ink); opacity: 0; animation: fadeUp 0.7s 0.5s forwards; transition: border-color 0.2s, box-shadow 0.2s; }
+    .hero-quiz:hover { border-color: var(--teal); box-shadow: 0 6px 24px rgba(26,26,24,0.06); }
+    .hero-quiz-kicker { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+    .hero-quiz-title { font-family: 'Cormorant Garant', serif; font-size: 25px; font-weight: 500; line-height: 1.15; margin-bottom: 6px; }
+    .hero-quiz-title em { color: var(--teal); }
+    .hero-quiz-text { font-size: 13.5px; font-weight: 300; line-height: 1.65; color: var(--ink-light); margin-bottom: 12px; }
+    .hero-quiz-cta { display: inline-block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; background: var(--teal); color: var(--white); padding: 11px 20px; transition: background 0.2s; }
+    .hero-quiz:hover .hero-quiz-cta { background: var(--ink); }
+    @media (max-width: 768px) { .hero-quiz { padding: 18px; margin-bottom: 24px; } .hero-quiz-title { font-size: 22px; } .hero-quiz-cta { display: block; text-align: center; } }
+    .hero-start { position: relative; z-index: 1; display: inline-block; align-self: flex-start; margin-top: 22px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); text-decoration: none; border-bottom: 1px solid var(--teal); padding-bottom: 3px; }
     .hero-start:hover { color: var(--ink); border-color: var(--ink); }
 </style>
 </head>
@@ -437,6 +446,12 @@
     <h1 class="hero-headline">Look like yourself,<br><em>well rested.</em></h1>
     <p class="hero-tagline">Flawless aging with a little help from science.</p>
     <p class="hero-body">We cut through the noise and do the research so you don't have to. Every brand in our directory is vetted for clinical evidence, ingredient quality, and real results. No trends. No filler. Just skincare that works.</p>
+    <a href="/routine-quiz.html" class="hero-quiz">
+      <div class="hero-quiz-kicker">Free routine quiz &middot; about 2 minutes</div>
+      <div class="hero-quiz-title">Find your skincare routine in <em>six questions</em></div>
+      <p class="hero-quiz-text">Get a morning and evening routine with my product picks for your skin, a weekly schedule, and a one-page plan you can print.</p>
+      <span class="hero-quiz-cta">Take the quiz &rarr;</span>
+    </a>
     <div class="hero-actions">
       <a href="/shop.html" class="btn-primary">Explore Brands →</a>
       <a href="/editorial.html" class="btn-secondary">Read the Science</a>
