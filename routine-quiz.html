@@ -109,7 +109,10 @@
     .profile-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 10px; background: var(--white); border: 1px solid var(--border); color: var(--teal-deep); }
     .profile p { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--ink-light); }
-    .tier-toggle { display: inline-flex; border: 1px solid var(--teal); margin-top: 18px; }
+    .tier-toggle { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--teal); margin-top: 18px; }
+    .phase { display: inline-block; margin-left: 8px; padding: 1px 6px; font-size: 8.5px; letter-spacing: 0.1em; vertical-align: 1px; }
+    .phase.now { background: #E8EFE5; color: #4F6B4A; }
+    .phase.later { background: #F3ECE2; color: #8E6E48; }
     .tier-toggle button { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 18px; background: transparent; border: none; color: var(--teal); }
     .tier-toggle button.on { background: var(--teal); color: var(--white); }
     .tier-note { font-size: 13px; color: var(--ink-faint); font-style: italic; margin-top: 8px; }
@@ -144,6 +147,7 @@
     .cart .btn-solid:hover { background: var(--teal-light); border-color: var(--teal-light); color: var(--ink); }
     .cart .btn-ghost { color: var(--teal-light); border-color: rgba(255,255,255,0.25); }
     .cart .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+    .iab-tip { margin-top: 14px; padding: 12px 14px; background: #F3ECE2; border-left: 2px solid var(--accent); font-size: 13.5px; line-height: 1.6; color: var(--ink-light); }
     .cart-fine { font-size: 12px; color: var(--ink-faint); margin-top: 10px; line-height: 1.6; }
 
     .week { margin-top: 56px; }
@@ -212,6 +216,7 @@
       .cart { position: static; margin-left: -20px; margin-right: -20px; padding: 18px 20px; }
       .cart-btns { width: 100%; }
       .cart-btns .btn { flex: 1; text-align: center; padding: 13px 10px; }
+      .tier-toggle button { padding: 10px 12px; }
       footer { grid-template-columns: 1fr; padding: 40px 24px; gap: 28px; }
     }
     /* Printable one-page schedule */
@@ -300,9 +305,10 @@
         <div class="profile-tags" id="r-tags"></div>
         <div class="tier-toggle" role="group" aria-label="Budget">
           <button type="button" data-tier="Smart">Smart picks</button>
+          <button type="button" data-tier="Mix">Splurge where it counts</button>
           <button type="button" data-tier="Splurge">Splurge picks</button>
         </div>
-        <p class="tier-note">Smart picks are mostly under $40 each. Splurge picks are $40 and up. Switch any time to compare.</p>
+        <p class="tier-note">Smart picks are mostly under $40 each and Splurge picks are $40 and up. Splurge where it counts uses my splurge picks for vitamin C, retinoid and your booster, and smart picks for everything else. Switch any time to compare.</p>
       </div>
 
       <div class="routine">
@@ -318,12 +324,12 @@
       <div class="cart" id="cart">
         <p id="cart-text"></p>
         <div class="cart-btns">
-          <a class="btn btn-solid" id="cart-all" href="#" target="_blank" rel="nofollow sponsored noopener">Add my routine to cart</a>
-          <a class="btn btn-ghost" id="cart-am" href="#" target="_blank" rel="nofollow sponsored noopener">Morning only</a>
-          <a class="btn btn-ghost" id="cart-pm" href="#" target="_blank" rel="nofollow sponsored noopener">Evening only</a>
+          <a class="btn btn-solid" id="cart-all" href="#" target="_blank" rel="nofollow sponsored noopener">Start with the essentials</a>
+          <a class="btn btn-ghost" id="cart-full" href="#" target="_blank" rel="nofollow sponsored noopener">Full routine</a>
         </div>
       </div>
-      <p class="cart-fine">The button opens Amazon with every checked product added to your cart, so you can review prices and quantities there before you check out. Already have something? Check "I have this" and it comes out of the cart.</p>
+      <p class="iab-tip" id="iab-tip" hidden>Reading this inside Instagram or Facebook? Tap the three dots at the top and choose Open in browser first, so Amazon recognizes your account and your cart is saved there.</p>
+      <p class="cart-fine">I suggest starting with the essentials marked "Start here" and adding the rest after 4 to 6 weeks, once your skin is used to the retinoid. Either button opens Amazon with those products in your cart, so you can review prices there before you check out. Already have something? Check "I have this" and it comes out of the cart.</p>
 
       <section class="week">
         <div class="eyebrow">Your week</div>
@@ -543,9 +549,10 @@
         { v: 'yes', b: 'Yes, most days', s: 'Add a cleansing oil for the first step at night.' },
         { v: 'no', b: 'Not usually', s: 'Your regular cleanser is enough.' }
       ] },
-    { id: 'tier', title: 'What kind of budget are you working with?', help: 'You can switch between the two on your results page and compare.',
+    { id: 'tier', title: 'What kind of budget are you working with?', help: 'You can switch between these on your results page and compare.',
       opts: [
         { v: 'Smart', b: 'Smart picks', s: 'Products that work well and are mostly under $40 each.' },
+        { v: 'Mix', b: 'Splurge where it counts', s: 'My splurge picks for vitamin C, retinoid and your booster, where a better formula shows. Smart picks for the cleanser, moisturizer and sunscreen.' },
         { v: 'Splurge', b: 'Splurge picks', s: 'My favorite higher end products, $40 and up.' }
       ] }
   ];
@@ -599,7 +606,10 @@
 
   function build() {
     var s = answers.skin, t = answers.tier, r = answers.ret;
-    var pick = function (k, v) { var x = P[k][v][t]; return { n: x.n, a: x.a, w: x.w }; };
+    var pick = function (k, v) {
+      var tt = t === 'Mix' ? (['vitc', 'retinoid', 'booster'].indexOf(k) > -1 ? 'Splurge' : 'Smart') : t;
+      var x = P[k][v][tt]; return { n: x.n, a: x.a, w: x.w };
+    };
     var oily = s === 'oily', sens = s === 'sensitive', dry = s === 'dry';
     var retV = r === 'pro' ? 'experienced' : 'beginner';
     var exV = (oily && !sens) || (s === 'normal' && r === 'pro') ? 'stronger' : 'gentle';
@@ -608,16 +618,16 @@
     var am = [
       { step: 'Cleanse', p: cleanser },
       { step: 'Vitamin C', p: pick('vitc', sens ? 'gentle' : 'regular'), when: 'A few drops on dry skin.' },
-      { step: 'Booster serum', p: pick('booster', answers.concern), when: 'Your targeted step. Let the vitamin C sink in first.' },
+      { step: 'Booster serum', later: true, p: pick('booster', answers.concern), when: 'Your targeted step. Let the vitamin C sink in first.' },
       { step: 'Moisturize', p: pick('amMoist', (dry || sens) ? 'rich' : 'light') },
       { step: 'Sunscreen', p: pick('spf', sens ? 'mineral' : 'everyday'), when: 'About a quarter teaspoon for your face, every day, even when it\'s cloudy.' }
     ];
     var pm = [];
-    if (answers.makeup === 'yes') pm.push({ step: 'Cleansing oil', p: pick('oil', 'one'), when: 'On dry skin to melt makeup and sunscreen, then rinse.' });
+    if (answers.makeup === 'yes') pm.push({ step: 'Cleansing oil', later: true, p: pick('oil', 'one'), when: 'On dry skin to melt makeup and sunscreen, then rinse.' });
     pm.push({ step: 'Cleanse', p: cleanser, same: true });
     pm.push({ step: 'Retinoid', p: pick('retinoid', retV), when: retV === 'beginner' ? 'Retinoid nights only. Start with 2 nights a week and build up over a month or two.' : 'Retinoid nights only, 3 nights a week. A pea-sized amount is plenty.' });
-    pm.push({ step: 'Exfoliant', p: pick('exfoliant', exV), when: 'Exfoliant night only, once a week. Never on the same night as your retinoid.' });
-    pm.push({ step: 'Peptide serum', p: pick('peptide', 'one'), when: 'On the nights you skip the retinoid and exfoliant.' });
+    pm.push({ step: 'Exfoliant', later: true, p: pick('exfoliant', exV), when: 'Exfoliant night only, once a week. Never on the same night as your retinoid.' });
+    pm.push({ step: 'Peptide serum', later: true, p: pick('peptide', 'one'), when: 'On the nights you skip the retinoid and exfoliant.' });
     var moist = am[3].p;
     pm.push({ step: 'Moisturize', p: moist, same: true, label: 'Same moisturizer as your morning', when: 'Every night, last step. Use a little more than you do in the morning.' });
     var wantsRich = dry || sens || answers.age === '55';
@@ -644,7 +654,7 @@
     }
     var isOwned = !!owned[key];
     return '<div class="item' + (isOwned ? ' owned' : '') + '"><div class="item-num">' + (i + 1) + '</div><div>' +
-      '<div class="item-step">' + esc(it.step) + '</div>' +
+      '<div class="item-step">' + esc(it.step) + (it.later ? '<span class="phase later">Add in 4 to 6 weeks</span>' : '<span class="phase now">Start here</span>') + '</div>' +
       '<div class="item-name"><a href="' + url + '" target="_blank" rel="nofollow sponsored noopener">' + esc(it.p.n) + '</a></div>' +
       '<div class="item-why">' + esc(it.p.w) + '</div>' +
       (it.when ? '<div class="item-when">' + esc(it.when) + '</div>' : '') +
@@ -671,6 +681,8 @@
     if (label) el.textContent = label;
   }
 
+  var TIERNAME = { Smart: 'Smart picks', Mix: 'Splurge where it counts', Splurge: 'Splurge picks' };
+
   var LABELS = {
     age: { '35': '35 to 44', '45': '45 to 54', '55': '55 and up' },
     skin: { dry: 'Dry skin', sensitive: 'Sensitive skin', normal: 'Balanced skin', oily: 'Oily or combination skin' },
@@ -695,9 +707,9 @@
     $('week').innerHTML = days.map(function (d, i) {
       return '<div class="day"><div class="day-name">' + names[i] + '</div><div><span class="chip ' + d.c + '">' + d.t + '</span><b>' + d.b + '</b><small>' + d.s + '</small></div></div>';
     }).join('');
-    $('week-note').textContent = retV === 'beginner'
+    $('week-note').textContent = (retV === 'beginner'
       ? 'Starting a retinoid: stay at two nights a week for the first month. If your skin is calm, move Saturday to a third retinoid night. Red, flaky or stinging? Take a few recovery nights and pick back up once it settles.'
-      : 'Your skin is used to a retinoid, so it gets three nights. If you ever feel raw, swap a retinoid night for a recovery night. Pause your retinoid and exfoliant before lasers, peels and microneedling, and ask your provider how long.';
+      : 'Your skin is used to a retinoid, so it gets three nights. If you ever feel raw, swap a retinoid night for a recovery night. Pause your retinoid and exfoliant before lasers, peels and microneedling, and ask your provider how long.') + ' Until you add your peptide serum and exfoliant, those nights are simply cleanser and moisturizer.';
   }
 
   function renderSheet(r) {
@@ -719,7 +731,7 @@
     var plan = r.retV === 'beginner' ? ['R', 'P', 'E', 'R', 'P', 'P', 'C'] : ['R', 'P', 'E', 'R', 'P', 'R', 'C'];
     var days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     var amLabels = ['Cleanse', 'Vitamin C', 'Booster', 'Moisturize', 'SPF'];
-    var forList = [LABELS.skin[answers.skin], LABELS.concern[answers.concern], LABELS.ret[answers.ret], (answers.tier === 'Smart' ? 'Smart' : 'Splurge') + ' picks'];
+    var forList = [LABELS.skin[answers.skin], LABELS.concern[answers.concern], LABELS.ret[answers.ret], TIERNAME[answers.tier]];
     var h = '<div class="sh-top"><div><div class="sh-kicker">Skincare after 40</div><h1>My <em>skincare</em> schedule</h1></div>' +
       '<div class="sh-brand"><b>Well Rested</b><span>SKINCARE</span></div></div>' +
       '<p class="sh-for">Made for: <b>' + forList.map(esc).join(' &middot; ') + '</b></p>' +
@@ -759,15 +771,16 @@
     renderWeek(r.retV);
     renderSheet(r);
 
-    var all = cartURL(r.am.concat(r.pm));
-    var amC = cartURL(r.am);
-    var pmC = cartURL(r.pm.filter(function (x) { return !x.same; }));
-    setCart('cart-all', all, all.n ? 'Add my routine to cart (' + all.n + ')' : 'Nothing left to add');
-    setCart('cart-am', amC);
-    setCart('cart-pm', pmC);
-    $('cart-text').innerHTML = all.n
-      ? '<b>' + all.n + ' products</b> in your ' + (answers.tier === 'Smart' ? 'Smart' : 'Splurge') + ' routine, ready to add in one click.'
-      : '<b>You already have everything.</b> Use the weekly schedule below to put it all together.';
+    var everything = r.am.concat(r.pm);
+    var ess = cartURL(everything.filter(function (x) { return !x.later; }));
+    var full = cartURL(everything);
+    setCart('cart-all', ess, ess.n ? 'Start with the essentials (' + ess.n + ')' : 'Essentials covered');
+    setCart('cart-full', full, full.n ? 'Full routine (' + full.n + ')' : 'Nothing left to add');
+    $('cart-text').innerHTML = !full.n
+      ? '<b>You already have everything.</b> Use the weekly schedule below to put it all together.'
+      : ess.n
+        ? '<b>Start with ' + ess.n + ' essentials</b>, then add the rest in 4 to 6 weeks.'
+        : '<b>You have the essentials.</b> Add the rest when your skin is ready.';
 
     Array.prototype.forEach.call(document.querySelectorAll('.have input'), function (cb) {
       cb.addEventListener('change', function () {
@@ -787,7 +800,8 @@
   Array.prototype.forEach.call(document.querySelectorAll('.tier-toggle button'), function (b) {
     b.addEventListener('click', function () { answers.tier = b.getAttribute('data-tier'); showResults(false); });
   });
-  $('cart-all').addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'routine_cart_click', { tier: answers.tier, scope: 'all' }); });
+  $('cart-all').addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'routine_cart_click', { tier: answers.tier, scope: 'essentials' }); });
+  $('cart-full').addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'routine_cart_click', { tier: answers.tier, scope: 'full' }); });
   $('next').addEventListener('click', function () { go(1); });
   $('back').addEventListener('click', function () { go(-1); });
   $('restart').addEventListener('click', function () {
@@ -807,6 +821,8 @@
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(link).then(done, function () { $('copied').textContent = link; });
     else $('copied').textContent = link;
   });
+
+  try { if (/Instagram|FBAN|FBAV|FB_IAB/i.test(navigator.userAgent)) $('iab-tip').hidden = false; } catch (e) {}
 
   // Restore from a shared link
   var valid = true, h = location.hash.replace(/^#/, '');
