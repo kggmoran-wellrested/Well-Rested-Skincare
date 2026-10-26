@@ -117,6 +117,8 @@
     .tier-toggle button { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 18px; background: transparent; border: none; color: var(--teal); }
     .tier-toggle button.on { background: var(--teal); color: var(--white); }
     .tier-note { font-size: 13px; color: var(--ink-faint); font-style: italic; margin-top: 8px; }
+    #tier-est { font-style: normal; color: var(--ink-light); font-size: 14px; margin-top: 14px; }
+    #tier-est b { font-weight: 500; color: var(--teal-deep); }
 
     .routine { margin-top: 48px; }
     .routine-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--ink); padding-bottom: 10px; margin-bottom: 4px; gap: 16px; flex-wrap: wrap; }
@@ -149,6 +151,7 @@
     .cart .btn-ghost { color: var(--teal-light); border-color: rgba(255,255,255,0.25); }
     .cart .btn-ghost:hover { background: rgba(255,255,255,0.08); }
     .iab-tip { margin-top: 14px; padding: 12px 14px; background: #F3ECE2; border-left: 2px solid var(--accent); font-size: 13.5px; line-height: 1.6; color: var(--ink-light); }
+    .cart-est { font-family: 'DM Mono', monospace; font-size: 11px !important; letter-spacing: 0.04em; color: var(--teal-light) !important; margin-top: 6px; }
     .cart-fine { font-size: 12px; color: var(--ink-faint); margin-top: 10px; line-height: 1.6; }
 
     .week { margin-top: 56px; }
@@ -309,6 +312,7 @@
           <button type="button" data-tier="Mix">Splurge where it counts</button>
           <button type="button" data-tier="Splurge">Splurge picks</button>
         </div>
+        <p class="tier-note" id="tier-est"></p>
         <p class="tier-note">Smart picks are mostly under $40 each and Splurge picks are $40 and up. Splurge where it counts uses my splurge picks for vitamin C, retinoid and your booster, and smart picks for everything else. Switch any time to compare.</p>
       </div>
 
@@ -323,14 +327,14 @@
       </div>
 
       <div class="cart" id="cart">
-        <p id="cart-text"></p>
+        <div><p id="cart-text"></p><p class="cart-est" id="cart-est"></p></div>
         <div class="cart-btns">
           <a class="btn btn-solid" id="cart-all" href="#" target="_blank" rel="nofollow sponsored noopener">Start with the essentials</a>
           <a class="btn btn-ghost" id="cart-full" href="#" target="_blank" rel="nofollow sponsored noopener">Full routine</a>
         </div>
       </div>
       <p class="iab-tip" id="iab-tip" hidden>Reading this inside Instagram or Facebook? Tap the three dots at the top and choose Open in browser first, so Amazon recognizes your account and your cart is saved there.</p>
-      <p class="cart-fine">I suggest starting with the essentials marked "Start here" and adding the rest after 4 to 6 weeks, once your skin is used to the retinoid. Either button opens Amazon with those products in your cart, so you can review prices there before you check out. Already have something? Check "I have this" and it comes out of the cart.</p>
+      <p class="cart-fine">I suggest starting with the essentials marked "Start here" and adding the rest after 4 to 6 weeks, once your skin is used to the retinoid. Either button opens Amazon with those products in your cart, so you can review prices there before you check out. Cost estimates are rounded ranges based on Amazon prices in October 2026, before anything you already own, so check Amazon for current prices. Already have something? Check "I have this" and it comes out of the cart.</p>
 
       <section class="week">
         <div class="eyebrow">Your week</div>
@@ -718,6 +722,13 @@
     if (label) el.textContent = label;
   }
 
+  // Rounded estimate ranges (Amazon prices, October 2026), not live prices
+  var BANDS = {
+    Smart: { ess: 'about $100 to $150', full: 'about $175 to $275' },
+    Mix: { ess: 'about $225 to $375', full: 'about $325 to $650' },
+    Splurge: { ess: 'about $375 to $475', full: 'about $700 to $950' }
+  };
+
   var TIERNAME = { Smart: 'Smart picks', Mix: 'Splurge where it counts', Splurge: 'Splurge picks' };
 
   var LABELS = {
@@ -805,6 +816,7 @@
     $('r-summary').textContent = summaryText();
     $('r-tags').innerHTML = [LABELS.age[answers.age], LABELS.skin[answers.skin], concernLabel(), LABELS.ret[answers.ret]].map(function (x) { return '<span class="tag">' + esc(x) + '</span>'; }).join('');
     Array.prototype.forEach.call(document.querySelectorAll('.tier-toggle button'), function (b) { b.classList.toggle('on', b.getAttribute('data-tier') === answers.tier); });
+    $('tier-est').innerHTML = '<b>' + TIERNAME[answers.tier] + ':</b> essentials ' + BANDS[answers.tier].ess + ', full routine ' + BANDS[answers.tier].full + ' (estimate)';
     renderWeek(r.retV);
     renderSheet(r);
 
@@ -813,6 +825,7 @@
     var full = cartURL(everything);
     setCart('cart-all', ess, ess.n ? 'Start with the essentials (' + ess.n + ')' : 'Essentials covered');
     setCart('cart-full', full, full.n ? 'Full routine (' + full.n + ')' : 'Nothing left to add');
+    $('cart-est').textContent = 'Estimated cost: essentials ' + BANDS[answers.tier].ess + ', full routine ' + BANDS[answers.tier].full;
     $('cart-text').innerHTML = !full.n
       ? '<b>You already have everything.</b> Use the weekly schedule below to put it all together.'
       : ess.n
