@@ -161,6 +161,8 @@
     .day-name { font-family: 'Cormorant Garant', serif; font-size: 18px; color: var(--teal-deep); margin-bottom: 6px; }
     .day b { display: block; font-weight: 500; font-size: 13.5px; color: var(--ink); }
     .day small { color: var(--ink-light); font-weight: 300; font-size: 12.5px; }
+    .day .led { display: block; margin-top: 8px; padding-top: 6px; border-top: 1px dashed var(--border); font-size: 12px; color: var(--ink-faint); }
+    .day .led em { font-style: normal; color: var(--teal-deep); }
     .chip { display: inline-block; font-family: 'DM Mono', monospace; font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 6px; margin-bottom: 6px; }
     .c-ret { background: #E8EFE5; color: #4F6B4A; }
     .c-pep { background: #F3ECE2; color: #8E6E48; }
@@ -253,6 +255,8 @@
       .sh-day .chip { font-size: 6.6pt; margin-bottom: 4px; }
       .sh-day ol { padding-left: 13px; }
       .sh-day li { margin-bottom: 3px; }
+      .sh-led { margin-top: 5px; padding-top: 4px; border-top: 1px dashed #E0DDD6; font-size: 7pt; color: #9A9A94; }
+      .sh-led b { color: #5F7A5A; font-weight: 500; }
       .sh-day li span { display: block; font-family: 'DM Mono', monospace; font-size: 6.2pt; letter-spacing: 0.08em; text-transform: uppercase; color: #9A9A94; }
       .sh-boxes { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px; }
       .sh-box { border: 1px solid #E0DDD6; border-top: 2.5px solid #7D9B77; padding: 7px 10px; }
@@ -745,6 +749,9 @@
     lines: 'For fine lines, your retinoid is the step with the most research behind it, and your peptide serum and booster support it on the nights in between.'
   };
 
+  // LED mask nights (optional, only if they own one): Mon, Tue, Thu, Fri, Sat
+  var LED = [1, 1, 0, 1, 1, 1, 0];
+
   function renderWeek(retV) {
     var R = { c: 'c-ret', t: 'Retinoid', b: 'Retinoid night', s: 'Then moisturizer' };
     var Pp = { c: 'c-pep', t: 'Repair', b: 'Peptide night', s: 'Peptide serum, then moisturizer' };
@@ -753,11 +760,12 @@
     var days = retV === 'beginner' ? [R, Pp, E, R, Pp, Pp, C] : [R, Pp, E, R, Pp, R, C];
     var names = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     $('week').innerHTML = days.map(function (d, i) {
-      return '<div class="day"><div class="day-name">' + names[i] + '</div><div><span class="chip ' + d.c + '">' + d.t + '</span><b>' + d.b + '</b><small>' + d.s + '</small></div></div>';
+      return '<div class="day"><div class="day-name">' + names[i] + '</div><div><span class="chip ' + d.c + '">' + d.t + '</span><b>' + d.b + '</b><small>' + d.s + '</small>' +
+        '<span class="led">' + (LED[i] ? '<em>LED mask</em>, if you have one' : 'LED mask: rest day') + '</span></div></div>';
     }).join('');
     $('week-note').textContent = (retV === 'beginner'
       ? 'Starting a retinoid: stay at two nights a week for the first month. If your skin is calm, move Saturday to a third retinoid night. Red, flaky or stinging? Take a few recovery nights and pick back up once it settles.'
-      : 'Your skin is used to a retinoid, so it gets three nights. If you ever feel raw, swap a retinoid night for a recovery night. Pause your retinoid and exfoliant before lasers, peels and microneedling, and ask your provider how long.') + ' Until you add your peptide serum and exfoliant, those nights are simply cleanser and moisturizer.';
+      : 'Your skin is used to a retinoid, so it gets three nights. If you ever feel raw, swap a retinoid night for a recovery night. Pause your retinoid and exfoliant before lasers, peels and microneedling, and ask your provider how long.') + ' Until you add your peptide serum and exfoliant, those nights are simply cleanser and moisturizer. Already have an LED mask? Use it on clean, dry skin before your serums on the nights marked, and skip it if you don\'t have one.';
   }
 
   function renderSheet(r) {
@@ -787,7 +795,8 @@
       am.map(function (it, i) { return '<li><i>' + amLabels[i] + '</i>' + esc(it.p.n) + '</li>'; }).join('') + '</ol></div>' +
       '<div class="sh-grid">' + plan.map(function (k, i) {
         var d = T[k];
-        return '<div class="sh-day"><div class="sh-dn">' + days[i] + '</div><span class="chip ' + d.c + '">' + d.t + '</span><ol>' + d.body + '</ol></div>';
+        return '<div class="sh-day"><div class="sh-dn">' + days[i] + '</div><span class="chip ' + d.c + '">' + d.t + '</span><ol>' + d.body + '</ol>' +
+          '<div class="sh-led">' + (LED[i] ? '<b>Optional:</b> LED mask, if you have one, before serums' : 'LED mask: rest day') + '</div></div>';
       }).join('') + '</div>' +
       '<div class="sh-boxes">' +
       '<div class="sh-box"><h3>Layering rules</h3><ul>' +
