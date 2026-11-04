@@ -261,6 +261,58 @@ Bundle = Ozempic Face Protocol + Perimenopause Skin and Diet Guide. Price drop M
 
 ---
 
+## Pinterest Rules (Nov 2026 audit) — follow for ALL Pinterest work
+
+Source: Katherine's Pinterest account audit (Loom + PDF, Nov 2026). These rules override older Pinterest notes below (including the old hashtag practice).
+
+### Keywords and copy
+- Write **"skin care" as two words** in pin titles, descriptions, board names and alt text (more search volume than "skincare"). Brand/product names stay as they are.
+- Put the **main search phrase at the start** of the pin title and the first line of the description.
+- **No hashtags.**
+- **Every pin gets a CTA** in the image and the description ("Read the full guide", "See all 7 calendars", "Take my skin care routine quiz").
+- Add "Contains affiliate links." to descriptions when the pin or its tagged products use affiliate links.
+- Always write alt text. Voice rules from this file still apply (no em/en dashes, no banned words, "nurse" not "former nurse").
+
+### Pin design
+- **2:3, 1000x1500.** Photo-led, not text-only. Three house styles:
+  - **A, photo top:** photo in the top ~860px, small uppercase keyword line, Cormorant headline, Lora italic subline, sage pill CTA, deep sage footer with WELLRESTEDSKINCARE.COM.
+  - **B, Katherine photo:** her photo full-bleed with a soft off-white text card ("From a nurse, over 40"). Best for opinion posts and the quiz.
+  - **C, product collage:** products on white with price or label tiles. Best for gift guides and roundups.
+- Brand colors and fonts only (see Brand section). Images: Katherine's photos, Storyblocks, retailer product images, or her Canva collages.
+- **3 to 5 pin variations per article**, spread over days, mixing styles A, B and C.
+- Tag products on collage and product pins (Pinterest "Tag products"); keep the pin's main link on the article, not on a retailer.
+
+### Linking and timing
+- Pins link to wellrestedskincare.com articles (or the quiz), never to Instagram.
+- Post in the evening, about 7:30 to 10pm Central.
+- Seasonal content goes up early (holiday gift content in early November).
+
+### Boards (consolidated Nov 4, 2026; account pinterest_atmid-uproad)
+| Board | ID | Use for |
+|---|---|---|
+| Skin Care Routine Over 40 | 1151232792187562308 | AM/PM routines, weekly schedules, body care |
+| Anti-Aging Skin Care Tips for Women Over 40 | 1151232792187633058 | Tips, dark spots, firming, sensitive skin, GLP-1 face, gift roundups |
+| Skin Care Ingredients That Work | 1151232792187598862 | Ingredient explainers, science, evidence |
+| Best Anti-Aging Skin Care Products Over 40 | 1151232792187598869 | Product picks, reviews, French pharmacy, gift picks |
+| At-Home Skin Care Devices and Microneedling | 1151232792187761347 | Devices, LED, microcurrent, microneedling aftercare |
+| Perimenopause and Menopause Skin Care | 1151232792187797668 | Perimenopause content |
+| Retinol and Retinoids for Anti-Aging Skin | 1151232792187769372 | Retinoid content |
+| Best Peptide Serums for Anti-Aging | 1151232792187761382 | Peptide content |
+| Foods for Glowing Skin | 1151232792187775071 | Food and recipe pins (was Pantry Picks) |
+| Well Rested Skincare | 1151232792187598880 | Brand, quiz, general |
+- 11 old overlapping boards were emptied into the boards above, made secret and renamed "DELETE - ..." for Katherine to delete. Do not pin to them.
+- Planned: a **"Skin Care Gift Ideas"** board for holiday content (gifts for mom, stocking stuffers, advent calendars) when those articles go up.
+
+### Profile
+- Name: Well Rested Skincare | Skin Care Routine Over 40
+- Bio: Science-backed skin care for women over 40 from a nurse. Simple skin care routines, anti-aging skin care, perimenopause skin care, retinol for beginners and at-home treatments, all tested on my own skin. Not sure where to start? Take my skin care routine quiz.
+- Cover: 1920x1080 brand cover with "Skin care routines for women over 40" and the quiz CTA (uploaded Nov 4, 2026).
+
+### Holiday keywords to target
+Skin Care Gift Ideas, Skin Care Gift Box Ideas, Skin Care Gifts for Women Over 40, Skincare Stocking Stuffers, Beauty Gifts for Mom, Skincare Advent Calendar.
+
+---
+
 ## Pinterest Status — May 2026
 
 ### Posting Cadence
