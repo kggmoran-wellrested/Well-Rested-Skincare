@@ -412,8 +412,8 @@
       <section class="quiz-signup" id="quiz-signup">
         <div class="qs-text">
           <div class="eyebrow">Before you shop</div>
-          <h2>Starting a new routine? <em>I'll help you stick with it.</em></h2>
-          <p>Join my Sunday email and I'll send my free Anti-Aging Starter Guide right away. After that, one short note a week on what I'm reading and testing on my own skin. Unsubscribe any time.</p>
+          <h2>Want this routine <em>in your inbox?</em></h2>
+          <p>I'll email you a link back to these exact results, plus my free Anti-Aging Starter Guide. After that, one short Sunday note a week on what I'm reading and testing on my own skin. Unsubscribe any time.</p>
         </div>
         <form action="https://wellrestedskincare.us7.list-manage.com/subscribe/post?u=e19c8770792d8aef42cc9cc10&amp;id=0b2fa22813&amp;f_id=007fefe4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate qs-form" target="_blank">
           <div class="mc-row">
@@ -421,8 +421,10 @@
             <input type="text" name="FNAME" placeholder="First name" class="mc-input" id="mce-FNAME" autocomplete="given-name">
             <label class="sr-only" for="mce-EMAIL">Email address</label>
             <input type="email" name="EMAIL" placeholder="Email address" class="mc-input required email" id="mce-EMAIL" autocomplete="email" required>
+            <input type="hidden" name="ROUTINE" id="mce-ROUTINE" value="">
+            <input type="hidden" name="tags" value="8769726">
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e19c8770792d8aef42cc9cc10_0b2fa22813" tabindex="-1" value=""></div>
-            <button type="submit" class="btn btn-solid" name="subscribe" id="mc-embedded-subscribe">Send me the starter guide</button>
+            <button type="submit" class="btn btn-solid" name="subscribe" id="mc-embedded-subscribe">Email me my routine</button>
           </div>
         </form>
       </section>
@@ -948,7 +950,7 @@
   Array.prototype.forEach.call(document.querySelectorAll('.tier-toggle button'), function (b) {
     b.addEventListener('click', function () { answers.tier = b.getAttribute('data-tier'); showResults(false); });
   });
-  $('mc-embedded-subscribe-form').addEventListener('submit', function () { if (typeof gtag === 'function') gtag('event', 'quiz_signup', { tier: answers.tier }); });
+  $('mc-embedded-subscribe-form').addEventListener('submit', function () { $('mce-ROUTINE').value = location.href; if (typeof gtag === 'function') gtag('event', 'quiz_signup', { tier: answers.tier }); });
   $('cart-all').addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'routine_cart_click', { tier: answers.tier, scope: 'essentials' }); });
   $('cart-full').addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'routine_cart_click', { tier: answers.tier, scope: 'full' }); });
   $('next').addEventListener('click', function () { go(1); });
