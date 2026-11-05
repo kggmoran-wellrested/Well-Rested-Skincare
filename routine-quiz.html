@@ -239,6 +239,14 @@
     .save-card p { font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--ink-light); margin-bottom: 16px; }
     .save-actions { display: flex; gap: 10px; flex-wrap: wrap; }
     .copied { font-size: 13px; color: var(--teal-deep); margin-top: 10px; min-height: 18px; }
+    .quiz-signup { margin-top: 48px; background: var(--teal); color: var(--white); padding: 36px 32px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+    .quiz-signup .eyebrow { color: rgba(255,255,255,0.75); }
+    .quiz-signup h2 { color: var(--white); font-size: clamp(24px, 3vw, 32px); margin-bottom: 10px; }
+    .quiz-signup h2 em { color: var(--white); }
+    .quiz-signup p { font-size: 14px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.88); }
+    .quiz-signup .btn-solid { background: var(--ink); border-color: var(--ink); color: var(--white); }
+    .save-one { grid-template-columns: 1fr; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     .mc-row { display: grid; gap: 10px; }
     .mc-input { font-family: 'Lora', serif; font-size: 15px; padding: 12px 14px; border: 1px solid var(--border); background: var(--white); color: var(--ink); width: 100%; }
     .mc-input:focus { outline: none; border-color: var(--teal); }
@@ -279,6 +287,7 @@
       .day:last-child { border-bottom: none; }
       .devices { padding: 28px 20px; margin-left: -20px; margin-right: -20px; }
       .device-grid, .save { grid-template-columns: 1fr; }
+      .quiz-signup { grid-template-columns: 1fr; padding: 28px 20px; }
       .cart { position: static; margin-left: -20px; margin-right: -20px; padding: 18px 20px; }
       .cart-btns { width: 100%; }
       .cart-btns .btn { flex: 1; text-align: center; padding: 13px 10px; }
@@ -400,6 +409,24 @@
       <p class="iab-tip" id="iab-tip" hidden>Reading this inside Instagram or Facebook? Tap the three dots at the top and choose Open in browser first, so Amazon recognizes your account and your cart is saved there.</p>
       <p class="cart-fine">I suggest starting with the essentials marked "Start here" and adding the rest after 4 to 6 weeks, once your skin is used to the retinoid. Either button opens Amazon with those products in your cart, so you can review prices there before you check out. Cost estimates are rounded ranges based on Amazon prices in October 2026, before anything you already own, so check Amazon for current prices. Already have something? Check "I have this" and it comes out of the cart.</p>
 
+      <section class="quiz-signup" id="quiz-signup">
+        <div class="qs-text">
+          <div class="eyebrow">Before you shop</div>
+          <h2>Starting a new routine? <em>I'll help you stick with it.</em></h2>
+          <p>Join my Sunday email and I'll send my free Anti-Aging Starter Guide right away. After that, one short note a week on what I'm reading and testing on my own skin. Unsubscribe any time.</p>
+        </div>
+        <form action="https://wellrestedskincare.us7.list-manage.com/subscribe/post?u=e19c8770792d8aef42cc9cc10&amp;id=0b2fa22813&amp;f_id=007fefe4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate qs-form" target="_blank">
+          <div class="mc-row">
+            <label class="sr-only" for="mce-FNAME">First name</label>
+            <input type="text" name="FNAME" placeholder="First name" class="mc-input" id="mce-FNAME" autocomplete="given-name">
+            <label class="sr-only" for="mce-EMAIL">Email address</label>
+            <input type="email" name="EMAIL" placeholder="Email address" class="mc-input required email" id="mce-EMAIL" autocomplete="email" required>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e19c8770792d8aef42cc9cc10_0b2fa22813" tabindex="-1" value=""></div>
+            <button type="submit" class="btn btn-solid" name="subscribe" id="mc-embedded-subscribe">Send me the starter guide</button>
+          </div>
+        </form>
+      </section>
+
       <section class="week">
         <div class="eyebrow">Your week</div>
         <h2>Which night gets <em>what</em></h2>
@@ -425,7 +452,7 @@
         </div>
       </section>
 
-      <section class="save">
+      <section class="save save-one">
         <div class="save-card">
           <h3>Keep your routine</h3>
           <p>Copy a link that brings you straight back to these results, or print a one-page schedule with your products for each morning and night to keep by the sink.</p>
@@ -434,18 +461,6 @@
             <button class="btn btn-ghost" id="print" type="button">Print my schedule</button>
           </div>
           <div class="copied" id="copied" aria-live="polite"></div>
-        </div>
-        <div class="save-card">
-          <h3>Get my starter guide</h3>
-          <p>Join my newsletter and I'll send my free Anti-Aging Starter Guide, plus a short note each week about what I'm reading and testing.</p>
-          <form action="https://wellrestedskincare.us7.list-manage.com/subscribe/post?u=e19c8770792d8aef42cc9cc10&amp;id=0b2fa22813&amp;f_id=007fefe4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-            <div class="mc-row">
-              <input type="text" name="FNAME" placeholder="First name" class="mc-input" id="mce-FNAME">
-              <input type="email" name="EMAIL" placeholder="Email address" class="mc-input required email" id="mce-EMAIL" required>
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e19c8770792d8aef42cc9cc10_0b2fa22813" tabindex="-1" value=""></div>
-              <button type="submit" class="btn btn-solid" name="subscribe" id="mc-embedded-subscribe">Send me the guide</button>
-            </div>
-          </form>
         </div>
       </section>
 
@@ -933,6 +948,7 @@
   Array.prototype.forEach.call(document.querySelectorAll('.tier-toggle button'), function (b) {
     b.addEventListener('click', function () { answers.tier = b.getAttribute('data-tier'); showResults(false); });
   });
+  $('mc-embedded-subscribe-form').addEventListener('submit', function () { if (typeof gtag === 'function') gtag('event', 'quiz_signup', { tier: answers.tier }); });
   $('cart-all').addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'routine_cart_click', { tier: answers.tier, scope: 'essentials' }); });
   $('cart-full').addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'routine_cart_click', { tier: answers.tier, scope: 'full' }); });
   $('next').addEventListener('click', function () { go(1); });
