@@ -300,8 +300,8 @@ Source: Katherine's Pinterest account audit (Loom + PDF, Nov 2026). These rules 
 | Best Peptide Serums for Anti-Aging | 1151232792187761382 | Peptide content |
 | Foods for Glowing Skin | 1151232792187775071 | Food and recipe pins (was Pantry Picks) |
 | Well Rested Skincare | 1151232792187598880 | Brand, quiz, general |
+| Skin Care Gift Ideas | 1151232792188432541 | Holiday gift guides, advent calendars, stocking stuffers (created Nov 10, 2026) |
 - 11 old overlapping boards were emptied into the boards above, made secret and renamed "DELETE - ..." for Katherine to delete. Do not pin to them.
-- Planned: a **"Skin Care Gift Ideas"** board for holiday content (gifts for mom, stocking stuffers, advent calendars) when those articles go up.
 
 ### Profile
 - Name: Well Rested Skincare | Skin Care Routine Over 40
