@@ -313,6 +313,8 @@ Skin Care Gift Ideas, Skin Care Gift Box Ideas, Skin Care Gifts for Women Over 4
 
 ---
 
+- **Photos of women (Katherine, Nov 16, 2026):** stock photos should show women who look about 40, with no gray hair. Avoid models who read as 55+ or as 20s.
+
 ## Pinterest Status — May 2026
 
 ### Posting Cadence
