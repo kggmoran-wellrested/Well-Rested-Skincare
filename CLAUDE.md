@@ -301,6 +301,7 @@ Source: Katherine's Pinterest account audit (Loom + PDF, Nov 2026). These rules 
 | Foods for Glowing Skin | 1151232792187775071 | Food and recipe pins (was Pantry Picks) |
 | Well Rested Skincare | 1151232792187598880 | Brand, quiz, general |
 | Skin Care Gift Ideas | 1151232792188432541 | Holiday gift guides, advent calendars, stocking stuffers (created Nov 10, 2026) |
+| Laser Aftercare and Post Procedure Skin Care | 1151232792188449340 | CO2 laser recovery, post procedure and aftercare pins |
 - 11 old overlapping boards were emptied into the boards above, made secret and renamed "DELETE - ..." for Katherine to delete. Do not pin to them.
 
 ### Profile
