@@ -74,7 +74,7 @@
     .guides-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
     .guide-card { background: var(--white); border: 1px solid var(--border); padding: 32px 32px 28px; display: flex; flex-direction: column; min-height: 340px; }
     .guide-card.featured { border-color: var(--teal); position: relative; }
-    .guide-card.featured::before { content: 'BUNDLE · SAVE $5'; position: absolute; top: -11px; left: 24px; background: var(--teal); color: var(--white); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; padding: 4px 10px; }
+    .guide-card.featured::before { content: 'BUNDLE · SAVE $9'; position: absolute; top: -11px; left: 24px; background: var(--teal); color: var(--white); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; padding: 4px 10px; }
     .guide-card.free { background: linear-gradient(135deg, #EEF5EE 0%, var(--white) 70%); border-color: var(--teal); position: relative; }
     .guide-card.free::before { content: 'FREE'; position: absolute; top: -11px; left: 24px; background: var(--accent); color: var(--white); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.22em; padding: 4px 10px; }
     .guide-card.free .guide-name { font-size: 22px; }
@@ -89,6 +89,9 @@
     .guide-price small { font-size: 12px; color: var(--ink-faint); font-weight: 300; }
     .payhip-buy-button { font-family: 'DM Mono', monospace !important; font-size: 10px !important; letter-spacing: 0.12em !important; text-transform: uppercase !important; color: var(--white) !important; background: var(--teal) !important; padding: 12px 22px !important; text-decoration: none !important; border: none !important; display: inline-block !important; cursor: pointer !important; transition: background 0.2s !important; }
     .payhip-buy-button:hover { background: var(--teal-light) !important; }
+    .etsy-button { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); background: var(--teal); padding: 12px 22px; text-decoration: none; display: inline-block; transition: background 0.2s; }
+    .etsy-button:hover { background: var(--teal-light); }
+    .guide-card.planner { grid-column: 1 / -1; min-height: 0; border-color: var(--teal); }
     @media (max-width: 768px) {
       .guides-section { padding: 40px 24px 56px; }
       .guides-grid { grid-template-columns: 1fr; }
@@ -218,6 +221,17 @@
         <div class="guide-price-row">
           <div class="guide-price">Free</div>
           <a class="payhip-buy-button" data-theme="green" data-product="Mb2QB" href="https://payhip.com/b/Mb2QB">Get the plan</a>
+        </div>
+      </div>
+
+      <!-- SKIN YEAR PLANNER (Etsy) -->
+      <div class="guide-card planner">
+        <div class="guide-tag">New · Fillable planner · 24 pages</div>
+        <h3 class="guide-name">The Skin Year Planner</h3>
+        <p class="guide-desc">Plan your whole skin year on one calendar: your morning and night routine, your at home devices and your office treatments. You get a dated 2027 planner and an undated one. Type into the fillable pages or print them and write by hand.</p>
+        <div class="guide-price-row">
+          <div class="guide-price">On Etsy</div>
+          <a class="etsy-button" href="https://www.etsy.com/listing/4620566168/skin-care-planner-2027-printable" target="_blank" rel="noopener">Get the planner</a>
         </div>
       </div>
 
