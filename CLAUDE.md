@@ -227,6 +227,8 @@ Bundle = Ozempic Face Protocol + Perimenopause Skin and Diet Guide. Price drop M
 
 ## Workflow Established (May 2026)
 
+**Publishing a new article (rule from Katherine, Nov 19 2026):** the newest article always goes in the featured "Latest Article" block at the top of `editorial.html`. In the same PR as the article: (1) replace the featured block with the new article, (2) move the previously featured article into the grid as the first card, keeping the grid newest first, (3) do not also list the featured article in the grid, (4) add the sitemap entry.
+
 - **Live repo path:** `/Users/katherinemoran/Documents/GitHub/Well-Rested-Skincare`
 - Claude edits files directly in the live repo
 - Katherine reviews diff in GitHub Desktop, commits, pushes — GitHub Pages auto-deploys
