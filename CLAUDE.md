@@ -225,6 +225,30 @@ Bundle = Ozempic Face Protocol + Perimenopause Skin and Diet Guide. Price drop M
 
 ---
 
+## Automations Claude Runs (added Nov 21, 2026)
+
+Katherine asked for these to be handled without her having to ask each time. Everything else still needs her approval before it is published, merged, sent or scheduled.
+
+**YouTube: Amazon product videos (rule from Katherine, Nov 21 2026).** She uploads each Amazon product video to YouTube as Private. Claude then:
+1. Checks the upload against every video already on the channel (same product, same file name, same length). Never publish a duplicate. Leave duplicates Private with no publish date and tell her so she can delete them. Claude does not delete videos.
+2. Writes the title (`{Product} Review: {benefit} Over 40`), description and tags in the review format. Descriptions stay factual about the product and do not invent what she noticed. Cosmetic language only ("the look of").
+3. Uses this footer on every video: `More reviews and my free 2 minute routine quiz: wellrestedskincare.com` / `Shop the products I mention: https://shopmy.us/shop/wellrestedskincare` / education and affiliate disclosure line. She wants the whole ShopMy store linked, not single products.
+4. Adds the video to the playlist "Skin Care Reviews for Women Over 40" (`PLQQPDVRNctrQ`), category 26, language en.
+5. Schedules three a day at noon, 4pm and 7pm Central, after whatever is already queued.
+6. Reports the schedule and asks her to confirm any product name guessed from a file name. Put uncertain ones last in the queue.
+
+**YouTube: other series.** CO2 recovery videos go in "CO2 Laser Recovery Day by Day" (`PLAiQ7noUmuRs`), in day order, each description linking the playlist. Planner and guide walkthroughs go in "Skin Care Planners and Guides for Women Over 40". Thumbnails, end screens, related video links on Shorts and pinned comments can only be done by Katherine in YouTube Studio, so list them for her. The YouTube connection has a daily request limit that resets around 2am Central. If it runs out, say so. Scheduled videos still publish on their own.
+
+**Walkthrough videos for digital products.** She screen-records herself scrolling the PDF. Claude trims it, writes a voiceover script timed to the pages, adds her recorded audio, and returns a wide version and a tall 1080x1920 version on the product's green with the title above. Check the recording shows the current corrected file.
+
+**Pinterest.** After she approves a pin, schedule it for 7:47pm Central with a scheduled task. When the task fires, post the pin and confirm in one line. Follow the Pinterest Rules section for every pin.
+
+**Sunday newsletter (Mailchimp).** Claude drafts it every week by Saturday morning without being asked: build the campaign as a draft in Mailchimp from the week's newest article and anything new (products, videos), show her the subject line and a preview, and schedule it for Sunday only after she approves. Kept separate from Substack.
+
+**Site.** The newest article always goes in the featured "Latest Article" block (see Workflow below). Site changes go through a pull request that she merges by saying "merge".
+
+**Standing check-ins.** Dec 3, 2026: affiliate click report (include YouTube as a traffic source). Dec 7, 2026 and Jan 18, 2027: Pinterest audit follow-ups.
+
 ## Workflow Established (May 2026)
 
 **Publishing a new article (rule from Katherine, Nov 19 2026):** the newest article always goes in the featured "Latest Article" block at the top of `editorial.html`. In the same PR as the article: (1) replace the featured block with the new article, (2) move the previously featured article into the grid as the first card, keeping the grid newest first, (3) do not also list the featured article in the grid, (4) add the sitemap entry.
