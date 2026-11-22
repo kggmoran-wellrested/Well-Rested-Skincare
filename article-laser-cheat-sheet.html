@@ -388,7 +388,22 @@ aside.quick-picks p.quick-picks-disclosure{font-family:inherit;font-size:12px;li
 
     <h2 id="chart">The cheat <em>sheet</em></h2>
 
-    <p><a href="/downloads/laser-cheat-sheet.pdf" target="_blank" rel="noopener" style="display:inline-block;background:var(--teal);color:#fff;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;padding:12px 20px;">Download the one page printable (PDF)</a></p>
+    <div class="cs-gate" id="printable" style="background:#F2F0EB;border:1px solid var(--border);border-left:3px solid var(--teal);padding:24px 26px;margin:28px 0;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">Free printable</div>
+      <div style="font-family:'Cormorant Garant',serif;font-size:26px;font-weight:500;color:var(--ink);line-height:1.15;margin-bottom:8px;">Get the one page printable</div>
+      <p style="margin:0 0 14px;font-size:15px;">Enter your email and the PDF is yours right away. You will also get my Sunday email. Unsubscribe anytime.</p>
+      <form id="cs-form" action="https://wellrestedskincare.us7.list-manage.com/subscribe/post?u=e19c8770792d8aef42cc9cc10&amp;id=0b2fa22813&amp;f_id=007fefe4f0" method="post" target="_blank" style="display:flex;flex-wrap:wrap;gap:10px;">
+        <input type="text" name="FNAME" placeholder="First name" aria-label="First name" style="flex:1 1 140px;min-width:0;padding:12px 14px;border:1px solid var(--border);background:#fff;font-family:inherit;font-size:15px;">
+        <input type="email" name="EMAIL" placeholder="Email address" aria-label="Email address" required style="flex:2 1 200px;min-width:0;padding:12px 14px;border:1px solid var(--border);background:#fff;font-family:inherit;font-size:15px;">
+        <input type="hidden" name="tags" value="8769737">
+        <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="b_e19c8770792d8aef42cc9cc10_0b2fa22813" tabindex="-1" value=""></div>
+        <button type="submit" style="flex:1 1 100%;background:var(--teal);color:#fff;border:0;cursor:pointer;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:14px 20px;">Send me the cheat sheet</button>
+      </form>
+      <p id="cs-done" style="display:none;margin:14px 0 0;font-size:15px;">Thank you. <a href="/downloads/laser-cheat-sheet.pdf" target="_blank" rel="noopener" style="color:var(--teal);font-weight:500;">Open your laser cheat sheet (PDF) →</a></p>
+    </div>
+    <script>
+    (function(){var f=document.getElementById('cs-form');if(!f)return;f.addEventListener('submit',function(){setTimeout(function(){f.style.display='none';document.getElementById('cs-done').style.display='block';if(window.gtag){gtag('event','generate_lead',{lead_type:'laser_cheat_sheet'});}},400);});})();
+    </script>
 
     <p>Listed from gentlest to strongest. Prices are typical US prices for one full-face session. They vary a lot by city and provider, so treat them as a starting point for your consult and not a quote.</p>
 
