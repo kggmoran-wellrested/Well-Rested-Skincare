@@ -225,6 +225,16 @@ Bundle = Ozempic Face Protocol + Perimenopause Skin and Diet Guide. Price drop M
 
 ---
 
+## Strategy Principle: Trust Over Information (from Katherine, Nov 22, 2026)
+
+Katherine's words: information is no longer valuable. It is about people trusting her, and packaging things in a way they relate to. Apply this to every platform and every piece of content.
+
+- Lead with Katherine: her face, her voice, what she did, what she noticed, what she would tell a friend. Her own CO2 recovery series outperformed everything else on YouTube for this reason.
+- Frame information through her experience. "How I plan my treatment year" beats "how to plan treatments". Reference pages like the laser cheat sheet are still worth making, as proof she knows the subject and as a reason to join her list, and they should be introduced in her voice.
+- Make it relatable: a specific moment, a real problem, plain words. No textbook tone.
+- Never invent her experience to get this effect. If a personal detail is missing, ask her for one line or leave a marked blank.
+- Search still runs on information. Keyword-first titles and descriptions get the content found on Google, Pinterest and YouTube. Trust is what makes people stay, subscribe and buy. Do both.
+
 ## Automations Claude Runs (added Nov 21, 2026)
 
 Katherine asked for these to be handled without her having to ask each time. Everything else still needs her approval before it is published, merged, sent or scheduled.
