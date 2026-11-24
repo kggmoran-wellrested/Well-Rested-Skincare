@@ -235,6 +235,14 @@ Katherine's words: information is no longer valuable. It is about people trustin
 - Never invent her experience to get this effect. If a personal detail is missing, ask her for one line or leave a marked blank.
 - Search still runs on information. Keyword-first titles and descriptions get the content found on Google, Pinterest and YouTube. Trust is what makes people stay, subscribe and buy. Do both.
 
+## Shopify Store (added Nov 24, 2026)
+
+- Store: wellrestedskincare.myshopify.com, theme Horizon, styled to match the website (headline "My skin care shelf, open to you"). Shopify Payments and Shopify Collective are set up.
+- Products come from Collective suppliers and ship from the brand. Katherine is the seller of record. Only import products she uses herself.
+- Live products: Osmosis Cleanse (/products/cleanse) and Osmosis Hydrate (/products/hydrate). Osmosis approved her on Nov 24. Other brand requests are pending.
+- Link rule: when a product is in her Shopify store, link to the store page instead of ShopMy or Amazon. Use rel="noopener" (not sponsored), add a "from my shop" note, and make sure the disclosure line on the page mentions her own shop.
+- Katherine imports products and changes store settings herself. Claude can edit the theme (publish only after she says so) and read products.
+
 ## Automations Claude Runs (added Nov 21, 2026)
 
 Katherine asked for these to be handled without her having to ask each time. Everything else still needs her approval before it is published, merged, sent or scheduled.
