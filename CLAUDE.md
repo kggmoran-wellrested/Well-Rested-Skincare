@@ -494,6 +494,9 @@ Medik8, Obagi, Paula's Choice, La Roche-Posay
 - Call IRS 1-800-829-4933 to get EIN (Reference 101)
 - Open business bank account under Red Barn Ventures LLC
 - File DBA with IL Secretary of State (~$30 + newspaper)
+- Sign up for a registered agent service that includes a usable business mailing address (added Nov 24, 2026). Katherine's business address is her home address and she wants it off customer-facing places. After signing up: file the change of registered agent with the IL Secretary of State, then update the address in Shopify (Settings > General and each policy), the Mailchimp email footer, and anywhere it shows on the website. Leave Shopify Payments verification on her real address.
+- Shopify: check Settings > Taxes and duties for Illinois sales tax collection (test order #1001 charged $0 tax) and ask her accountant (added Nov 24, 2026)
+- Shopify: confirm what the plan costs after the $1/month promo ends (store shows the Advanced plan) (added Nov 24, 2026)
 
 ### Content (longer arc)
 - Arbutin results article (~June 2026) — take before photos first
