@@ -235,6 +235,16 @@ Katherine's words: information is no longer valuable. It is about people trustin
 - Never invent her experience to get this effect. If a personal detail is missing, ask her for one line or leave a marked blank.
 - Search still runs on information. Keyword-first titles and descriptions get the content found on Google, Pinterest and YouTube. Trust is what makes people stay, subscribe and buy. Do both.
 
+## Instagram Content Rules (from Katherine, Nov 25, 2026)
+
+Apply to every Instagram post, reel, carousel and calendar. These sit alongside the Trust Over Information principle: the structure and keywords are the packaging, and Katherine's own experience is the content.
+
+1. **Use a proven structure.** Hook, proof, belief shift, framework, outcome, invite. Proof is Katherine's own experience or her nurse background, never invented. The invite is one clear action, usually a ManyChat keyword.
+2. **Make it saveable.** Favor frameworks, breakdowns and clear steps over trend chasing. Saves tell Instagram the content is valuable. As of Nov 25 her posts get 0 to 1 saves each, so saves are the number to move.
+3. **SEO over aesthetics.** Put niche keywords in captions, on-screen text and the bio (for example: skin care over 40, perimenopause skin, CO2 laser recovery, retinol for beginners). Hashtags help, but keywords drive distribution. Keep to about 5 hashtags.
+4. Claude has read and publish access to @wellrestedskincare through Composio (account instagram_tanged-krone). Never post without Katherine's OK on the exact caption and media.
+5. What the numbers show (Nov 16 to 25): CO2 recovery reels reach 136 to 231 people each; routine, planner and product posts reach 5 to 69.
+
 ## Shopify Store (added Nov 24, 2026)
 
 - Store: wellrestedskincare.myshopify.com, theme Horizon, styled to match the website (headline "My skin care shelf, open to you"). Shopify Payments and Shopify Collective are set up.
